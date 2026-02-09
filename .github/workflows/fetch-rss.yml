@@ -42,7 +42,7 @@ jobs:
         if: ${{ success() }}
         uses: slackapi/slack-github-action@v2.0.0
         with:
-          webhook: ${{ secrets.SLACK_WEBHOOK }}
+          webhook: ${{ secrets.SLACKWEBHOOK }}
           webhook-type: incoming-webhook
           payload: |
             text: "*Fetch RSS result*: ${{ job.status }}\nRepository: ${{ github.repository }}\nRun: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
@@ -52,7 +52,7 @@ jobs:
                   type: "mrkdwn"
                   text: "Fetch RSS result: ${{ job.status }}\nRepository: ${{ github.repository }}\nRun: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
         env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_WEBHOOK: ${{ secrets.SLACKWEBHOOK }}
 
       - name: Slack Notify — Failure
         if: ${{ failure() }}
