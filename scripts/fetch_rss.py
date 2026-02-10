@@ -6,6 +6,7 @@ import json
 import datetime
 import pathlib
 import re
+from dateutil import parser as date_parser
 
 import requests
 import feedparser
@@ -113,7 +114,7 @@ def fetch_feed_with_state(url, state):
         return None, s
 
 
-def process_feed(feed, target_dir, seen_hashes, new_hashes):
+def process_feed(feed, base_dir, seen_hashes, new_hashes):
     """Process feed entries.
 
     Returns: (added_count, added_hashes_set)
@@ -127,10 +128,29 @@ def process_feed(feed, target_dir, seen_hashes, new_hashes):
         h = hashlib.sha256(unique.encode('utf-8')).hexdigest()
         if h in seen_hashes or h in new_hashes or h in added_hashes:
             continue
+        
+        # 解析发布日期
+        published_str = entry.get('published', '')
+        if published_str:
+            try:
+                # 尝试解析日期
+                pub_date = date_parser.parse(published_str)
+                date_folder = pub_date.strftime('%Y-%m-%d')
+            except Exception as e:
+                print(f'Failed to parse date "{published_str}": {e}, using today', file=sys.stderr)
+                date_folder = datetime.date.today().isoformat()
+        else:
+            # 如果没有发布日期，使用今天的日期
+            date_folder = datetime.date.today().isoformat()
+        
+        # 创建日期对应的目录
+        target_dir = base_dir / date_folder
+        target_dir.mkdir(parents=True, exist_ok=True)
+        
         item = {
             'title': entry.get('title'),
             'link': entry.get('link'),
-            'published': entry.get('published', ''),
+            'published': published_str,
             'summary': entry.get('summary', ''),
             'id': entry.get('id', ''),
         }
@@ -146,9 +166,6 @@ def main():
     ensure_dirs()
     seen = load_history()
     new_hashes = set()
-    today = datetime.date.today().isoformat()
-    target_dir = RAW_DIR / today
-    target_dir.mkdir(parents=True, exist_ok=True)
 
     total_added = 0
     if not RSS_DIR.exists():
@@ -164,7 +181,7 @@ def main():
             feed = None
             new_meta = {}
             feed, new_meta = fetch_feed_with_state(payload, state)
-            added, added_hashes = process_feed(feed, target_dir, seen, new_hashes)
+            added, added_hashes = process_feed(feed, RAW_DIR, seen, new_hashes)
             if added:
                 append_history(added_hashes)
                 seen.update(added_hashes)
@@ -184,7 +201,7 @@ def main():
                     if url in state:
                         save_state(state)
                     continue
-                added, added_hashes = process_feed(feed, target_dir, seen, new_hashes)
+                added, added_hashes = process_feed(feed, RAW_DIR, seen, new_hashes)
                 if added:
                     append_history(added_hashes)
                     seen.update(added_hashes)
@@ -195,7 +212,10 @@ def main():
                 total_added += added
         else:
             feed = feedparser.parse(payload)
-            added = process_feed(feed, target_dir, seen, new_hashes)
+            added, added_hashes = process_feed(feed, RAW_DIR, seen, new_hashes)
+            if added:
+                append_history(added_hashes)
+                seen.update(added_hashes)
             print(f'Added {added} items from {src.name}')
             total_added += added
 
