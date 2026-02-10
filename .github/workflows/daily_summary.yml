@@ -1,0 +1,43 @@
+name: Daily RSS Summary
+
+on:
+  schedule:
+    # 每天UTC时间00:00运行（北京时间08:00）
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install anthropic
+      
+      - name: Fetch RSS feeds
+        run: |
+          python scripts/fetch_rss.py
+      
+      - name: Analyze with LLM
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          # 分析昨天的数据
+          python scripts/analyze_rss.py
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/ raw_content/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Daily RSS summary $(date +'%Y-%m-%d')" && git push)
