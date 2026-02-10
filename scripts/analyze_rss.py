@@ -4,6 +4,7 @@
 """
 import os
 import sys
+import argparse
 import json
 import pathlib
 import datetime
@@ -256,13 +257,16 @@ async def async_main():
     if not api_key:
         logger.error('请设置环境变量 OPENAI_API_KEY')
         sys.exit(1)
-    
-    # 获取要处理的日期（默认为昨天）
-    if len(sys.argv) > 1:
-        date_str = sys.argv[1]
+
+    # 获取要处理的日期（可选位置参数，默认为当天）
+    parser = argparse.ArgumentParser(description='分析指定日期的 raw_content 目录（格式 YYYY-MM-DD），默认：今天）')
+    parser.add_argument('date', nargs='?', help='要处理的日期，格式 YYYY-MM-DD（默认：今天）')
+    args = parser.parse_args()
+
+    if args.date:
+        date_str = args.date
     else:
-        yesterday = datetime.date.today() - datetime.timedelta(days=1)
-        date_str = yesterday.isoformat()
+        date_str = datetime.date.today().isoformat()
     
     logger.info(f'正在分析日期: {date_str}')
     
