@@ -21,6 +21,23 @@ SUMMARIES_DIR = ROOT / 'data' / 'summaries'
 PODCASTS_DIR = ROOT / 'data' / 'podcasts'
 
 
+def get_storage_state_path() -> str:
+    """从环境变量获取 NotebookLM storage_state.json 路径
+    
+    环境变量: NOTEBOOKLM_STORAGE_STATE
+    默认路径: ~/.notebooklm/storage_state.json
+    """
+    storage_path = os.getenv('NOTEBOOKLM_STORAGE_STATE')
+    if storage_path:
+        logger.info(f'使用环境变量指定的 storage_state 路径: {storage_path}')
+        return storage_path
+    
+    # 使用默认路径
+    default_path = pathlib.Path.home() / '.notebooklm' / 'storage_state.json'
+    logger.debug(f'使用默认 storage_state 路径: {default_path}')
+    return str(default_path)
+
+
 def ensure_dirs():
     """确保必要的目录存在"""
     PODCASTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -112,7 +129,8 @@ async def generate_podcast_for_date(date_str: str, audio_format: str = 'deep-div
     logger.info(f'内容已保存到临时文件：{temp_file}')
     
     # 使用 NotebookLM API 生成 podcast
-    async with await NotebookLMClient.from_storage() as client:
+    storage_path = get_storage_state_path()
+    async with await NotebookLMClient.from_storage(storage_path) as client:
         # 创建一个新的 notebook
         notebook_title = f'每日科技资讯 - {date_str}'
         logger.info(f'创建 notebook: {notebook_title}')

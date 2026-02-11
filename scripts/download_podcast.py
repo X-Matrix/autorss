@@ -18,6 +18,23 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 PODCASTS_DIR = ROOT / 'data' / 'podcasts'
 
 
+def get_storage_state_path() -> str:
+    """从环境变量获取 NotebookLM storage_state.json 路径
+    
+    环境变量: NOTEBOOKLM_STORAGE_STATE
+    默认路径: ~/.notebooklm/storage_state.json
+    """
+    storage_path = os.getenv('NOTEBOOKLM_STORAGE_STATE')
+    if storage_path:
+        logger.info(f'使用环境变量指定的 storage_state 路径: {storage_path}')
+        return storage_path
+    
+    # 使用默认路径
+    default_path = pathlib.Path.home() / '.notebooklm' / 'storage_state.json'
+    logger.debug(f'使用默认 storage_state 路径: {default_path}')
+    return str(default_path)
+
+
 async def download_podcast(date_str: str = None, notebook_id: str = None):
     """下载 podcast"""
     
@@ -48,7 +65,8 @@ async def download_podcast(date_str: str = None, notebook_id: str = None):
     logger.info(f'  输出文件: {output_file}')
     
     try:
-        async with await NotebookLMClient.from_storage() as client:
+        storage_path = get_storage_state_path()
+        async with await NotebookLMClient.from_storage(storage_path) as client:
             # 检查 artifact 状态
             logger.info('检查 Podcast 生成状态...')
             artifacts = await client.artifacts.list(notebook_id)

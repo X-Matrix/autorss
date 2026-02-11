@@ -1,0 +1,136 @@
+name: Download Pending Podcasts
+
+on:
+  schedule:
+    # 每天运行两次，检查是否有待下载的 podcast
+    - cron: '0 */12 * * *'  # 每12小时运行一次
+  workflow_dispatch:  # 允许手动触发
+    inputs:
+      date:
+        description: '指定日期 (YYYY-MM-DD), 留空自动检测'
+        required: false
+        type: string
+
+jobs:
+  download-pending:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+          playwright install-deps chromium
+      
+      - name: Setup NotebookLM storage state
+        env:
+          NOTEBOOKLM_STORAGE_STATE_CONTENT: ${{ secrets.NOTEBOOKLM_STORAGE_STATE }}
+        run: |
+          mkdir -p ~/.notebooklm
+          echo "$NOTEBOOKLM_STORAGE_STATE_CONTENT" > ~/.notebooklm/storage_state.json
+          chmod 600 ~/.notebooklm/storage_state.json
+      
+      - name: Check and download pending podcasts
+        env:
+          NOTEBOOKLM_STORAGE_STATE: ${{ secrets.NOTEBOOKLM_STORAGE_STATE_PATH || '~/.notebooklm/storage_state.json' }}
+        run: |
+          # 创建下载脚本
+          cat > /tmp/check_and_download.py << 'EOF'
+          #!/usr/bin/env python3
+          import json
+          import asyncio
+          import sys
+          from pathlib import Path
+          
+          ROOT = Path.cwd()
+          PODCASTS_DIR = ROOT / 'data' / 'podcasts'
+          
+          async def check_and_download():
+              """检查所有待下载的 podcast"""
+              if not PODCASTS_DIR.exists():
+                  print("No podcasts directory")
+                  return
+              
+              # 查找所有元数据文件
+              metadata_files = sorted(PODCASTS_DIR.glob('*_metadata.json'))
+              downloaded = []
+              
+              for metadata_file in metadata_files:
+                  with open(metadata_file, 'r', encoding='utf-8') as f:
+                      metadata = json.load(f)
+                  
+                  date = metadata.get('date', 'Unknown')
+                  status = metadata.get('status', 'unknown')
+                  
+                  # 检查是否需要下载
+                  audio_file = PODCASTS_DIR / f'{date}_podcast.mp3'
+                  if audio_file.exists():
+                      print(f"✓ {date}: Already downloaded")
+                      continue
+                  
+                  if status in ['generating', 'timeout_but_generating']:
+                      print(f"→ {date}: Attempting to download...")
+                      # 导入并运行下载
+                      sys.path.insert(0, str(ROOT / 'scripts'))
+                      from download_podcast import download_podcast
+                      
+                      success = await download_podcast(date_str=date)
+                      if success:
+                          print(f"✓ {date}: Downloaded successfully")
+                          downloaded.append(date)
+                      else:
+                          print(f"✗ {date}: Download failed or still generating")
+                  else:
+                      print(f"- {date}: Status {status}, skipping")
+              
+              return downloaded
+          
+          if __name__ == '__main__':
+              downloaded = asyncio.run(check_and_download())
+              if downloaded:
+                  print(f"\n✓ Downloaded {len(downloaded)} podcasts: {', '.join(downloaded)}")
+              else:
+                  print("\nNo podcasts downloaded")
+          EOF
+          
+          chmod +x /tmp/check_and_download.py
+          python /tmp/check_and_download.py
+      
+      - name: Generate static data
+        run: |
+          python scripts/generate_static_data.py
+      
+      - name: Check if files changed
+        id: check_changes
+        run: |
+          git add -A
+          if git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit and push if changed
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Download pending podcasts $(date +'%Y-%m-%d %H:%M')"
+          git push
+      
+      - name: Upload artifacts
+        if: steps.check_changes.outputs.changed == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: downloaded-podcasts
+          path: data/podcasts/*.mp3
+          retention-days: 30

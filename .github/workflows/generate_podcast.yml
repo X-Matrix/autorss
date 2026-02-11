@@ -1,0 +1,139 @@
+name: Generate Daily Podcast
+
+on:
+  workflow_run:
+    workflows: ["Daily RSS Summary"]
+    types:
+      - completed
+  workflow_dispatch:  # 允许手动触发
+    inputs:
+      date:
+        description: '指定日期 (YYYY-MM-DD), 留空使用昨天'
+        required: false
+        type: string
+      wait:
+        description: '是否等待生成完成'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  generate-podcast:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          
+      - name: Install Playwright browsers
+        run: |
+          playwright install chromium
+          playwright install-deps chromium
+      
+      - name: Setup NotebookLM storage state
+        env:
+          NOTEBOOKLM_STORAGE_STATE_CONTENT: ${{ secrets.NOTEBOOKLM_STORAGE_STATE }}
+        run: |
+          mkdir -p ~/.notebooklm
+          echo "$NOTEBOOKLM_STORAGE_STATE_CONTENT" > ~/.notebooklm/storage_state.json
+          chmod 600 ~/.notebooklm/storage_state.json
+      
+      - name: Generate Podcast (async mode)
+        env:
+          NOTEBOOKLM_STORAGE_STATE: ${{ secrets.NOTEBOOKLM_STORAGE_STATE_PATH || '~/.notebooklm/storage_state.json' }}
+        run: |
+          if [ -n "${{ inputs.date }}" ]; then
+            DATE_ARG="--date ${{ inputs.date }}"
+          else
+            DATE_ARG=""
+          fi
+          
+          if [ "${{ inputs.wait }}" = "true" ]; then
+            python scripts/generate_podcast.py $DATE_ARG --timeout 900
+          else
+            python scripts/generate_podcast.py $DATE_ARG --no-wait
+          fi
+      
+      - name: Save metadata
+        uses: actions/upload-artifact@v4
+        with:
+          name: podcast-metadata
+          path: data/podcasts/*_metadata.json
+          retention-days: 7
+      
+      - name: Commit metadata
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/podcasts/*_metadata.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Add podcast metadata $(date +'%Y-%m-%d')" && git push)
+
+  download-podcast:
+    runs-on: ubuntu-latest
+    needs: generate-podcast
+    if: ${{ inputs.wait == true }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main  # 确保拉取最新的 metadata
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+          playwright install-deps chromium
+      
+      - name: Setup NotebookLM storage state
+        env:
+          NOTEBOOKLM_STORAGE_STATE_CONTENT: ${{ secrets.NOTEBOOKLM_STORAGE_STATE }}
+        run: |
+          mkdir -p ~/.notebooklm
+          echo "$NOTEBOOKLM_STORAGE_STATE_CONTENT" > ~/.notebooklm/storage_state.json
+          chmod 600 ~/.notebooklm/storage_state.json
+      
+      - name: Download Podcast
+        env:
+          NOTEBOOKLM_STORAGE_STATE: ${{ secrets.NOTEBOOKLM_STORAGE_STATE_PATH || '~/.notebooklm/storage_state.json' }}
+        run: |
+          if [ -n "${{ inputs.date }}" ]; then
+            python scripts/download_podcast.py --date ${{ inputs.date }}
+          else
+            python scripts/download_podcast.py
+          fi
+      
+      - name: Generate static data
+        run: |
+          python scripts/generate_static_data.py
+      
+      - name: Upload podcast artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-podcast
+          path: data/podcasts/*.mp3
+          retention-days: 30
+      
+      - name: Commit and push podcast
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/podcasts/*.mp3 web/public/data/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Add daily podcast $(date +'%Y-%m-%d')" && git push)

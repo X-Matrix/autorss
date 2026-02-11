@@ -3,6 +3,7 @@
 测试 NotebookLM Podcast 生成功能
 快速验证配置是否正确
 """
+import os
 import sys
 import asyncio
 from pathlib import Path
@@ -10,6 +11,22 @@ from pathlib import Path
 # 添加项目根目录到路径
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+
+
+def get_storage_state_path() -> str:
+    """从环境变量获取 NotebookLM storage_state.json 路径
+    
+    环境变量: NOTEBOOKLM_STORAGE_STATE
+    默认路径: ~/.notebooklm/storage_state.json
+    """
+    storage_path = os.getenv('NOTEBOOKLM_STORAGE_STATE')
+    if storage_path:
+        print(f'使用环境变量指定的 storage_state 路径: {storage_path}')
+        return storage_path
+    
+    # 使用默认路径
+    default_path = Path.home() / '.notebooklm' / 'storage_state.json'
+    return str(default_path)
 
 
 async def test_notebooklm_auth():
@@ -20,7 +37,8 @@ async def test_notebooklm_auth():
     try:
         from notebooklm import NotebookLMClient
         
-        async with await NotebookLMClient.from_storage() as client:
+        storage_path = get_storage_state_path()
+        async with await NotebookLMClient.from_storage(storage_path) as client:
             print("✅ 认证成功")
             
             # 列出现有的 notebooks
@@ -134,7 +152,8 @@ async def test_mini_podcast():
             f.write(test_content)
         print(f"✅ 测试内容已保存: {test_file}")
         
-        async with await NotebookLMClient.from_storage() as client:
+        storage_path = get_storage_state_path()
+        async with await NotebookLMClient.from_storage(storage_path) as client:
             # 创建测试 notebook
             print("创建测试 Notebook...")
             nb = await client.notebooks.create("Podcast 功能测试")
