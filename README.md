@@ -6,7 +6,8 @@
 
 - 🤖 **AI智能分析**: 使用Claude LLM自动分类和翻译RSS内容
 - 📊 **每日摘要**: 生成结构化的每日技术动态摘要
-- 🌐 **现代Web界面**: 使用React + TailwindCSS构建的优雅极客风格界面
+- �️ **Podcast生成**: 基于NotebookLM将每日新闻转换为专业播客音频
+- �🌐 **现代Web界面**: 使用React + TailwindCSS构建的优雅极客风格界面
 - ☁️ **自动部署**: GitHub Actions自动化工作流，部署到Cloudflare Pages
 - 🔄 **增量更新**: 智能的ETag/Last-Modified支持，避免重复抓取
 
@@ -17,9 +18,11 @@ AutoRss/
 ├── scripts/
 │   ├── fetch_rss.py           # RSS订阅获取脚本
 │   ├── analyze_rss.py         # LLM分析脚本
+│   ├── generate_podcast.py    # Podcast生成脚本 🆕
 │   └── generate_static_data.py # 静态数据生成
 ├── data/
 │   ├── summaries/             # AI生成的每日摘要
+│   ├── podcasts/              # 生成的Podcast音频 🆕
 │   ├── feed_state.json        # RSS源状态缓存
 │   └── rss_history.txt        # 历史记录
 ├── raw_content/               # 原始RSS数据（按日期组织）
@@ -109,12 +112,50 @@ python scripts/fetch_rss.py
 # 分析特定日期
 python scripts/analyze_rss.py 2026-02-09
 
+# 🆕 生成Podcast
+python scripts/generate_podcast.py --date 2026-02-09
+
 # 生成Web静态数据
 python scripts/generate_static_data.py
 
 # 构建Web应用
 cd web && npm run build
 ```
+
+## 🎙️ Podcast 生成
+
+基于 [NotebookLM](https://github.com/teng-lin/notebooklm-py) 将每日新闻转换为专业播客音频。
+
+### 快速开始
+
+```bash
+# 一键安装和配置
+./setup_podcast.sh
+
+# 异步生成（推荐）- 立即返回，后台生成
+python scripts/generate_podcast.py --no-wait
+
+# 等待 5-10 分钟后下载
+python scripts/download_podcast.py
+
+# 收听
+open data/podcasts/2026-02-10_podcast.mp3
+```
+
+### 功能特性
+
+- ✅ 支持多种格式：深度讨论、简要概述、批判分析、辩论形式
+- ✅ 可调节长度：短版、标准版、长版
+- ✅ 异步模式：提交后即可返回，无需等待
+- ✅ 多语言支持（默认中文）
+- ✅ 自动化生成高质量AI语音
+- ✅ 保存完整元数据
+
+### 详细文档
+
+- 🚀 [快速开始指南](QUICKSTART_PODCAST.md) - 最简单的使用方法
+- 📖 [完整文档](README_PODCAST.md) - 所有功能和配置
+- 💡 [使用示例](PODCAST_EXAMPLES.md) - 各种场景的实用示例
 
 ## 🎨 Web界面特性
 
