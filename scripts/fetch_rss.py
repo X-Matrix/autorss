@@ -133,9 +133,17 @@ def process_feed(feed, base_dir, seen_hashes, new_hashes):
         published_str = entry.get('published', '')
         if published_str:
             try:
-                # 尝试解析日期
+                # 尝试解析日期，保留时区信息
                 pub_date = date_parser.parse(published_str)
-                date_folder = pub_date.strftime('%Y-%m-%d')
+                # 如果有时区信息，转换为UTC；否则视为本地时间
+                if pub_date.tzinfo is not None:
+                    # 转换到UTC
+                    pub_date_utc = pub_date.astimezone(datetime.timezone.utc)
+                    # 使用UTC日期作为文件夹名
+                    date_folder = pub_date_utc.strftime('%Y-%m-%d')
+                else:
+                    # 没有时区信息，使用原始日期
+                    date_folder = pub_date.strftime('%Y-%m-%d')
             except Exception as e:
                 print(f'Failed to parse date "{published_str}": {e}, using today', file=sys.stderr)
                 date_folder = datetime.date.today().isoformat()

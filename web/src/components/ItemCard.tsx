@@ -1,5 +1,6 @@
 import type { FeedItem } from '../types';
 import { ExternalLink, Calendar } from 'lucide-react';
+import { formatPublishedDate } from '../utils/dateFormat';
 
 export default function ItemCard({ item }: { item: FeedItem }) {
   return (
@@ -20,7 +21,7 @@ export default function ItemCard({ item }: { item: FeedItem }) {
       <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800/50 flex justify-between items-center mt-auto">
          <div className="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-600 font-mono">
            <Calendar className="w-3 h-3" />
-           <span>{item.published !== "发布时间未提供" ? item.published : "Unknown Date"}</span>
+           <span>{formatPublishedDate(item.published)}</span>
          </div>
          <a href={item.link} target="_blank" rel="noopener noreferrer" 
             className="text-emerald-600 dark:text-emerald-500 hover:text-emerald-500 dark:hover:text-emerald-400 inline-flex items-center gap-1 text-xs uppercase tracking-wider font-bold transition-colors">
