@@ -2,8 +2,8 @@ name: Daily RSS Summary
 
 on:
   schedule:
-    # 每天UTC时间00:00运行（北京时间08:00）
-    - cron: '0 0 * * *'
+    # 每天UTC时间22:00运行（北京时间次日06:00）
+    - cron: '0 22 * * *'
   workflow_dispatch:  # 允许手动触发
 
 jobs:
@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
       
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -33,11 +35,46 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           # 分析昨天的数据
-          python scripts/analyze_rss.py
+          YESTERDAY=$(date -u -d '1 day ago' +'%Y-%m-%d')
+          python scripts/analyze_rss.py $YESTERDAY
       
       - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ raw_content/
           git diff --quiet && git diff --staged --quiet || (git commit -m "Daily RSS summary $(date +'%Y-%m-%d')" && git push)
+      
+      - name: Slack Notify — Success
+        if: ${{ success() }}
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK }}
+          webhook-type: incoming-webhook
+          payload: |
+            text: "*Daily RSS Summary*: ${{ job.status }}\nRepository: ${{ github.repository }}\nRun: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
+            blocks:
+              - type: "section"
+                text:
+                  type: "mrkdwn"
+                  text: "Daily RSS Summary: ${{ job.status }}\nRepository: ${{ github.repository }}\nRun: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
+      - name: Slack Notify — Failure
+        if: ${{ failure() }}
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK }}
+          webhook-type: incoming-webhook
+          payload: |
+            text: "*Daily RSS Summary*: ${{ job.status }}\nRepository: ${{ github.repository }}\nRun: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
+            blocks:
+              - type: "section"
+                text:
+                  type: "mrkdwn"
+                  text: "Daily RSS Summary: ${{ job.status }}\nRepository: ${{ github.repository }}\nRun: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

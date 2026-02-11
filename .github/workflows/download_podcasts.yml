@@ -1,9 +1,13 @@
 name: Download Pending Podcasts
 
 on:
+  workflow_run:
+    workflows: ["Generate Daily Podcast"]
+    types:
+      - completed
   schedule:
-    # 每天运行两次，检查是否有待下载的 podcast
-    - cron: '0 */12 * * *'  # 每12小时运行一次
+    # 每天运行一次，检查是否有待下载的 podcast
+    - cron: '0 12 * * *'  # 每天中午12点运行一次
   workflow_dispatch:  # 允许手动触发
     inputs:
       date:
@@ -16,6 +20,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: Wait 30 minutes for podcast generation
+        if: github.event_name == 'workflow_run'
+        run: |
+          echo "Waiting 30 minutes for podcast generation to complete..."
+          sleep 1800
+      
       - name: Checkout repository
         uses: actions/checkout@v4
       
