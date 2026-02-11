@@ -1,56 +1,73 @@
-# Web开发指南
+# React + TypeScript + Vite
 
-## 本地开发
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-1. 安装依赖:
-```bash
-npm install
-```
+Currently, two official plugins are available:
 
-2. 启动开发服务器:
-```bash
-npm run dev
-```
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-3. 构建生产版本:
-```bash
-npm run build
-```
+## React Compiler
 
-## 数据加载
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Web应用从 `/public/data/` 目录加载静态JSON文件：
+## Expanding the ESLint configuration
 
-- `/data/index.json`: 包含所有日期的索引
-- `/data/summaries/{date}.json`: 每日摘要详情
-
-这些文件由 `scripts/generate_static_data.py` 自动生成。
-
-## 部署
-
-应用构建后的 `dist/` 目录可以部署到任何静态托管服务，如：
-- Cloudflare Pages
-- Vercel
-- Netlify
-- GitHub Pages
-
-## 自定义
-
-### 颜色主题
-
-编辑 `tailwind.config.js`:
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
 ```js
-theme: {
-  extend: {
-    colors: {
-      'dark': '#your-color',
-      'accent': '#your-color',
-    }
-  }
-}
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-### 字体
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-在 `index.html` 中修改Google Fonts链接，然后在 `tailwind.config.js` 中更新 `fontFamily`。
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```

@@ -55,6 +55,7 @@ async def analyze_batch(batch_items: List[Dict[str, Any]], batch_num: int, clien
     items_text = "\n\n".join([
         f"标题: {item.get('title', 'N/A')}\n"
         f"链接: {item.get('link', 'N/A')}\n"
+        f"发布时间: {item.get('published', 'N/A')}\n"
         f"摘要: {item.get('summary', 'N/A')[:200]}"
         for item in batch_items
     ])
@@ -62,7 +63,7 @@ async def analyze_batch(batch_items: List[Dict[str, Any]], batch_num: int, clien
     prompt = f"""请分析以下{len(batch_items)}条RSS内容，完成以下任务：
 
 1. 将这些内容分类到合适的类别（如：技术、科学、商业、设计、AI/机器学习、开源项目、新闻等）
-2. 对每条内容的标题和摘要进行中文翻译（如果原文是英文）
+2. 对每条内容的标题和摘要进行中文翻译（如果原文是英文）,去掉所有的HTML标签，并生成一个简短的中文摘要（不超过200字）
 3. 选出最值得关注的亮点（2-3个）
 
 请以JSON格式返回结果，格式如下：
@@ -140,13 +141,13 @@ RSS内容：
         }
 
 
-async def categorize_and_translate(items: List[Dict[str, Any]], api_key: str) -> Dict[str, Any]:
+async def categorize_and_translate(items: List[Dict[str, Any]], api_key: str, date_str: str) -> Dict[str, Any]:
     """
     使用LLM对RSS条目进行分批异步分析和翻译
     """
     if not items:
         return {
-            "date": datetime.date.today().isoformat(),
+            "date": date_str,
             "total_items": 0,
             "categories": {},
             "category_summaries": {},
@@ -233,7 +234,7 @@ async def categorize_and_translate(items: List[Dict[str, Any]], api_key: str) ->
     
     # 返回最终结果
     return {
-        "date": datetime.date.today().isoformat(),
+        "date": date_str,
         "total_items": len(items),
         "categories": merged_categories,
         "category_summaries": category_summaries,
@@ -280,7 +281,7 @@ async def async_main():
     
     # 使用LLM分析（异步并发）
     logger.info('正在使用LLM进行分批异步分析...')
-    summary = await categorize_and_translate(items, api_key)
+    summary = await categorize_and_translate(items, api_key, date_str)
     
     # 保存结果
     save_summary(summary, date_str)
