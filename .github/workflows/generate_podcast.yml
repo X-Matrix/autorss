@@ -71,6 +71,38 @@ jobs:
           git config --local user.name "GitHub Action"
           git add data/podcasts/*_metadata.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "Add podcast metadata $(date +'%Y-%m-%d')" && git push)
+      
+      - name: Slack Notify — Success
+        if: ${{ success() }}
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK }}
+          webhook-type: incoming-webhook
+          payload: |
+            text: "*Generate Daily Podcast*: ${{ job.status }}\nRepository: ${{ github.repository }}\nRun: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
+            blocks:
+              - type: "section"
+                text:
+                  type: "mrkdwn"
+                  text: "Generate Daily Podcast: ${{ job.status }}\nRepository: ${{ github.repository }}\nRun: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
+      - name: Slack Notify — Failure
+        if: ${{ failure() }}
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK }}
+          webhook-type: incoming-webhook
+          payload: |
+            text: "*Generate Daily Podcast*: ${{ job.status }}\nRepository: ${{ github.repository }}\nRun: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
+            blocks:
+              - type: "section"
+                text:
+                  type: "mrkdwn"
+                  text: "Generate Daily Podcast: ${{ job.status }}\nRepository: ${{ github.repository }}\nRun: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
 
   download-podcast:
     runs-on: ubuntu-latest
@@ -126,3 +158,35 @@ jobs:
           git config --local user.name "GitHub Action"
           git add data/podcasts/*.mp3 web/public/data/
           git diff --quiet && git diff --staged --quiet || (git commit -m "Add daily podcast $(date +'%Y-%m-%d')" && git push)
+      
+      - name: Slack Notify — Success
+        if: ${{ success() }}
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK }}
+          webhook-type: incoming-webhook
+          payload: |
+            text: "*Download Podcast*: ${{ job.status }}\nRepository: ${{ github.repository }}\nRun: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
+            blocks:
+              - type: "section"
+                text:
+                  type: "mrkdwn"
+                  text: "Download Podcast: ${{ job.status }}\nRepository: ${{ github.repository }}\nRun: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
+      - name: Slack Notify — Failure
+        if: ${{ failure() }}
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK }}
+          webhook-type: incoming-webhook
+          payload: |
+            text: "*Download Podcast*: ${{ job.status }}\nRepository: ${{ github.repository }}\nRun: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
+            blocks:
+              - type: "section"
+                text:
+                  type: "mrkdwn"
+                  text: "Download Podcast: ${{ job.status }}\nRepository: ${{ github.repository }}\nRun: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View run>"
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
