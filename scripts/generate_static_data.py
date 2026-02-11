@@ -89,20 +89,10 @@ def copy_summaries():
 
 
 def copy_podcasts():
-    """复制播客文件到web/public目录"""
-    if not PODCASTS_DIR.exists():
-        return
-    
-    podcasts_dir = WEB_PUBLIC / 'podcasts'
-    podcasts_dir.mkdir(exist_ok=True)
-    
-    count = 0
-    for audio_file in PODCASTS_DIR.glob('*_podcast.mp3'):
-        target = podcasts_dir / audio_file.name
-        shutil.copy2(audio_file, target)
-        count += 1
-    
-    print(f'Copied {count} podcast files')
+    """不再复制播客文件，podcast将上传到R2存储"""
+    # Podcasts are now uploaded to R2 bucket (autorss-podcast)
+    # No need to copy to web/public
+    print('Skipping podcast copy - podcasts will be uploaded to R2')
 
 
 def main():
@@ -110,7 +100,7 @@ def main():
     ensure_dirs()
     generate_index()
     copy_summaries()
-    copy_podcasts()
+    # copy_podcasts()  # 不再需要复制，直接上传到R2
     print('Static data generation complete!')
 
 

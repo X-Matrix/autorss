@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import type { DailySummary } from '../types';
 import ItemCard from '../components/ItemCard';
 import { ArrowLeft, Tag, Info, Headphones } from 'lucide-react';
+import { getPodcastUrl } from '../config';
 
 export default function DayView() {
   const { date } = useParams<{ date: string }>();
@@ -56,7 +57,7 @@ export default function DayView() {
              <h2 className="text-xl font-bold text-indigo-900 dark:text-indigo-100">今日播客</h2>
           </div>
           <audio controls className="w-full">
-            <source src={`/data/podcasts/${data.date}_podcast.mp3`} type="audio/mpeg" />
+            <source src={getPodcastUrl(data.date)} type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </section>
