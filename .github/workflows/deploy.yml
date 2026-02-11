@@ -35,7 +35,7 @@ jobs:
             if [ -f "$file" ]; then
               filename=$(basename "$file")
               echo "Uploading $filename to R2..."
-              wrangler r2 object put "autorss-podcast/$filename" --file "$file"
+              wrangler r2 object put "autorss-podcast/$filename" --file "$file" --remote
             fi
           done
         env:
