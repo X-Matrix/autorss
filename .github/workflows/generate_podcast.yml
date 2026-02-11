@@ -45,8 +45,6 @@ jobs:
           chmod 600 ~/.notebooklm/storage_state.json
       
       - name: Generate Podcast (async mode)
-        env:
-          NOTEBOOKLM_STORAGE_STATE: ${{ secrets.NOTEBOOKLM_STORAGE_STATE_PATH || '~/.notebooklm/storage_state.json' }}
         run: |
           if [ -n "${{ inputs.date }}" ]; then
             DATE_ARG="--date ${{ inputs.date }}"
@@ -104,8 +102,6 @@ jobs:
           chmod 600 ~/.notebooklm/storage_state.json
       
       - name: Download Podcast
-        env:
-          NOTEBOOKLM_STORAGE_STATE: ${{ secrets.NOTEBOOKLM_STORAGE_STATE_PATH || '~/.notebooklm/storage_state.json' }}
         run: |
           if [ -n "${{ inputs.date }}" ]; then
             python scripts/download_podcast.py --date ${{ inputs.date }}

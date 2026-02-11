@@ -38,8 +38,6 @@ jobs:
           chmod 600 ~/.notebooklm/storage_state.json
       
       - name: Check and download pending podcasts
-        env:
-          NOTEBOOKLM_STORAGE_STATE: ${{ secrets.NOTEBOOKLM_STORAGE_STATE_PATH || '~/.notebooklm/storage_state.json' }}
         run: |
           # 创建下载脚本
           cat > /tmp/check_and_download.py << 'EOF'
