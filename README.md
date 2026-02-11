@@ -57,12 +57,88 @@ cd AutoRss
 https://example.com/feed.xml
 ```
 
-### 3. 设置环境变量
+### 3. 设置环境变量（Secrets / 本地环境）
 
-需要设置以下GitHub Secrets:
-- `OPENAI_API_KEY`: OpenAI API密钥
-- `CLOUDFLARE_API_TOKEN`: Cloudflare Pages部署令牌
-- `CLOUDFLARE_ACCOUNT_ID`: Cloudflare账户ID
+以下为推荐的 Secrets 与本地环境配置说明。将 GitHub Actions 所需的敏感信息添加到 GitHub 仓库设置 -> `Settings` -> `Secrets and variables` -> `Actions` 中。
+
+- **必填（GitHub Secrets）**:
+  - `OPENAI_API_KEY`: 用于调用 OpenAI 或其它 LLM 提供商的 API Key（例如以 `sk-...` 开头的密钥）。
+  - `CLOUDFLARE_API_TOKEN`: Cloudflare Pages 的部署令牌。建议创建最小权限的令牌，仅包含 Pages 部署所需权限。
+  - `CLOUDFLARE_ACCOUNT_ID`: Cloudflare 账户 ID（可在 Cloudflare 仪表板的账户概览中找到）。
+
+- **可选/扩展（根据使用的服务添加）**:
+  - `NOTEBOOKLM_API_KEY`：如果使用 NotebookLM 的 API/服务时需要添加。
+  - 其他第三方服务的 API Key（例如语音合成、存储、翻译服务等），请按需添加并在 CI 中以 `${{ secrets.NAME }}` 方式引用。
+
+- **本地开发（临时环境变量）**:
+  - 直接在终端导出（临时生效）：
+    ```bash
+    export OPENAI_API_KEY=your_api_key
+    export CLOUDFLARE_API_TOKEN=your_cloudflare_token
+    export CLOUDFLARE_ACCOUNT_ID=your_account_id
+    ```
+  - 使用 `.env` 文件（不要将其提交到仓库）：
+    ```text
+    OPENAI_API_KEY=your_api_key
+    CLOUDFLARE_API_TOKEN=your_cloudflare_token
+    CLOUDFLARE_ACCOUNT_ID=your_account_id
+    ```
+    然后在当前 shell 中加载：
+    ```bash
+    source .env
+    ```
+  - 也可使用 `direnv`、`dotenv` 等工具自动加载本地环境变量。
+
+- **安全建议**:
+  - 永远不要将密钥或凭据提交到版本库；使用 GitHub Secrets 存储并在 Actions 中注入。
+  - 为部署或 API 密钥设定最小权限；如果服务支持，启用域名/IP 白名单与速率限制。
+  - 在 CI/日志中不要打印完整密钥，必要时打印已掩码或校验信息（如长度、前后几位）。
+
+- **在 GitHub Actions 中使用**:
+  - 在 workflow 文件中通过 `${{ secrets.OPENAI_API_KEY }}` 使用密钥；示例：
+    ```yaml
+    - name: Run analysis
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: python scripts/analyze_rss.py
+    ```
+
+- **常见问题**:
+  - 找不到 `CLOUDFLARE_ACCOUNT_ID`：登录 Cloudflare -> 仪表板 -> 账户概览（Account Overview）可查看 Account ID。
+  - 需要在本地模拟 GitHub Secrets？ 推荐使用本地环境变量或 `.env`，并确保 `.gitignore` 忽略 `.env`。
+
+### 仓库中使用到的 Secrets
+
+下面列出当前仓库 `.github/workflows` 中实际使用到的 Secrets 名称、用途与简要建议：
+
+- `OPENAI_API_KEY`:
+  - 用途：在 `Daily RSS Summary` workflow 中用于调用 LLM（分析摘要）。
+  - 建议：只给予模型调用权限，定期轮换密钥。
+
+- `NOTEBOOKLM_STORAGE_STATE`:
+  - 用途：在 `Generate Daily Podcast`、`Download Pending Podcasts` workflows 中，用作 NotebookLM 的 storage state（工作流中以 `NOTEBOOKLM_STORAGE_STATE` 内容写入到 `~/.notebooklm/storage_state.json`）。
+  - 建议：将其作为敏感 JSON 内容存储，权限最小化，设置文件权限为 `600`。
+
+- `CLOUDFLARE_API_TOKEN`:
+  - 用途：在 `Build and Deploy` workflow 中用于 Cloudflare Pages 发布（`cloudflare/pages-action`）。
+  - 建议：创建最小权限的 API 令牌，仅包含 Pages 部署权限，避免包含过多账户级权限。
+
+- `CLOUDFLARE_ACCOUNT_ID`:
+  - 用途：Cloudflare 账户标识，`Build and Deploy` 与 R2 上传步骤需要用到。
+  - 建议：非秘密信息也可存为 Secret，便于在 workflow 中统一管理。
+
+- `CLOUDFLARE_R2_API_TOKEN`:
+  - 用途：在 `Build and Deploy` workflow 中用于将 podcast 上传到 R2（通过 `wrangler`）。
+  - 建议：仅授予 R2 写入权限并可限制为特定命名空间。
+
+- `R2_PODCAST_URL`:
+  - 用途：在构建前注入到前端构建环境以生成指向 R2 的静态资源 URL（`VITE_R2_PODCAST_URL`）。
+  - 建议：作为构建时变量使用，不在客户端代码中暴露敏感令牌。
+
+- `SLACK_WEBHOOK`:
+  - 用途：在 `Fetch RSS feeds` workflow 中用于发送 Slack 通知。
+  - 建议：仅用于 webhook 通知，不要打印到日志中。
+
 
 ### 4. 本地开发
 
@@ -153,9 +229,9 @@ open data/podcasts/2026-02-10_podcast.mp3
 
 ### 详细文档
 
-- 🚀 [快速开始指南](QUICKSTART_PODCAST.md) - 最简单的使用方法
-- 📖 [完整文档](README_PODCAST.md) - 所有功能和配置
-- 💡 [使用示例](PODCAST_EXAMPLES.md) - 各种场景的实用示例
+- 🚀 [快速开始指南](./docs/QUICKSTART_PODCAST.md) - 最简单的使用方法
+- 📖 [完整文档](./docs/README_PODCAST.md) - 所有功能和配置
+- 💡 [使用示例](./docs/PODCAST_EXAMPLES.md) - 各种场景的实用示例
 
 ## 🎨 Web界面特性
 
