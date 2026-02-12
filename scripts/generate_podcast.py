@@ -71,8 +71,8 @@ def format_news_for_podcast(summary: dict) -> str:
     if daily_summary:
         content_parts.append(f"\n## 今日要点\n\n{daily_summary}\n")
     
-    # 添加各研究方向的精选论文（每个方向最多3篇）
-    content_parts.append("\n## 研究方向精选\n")
+    # 添加各研究方向的所有论文
+    content_parts.append("\n## 研究方向详细介绍\n")
     for category, items in categories.items():
         if not items:
             continue
@@ -83,15 +83,17 @@ def format_news_for_podcast(summary: dict) -> str:
         if cat_summary:
             content_parts.append(f"{cat_summary}\n")
         
-        # 只选择前3篇最重要的论文
-        selected_items = items[:3]
-        for item in selected_items:
+        # 包含所有论文
+        for item in items:
             title = item.get('title_zh') or item.get('title', 'N/A')
             summary_text = item.get('summary_zh') or item.get('summary', 'N/A')
             authors = item.get('authors', [])
+            link = item.get('link', '')
             
-            # 简洁格式，只包含标题和核心摘要
+            # 包含标题、链接和核心摘要
             content_parts.append(f"\n**{title}**")
+            if link:
+                content_parts.append(f"论文链接：{link}")
             if authors:
                 author_str = ', '.join(authors[:2])
                 if len(authors) > 2:
@@ -335,8 +337,8 @@ async def main():
         '--format',
         type=str,
         choices=['deep-dive', 'brief', 'critique', 'debate'],
-        default='deep-dive',
-        help='Podcast 格式 (默认: deep-dive)'
+        default='brief',
+        help='Podcast 格式 (默认: brief)'
     )
     parser.add_argument(
         '--length',
