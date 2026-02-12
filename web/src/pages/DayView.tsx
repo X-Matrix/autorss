@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import type { DailySummary } from '../types';
 import ItemCard from '../components/ItemCard';
-import { ArrowLeft, Tag, Info, Headphones, List, ChevronLeft, ChevronRight, Share2 } from 'lucide-react';
+import { ArrowLeft, Tag, Info, Headphones, List, ChevronLeft, ChevronRight, Share2, X } from 'lucide-react';
 import { getPodcastUrl } from '../config';
 
 export default function DayView() {
@@ -11,6 +11,8 @@ export default function DayView() {
   const [loading, setLoading] = useState(true);
   const [activeSection, setActiveSection] = useState<string>('');
   const [isOutlineOpen, setIsOutlineOpen] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showFloatingButton, setShowFloatingButton] = useState(true);
 
   useEffect(() => {
     if (!date) return;
@@ -57,6 +59,9 @@ export default function DayView() {
     const handleScroll = () => {
       if (!data) return;
       
+      // 滚动时显示悬浮按钮
+      setShowFloatingButton(true);
+      
       const sections = Object.keys(data.categories);
       const scrollPosition = window.scrollY + 200;
 
@@ -80,6 +85,15 @@ export default function DayView() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [data]);
 
+  // 1秒后隐藏悬浮按钮
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowFloatingButton(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [showFloatingButton]); // 依赖showFloatingButton，每次显示后重新计时
+
   const scrollToSection = (category: string) => {
     const element = document.getElementById(category);
     if (element) {
@@ -89,6 +103,8 @@ export default function DayView() {
         top: elementPosition,
         behavior: 'smooth'
       });
+      // 关闭移动端菜单
+      setIsMobileMenuOpen(false);
     }
   };
 
@@ -106,6 +122,64 @@ export default function DayView() {
         <ArrowLeft className="w-4 h-4" />
         返回首页
       </Link>
+
+      {/* 移动端悬浮导航按钮 */}
+      <button
+        onClick={() => setIsMobileMenuOpen(true)}
+        className={`lg:hidden fixed left-4 top-1/2 -translate-y-1/2 z-30 flex flex-col items-center gap-1 px-3 py-3 bg-emerald-500 text-white shadow-lg rounded-full hover:bg-emerald-600 transition-all hover:scale-110 ${
+          showFloatingButton ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+        style={{ transition: 'opacity 0.5s ease-in-out, transform 0.2s' }}
+      >
+        <List className="w-5 h-5" />
+        <span className="text-[10px] font-bold">目录</span>
+      </button>
+
+      {/* 移动端导航抽屉 */}
+      {isMobileMenuOpen && (
+        <>
+          {/* 遮罩层 */}
+          <div 
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+          
+          {/* 抽屉菜单 - 从左侧滑出 */}
+          <div className="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-white dark:bg-zinc-900 z-50 lg:hidden shadow-2xl overflow-y-auto animate-in slide-in-from-left duration-300">
+            <div className="sticky top-0 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 p-4 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <List className="w-4 h-4 text-emerald-600 dark:text-emerald-500" />
+                <h3 className="font-bold text-sm uppercase tracking-wider text-zinc-700 dark:text-zinc-300">研究方向</h3>
+              </div>
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+              >
+                <X className="w-5 h-5 text-zinc-500" />
+              </button>
+            </div>
+            
+            <nav className="p-4 space-y-1">
+              {data && Object.entries(data.categories).map(([category, items]) => (
+                <button
+                  key={category}
+                  onClick={() => scrollToSection(category)}
+                  className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-all ${
+                    activeSection === category
+                      ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-500 font-medium border-l-2 border-emerald-500'
+                      : 'text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800/50 border-l-2 border-transparent'
+                  }`}
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="truncate">{category}</span>
+                    <span className="text-xs opacity-60 shrink-0">{items.length}</span>
+                  </div>
+                </button>
+              ))}
+            </nav>
+          </div>
+        </>
+      )}
 
       <div className="flex gap-8 relative">
         {/* 左侧导航 */}
