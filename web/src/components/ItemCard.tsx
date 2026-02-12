@@ -37,7 +37,7 @@ export default function ItemCard({ item }: { item: FeedItem }) {
         </div>
       )}
       
-      <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed text-sm mb-4 line-clamp-4 group-hover:line-clamp-none transition-all">
+      <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed text-sm mb-4 md:line-clamp-4 md:group-hover:line-clamp-none transition-all">
         {item.summary_zh || item.summary}
       </p>
       
