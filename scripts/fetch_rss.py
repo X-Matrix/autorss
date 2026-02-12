@@ -9,12 +9,20 @@ import re
 from dateutil import parser as date_parser
 
 import requests
-import feedparser
 import xml.etree.ElementTree as ET
 
 
+# arXiv API configuration
+ARXIV_API_URL = "https://export.arxiv.org/api/query"
+ARXIV_QUERY_PARAMS = {
+    'search_query': '(cat:cs.AI)',
+    'sortBy': 'lastUpdatedDate',
+    'sortOrder': 'descending',
+    'start': 0,
+    'max_results': 100
+}
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-RSS_DIR = ROOT / 'rss'
 RAW_DIR = ROOT / 'raw_content'
 DATA_DIR = ROOT / 'data'
 HISTORY_FILE = DATA_DIR / 'rss_history.txt'
@@ -47,34 +55,62 @@ def sanitize_filename(s):
     return s[:200]
 
 
-def parse_source_file(path):
-    text = path.read_text(encoding='utf-8').strip()
-    if text.startswith('http://') or text.startswith('https://'):
-        return ('url', text)
-    # try to detect OPML and extract feed URLs
+def fetch_arxiv_papers():
+    """
+    从 arXiv API 获取最新的 AI 论文
+    """
     try:
-        root = ET.fromstring(text.encode('utf-8'))
-        if root.tag.lower().endswith('opml'):
-            urls = []
-            for out in root.findall('.//outline'):
-                xmlurl = out.attrib.get('xmlUrl') or out.attrib.get('xmlurl')
-                if xmlurl:
-                    urls.append(xmlurl)
-            return ('opml', urls)
-    except ET.ParseError:
-        pass
-    # otherwise treat file content as XML data (single feed)
-    return ('xml', text)
-
-
-def fetch_feed_from_url(url):
-    # legacy compatibility: keep simple fetch (not used)
-    try:
-        resp = requests.get(url, timeout=30)
+        params = ARXIV_QUERY_PARAMS.copy()
+        resp = requests.get(ARXIV_API_URL, params=params, timeout=30)
         resp.raise_for_status()
-        return feedparser.parse(resp.content)
+        
+        # 解析 Atom XML feed
+        root = ET.fromstring(resp.content)
+        
+        # arXiv API 使用 Atom 格式
+        ns = {'atom': 'http://www.w3.org/2005/Atom'}
+        
+        entries = []
+        for entry in root.findall('atom:entry', ns):
+            # 提取论文信息
+            paper = {
+                'id': entry.find('atom:id', ns).text if entry.find('atom:id', ns) is not None else '',
+                'title': entry.find('atom:title', ns).text if entry.find('atom:title', ns) is not None else '',
+                'summary': entry.find('atom:summary', ns).text if entry.find('atom:summary', ns) is not None else '',
+                'published': entry.find('atom:published', ns).text if entry.find('atom:published', ns) is not None else '',
+                'updated': entry.find('atom:updated', ns).text if entry.find('atom:updated', ns) is not None else '',
+                'link': '',
+                'authors': []
+            }
+            
+            # 获取论文链接
+            for link in entry.findall('atom:link', ns):
+                if link.get('title') == 'pdf':
+                    paper['pdf_link'] = link.get('href', '')
+                elif link.get('rel') == 'alternate':
+                    paper['link'] = link.get('href', '')
+            
+            # 获取作者
+            for author in entry.findall('atom:author', ns):
+                name = author.find('atom:name', ns)
+                if name is not None:
+                    paper['authors'].append(name.text)
+            
+            # 获取分类
+            categories = []
+            for category in entry.findall('atom:category', ns):
+                term = category.get('term')
+                if term:
+                    categories.append(term)
+            paper['categories'] = categories
+            
+            entries.append(paper)
+        
+        print(f'成功获取 {len(entries)} 篇 arXiv 论文')
+        return entries
+        
     except Exception as e:
-        print(f'Failed to fetch {url}: {e}', file=sys.stderr)
+        print(f'Failed to fetch arXiv papers: {e}', file=sys.stderr)
         return None
 
 
@@ -94,80 +130,103 @@ def save_state(state):
         print(f'Failed to save state: {e}', file=sys.stderr)
 
 
-def fetch_feed_with_state(url, state):
-    headers = {}
-    s = state.get(url, {}) or {}
-    if s.get('etag'):
-        headers['If-None-Match'] = s['etag']
-    if s.get('modified'):
-        headers['If-Modified-Since'] = s['modified']
-    try:
-        resp = requests.get(url, timeout=30, headers=headers)
-        if resp.status_code == 304:
-            return None, s
-        resp.raise_for_status()
-        parsed = feedparser.parse(resp.content)
-        new_meta = {'etag': resp.headers.get('ETag'), 'modified': resp.headers.get('Last-Modified')}
-        return parsed, new_meta
-    except Exception as e:
-        print(f'Failed to fetch {url}: {e}', file=sys.stderr)
-        return None, s
-
-
-def process_feed(feed, base_dir, seen_hashes, new_hashes):
-    """Process feed entries.
-
-    Returns: (added_count, added_hashes_set)
+def process_arxiv_entries(entries, base_dir, seen_hashes, new_hashes, filter_yesterday=True):
+    """处理 arXiv 论文条目
+    
+    Args:
+        entries: arXiv 论文条目列表
+        base_dir: 保存目录
+        seen_hashes: 已处理的哈希集合
+        new_hashes: 新增的哈希集合
+        filter_yesterday: 是否只保留昨天发布的论文（基于 published 字段）
+    
+    Returns: (added_count, added_hashes_set, filtered_count)
     """
-    if not feed:
-        return 0, set()
+    if not entries:
+        return 0, set(), 0
+    
     added = 0
+    filtered = 0
     added_hashes = set()
-    for entry in feed.entries:
-        unique = entry.get('id') or entry.get('link') or (entry.get('title', '') + entry.get('published', ''))
+    today = datetime.date.today()
+    yesterday = today - datetime.timedelta(days=1)
+    
+    for entry in entries:
+        # 使用论文ID作为唯一标识
+        unique = entry.get('id', '')
+        if not unique:
+            continue
+            
         h = hashlib.sha256(unique.encode('utf-8')).hexdigest()
         if h in seen_hashes or h in new_hashes or h in added_hashes:
             continue
         
-        # 解析发布日期
-        published_str = entry.get('published', '')
-        if published_str:
+        # 检查发布日期是否为昨天
+        if filter_yesterday:
+            published_str = entry.get('published', '')
+            if published_str:
+                try:
+                    pub_date = date_parser.parse(published_str)
+                    if pub_date.tzinfo is not None:
+                        pub_date_utc = pub_date.astimezone(datetime.timezone.utc)
+                        pub_day = pub_date_utc.date()
+                    else:
+                        pub_day = pub_date.date()
+                    
+                    # 只保留昨天发布的论文
+                    if pub_day != yesterday:
+                        filtered += 1
+                        continue
+                except Exception as e:
+                    print(f'Failed to parse published date "{published_str}": {e}', file=sys.stderr)
+                    filtered += 1
+                    continue
+            else:
+                # 没有发布日期，跳过
+                filtered += 1
+                continue
+        
+        # 解析日期用于文件夹名（使用 updated 字段，因为它更能反映最新状态）
+        date_str = entry.get('updated') or entry.get('published', '')
+        if date_str:
             try:
-                # 尝试解析日期，保留时区信息
-                pub_date = date_parser.parse(published_str)
-                # 如果有时区信息，转换为UTC；否则视为本地时间
+                pub_date = date_parser.parse(date_str)
                 if pub_date.tzinfo is not None:
-                    # 转换到UTC
                     pub_date_utc = pub_date.astimezone(datetime.timezone.utc)
-                    # 使用UTC日期作为文件夹名
                     date_folder = pub_date_utc.strftime('%Y-%m-%d')
                 else:
-                    # 没有时区信息，使用原始日期
                     date_folder = pub_date.strftime('%Y-%m-%d')
             except Exception as e:
-                print(f'Failed to parse date "{published_str}": {e}, using today', file=sys.stderr)
-                date_folder = datetime.date.today().isoformat()
+                print(f'Failed to parse date "{date_str}": {e}, using today', file=sys.stderr)
+                date_folder = today.isoformat()
         else:
-            # 如果没有发布日期，使用今天的日期
-            date_folder = datetime.date.today().isoformat()
+            date_folder = today.isoformat()
         
         # 创建日期对应的目录
         target_dir = base_dir / date_folder
         target_dir.mkdir(parents=True, exist_ok=True)
         
+        # 构造条目数据（格式与原RSS保持一致，便于后续分析）
         item = {
-            'title': entry.get('title'),
-            'link': entry.get('link'),
-            'published': published_str,
-            'summary': entry.get('summary', ''),
+            'title': entry.get('title', '').replace('\n', ' ').strip(),
+            'link': entry.get('link', ''),
+            'published': entry.get('published', ''),
+            'updated': entry.get('updated', ''),
+            'summary': entry.get('summary', '').replace('\n', ' ').strip(),
             'id': entry.get('id', ''),
+            'authors': entry.get('authors', []),
+            'categories': entry.get('categories', []),
+            'pdf_link': entry.get('pdf_link', ''),
         }
+        
         fname = f"{h}.json"
         with open(target_dir / fname, 'w', encoding='utf-8') as f:
             json.dump(item, f, ensure_ascii=False, indent=2)
+        
         added_hashes.add(h)
         added += 1
-    return added, added_hashes
+    
+    return added, added_hashes, filtered
 
 
 def main():
@@ -175,60 +234,25 @@ def main():
     seen = load_history()
     new_hashes = set()
 
-    total_added = 0
-    if not RSS_DIR.exists():
-        print('rss directory not found; nothing to do')
+    print('从 arXiv API 获取最新 AI 论文...')
+    
+    # 获取 arXiv 论文
+    entries = fetch_arxiv_papers()
+    
+    if entries is None:
+        print('获取 arXiv 数据失败')
         return
-
-    state = load_state()
-
-    for src in RSS_DIR.glob('*.xml'):
-        kind, payload = parse_source_file(src)
-        print(f'Processing source: {src} ({kind})')
-        if kind == 'url':
-            feed = None
-            new_meta = {}
-            feed, new_meta = fetch_feed_with_state(payload, state)
-            added, added_hashes = process_feed(feed, RAW_DIR, seen, new_hashes)
-            if added:
-                append_history(added_hashes)
-                seen.update(added_hashes)
-            # update and persist feed state even if no new items
-            if feed is not None:
-                state[payload] = new_meta
-                save_state(state)
-            print(f'Added {added} items from {src.name}')
-            total_added += added
-        elif kind == 'opml':
-            for url in payload:
-                print(f'  fetching {url}')
-                feed, new_meta = fetch_feed_with_state(url, state)
-                if feed is None:
-                    print(f'  no change for {url} (skipping)')
-                    # still persist state entry if present
-                    if url in state:
-                        save_state(state)
-                    continue
-                added, added_hashes = process_feed(feed, RAW_DIR, seen, new_hashes)
-                if added:
-                    append_history(added_hashes)
-                    seen.update(added_hashes)
-                    print(f'  Added {added} items from {url}')
-                # persist state for this feed
-                state[url] = new_meta
-                save_state(state)
-                total_added += added
-        else:
-            feed = feedparser.parse(payload)
-            added, added_hashes = process_feed(feed, RAW_DIR, seen, new_hashes)
-            if added:
-                append_history(added_hashes)
-                seen.update(added_hashes)
-            print(f'Added {added} items from {src.name}')
-            total_added += added
-
-    append_history(new_hashes)
-    print(f'Total new items: {total_added}')
+    
+    # 处理论文条目（只保留昨天发布的）
+    added, added_hashes, filtered = process_arxiv_entries(entries, RAW_DIR, seen, new_hashes, filter_yesterday=True)
+    
+    if added:
+        append_history(added_hashes)
+        seen.update(added_hashes)
+    
+    print(f'成功添加 {added} 篇昨日发布的新论文')
+    print(f'过滤掉 {filtered} 篇非昨日发布的论文')
+    print(f'总计处理: {len(entries)} 篇论文')
 
 
 if __name__ == '__main__':

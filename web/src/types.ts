@@ -5,6 +5,9 @@ export interface FeedItem {
     summary: string;
     summary_zh: string;
     published: string;
+    authors?: string[];
+    categories?: string[];
+    pdf_link?: string;
 }
 
 export interface DailySummary {

@@ -54,43 +54,50 @@ def load_summary(date_str: str) -> dict:
 
 
 def format_news_for_podcast(summary: dict) -> str:
-    """将新闻摘要格式化为适合生成 podcast 的文本内容"""
+    """将arXiv论文摘要格式化为适合生成简洁播客的文本内容"""
     date = summary.get('date', 'Unknown')
     total_items = summary.get('total_items', 0)
     categories = summary.get('categories', {})
     category_summaries = summary.get('category_summaries', {})
+    daily_summary = summary.get('daily_summary', '')
     
-    # 构建内容文本
+    # 构建简洁的内容文本
     content_parts = [
-        f"# {date} 每日科技资讯播客",
-        f"\n## 概览\n今日共收集 {total_items} 条资讯，涵盖以下领域：\n",
+        f"# {date} arXiv AI 研究动态简报",
+        f"\n今日共收录 {total_items} 篇 AI 领域最新论文，涵盖 {len(categories)} 个研究方向。\n",
     ]
     
-    # 添加各分类摘要
-    if category_summaries:
-        content_parts.append("\n## 分类概览\n")
-        for cat, summary_text in category_summaries.items():
-            content_parts.append(f"### {cat}\n{summary_text}\n")
+    # 添加每日总结
+    if daily_summary:
+        content_parts.append(f"\n## 今日要点\n\n{daily_summary}\n")
     
-    # 添加详细内容
-    content_parts.append("\n## 详细资讯\n")
+    # 添加各研究方向的精选论文（每个方向最多3篇）
+    content_parts.append("\n## 研究方向精选\n")
     for category, items in categories.items():
         if not items:
             continue
         
-        content_parts.append(f"\n### {category} ({len(items)}条)\n")
-        for idx, item in enumerate(items, 1):
+        # 获取该方向的总结
+        cat_summary = category_summaries.get(category, '')
+        content_parts.append(f"\n### {category}")
+        if cat_summary:
+            content_parts.append(f"{cat_summary}\n")
+        
+        # 只选择前3篇最重要的论文
+        selected_items = items[:3]
+        for item in selected_items:
             title = item.get('title_zh') or item.get('title', 'N/A')
             summary_text = item.get('summary_zh') or item.get('summary', 'N/A')
-            link = item.get('link', '')
-            published = item.get('published', '')
+            authors = item.get('authors', [])
             
-            content_parts.append(
-                f"\n{idx}. **{title}**\n"
-                f"   - 来源：{link}\n"
-                f"   - 发布时间：{published}\n"
-                f"   - 摘要：{summary_text}\n"
-            )
+            # 简洁格式，只包含标题和核心摘要
+            content_parts.append(f"\n**{title}**")
+            if authors:
+                author_str = ', '.join(authors[:2])
+                if len(authors) > 2:
+                    author_str += f' 等 {len(authors)} 位学者'
+                content_parts.append(f"研究团队：{author_str}")
+            content_parts.append(f"{summary_text}\n")
     
     return '\n'.join(content_parts)
 

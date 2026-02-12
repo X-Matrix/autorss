@@ -44,101 +44,119 @@ def load_raw_items(date_str: str) -> List[Dict[str, Any]]:
     return items
 
 
-async def analyze_batch(batch_items: List[Dict[str, Any]], batch_num: int, client: AsyncOpenAI) -> Dict[str, Any]:
+async def analyze_batch(batch_items: List[Dict[str, Any]], batch_num: int, client: AsyncOpenAI, max_retries: int = 3) -> Dict[str, Any]:
     """
-    异步分析一个批次的RSS条目
+    异步分析一个批次的RSS条目，支持重试
+    
+    Args:
+        batch_items: 要分析的条目列表
+        batch_num: 批次编号
+        client: OpenAI客户端
+        max_retries: 最大重试次数
     """
     if not batch_items:
         return {"categories": {}, "highlights": []}
     
     # 准备发送给LLM的数据
     items_text = "\n\n".join([
-        f"标题: {item.get('title', 'N/A')}\n"
-        f"链接: {item.get('link', 'N/A')}\n"
+        f"论文标题: {item.get('title', 'N/A')}\n"
+        f"arXiv链接: {item.get('link', 'N/A')}\n"
+        f"作者: {', '.join(item.get('authors', [])[:3])}{'...' if len(item.get('authors', [])) > 3 else ''}\n"
         f"发布时间: {item.get('published', 'N/A')}\n"
-        f"摘要: {item.get('summary', 'N/A')[:200]}"
+        f"分类: {', '.join(item.get('categories', []))}\n"
+        f"摘要: {item.get('summary', 'N/A')[:300]}"
         for item in batch_items
     ])
     
-    prompt = f"""请分析以下{len(batch_items)}条RSS内容，完成以下任务：
+    prompt = f"""请分析以下{len(batch_items)}篇arXiv AI领域论文，完成以下任务：
 
-1. 将这些内容分类到合适的类别（如：技术、科学、商业、设计、AI/机器学习、开源项目、新闻等）
-2. 对每条内容的标题和摘要进行中文翻译（如果原文是英文）,去掉所有的HTML标签，并生成一个简短的中文摘要（不超过200字）
-3. 选出最值得关注的亮点（2-3个）
+1. 将这些论文按研究方向分类（如：大语言模型/LLM、计算机视觉/CV、强化学习/RL、多模态学习、机器人、推荐系统、图神经网络、NLP、生成模型、优化算法、理论研究等）
+2. 对每篇论文的标题和摘要进行准确的中文学术翻译，生成一个简明的中文摘要（150-200字），突出研究创新点和主要贡献
+3. 从学术价值和实用性角度，选出最值得关注的研究亮点（2-3个）
 
 请以JSON格式返回结果，格式如下：
 {{
     "categories": {{
-        "类别名称": [
+        "研究方向": [
             {{
-                "title": "原标题",
+                "title": "原英文标题",
                 "title_zh": "中文标题",
-                "link": "链接",
-                "summary": "原摘要",
-                "summary_zh": "中文摘要",
-                "published": "发布时间"
+                "link": "arXiv链接",
+                "summary": "原英文摘要",
+                "summary_zh": "中文学术摘要（突出创新点和贡献）",
+                "published": "发布时间",
+                "authors": ["作者列表"],
+                "categories": ["arXiv分类"]
             }}
         ]
     }},
     "highlights": [
-        "亮点1：xxx",
-        "亮点2：xxx"
+        "研究亮点1：简述论文标题及其核心创新",
+        "研究亮点2：简述论文标题及其核心创新"
     ]
 }}
 
-RSS内容：
+arXiv论文：
 
 {items_text}
 """
     
-    try:
-        logger.info(f'批次 {batch_num}: 正在分析 {len(batch_items)} 条内容...')
-        response = await client.chat.completions.create(
-            model="deepseek-chat",
-            max_tokens=4000,
-            temperature=0.7,
-            response_format={"type": "json_object"},
-            messages=[
-                {"role": "system", "content": "你是一个专业的技术内容分析助手，擅长分类和总结技术资讯。请始终以JSON格式返回结果。"},
-                {"role": "user", "content": prompt}
-            ]
-        )
-        
-        logger.debug(f'批次 {batch_num}: API调用成功，使用token数: {response.usage.total_tokens}')
-        
-        # 提取JSON响应
-        response_text = response.choices[0].message.content
-        
-        # 解析JSON
-        import re
-        json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
-        if json_match:
-            result = json.loads(json_match.group())
-        else:
-            result = json.loads(response_text)
-        
-        logger.success(f'批次 {batch_num}: 分析完成')
-        return result
-        
-    except Exception as e:
-        logger.error(f'批次 {batch_num}: 分析失败 - {e}')
-        # 返回简单分类
-        return {
-            "categories": {
-                "未分类": [
-                    {
-                        "title": item.get('title', 'N/A'),
-                        "title_zh": item.get('title', 'N/A'),
-                        "link": item.get('link', 'N/A'),
-                        "summary": item.get('summary', 'N/A'),
-                        "summary_zh": item.get('summary', 'N/A'),
-                        "published": item.get('published', '')
-                    }
-                    for item in batch_items
+    # 重试逻辑
+    for attempt in range(max_retries):
+        try:
+            logger.info(f'批次 {batch_num}: 正在分析 {len(batch_items)} 条内容... (尝试 {attempt + 1}/{max_retries})')
+            response = await client.chat.completions.create(
+                model="deepseek-chat",
+                max_tokens=4000,
+                temperature=0.7,
+                response_format={"type": "json_object"},
+                messages=[
+                    {"role": "system", "content": "你是一个专业的AI研究论文分析助手,精通计算机科学和人工智能领域的学术研究，擅长准确翻译和总结arXiv论文的核心创新点。请始终以JSON格式返回结果。"},
+                    {"role": "user", "content": prompt}
                 ]
-            },
-            "highlights": []
-        }
+            )
+            
+            logger.debug(f'批次 {batch_num}: API调用成功，使用token数: {response.usage.total_tokens}')
+            
+            # 提取JSON响应
+            response_text = response.choices[0].message.content
+            
+            # 解析JSON
+            import re
+            json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
+            if json_match:
+                result = json.loads(json_match.group())
+            else:
+                result = json.loads(response_text)
+            
+            logger.success(f'批次 {batch_num}: 分析完成')
+            return result
+            
+        except Exception as e:
+            logger.warning(f'批次 {batch_num}: 尝试 {attempt + 1} 失败 - {e}')
+            if attempt == max_retries - 1:
+                logger.error(f'批次 {batch_num}: 已达最大重试次数，返回默认分类')
+                # 返回简单分类
+                return {
+                    "categories": {
+                        "未分类": [
+                            {
+                                "title": item.get('title', 'N/A'),
+                                "title_zh": item.get('title', 'N/A'),
+                                "link": item.get('link', 'N/A'),
+                                "summary": item.get('summary', 'N/A'),
+                                "summary_zh": item.get('summary', 'N/A'),
+                                "published": item.get('published', ''),
+                                "authors": item.get('authors', []),
+                                "categories": item.get('categories', [])
+                            }
+                            for item in batch_items
+                        ]
+                    },
+                    "highlights": []
+                }
+            # 等待一秒后重试
+            await asyncio.sleep(1)
 
 
 async def categorize_and_translate(items: List[Dict[str, Any]], api_key: str, date_str: str) -> Dict[str, Any]:
@@ -161,8 +179,8 @@ async def categorize_and_translate(items: List[Dict[str, Any]], api_key: str, da
         base_url="https://api.deepseek.com/v1"
     )
     
-    # 分批处理，每批20条
-    batch_size = 20
+    # 分批处理，每批5条
+    batch_size = 5
     batches = [items[i:i + batch_size] for i in range(0, len(items), batch_size)]
     logger.info(f'共 {len(items)} 条内容，分为 {len(batches)} 个批次进行并发分析')
     
@@ -186,19 +204,19 @@ async def categorize_and_translate(items: List[Dict[str, Any]], api_key: str, da
     
     # 生成整体总结（使用第一批的部分内容作为代表）
     logger.info('正在生成整体总结...')
-    summary_prompt = f"""基于今天收集的{len(items)}条技术资讯，已分为{len(merged_categories)}个类别：
+    summary_prompt = f"""基于今天收集的{len(items)}篇arXiv AI领域论文，已按研究方向分为{len(merged_categories)}个类别：
 {', '.join(merged_categories.keys())}
 
 请生成：
-1. 每个类别的简短总结
-2. 整体的每日总结（2-3段）
+1. 每个研究方向的学术总结（100-150字，概括该方向的主要研究趋势和亮点）
+2. 整体的每日AI研究动态总结（2-3段，200-300字，突出当日AI领域的研究热点、创新突破和发展趋势）
 
 返回JSON格式：
 {{
     "category_summaries": {{
-        "类别名称": "该类别的简短总结"
+        "研究方向": "该方向的学术总结"
     }},
-    "daily_summary": "今日总结文本（2-3段）"
+    "daily_summary": "今日AI研究动态总结（2-3段）"
 }}
 """
     
@@ -209,7 +227,7 @@ async def categorize_and_translate(items: List[Dict[str, Any]], api_key: str, da
             temperature=0.7,
             response_format={"type": "json_object"},
             messages=[
-                {"role": "system", "content": "你是一个专业的技术内容总结助手。请以JSON格式返回结果。"},
+                {"role": "system", "content": "你是一个专业的AI研究动态总结助手，精通分析AI领域的研究趋势和前沿进展。请以JSON格式返回结果。"},
                 {"role": "user", "content": summary_prompt}
             ]
         )
@@ -223,14 +241,14 @@ async def categorize_and_translate(items: List[Dict[str, Any]], api_key: str, da
             summary_data = json.loads(summary_text)
         
         category_summaries = summary_data.get('category_summaries', {})
-        daily_summary = summary_data.get('daily_summary', f'今日共收集{len(items)}条内容，涵盖{len(merged_categories)}个分类。')
+        daily_summary = summary_data.get('daily_summary', f'今日共收集{len(items)}篇arXiv AI论文，涵盖{len(merged_categories)}个研究方向。')
         
         logger.success('整体总结生成完成')
         
     except Exception as e:
         logger.warning(f'总结生成失败: {e}，使用默认总结')
-        category_summaries = {cat: f'今日{cat}类共有{len(items)}条内容' for cat, items in merged_categories.items()}
-        daily_summary = f'今日共收集{len(items)}条内容，涵盖{len(merged_categories)}个分类。'
+        category_summaries = {cat: f'今日{cat}方向共有{len(items)}篇论文' for cat, items in merged_categories.items()}
+        daily_summary = f'今日共收集{len(items)}篇arXiv AI论文，涵盖{len(merged_categories)}个研究方向。'
     
     # 返回最终结果
     return {
@@ -259,21 +277,23 @@ async def async_main():
         logger.error('请设置环境变量 OPENAI_API_KEY')
         sys.exit(1)
 
-    # 获取要处理的日期（可选位置参数，默认为当天）
-    parser = argparse.ArgumentParser(description='分析指定日期的 raw_content 目录（格式 YYYY-MM-DD），默认：今天）')
-    parser.add_argument('date', nargs='?', help='要处理的日期，格式 YYYY-MM-DD（默认：今天）')
+    # 获取要处理的日期（可选参数，默认为昨天）
+    parser = argparse.ArgumentParser(description='分析指定日期的arXiv论文数据')
+    parser.add_argument('--date', '-d', type=str, help='要处理的日期，格式 YYYY-MM-DD（默认：昨天）')
     args = parser.parse_args()
 
     if args.date:
         date_str = args.date
     else:
-        date_str = datetime.date.today().isoformat()
+        # 默认使用昨天的日期
+        yesterday = datetime.date.today() - datetime.timedelta(days=1)
+        date_str = yesterday.isoformat()
     
     logger.info(f'正在分析日期: {date_str}')
     
     # 加载原始数据
     items = load_raw_items(date_str)
-    logger.info(f'找到 {len(items)} 条RSS条目')
+    logger.info(f'找到 {len(items)} 条arXiv论文')
     
     if not items:
         logger.warning('没有数据需要分析')

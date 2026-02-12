@@ -42,7 +42,7 @@ export function Header() {
              <Terminal className="w-5 h-5 text-emerald-600 dark:text-emerald-500" />
           </div>
           <span className="font-mono font-bold text-lg text-zinc-900 dark:text-zinc-100 tracking-tighter">
-            Auto<span className="text-emerald-600 dark:text-emerald-500">RSS</span>
+            arXiv<span className="text-emerald-600 dark:text-emerald-500">Daily</span>
           </span>
         </Link>
         <div className="flex items-center gap-4">

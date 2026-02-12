@@ -1,32 +1,30 @@
-# AutoRSS - AI驱动的RSS订阅摘要系统
+# AutoRSS - AI驱动的arXiv论文摘要系统
 
-一个使用AI自动整理、分类和翻译RSS订阅内容的系统，配备优雅的Web界面展示每日技术摘要。
+一个使用AI自动整理、分类和翻译arXiv AI论文的系统，配备优雅的Web界面展示每日技术摘要。
 
 ## ✨ 特性
 
-- 🤖 **AI智能分析**: 使用Claude LLM自动分类和翻译RSS内容
-- 📊 **每日摘要**: 生成结构化的每日技术动态摘要
-- �️ **Podcast生成**: 基于NotebookLM将每日新闻转换为专业播客音频
-- �🌐 **现代Web界面**: 使用React + TailwindCSS构建的优雅极客风格界面
+- 🤖 **AI智能分析**: 使用Claude LLM自动分类和翻译arXiv论文内容
+- 📊 **每日摘要**: 生成结构化的每日AI研究动态摘要
+- 🎙️ **Podcast生成**: 基于NotebookLM将每日论文转换为专业播客音频
+- 🌐 **现代Web界面**: 使用React + TailwindCSS构建的优雅极客风格界面
 - ☁️ **自动部署**: GitHub Actions自动化工作流，部署到Cloudflare Pages
-- 🔄 **增量更新**: 智能的ETag/Last-Modified支持，避免重复抓取
+- 📚 **arXiv数据源**: 自动从arXiv API获取最新AI领域论文（cs.AI类别）
 
 ## 🏗️ 项目结构
 
 ```
 AutoRss/
 ├── scripts/
-│   ├── fetch_rss.py           # RSS订阅获取脚本
+│   ├── fetch_rss.py           # arXiv论文获取脚本
 │   ├── analyze_rss.py         # LLM分析脚本
 │   ├── generate_podcast.py    # Podcast生成脚本 🆕
 │   └── generate_static_data.py # 静态数据生成
 ├── data/
 │   ├── summaries/             # AI生成的每日摘要
 │   ├── podcasts/              # 生成的Podcast音频 🆕
-│   ├── feed_state.json        # RSS源状态缓存
 │   └── rss_history.txt        # 历史记录
-├── raw_content/               # 原始RSS数据（按日期组织）
-├── rss/                       # RSS源配置文件
+├── raw_content/               # 原始arXiv论文数据（按日期组织）
 ├── web/                       # React Web应用
 │   ├── src/
 │   │   ├── components/
@@ -45,17 +43,26 @@ git clone <your-repo-url>
 cd AutoRss
 ```
 
-### 2. 配置RSS源
+### 2. 数据源配置
 
-在 `rss/` 目录下创建 `.xml` 文件，可以是：
-- RSS源URL（一行一个URL）
-- OPML文件（包含多个RSS源）
-- RSS XML内容
+本系统自动从 arXiv API 获取最新的 AI 领域论文（cs.AI 类别）。
 
-示例 `rss/source1.xml`:
+数据源配置在 [scripts/fetch_rss.py](scripts/fetch_rss.py) 中：
+```python
+ARXIV_API_URL = "https://export.arxiv.org/api/query"
+ARXIV_QUERY_PARAMS = {
+    'search_query': '(cat:cs.AI)',
+    'sortBy': 'lastUpdatedDate',
+    'sortOrder': 'descending',
+    'start': 0,
+    'max_results': 100
+}
 ```
-https://example.com/feed.xml
-```
+
+如需自定义查询条件，可修改 `ARXIV_QUERY_PARAMS`：
+- `search_query`: 搜索条件（例如：`cat:cs.AI` 表示计算机科学AI类别）
+- `max_results`: 每次获取的论文数量（最大2000）
+- `sortBy`: 排序方式（`lastUpdatedDate`、`submittedDate`、`relevance`）
 
 ### 3. 设置环境变量（Secrets / 本地环境）
 
