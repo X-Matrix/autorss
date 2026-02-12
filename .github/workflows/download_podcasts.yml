@@ -56,19 +56,40 @@ jobs:
           import asyncio
           import sys
           from pathlib import Path
+          from datetime import datetime, timedelta
           
           ROOT = Path.cwd()
           PODCASTS_DIR = ROOT / 'data' / 'podcasts'
           
-          async def check_and_download():
-              """检查所有待下载的 podcast"""
+          async def check_and_download(target_date=None):
+              """检查待下载的 podcast
+              
+              Args:
+                  target_date: 指定日期(YYYY-MM-DD)，如果为None则检查最近两天
+              """
               if not PODCASTS_DIR.exists():
                   print("No podcasts directory")
                   return
               
-              # 查找所有元数据文件
-              metadata_files = sorted(PODCASTS_DIR.glob('*_metadata.json'))
+              # 查找元数据文件
+              metadata_files = sorted(PODCASTS_DIR.glob('*_metadata.json'), reverse=True)
               downloaded = []
+              
+              # 如果指定了日期，只处理该日期
+              if target_date:
+                  target_files = [f for f in metadata_files if f.stem.startswith(target_date)]
+                  if not target_files:
+                      print(f"No metadata found for date: {target_date}")
+                      return []
+                  metadata_files = target_files
+                  print(f"Processing specified date: {target_date}")
+              else:
+                  # 只处理最近两天的
+                  today = datetime.now()
+                  cutoff_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
+                  metadata_files = [f for f in metadata_files 
+                                   if f.stem.replace('_metadata', '') >= cutoff_date]
+                  print(f"Processing podcasts since {cutoff_date} (last 2 days)")
               
               for metadata_file in metadata_files:
                   with open(metadata_file, 'r', encoding='utf-8') as f:
@@ -101,7 +122,9 @@ jobs:
               return downloaded
           
           if __name__ == '__main__':
-              downloaded = asyncio.run(check_and_download())
+              import sys
+              target_date = sys.argv[1] if len(sys.argv) > 1 else None
+              downloaded = asyncio.run(check_and_download(target_date))
               if downloaded:
                   print(f"\n✓ Downloaded {len(downloaded)} podcasts: {', '.join(downloaded)}")
               else:
@@ -109,11 +132,25 @@ jobs:
           EOF
           
           chmod +x /tmp/check_and_download.py
-          python /tmp/check_and_download.py
+          python /tmp/check_and_download.py ${{ inputs.date || '' }}
       
       - name: Generate static data
         run: |
           python scripts/generate_static_data.py
+      
+      - name: Upload podcasts to R2
+        run: |
+          npm install -g wrangler
+          for file in data/podcasts/*_podcast.mp3; do
+            if [ -f "$file" ]; then
+              filename=$(basename "$file")
+              echo "Uploading $filename to R2..."
+              wrangler r2 object put "autorss-podcast/$filename" --file "$file" --remote
+            fi
+          done
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_R2_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       
       - name: Check if files changed
         id: check_changes
