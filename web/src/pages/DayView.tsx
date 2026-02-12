@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import type { DailySummary } from '../types';
 import ItemCard from '../components/ItemCard';
-import { ArrowLeft, Tag, Info, Headphones, List, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Tag, Info, Headphones, List, ChevronLeft, ChevronRight, Share2 } from 'lucide-react';
 import { getPodcastUrl } from '../config';
 
 export default function DayView() {
@@ -23,12 +23,35 @@ export default function DayView() {
       .then(data => {
         setData(data);
         setLoading(false);
+        // 更新页面标题
+        document.title = `${date} - arXiv AI 每日论文精选`;
       })
       .catch(err => {
         console.error('Failed to load day', err);
         setLoading(false);
       });
   }, [date]);
+
+  // 分享功能
+  const handleShare = async () => {
+    const shareData = {
+      title: `arXiv AI Daily - ${date}`,
+      text: `查看 ${date} 的 AI 论文精选，共 ${data?.total_items || 0} 篇论文`,
+      url: window.location.href
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        // 降级处理：复制链接到剪贴板
+        await navigator.clipboard.writeText(window.location.href);
+        alert('链接已复制到剪贴板！');
+      }
+    } catch (err) {
+      console.error('分享失败:', err);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -137,7 +160,17 @@ export default function DayView() {
         {/* 主内容区 */}
         <div className="flex-1 min-w-0">
           <header className="mb-12 border-b border-zinc-200 dark:border-zinc-800 pb-8">
-            <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-100 mb-2 font-mono">{data.date}</h1>
+            <div className="flex items-start justify-between gap-4 mb-4">
+              <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-100 font-mono">{data.date}</h1>
+              <button
+                onClick={handleShare}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-500 border border-emerald-200 dark:border-emerald-800/50 rounded-lg hover:bg-emerald-500/20 dark:hover:bg-emerald-500/30 transition-all group"
+                title="分享此页面"
+              >
+                <Share2 className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium">分享</span>
+              </button>
+            </div>
             <p className="text-zinc-600 dark:text-zinc-500">
               共处理 <span className="text-emerald-600 dark:text-emerald-500 font-bold">{data.total_items}</span> 篇arXiv论文，涵盖 <span className="text-emerald-600 dark:text-emerald-500 font-bold">{Object.keys(data.categories).length}</span> 个研究方向。
             </p>

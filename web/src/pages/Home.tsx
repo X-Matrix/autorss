@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import type { DayIndexEntry } from '../types';
-import { FileText, ChevronRight, Hash, AudioLines } from 'lucide-react';
+import { FileText, ChevronRight, Hash, AudioLines, Share2 } from 'lucide-react';
 
 export default function Home() {
   const [days, setDays] = useState<DayIndexEntry[]>([]);
@@ -20,6 +20,27 @@ export default function Home() {
       });
   }, []);
 
+  // 分享功能
+  const handleShare = async () => {
+    const shareData = {
+      title: 'arXiv AI Daily - 每日论文精选',
+      text: '由 AI 精心筛选和翻译的 arXiv AI 领域最新研究论文',
+      url: window.location.href
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        // 降级处理：复制链接到剪贴板
+        await navigator.clipboard.writeText(window.location.href);
+        alert('链接已复制到剪贴板！');
+      }
+    } catch (err) {
+      console.error('分享失败:', err);
+    }
+  };
+
   if (loading) {
     return (
       <div className="container mx-auto px-4 py-12 text-center text-zinc-500 font-mono">
@@ -32,9 +53,17 @@ export default function Home() {
     <main className="container mx-auto px-4 py-8 max-w-4xl">
       <div className="mb-16 text-center">
         <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-100 mb-4 tracking-tight">arXiv AI 每日论文精选</h1>
-        <p className="text-zinc-600 dark:text-zinc-500 max-w-lg mx-auto font-mono text-sm">
+        <p className="text-zinc-600 dark:text-zinc-500 max-w-lg mx-auto font-mono text-sm mb-6">
            由 AI 精心筛选和翻译的 arXiv AI 领域最新研究论文
         </p>
+        <button
+          onClick={handleShare}
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-500 border border-emerald-200 dark:border-emerald-800/50 rounded-lg hover:bg-emerald-500/20 dark:hover:bg-emerald-500/30 transition-all group"
+          title="分享网站"
+        >
+          <Share2 className="w-4 h-4 group-hover:scale-110 transition-transform" />
+          <span className="text-sm font-medium">分享网站</span>
+        </button>
       </div>
 
       <div className="relative border-l-2 border-zinc-200 dark:border-zinc-800 ml-4 md:ml-12 space-y-12">
