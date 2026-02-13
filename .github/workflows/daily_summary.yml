@@ -36,7 +36,7 @@ jobs:
         run: |
           # 分析昨天的数据
           YESTERDAY=$(date -u -d '1 day ago' +'%Y-%m-%d')
-          python scripts/analyze_rss.py $YESTERDAY
+          python scripts/analyze_rss.py --date $YESTERDAY
       
       - name: Commit and push changes
         env:
