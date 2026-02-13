@@ -20,11 +20,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Wait 30 minutes for podcast generation
+      - name: Wait 15 minutes for podcast generation
         if: github.event_name == 'workflow_run'
         run: |
           echo "Waiting 30 minutes for podcast generation to complete..."
-          sleep 1800
+          sleep 900
       
       - name: Checkout repository
         uses: actions/checkout@v4
