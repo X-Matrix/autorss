@@ -277,7 +277,7 @@ export default function DayView() {
                   <div className="mb-8 bg-zinc-100 dark:bg-zinc-900/40 border-l-2 border-emerald-500/50 p-4 rounded-r-lg">
                     <div className="flex items-start gap-3">
                       <Info className="w-5 h-5 text-emerald-600/80 dark:text-emerald-500/80 mt-0.5 shrink-0" />
-                      <p className="text-zinc-600 dark:text-zinc-300 italic text-sm leading-relaxed">
+                      <p className="text-zinc-600 dark:text-zinc-300 text-sm leading-relaxed">
                         {data.category_summaries[category]}
                       </p>
                     </div>
