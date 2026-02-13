@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Terminal, Sun, Moon } from 'lucide-react';
+import { Sun, Moon } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export function Header() {
@@ -38,11 +38,11 @@ export function Header() {
     <header className="border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 backdrop-blur top-0 sticky z-50 transition-colors duration-300">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="bg-emerald-500/10 p-1.5 rounded-md group-hover:bg-emerald-500/20 transition-colors">
-             <Terminal className="w-5 h-5 text-emerald-600 dark:text-emerald-500" />
+          <div className="p-0.5 rounded-md bg-transparent">
+            <img src="/icon.png" alt="Espresso" className="w-6 h-6 rounded-md" />
           </div>
           <span className="font-mono font-bold text-lg text-zinc-900 dark:text-zinc-100 tracking-tighter">
-            arXiv<span className="text-emerald-600 dark:text-emerald-500">Daily</span>
+            Espresso
           </span>
         </Link>
         <div className="flex items-center gap-4">

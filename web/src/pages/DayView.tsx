@@ -26,7 +26,7 @@ export default function DayView() {
         setData(data);
         setLoading(false);
         // 更新页面标题
-        document.title = `${date} - arXiv AI 每日论文精选`;
+        document.title = `${date} - Espresso - 每日论文精选`;
       })
       .catch(err => {
         console.error('Failed to load day', err);
@@ -37,7 +37,7 @@ export default function DayView() {
   // 分享功能
   const handleShare = async () => {
     const shareData = {
-      title: `arXiv AI Daily - ${date}`,
+      title: `Espresso - ${date}`,
       text: `查看 ${date} 的 AI 论文精选，共 ${data?.total_items || 0} 篇论文`,
       url: window.location.href
     };

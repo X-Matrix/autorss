@@ -23,7 +23,7 @@ export default function Home() {
   // 分享功能
   const handleShare = async () => {
     const shareData = {
-      title: 'arXiv AI Daily - 每日论文精选',
+      title: 'Espresso - 每日论文精选',
       text: '由 AI 精心筛选和翻译的 arXiv AI 领域最新研究论文',
       url: window.location.href
     };
@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8 max-w-4xl">
       <div className="mb-16 text-center">
-        <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-100 mb-4 tracking-tight">arXiv AI 每日论文精选</h1>
+        <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-100 mb-4 tracking-tight">Espresso - 每日论文精选</h1>
         <p className="text-zinc-600 dark:text-zinc-500 max-w-lg mx-auto font-mono text-sm mb-6">
            由 AI 精心筛选和翻译的 arXiv AI 领域最新研究论文
         </p>
