@@ -1,6 +1,21 @@
 import type { FeedItem } from '../types';
-import { ExternalLink, Calendar, Users, FileText, Tag } from 'lucide-react';
+import { ExternalLink, Calendar, Users, FileText, Tag, Sparkles } from 'lucide-react';
 import { formatPublishedDate } from '../utils/dateFormat';
+
+// 生成 CoolPaper 解读 URL
+function generateCoolPaperUrl(item: FeedItem): string {
+  const link = item.link;
+  // 从 arXiv 链接中提取 ID，例如：https://arxiv.org/abs/2301.12345 -> 2301.12345
+  const arxivIdMatch = link.match(/arxiv\.org\/abs\/(\d+\.\d+)/);
+  const arxivId = arxivIdMatch ? arxivIdMatch[1] : '';
+  
+  if (!arxivId) {
+    // 如果无法提取 ID，返回原链接
+    return link;
+  }
+  
+  return `https://papers.cool/arxiv/${arxivId}`;
+}
 
 export default function ItemCard({ item }: { item: FeedItem }) {
   return (
@@ -46,7 +61,16 @@ export default function ItemCard({ item }: { item: FeedItem }) {
            <Calendar className="w-3 h-3" />
            <span>{formatPublishedDate(item.published)}</span>
          </div>
-         <div className="flex items-center gap-2">
+         <div className="flex items-center gap-2 flex-wrap">
+           <a 
+             href={generateCoolPaperUrl(item)} 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             className="text-purple-600 dark:text-purple-500 hover:text-purple-500 dark:hover:text-purple-400 inline-flex items-center gap-1 text-xs uppercase tracking-wider font-bold transition-colors"
+             title="在 CoolPaper 中查看"
+           >
+             <Sparkles className="w-3 h-3" /> CoolPaper
+           </a>
            {item.pdf_link && (
              <a href={item.pdf_link} target="_blank" rel="noopener noreferrer" 
                 className="text-rose-600 dark:text-rose-500 hover:text-rose-500 dark:hover:text-rose-400 inline-flex items-center gap-1 text-xs uppercase tracking-wider font-bold transition-colors">
