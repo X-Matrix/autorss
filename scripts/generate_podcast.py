@@ -178,9 +178,9 @@ async def generate_podcast_for_date(date_str: str, audio_format: str = 'deep-div
             
             # 生成 podcast 指令
             instructions = (
-                f"这是 {date_str} 的科技资讯摘要。"
-                "请用专业但轻松的语调，为听众呈现今日科技新闻的亮点。"
-                "重点突出各个领域的创新动态和重要趋势。"
+                f"这是 {date_str} 新更新的论文。"
+                "请用专业但轻松的语调，为听众呈现这些论文的核心内容。"
+                "重点突出研究方法和结果。"
                 "适当加入主持人之间的互动讨论，使内容更生动有趣。"
             )
             
