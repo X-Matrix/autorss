@@ -39,7 +39,7 @@ export function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <div className="p-0.5 rounded-md bg-transparent">
-            <img src="/icon.png" alt="Espresso" className="w-6 h-6 rounded-md" />
+            <img src="/icon.png" alt="Espresso" className="w-8 h-8 rounded-md" />
           </div>
           <span className="font-mono font-bold text-lg text-zinc-900 dark:text-zinc-100 tracking-tighter">
             Espresso
