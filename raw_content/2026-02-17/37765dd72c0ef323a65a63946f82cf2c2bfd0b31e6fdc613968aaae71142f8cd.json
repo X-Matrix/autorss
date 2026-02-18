@@ -1,0 +1,23 @@
+{
+  "title": "Spanning the Visual Analogy Space with a Weight Basis of LoRAs",
+  "link": "https://arxiv.org/abs/2602.15727v1",
+  "published": "2026-02-17T17:02:38Z",
+  "updated": "2026-02-17T17:02:38Z",
+  "summary": "Visual analogy learning enables image manipulation through demonstration rather than textual description, allowing users to specify complex transformations difficult to articulate in words. Given a triplet $\\{\\mathbf{a}$, $\\mathbf{a}'$, $\\mathbf{b}\\}$, the goal is to generate $\\mathbf{b}'$ such that $\\mathbf{a} : \\mathbf{a}' :: \\mathbf{b} : \\mathbf{b}'$. Recent methods adapt text-to-image models to this task using a single Low-Rank Adaptation (LoRA) module, but they face a fundamental limitation: attempting to capture the diverse space of visual transformations within a fixed adaptation module constrains generalization capabilities. Inspired by recent work showing that LoRAs in constrained domains span meaningful, interpolatable semantic spaces, we propose LoRWeB, a novel approach that specializes the model for each analogy task at inference time through dynamic composition of learned transformation primitives, informally, choosing a point in a \"space of LoRAs\". We introduce two key components: (1) a learnable basis of LoRA modules, to span the space of different visual transformations, and (2) a lightweight encoder that dynamically selects and weighs these basis LoRAs based on the input analogy pair. Comprehensive evaluations demonstrate our approach achieves state-of-the-art performance and significantly improves generalization to unseen visual transformations. Our findings suggest that LoRA basis decompositions are a promising direction for flexible visual manipulation. Code and data are in https://research.nvidia.com/labs/par/lorweb",
+  "id": "http://arxiv.org/abs/2602.15727v1",
+  "authors": [
+    "Hila Manor",
+    "Rinon Gal",
+    "Haggai Maron",
+    "Tomer Michaeli",
+    "Gal Chechik"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.GR",
+    "cs.LG",
+    "eess.IV"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2602.15727v1"
+}
