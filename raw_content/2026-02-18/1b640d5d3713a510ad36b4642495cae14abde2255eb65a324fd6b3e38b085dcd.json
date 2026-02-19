@@ -1,0 +1,21 @@
+{
+  "title": "Automated Histopathology Report Generation via Pyramidal Feature Extraction and the UNI Foundation Model",
+  "link": "https://arxiv.org/abs/2602.16422v1",
+  "published": "2026-02-18T12:55:20Z",
+  "updated": "2026-02-18T12:55:20Z",
+  "summary": "Generating diagnostic text from histopathology whole slide images (WSIs) is challenging due to the gigapixel scale of the input and the requirement for precise, domain specific language. We propose a hierarchical vision language framework that combines a frozen pathology foundation model with a Transformer decoder for report generation. To make WSI processing tractable, we perform multi resolution pyramidal patch selection (downsampling factors 2^3 to 2^6) and remove background and artifacts using Laplacian variance and HSV based criteria. Patch features are extracted with the UNI Vision Transformer and projected to a 6 layer Transformer decoder that generates diagnostic text via cross attention. To better represent biomedical terminology, we tokenize the output using BioGPT. Finally, we add a retrieval based verification step that compares generated reports with a reference corpus using Sentence BERT embeddings; if a high similarity match is found, the generated report is replaced with the retrieved ground truth reference to improve reliability.",
+  "id": "http://arxiv.org/abs/2602.16422v1",
+  "authors": [
+    "Ahmet Halici",
+    "Ece Tugba Cebeci",
+    "Musa Balci",
+    "Mustafa Cini",
+    "Serkan Sokmen"
+  ],
+  "categories": [
+    "eess.IV",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2602.16422v1"
+}
