@@ -1,0 +1,18 @@
+{
+  "title": "All Leaks Count, Some Count More: Interpretable Temporal Contamination Detection in LLM Backtesting",
+  "link": "https://arxiv.org/abs/2602.17234v1",
+  "published": "2026-02-19T10:28:00Z",
+  "updated": "2026-02-19T10:28:00Z",
+  "summary": "To evaluate whether LLMs can accurately predict future events, we need the ability to \\textit{backtest} them on events that have already resolved. This requires models to reason only with information available at a specified past date. Yet LLMs may inadvertently leak post-cutoff knowledge encoded during training, undermining the validity of retrospective evaluation. We introduce a claim-level framework for detecting and quantifying this \\emph{temporal knowledge leakage}. Our approach decomposes model rationales into atomic claims and categorizes them by temporal verifiability, then applies \\textit{Shapley values} to measure each claim's contribution to the prediction. This yields the \\textbf{Shapley}-weighted \\textbf{D}ecision-\\textbf{C}ritical \\textbf{L}eakage \\textbf{R}ate (\\textbf{Shapley-DCLR}), an interpretable metric that captures what fraction of decision-driving reasoning derives from leaked information. Building on this framework, we propose \\textbf{Time}-\\textbf{S}upervised \\textbf{P}rediction with \\textbf{E}xtracted \\textbf{C}laims (\\textbf{TimeSPEC}), which interleaves generation with claim verification and regeneration to proactively filter temporal contamination -- producing predictions where every supporting claim can be traced to sources available before the cutoff date. Experiments on 350 instances spanning U.S. Supreme Court case prediction, NBA salary estimation, and stock return ranking reveal substantial leakage in standard prompting baselines. TimeSPEC reduces Shapley-DCLR while preserving task performance, demonstrating that explicit, interpretable claim-level verification outperforms prompt-based temporal constraints for reliable backtesting.",
+  "id": "http://arxiv.org/abs/2602.17234v1",
+  "authors": [
+    "Zeyu Zhang",
+    "Ryan Chen",
+    "Bradly C. Stadie"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2602.17234v1"
+}

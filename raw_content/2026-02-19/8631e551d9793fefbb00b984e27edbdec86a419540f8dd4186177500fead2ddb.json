@@ -1,0 +1,20 @@
+{
+  "title": "KLong: Training LLM Agent for Extremely Long-horizon Tasks",
+  "link": "https://arxiv.org/abs/2602.17547v1",
+  "published": "2026-02-19T17:01:08Z",
+  "updated": "2026-02-19T17:01:08Z",
+  "summary": "This paper introduces KLong, an open-source LLM agent trained to solve extremely long-horizon tasks. The principle is to first cold-start the model via trajectory-splitting SFT, then scale it via progressive RL training. Specifically, we first activate basic agentic abilities of a base model with a comprehensive SFT recipe. Then, we introduce Research-Factory, an automated pipeline that generates high-quality training data by collecting research papers and constructing evaluation rubrics. Using this pipeline, we build thousands of long-horizon trajectories distilled from Claude 4.5 Sonnet (Thinking). To train with these extremely long trajectories, we propose a new trajectory-splitting SFT, which preserves early context, progressively truncates later context, and maintains overlap between sub-trajectories. In addition, to further improve long-horizon task-solving capability, we propose a novel progressive RL, which schedules training into multiple stages with progressively extended timeouts. Experiments demonstrate the superiority and generalization of KLong, as shown in Figure 1. Notably, our proposed KLong (106B) surpasses Kimi K2 Thinking (1T) by 11.28% on PaperBench, and the performance improvement generalizes to other coding benchmarks like SWE-bench Verified and MLE-bench.",
+  "id": "http://arxiv.org/abs/2602.17547v1",
+  "authors": [
+    "Yue Liu",
+    "Zhiyuan Hu",
+    "Flood Sung",
+    "Jiaheng Zhang",
+    "Bryan Hooi"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2602.17547v1"
+}
