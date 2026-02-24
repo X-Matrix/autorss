@@ -1,0 +1,20 @@
+{
+  "title": "StructXLIP: Enhancing Vision-language Models with Multimodal Structural Cues",
+  "link": "https://arxiv.org/abs/2602.20089v1",
+  "published": "2026-02-23T17:57:37Z",
+  "updated": "2026-02-23T17:57:37Z",
+  "summary": "Edge-based representations are fundamental cues for visual understanding, a principle rooted in early vision research and still central today. We extend this principle to vision-language alignment, showing that isolating and aligning structural cues across modalities can greatly benefit fine-tuning on long, detail-rich captions, with a specific focus on improving cross-modal retrieval. We introduce StructXLIP, a fine-tuning alignment paradigm that extracts edge maps (e.g., Canny), treating them as proxies for the visual structure of an image, and filters the corresponding captions to emphasize structural cues, making them \"structure-centric\". Fine-tuning augments the standard alignment loss with three structure-centric losses: (i) aligning edge maps with structural text, (ii) matching local edge regions to textual chunks, and (iii) connecting edge maps to color images to prevent representation drift. From a theoretical standpoint, while standard CLIP maximizes the mutual information between visual and textual embeddings, StructXLIP additionally maximizes the mutual information between multimodal structural representations. This auxiliary optimization is intrinsically harder, guiding the model toward more robust and semantically stable minima, enhancing vision-language alignment. Beyond outperforming current competitors on cross-modal retrieval in both general and specialized domains, our method serves as a general boosting recipe that can be integrated into future approaches in a plug-and-play manner. Code and pretrained models are publicly available at: https://github.com/intelligolabs/StructXLIP.",
+  "id": "http://arxiv.org/abs/2602.20089v1",
+  "authors": [
+    "Zanxi Ruan",
+    "Qiuyu Kong",
+    "Songqun Gao",
+    "Yiming Wang",
+    "Marco Cristani"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2602.20089v1"
+}

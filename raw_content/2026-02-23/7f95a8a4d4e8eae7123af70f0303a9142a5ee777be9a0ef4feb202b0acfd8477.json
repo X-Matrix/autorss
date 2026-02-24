@@ -1,0 +1,19 @@
+{
+  "title": "DP-FedAdamW: An Efficient Optimizer for Differentially Private Federated Large Models",
+  "link": "https://arxiv.org/abs/2602.19945v1",
+  "published": "2026-02-23T15:15:47Z",
+  "updated": "2026-02-23T15:15:47Z",
+  "summary": "Balancing convergence efficiency and robustness under Differential Privacy (DP) is a central challenge in Federated Learning (FL). While AdamW accelerates training and fine-tuning in large-scale models, we find that directly applying it to Differentially Private FL (DPFL) suffers from three major issues: (i) data heterogeneity and privacy noise jointly amplify the variance of second-moment estimator, (ii) DP perturbations bias the second-moment estimator, and (iii) DP amplify AdamW sensitivity to local overfitting, worsening client drift. We propose DP-FedAdamW, the first AdamW-based optimizer for DPFL. It restores AdamW under DP by stabilizing second-moment variance, removing DP-induced bias, and aligning local updates to the global descent to curb client drift. Theoretically, we establish an unbiased second-moment estimator and prove a linearly accelerated convergence rate without any heterogeneity assumption, while providing tighter $(\\varepsilon,δ)$-DP guarantees. Our empirical results demonstrate the effectiveness of DP-FedAdamW across language and vision Transformers and ResNet-18. On Tiny-ImageNet (Swin-Base, $\\varepsilon=1$), DP-FedAdamW outperforms the state-of-the-art (SOTA) by 5.83\\%. The code is available in Appendix.",
+  "id": "http://arxiv.org/abs/2602.19945v1",
+  "authors": [
+    "Jin Liu",
+    "Yinbin Miao",
+    "Ning Xi",
+    "Junkang Liu"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2602.19945v1"
+}

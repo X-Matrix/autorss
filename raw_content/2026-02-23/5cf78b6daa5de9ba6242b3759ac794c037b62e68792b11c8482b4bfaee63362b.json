@@ -1,0 +1,19 @@
+{
+  "title": "Rethinking LoRA for Privacy-Preserving Federated Learning in Large Models",
+  "link": "https://arxiv.org/abs/2602.19926v1",
+  "published": "2026-02-23T15:05:28Z",
+  "updated": "2026-02-23T15:05:28Z",
+  "summary": "Fine-tuning large vision models (LVMs) and large language models (LLMs) under differentially private federated learning (DPFL) is hindered by a fundamental privacy-utility trade-off. Low-Rank Adaptation (LoRA), a promising parameter-efficient fine-tuning (PEFT) method, reduces computational and communication costs by introducing two trainable low-rank matrices while freezing pre-trained weights. However, directly applying LoRA in DPFL settings leads to performance degradation, especially in LVMs. Our analysis reveals three previously underexplored challenges: (1) gradient coupling caused by the simultaneous update of two asymmetric low-rank matrices, (2) compounded noise amplification under differential privacy, and (3) sharpness of the global aggregated model in the parameter space. To address these issues, we propose LA-LoRA (\\textbf{L}ocal \\textbf{A}lternating \\textbf{LoRA}), a novel approach that decouples gradient interactions and aligns update directions across clients to enhance robustness under stringent privacy constraints. Theoretically, LA-LoRA strengthens convergence guarantees in noisy federated environments. Extensive experiments demonstrate that LA-LoRA achieves state-of-the-art (SOTA) performance on Swin Transformer and RoBERTa models, showcasing robustness to DP noise and broad applicability across both LVMs and LLMs. For example, when fine-tuning the Swin-B model on the Tiny-ImageNet dataset under a strict privacy budget ($ε= 1$), LA-LoRA outperforms the best baseline, RoLoRA, by 16.83\\% in test accuracy. Code is provided in \\repolink.",
+  "id": "http://arxiv.org/abs/2602.19926v1",
+  "authors": [
+    "Jin Liu",
+    "Yinbin Miao",
+    "Ning Xi",
+    "Junkang Liu"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2602.19926v1"
+}

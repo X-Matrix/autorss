@@ -1,0 +1,20 @@
+{
+  "title": "ReAttn: Improving Attention-based Re-ranking via Attention Re-weighting",
+  "link": "https://arxiv.org/abs/2602.19969v1",
+  "published": "2026-02-23T15:30:52Z",
+  "updated": "2026-02-23T15:30:52Z",
+  "summary": "The strong capabilities of recent Large Language Models (LLMs) have made them highly effective for zero-shot re-ranking task. Attention-based re-ranking methods, which derive relevance scores directly from attention weights, offer an efficient and interpretable alternative to generation-based re-ranking methods. However, they still face two major limitations. First, attention signals are highly concentrated a small subset of tokens within a few documents, making others indistinguishable. Second, attention often overemphasizes phrases lexically similar to the query, yielding biased rankings that irrelevant documents with mere lexical resemblance are regarded as relevant. In this paper, we propose \\textbf{ReAttn}, a post-hoc re-weighting strategy for attention-based re-ranking methods. It first compute the cross-document IDF weighting to down-weight attention on query-overlapping tokens that frequently appear across the candidate documents, reducing lexical bias and emphasizing distinctive terms. It then employs entropy-based regularization to mitigate over-concentrated attention, encouraging a more balanced distribution across informative tokens. Both adjustments operate directly on existing attention weights without additional training or supervision. Extensive experiments demonstrate the effectiveness of our method.",
+  "id": "http://arxiv.org/abs/2602.19969v1",
+  "authors": [
+    "Yuxing Tian",
+    "Fengran Mo",
+    "Weixu Zhang",
+    "Yiyan Qi",
+    "Jian-Yun Nie"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2602.19969v1"
+}

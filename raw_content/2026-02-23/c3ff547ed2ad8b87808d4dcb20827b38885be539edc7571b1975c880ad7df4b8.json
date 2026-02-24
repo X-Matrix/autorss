@@ -1,0 +1,22 @@
+{
+  "title": "On the Equivalence of Random Network Distillation, Deep Ensembles, and Bayesian Inference",
+  "link": "https://arxiv.org/abs/2602.19964v1",
+  "published": "2026-02-23T15:28:27Z",
+  "updated": "2026-02-23T15:28:27Z",
+  "summary": "Uncertainty quantification is central to safe and efficient deployments of deep learning models, yet many computationally practical methods lack lacking rigorous theoretical motivation. Random network distillation (RND) is a lightweight technique that measures novelty via prediction errors against a fixed random target. While empirically effective, it has remained unclear what uncertainties RND measures and how its estimates relate to other approaches, e.g. Bayesian inference or deep ensembles. This paper establishes these missing theoretical connections by analyzing RND within the neural tangent kernel framework in the limit of infinite network width. Our analysis reveals two central findings in this limit: (1) The uncertainty signal from RND -- its squared self-predictive error -- is equivalent to the predictive variance of a deep ensemble. (2) By constructing a specific RND target function, we show that the RND error distribution can be made to mirror the centered posterior predictive distribution of Bayesian inference with wide neural networks. Based on this equivalence, we moreover devise a posterior sampling algorithm that generates i.i.d. samples from an exact Bayesian posterior predictive distribution using this modified \\textit{Bayesian RND} model. Collectively, our findings provide a unified theoretical perspective that places RND within the principled frameworks of deep ensembles and Bayesian inference, and offer new avenues for efficient yet theoretically grounded uncertainty quantification methods.",
+  "id": "http://arxiv.org/abs/2602.19964v1",
+  "authors": [
+    "Moritz A. Zanger",
+    "Yijun Wu",
+    "Pascal R. Van der Vaart",
+    "Wendelin Böhmer",
+    "Matthijs T. J. Spaan"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "math.PR",
+    "stat.ML"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2602.19964v1"
+}

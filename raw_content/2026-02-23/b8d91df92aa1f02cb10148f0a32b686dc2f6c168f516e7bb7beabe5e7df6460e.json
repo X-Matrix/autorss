@@ -1,0 +1,18 @@
+{
+  "title": "SafePickle: Robust and Generic ML Detection of Malicious Pickle-based ML Models",
+  "link": "https://arxiv.org/abs/2602.19818v1",
+  "published": "2026-02-23T13:19:43Z",
+  "updated": "2026-02-23T13:19:43Z",
+  "summary": "Model repositories such as Hugging Face increasingly distribute machine learning artifacts serialized with Python's pickle format, exposing users to remote code execution (RCE) risks during model loading. Recent defenses, such as PickleBall, rely on per-library policy synthesis that requires complex system setups and verified benign models, which limits scalability and generalization. In this work, we propose a lightweight, machine-learning-based scanner that detects malicious Pickle-based files without policy generation or code instrumentation. Our approach statically extracts structural and semantic features from Pickle bytecode and applies supervised and unsupervised models to classify files as benign or malicious. We construct and release a labeled dataset of 727 Pickle-based files from Hugging Face and evaluate our models on four datasets: our own, PickleBall (out-of-distribution), Hide-and-Seek (9 advanced evasive malicious models), and synthetic joblib files. Our method achieves 90.01% F1-score compared with 7.23%-62.75% achieved by the SOTA scanners (Modelscan, Fickling, ClamAV, VirusTotal) on our dataset. Furthermore, on the PickleBall data (OOD), it achieves 81.22% F1-score compared with 76.09% achieved by the PickleBall method, while remaining fully library-agnostic. Finally, we show that our method is the only one to correctly parse and classify 9/9 evasive Hide-and-Seek malicious models specially crafted to evade scanners. This demonstrates that data-driven detection can effectively and generically mitigate Pickle-based model file attacks.",
+  "id": "http://arxiv.org/abs/2602.19818v1",
+  "authors": [
+    "Hillel Ohayon",
+    "Daniel Gilkarov",
+    "Ran Dubin"
+  ],
+  "categories": [
+    "cs.CR",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2602.19818v1"
+}

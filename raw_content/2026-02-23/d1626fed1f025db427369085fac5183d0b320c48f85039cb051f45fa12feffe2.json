@@ -1,0 +1,16 @@
+{
+  "title": "CodeCompass: Navigating the Navigation Paradox in Agentic Code Intelligence",
+  "link": "https://arxiv.org/abs/2602.20048v1",
+  "published": "2026-02-23T16:58:37Z",
+  "updated": "2026-02-23T16:58:37Z",
+  "summary": "Modern code intelligence agents operate in contexts exceeding 1 million tokens--far beyond the scale where humans manually locate relevant files. Yet agents consistently fail to discover architecturally critical files when solving real-world coding tasks. We identify the Navigation Paradox: agents perform poorly not due to context limits, but because navigation and retrieval are fundamentally distinct problems. Through 258 automated trials across 30 benchmark tasks on a production FastAPI repository, we demonstrate that graph-based structural navigation via CodeCompass--a Model Context Protocol server exposing dependency graphs--achieves 99.4% task completion on hidden-dependency tasks, a 23.2 percentage-point improvement over vanilla agents (76.2%) and 21.2 points over BM25 retrieval (78.2%).However, we uncover a critical adoption gap: 58% of trials with graph access made zero tool calls, and agents required explicit prompt engineering to adopt the tool consistently. Our findings reveal that the bottleneck is not tool availability but behavioral alignment--agents must be explicitly guided to leverage structural context over lexical heuristics. We contribute: (1) a task taxonomy distinguishing semantic-search, structural, and hidden-dependency scenarios; (2) empirical evidence that graph navigation outperforms retrieval when dependencies lack lexical overlap; and (3) open-source infrastructure for reproducible evaluation of navigation tools.",
+  "id": "http://arxiv.org/abs/2602.20048v1",
+  "authors": [
+    "Tarakanath Paipuru"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.SE"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2602.20048v1"
+}
