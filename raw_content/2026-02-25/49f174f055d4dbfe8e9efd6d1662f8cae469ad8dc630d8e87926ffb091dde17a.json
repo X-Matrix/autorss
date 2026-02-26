@@ -1,0 +1,25 @@
+{
+  "title": "SurGo-R1: Benchmarking and Modeling Contextual Reasoning for Operative Zone in Surgical Video",
+  "link": "https://arxiv.org/abs/2602.21706v1",
+  "published": "2026-02-25T09:11:45Z",
+  "updated": "2026-02-25T09:11:45Z",
+  "summary": "Minimally invasive surgery has dramatically improved patient operative outcomes, yet identifying safe operative zones remains challenging in critical phases, requiring surgeons to integrate visual cues, procedural phase, and anatomical context under high cognitive load. Existing AI systems offer binary safety verification or static detection, ignoring the phase-dependent nature of intraoperative reasoning. We introduce ResGo, a benchmark of laparoscopic frames annotated with Go Zone bounding boxes and clinician-authored rationales covering phase, exposure quality reasoning, next action and risk reminder. We introduce evaluation metrics that treat correct grounding under incorrect phase as failures, revealing that most vision-language models cannot handle such tasks and perform poorly. We then present SurGo-R1, a model optimized via RLHF with a multi-turn phase-then-go architecture where the model first identifies the surgical phase, then generates reasoning and Go Zone coordinates conditioned on that context. On unseen procedures, SurGo-R1 achieves 76.6% phase accuracy, 32.7 mIoU, and 54.8% hardcore accuracy, a 6.6$\\times$ improvement over the mainstream generalist VLMs. Code, model and benchmark will be available at https://github.com/jinlab-imvr/SurGo-R1",
+  "id": "http://arxiv.org/abs/2602.21706v1",
+  "authors": [
+    "Guanyi Qin",
+    "Xiaozhen Wang",
+    "Zhu Zhuo",
+    "Chang Han Low",
+    "Yuancan Xiao",
+    "Yibing Fu",
+    "Haofeng Liu",
+    "Kai Wang",
+    "Chunjiang Li",
+    "Yueming Jin"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2602.21706v1"
+}

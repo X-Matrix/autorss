@@ -1,0 +1,16 @@
+{
+  "title": "Excitation: Momentum For Experts",
+  "link": "https://arxiv.org/abs/2602.21798v1",
+  "published": "2026-02-25T11:22:47Z",
+  "updated": "2026-02-25T11:22:47Z",
+  "summary": "We propose Excitation, a novel optimization framework designed to accelerate learning in sparse architectures such as Mixture-of-Experts (MoEs). Unlike traditional optimizers that treat all parameters uniformly, Excitation dynamically modulates updates using batch-level expert utilization. It introduces a competitive update dynamic that amplifies updates to highly-utilized experts and can selectively suppress low-utilization ones, effectively sharpening routing specialization. Notably, we identify a phenomenon of \"structural confusion\" in deep MoEs, where standard optimizers fail to establish functional signal paths; Excitation acts as a specialization catalyst, \"rescuing\" these models and enabling stable training where baselines remain trapped. Excitation is optimizer-, domain-, and model-agnostic, requires minimal integration effort, and introduces neither additional per-parameter optimizer state nor learnable parameters, making it highly viable for memory-constrained settings. Across language and vision tasks, Excitation consistently improves convergence speed and final performance in MoE models, indicating that active update modulation is a key mechanism for effective conditional computation.",
+  "id": "http://arxiv.org/abs/2602.21798v1",
+  "authors": [
+    "Sagi Shaier"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2602.21798v1"
+}
