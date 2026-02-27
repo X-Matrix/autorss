@@ -1,0 +1,21 @@
+{
+  "title": "Certified Circuits: Stability Guarantees for Mechanistic Circuits",
+  "link": "https://arxiv.org/abs/2602.22968v1",
+  "published": "2026-02-26T13:07:31Z",
+  "updated": "2026-02-26T13:07:31Z",
+  "summary": "Understanding how neural networks arrive at their predictions is essential for debugging, auditing, and deployment. Mechanistic interpretability pursues this goal by identifying circuits - minimal subnetworks responsible for specific behaviors. However, existing circuit discovery methods are brittle: circuits depend strongly on the chosen concept dataset and often fail to transfer out-of-distribution, raising doubts whether they capture concept or dataset-specific artifacts. We introduce Certified Circuits, which provide provable stability guarantees for circuit discovery. Our framework wraps any black-box discovery algorithm with randomized data subsampling to certify that circuit component inclusion decisions are invariant to bounded edit-distance perturbations of the concept dataset. Unstable neurons are abstained from, yielding circuits that are more compact and more accurate. On ImageNet and OOD datasets, certified circuits achieve up to 91% higher accuracy while using 45% fewer neurons, and remain reliable where baselines degrade. Certified Circuits puts circuit discovery on formal ground by producing mechanistic explanations that are provably stable and better aligned with the target concept. Code will be released soon!",
+  "id": "http://arxiv.org/abs/2602.22968v1",
+  "authors": [
+    "Alaa Anani",
+    "Tobias Lorenz",
+    "Bernt Schiele",
+    "Mario Fritz",
+    "Jonas Fischer"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CV",
+    "cs.CY"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2602.22968v1"
+}
