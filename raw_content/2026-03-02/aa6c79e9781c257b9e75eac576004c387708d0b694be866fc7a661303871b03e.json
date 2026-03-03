@@ -1,0 +1,16 @@
+{
+  "title": "TiledAttention: a CUDA Tile SDPA Kernel for PyTorch",
+  "link": "https://arxiv.org/abs/2603.01960v1",
+  "published": "2026-03-02T15:11:00Z",
+  "updated": "2026-03-02T15:11:00Z",
+  "summary": "TiledAttention is a scaled dot-product attention (SDPA) forward operator for SDPA research on NVIDIA GPUs. Implemented in cuTile Python (TileIR) and exposed as a PyTorch-callable function, it is easier to modify than low-level CUDA templates while retaining realistic behavior via online softmax and tiled $K,V$ streaming. The approach is both performant and directly editable at the schedule level from Python (tile shapes, staging, shared-memory layout), enabling rapid, reproducible kernel research without template-heavy CUDA/CUTLASS rewrites. We benchmark TiledAttention on an NVIDIA DGX GB10 node with a reproducible harness and compare against PyTorch SDPA (auto-dispatch) and explicit unfused baselines across sequence length, head dimension, and precision (FP16/BF16). While production fused baselines remain stronger overall, TiledAttention delivers large speedups over standard eager attention paths and is available for direct use within PyTorch workflows, providing a practical balance between performance and customizability.",
+  "id": "http://arxiv.org/abs/2603.01960v1",
+  "authors": [
+    "Taimur Khan"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.01960v1"
+}
