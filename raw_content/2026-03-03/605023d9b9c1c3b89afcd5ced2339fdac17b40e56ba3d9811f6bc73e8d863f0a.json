@@ -1,0 +1,19 @@
+{
+  "title": "MoECLIP: Patch-Specialized Experts for Zero-shot Anomaly Detection",
+  "link": "https://arxiv.org/abs/2603.03101v1",
+  "published": "2026-03-03T15:36:55Z",
+  "updated": "2026-03-03T15:36:55Z",
+  "summary": "The CLIP model's outstanding generalization has driven recent success in Zero-Shot Anomaly Detection (ZSAD) for detecting anomalies in unseen categories. The core challenge in ZSAD is to specialize the model for anomaly detection tasks while preserving CLIP's powerful generalization capability. Existing approaches attempting to solve this challenge share the fundamental limitation of a patch-agnostic design that processes all patches monolithically without regard for their unique characteristics. To address this limitation, we propose \\textbf{MoECLIP}, a Mixture-of-Experts (MoE) architecture for the ZSAD task, which achieves patch-level adaptation by dynamically routing each image patch to a specialized Low-Rank Adaptation (LoRA) expert based on its unique characteristics. Furthermore, to prevent functional redundancy among the LoRA experts, we introduce (1) Frozen Orthogonal Feature Separation (FOFS), which orthogonally separates the input feature space to force experts to focus on distinct information, and (2) a simplex equiangular tight frame (ETF) loss to regulate the expert outputs to form maximally equiangular representations. Comprehensive experimental results across 14 benchmark datasets spanning industrial and medical domains demonstrate that MoECLIP outperforms existing state-of-the-art methods. The code is available at https://github.com/CoCoRessa/MoECLIP.",
+  "id": "http://arxiv.org/abs/2603.03101v1",
+  "authors": [
+    "Jun Yeong Park",
+    "JunYoung Seo",
+    "Minji Kang",
+    "Yu Rang Park"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.03101v1"
+}

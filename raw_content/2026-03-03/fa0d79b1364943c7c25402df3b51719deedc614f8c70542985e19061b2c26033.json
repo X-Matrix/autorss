@@ -1,0 +1,22 @@
+{
+  "title": "Understanding and Mitigating Dataset Corruption in LLM Steering",
+  "link": "https://arxiv.org/abs/2603.03206v1",
+  "published": "2026-03-03T18:00:49Z",
+  "updated": "2026-03-03T18:00:49Z",
+  "summary": "Contrastive steering has been shown as a simple and effective method to adjust the generative behavior of LLMs at inference time. It uses examples of prompt responses with and without a trait to identify a direction in an intermediate activation layer, and then shifts activations in this 1-dimensional subspace. However, despite its growing use in AI safety applications, the robustness of contrastive steering to noisy or adversarial data corruption is poorly understood. We initiate a study of the robustness of this process with respect to corruption of the dataset of examples used to train the steering direction. Our first observation is that contrastive steering is quite robust to a moderate amount of corruption, but unwanted side effects can be clearly and maliciously manifested when a non-trivial fraction of the training data is altered. Second, we analyze the geometry of various types of corruption, and identify some safeguards. Notably, a key step in learning the steering direction involves high-dimensional mean computation, and we show that replacing this step with a recently developed robust mean estimator often mitigates most of the unwanted effects of malicious corruption.",
+  "id": "http://arxiv.org/abs/2603.03206v1",
+  "authors": [
+    "Cullen Anderson",
+    "Narmeen Oozeer",
+    "Foad Namjoo",
+    "Remy Ogasawara",
+    "Amirali Abdullah",
+    "Jeff M. Phillips"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.03206v1"
+}
