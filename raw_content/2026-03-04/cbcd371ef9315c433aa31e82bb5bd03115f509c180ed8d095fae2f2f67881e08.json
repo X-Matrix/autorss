@@ -1,0 +1,21 @@
+{
+  "title": "Online Learning for Multi-Layer Hierarchical Inference under Partial and Policy-Dependent Feedback",
+  "link": "https://arxiv.org/abs/2603.04247v1",
+  "published": "2026-03-04T16:35:33Z",
+  "updated": "2026-03-04T16:35:33Z",
+  "summary": "Hierarchical inference systems route tasks across multiple computational layers, where each node may either finalize a prediction locally or offload the task to a node in the next layer for further processing. Learning optimal routing policies in such systems is challenging: inference loss is defined recursively across layers, while feedback on prediction error is revealed only at a terminal oracle layer. This induces a partial, policy-dependent feedback structure in which observability probabilities decay with depth, causing importance-weighted estimators to suffer from amplified variance. We study online routing for multi-layer hierarchical inference under long-term resource constraints and terminal-only feedback. We formalize the recursive loss structure and show that naive importance-weighted contextual bandit methods become unstable as feedback probability decays along the hierarchy. To address this, we develop a variance-reduced EXP4-based algorithm integrated with Lyapunov optimization, yielding unbiased loss estimation and stable learning under sparse and policy-dependent feedback. We provide regret guarantees relative to the best fixed routing policy in hindsight and establish near-optimality under stochastic arrivals and resource constraints. Experiments on large-scale multi-task workloads demonstrate improved stability and performance compared to standard importance-weighted approaches.",
+  "id": "http://arxiv.org/abs/2603.04247v1",
+  "authors": [
+    "Haoran Zhang",
+    "Seohyeon Cha",
+    "Hasan Burhan Beytur",
+    "Kevin S Chan",
+    "Gustavo de Veciana",
+    "Haris Vikalo"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.04247v1"
+}
