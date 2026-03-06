@@ -1,0 +1,17 @@
+{
+  "title": "Residual RL--MPC for Robust Microrobotic Cell Pushing Under Time-Varying Flow",
+  "link": "https://arxiv.org/abs/2603.05448v1",
+  "published": "2026-03-05T18:20:07Z",
+  "updated": "2026-03-05T18:20:07Z",
+  "summary": "Contact-rich micromanipulation in microfluidic flow is challenging because small disturbances can break pushing contact and induce large lateral drift. We study planar cell pushing with a magnetic rolling microrobot that tracks a waypoint-sampled reference curve under time-varying Poiseuille flow. We propose a hybrid controller that augments a nominal MPC with a learned residual policy trained by SAC. The policy outputs a bounded 2D velocity correction that is contact-gated, so residual actions are applied only during robot--cell contact, preserving reliable approach behavior and stabilizing learning. All methods share the same actuation interface and speed envelope for fair comparisons. Experiments show improved robustness and tracking accuracy over pure MPC and PID under nonstationary flow, with generalization from a clover training curve to unseen circle and square trajectories. A residual-bound sweep identifies an intermediate correction limit as the best trade-off, which we use in all benchmarks.",
+  "id": "http://arxiv.org/abs/2603.05448v1",
+  "authors": [
+    "Yanda Yang",
+    "Sambeeta Das"
+  ],
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.05448v1"
+}
