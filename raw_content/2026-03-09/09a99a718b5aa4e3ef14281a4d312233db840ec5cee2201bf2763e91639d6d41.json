@@ -1,0 +1,19 @@
+{
+  "title": "Towards a more efficient bias detection in financial language models",
+  "link": "https://arxiv.org/abs/2603.08267v1",
+  "published": "2026-03-09T11:38:53Z",
+  "updated": "2026-03-09T11:38:53Z",
+  "summary": "Bias in financial language models constitutes a major obstacle to their adoption in real-world applications. Detecting such bias is challenging, as it requires identifying inputs whose predictions change when varying properties unrelated to the decision, such as demographic attributes. Existing approaches typically rely on exhaustive mutation and pairwise prediction analysis over large corpora, which is effective but computationally expensive-particularly for large language models and can become impractical in continuous retraining and releasing processes. Aiming at reducing this cost, we conduct a large-scale study of bias in five financial language models, examining similarities in their bias tendencies across protected attributes and exploring cross-model-guided bias detection to identify bias-revealing inputs earlier. Our study uses approximately 17k real financial news sentences, mutated to construct over 125k original-mutant pairs. Results show that all models exhibit bias under both atomic (0.58\\%-6.05\\%) and intersectional (0.75\\%-5.97\\%) settings. Moreover, we observe consistent patterns in bias-revealing inputs across models, enabling substantial reuse and cost reduction in bias detection. For example, up to 73\\% of FinMA's biased behaviours can be uncovered using only 20\\% of the input pairs when guided by properties derived from DistilRoBERTa outputs.",
+  "id": "http://arxiv.org/abs/2603.08267v1",
+  "authors": [
+    "Firas Hadj Kacem",
+    "Ahmed Khanfir",
+    "Mike Papadakis"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CE",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.08267v1"
+}

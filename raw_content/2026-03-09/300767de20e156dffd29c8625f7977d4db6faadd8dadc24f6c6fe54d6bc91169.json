@@ -1,0 +1,17 @@
+{
+  "title": "Geometrically Constrained Outlier Synthesis",
+  "link": "https://arxiv.org/abs/2603.08413v1",
+  "published": "2026-03-09T14:11:47Z",
+  "updated": "2026-03-09T14:11:47Z",
+  "summary": "Deep neural networks for image classification often exhibit overconfidence on out-of-distribution (OOD) samples. To address this, we introduce Geometrically Constrained Outlier Synthesis (GCOS), a training-time regularization framework aimed at improving OOD robustness during inference. GCOS addresses a limitation of prior synthesis methods by generating virtual outliers in the hidden feature space that respect the learned manifold structure of in-distribution (ID) data. The synthesis proceeds in two stages: (i) a dominant-variance subspace extracted from the training features identifies geometrically informed, off-manifold directions; (ii) a conformally-inspired shell, defined by the empirical quantiles of a nonconformity score from a calibration set, adaptively controls the synthesis magnitude to produce boundary samples. The shell ensures that generated outliers are neither trivially detectable nor indistinguishable from in-distribution data, facilitating smoother learning of robust features. This is combined with a contrastive regularization objective that promotes separability of ID and OOD samples in a chosen score space, such as Mahalanobis or energy-based. Experiments demonstrate that GCOS outperforms state-of-the-art methods using standard energy-based inference on near-OOD benchmarks, defined as tasks where outliers share the same semantic domain as in-distribution data. As an exploratory extension, the framework naturally transitions to conformal OOD inference, which translates uncertainty scores into statistically valid p-values and enables thresholds with formal error guarantees, providing a pathway toward more predictable and reliable OOD detection.",
+  "id": "http://arxiv.org/abs/2603.08413v1",
+  "authors": [
+    "Daniil Karzanov",
+    "Marcin Detyniecki"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.08413v1"
+}

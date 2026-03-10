@@ -1,0 +1,21 @@
+{
+  "title": "LycheeCluster: Efficient Long-Context Inference with Structure-Aware Chunking and Hierarchical KV Indexing",
+  "link": "https://arxiv.org/abs/2603.08453v1",
+  "published": "2026-03-09T14:50:35Z",
+  "updated": "2026-03-09T14:50:35Z",
+  "summary": "The quadratic complexity of the attention mechanism and the substantial memory footprint of the Key-Value (KV) cache present severe computational and memory challenges for Large Language Models (LLMs) processing long contexts. Existing retrieval-based methods often compromise semantic integrity through fixed-size chunking and suffer from inefficient linear scanning. In this paper, we propose LycheeCluster, a novel method for efficient KV cache management. LycheeCluster preserves local semantic coherence via boundary-aware chunking and constructs a recursive hierarchical index rooted in the triangle inequality. This design transforms cache retrieval from a linear scan into a theoretically bounded, logarithmic-time pruning process, while a lazy update strategy supports efficient streaming generation. Experiments demonstrate that LycheeCluster achieves up to a 3.6x end-to-end inference speedup with negligible degradation in model performance, outperforming state-of-the-art KV cache management methods (e.g., Quest, ClusterKV). We will release our code and kernels after publication.",
+  "id": "http://arxiv.org/abs/2603.08453v1",
+  "authors": [
+    "Dongfang Li",
+    "Zixuan Liu",
+    "Gang Lin",
+    "Baotian Hu",
+    "Min Zhang"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.08453v1"
+}
