@@ -1,0 +1,21 @@
+{
+  "title": "When Learning Rates Go Wrong: Early Structural Signals in PPO Actor-Critic",
+  "link": "https://arxiv.org/abs/2603.09950v1",
+  "published": "2026-03-10T17:46:31Z",
+  "updated": "2026-03-10T17:46:31Z",
+  "summary": "Deep Reinforcement Learning systems are highly sensitive to the learning rate (LR), and selecting stable and performant training runs often requires extensive hyperparameter search. In Proximal Policy Optimization (PPO) actor--critic methods, small LR values lead to slow convergence, whereas large LR values may induce instability or collapse. We analyse this phenomenon from the behavior of the hidden neurons in the network using the Overfitting-Underfitting Indicator (OUI), a metric that quantifies the balance of binary activation patterns over a fixed probe batch. We introduce an efficient batch-based formulation of OUI and derive a theoretical connection between LR and activation sign changes, clarifying how a correct evolution of the neuron's inner structure depends on the step size.   Empirically, across three discrete-control environments and multiple seeds, we show that OUI measured at only 10\\% of training already discriminates between LR regimes. We observe a consistent asymmetry: critic networks achieving highest return operate in an intermediate OUI band (avoiding saturation), whereas actor networks achieving highest return exhibit comparatively high OUI values. We then compare OUI-based screening rules against early return, clip-based, divergence-based, and flip-based criteria under matched recall over successful runs. In this setting, OUI provides the strongest early screening signal: OUI alone achieves the best precision at broader recall, while combining early return with OUI yields the highest precision in best-performing screening regimes, enabling aggressive pruning of unpromising runs without requiring full training.",
+  "id": "http://arxiv.org/abs/2603.09950v1",
+  "authors": [
+    "Alberto Fernández-Hernández",
+    "Cristian Pérez-Corral",
+    "Jose I. Mestre",
+    "Manuel F. Dolz",
+    "Jose Duato",
+    "Enrique S. Quintana-Ortí"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.09950v1"
+}

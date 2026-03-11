@@ -1,0 +1,15 @@
+{
+  "title": "The Confidence Gate Theorem: When Should Ranked Decision Systems Abstain?",
+  "link": "https://arxiv.org/abs/2603.09947v1",
+  "published": "2026-03-10T17:44:10Z",
+  "updated": "2026-03-10T17:44:10Z",
+  "summary": "Ranked decision systems -- recommenders, ad auctions, clinical triage queues -- must decide when to intervene in ranked outputs and when to abstain. We study when confidence-based abstention monotonically improves decision quality, and when it fails. The formal conditions are simple: rank-alignment and no inversion zones. The substantive contribution is identifying why these conditions hold or fail: the distinction between structural uncertainty (missing data, e.g., cold-start) and contextual uncertainty (missing context, e.g., temporal drift). Empirically, we validate this distinction across three domains: collaborative filtering (MovieLens, 3 distribution shifts), e-commerce intent detection (RetailRocket, Criteo, Yoochoose), and clinical pathway triage (MIMIC-IV). Structural uncertainty produces near-monotonic abstention gains in all domains; structurally grounded confidence signals (observation counts) fail under contextual drift, producing as many monotonicity violations as random abstention on our MovieLens temporal split. Context-aware alternatives -- ensemble disagreement and recency features -- substantially narrow the gap (reducing violations from 3 to 1--2) but do not fully restore monotonicity, suggesting that contextual uncertainty poses qualitatively different challenges. Exception labels defined from residuals degrade substantially under distribution shift (AUC drops from 0.71 to 0.61--0.62 across three splits), providing a clean negative result against the common practice of exception-based intervention. The results provide a practical deployment diagnostic: check C1 and C2 on held-out data before deploying a confidence gate, and match the confidence signal to the dominant uncertainty type.",
+  "id": "http://arxiv.org/abs/2603.09947v1",
+  "authors": [
+    "Ronald Doku"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.09947v1"
+}
