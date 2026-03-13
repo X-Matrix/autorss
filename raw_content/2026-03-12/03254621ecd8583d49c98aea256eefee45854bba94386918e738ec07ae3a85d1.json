@@ -1,0 +1,17 @@
+{
+  "title": "Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights",
+  "link": "https://arxiv.org/abs/2603.12228v1",
+  "published": "2026-03-12T17:49:30Z",
+  "updated": "2026-03-12T17:49:30Z",
+  "summary": "Pretraining produces a learned parameter vector that is typically treated as a starting point for further iterative adaptation. In this work, we instead view the outcome of pretraining as a distribution over parameter vectors, whose support already contains task-specific experts. We show that in small models such expert solutions occupy a negligible fraction of the volume of this distribution, making their discovery reliant on structured optimization methods such as gradient descent. In contrast, in large, well-pretrained models the density of task-experts increases dramatically, so that diverse, task-improving specialists populate a substantial fraction of the neighborhood around the pretrained weights. Motivated by this perspective, we explore a simple, fully parallel post-training method that samples $N$ parameter perturbations at random, selects the top $K$, and ensembles predictions via majority vote. Despite its simplicity, this approach is competitive with standard post-training methods such as PPO, GRPO, and ES for contemporary large-scale models.",
+  "id": "http://arxiv.org/abs/2603.12228v1",
+  "authors": [
+    "Yulu Gan",
+    "Phillip Isola"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.12228v1"
+}
