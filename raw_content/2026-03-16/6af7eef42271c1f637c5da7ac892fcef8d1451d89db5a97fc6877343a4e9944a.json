@@ -1,0 +1,23 @@
+{
+  "title": "ADV-0: Closed-Loop Min-Max Adversarial Training for Long-Tail Robustness in Autonomous Driving",
+  "link": "https://arxiv.org/abs/2603.15221v1",
+  "published": "2026-03-16T12:58:31Z",
+  "updated": "2026-03-16T12:58:31Z",
+  "summary": "Deploying autonomous driving systems requires robustness against long-tail scenarios that are rare but safety-critical. While adversarial training offers a promising solution, existing methods typically decouple scenario generation from policy optimization and rely on heuristic surrogates. This leads to objective misalignment and fails to capture the shifting failure modes of evolving policies. This paper presents ADV-0, a closed-loop min-max optimization framework that treats the interaction between driving policy (defender) and adversarial agent (attacker) as a zero-sum Markov game. By aligning the attacker's utility directly with the defender's objective, we reveal the optimal adversary distribution. To make this tractable, we cast dynamic adversary evolution as iterative preference learning, efficiently approximating this optimum and offering an algorithm-agnostic solution to the game. Theoretically, ADV-0 converges to a Nash Equilibrium and maximizes a certified lower bound on real-world performance. Experiments indicate that it effectively exposes diverse safety-critical failures and greatly enhances the generalizability of both learned policies and motion planners against unseen long-tail risks.",
+  "id": "http://arxiv.org/abs/2603.15221v1",
+  "authors": [
+    "Tong Nie",
+    "Yihong Tang",
+    "Junlin He",
+    "Yuewen Mei",
+    "Jie Sun",
+    "Lijun Sun",
+    "Wei Ma",
+    "Jian Sun"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.15221v1"
+}

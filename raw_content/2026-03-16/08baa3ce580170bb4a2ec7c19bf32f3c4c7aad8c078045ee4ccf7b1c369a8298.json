@@ -1,0 +1,22 @@
+{
+  "title": "SAGE: Multi-Agent Self-Evolution for LLM Reasoning",
+  "link": "https://arxiv.org/abs/2603.15255v1",
+  "published": "2026-03-16T13:24:20Z",
+  "updated": "2026-03-16T13:24:20Z",
+  "summary": "Reinforcement learning with verifiable rewards improves reasoning in large language models (LLMs), but many methods still rely on large human-labeled datasets. While self-play reduces this dependency, it often lacks explicit planning and strong quality control, limiting stability in long-horizon multi-step reasoning. We present SAGE (Self-evolving Agents for Generalized reasoning Evolution), a closed-loop framework where four agents: Challenger, Planner, Solver, and Critic, co-evolve from a shared LLM backbone using only a small seed set. The Challenger continuously generates increasingly difficult tasks; the Planner converts each task into a structured multi-step plan; and the Solver follows the plan to produce an answer, whose correctness is determined by external verifiers. The Critic scores and filters both generated questions and plans to prevent curriculum drift and maintain training signal quality, enabling stable self-training. Across mathematics and code-generation benchmarks, SAGE delivers consistent gains across model scales, improving the Qwen-2.5-7B model by 8.9% on LiveCodeBench and 10.7% on OlympiadBench.",
+  "id": "http://arxiv.org/abs/2603.15255v1",
+  "authors": [
+    "Yulin Peng",
+    "Xinxin Zhu",
+    "Chenxing Wei",
+    "Nianbo Zeng",
+    "Leilei Wang",
+    "Ying Tiffany He",
+    "F. Richard Yu"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.MA"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.15255v1"
+}

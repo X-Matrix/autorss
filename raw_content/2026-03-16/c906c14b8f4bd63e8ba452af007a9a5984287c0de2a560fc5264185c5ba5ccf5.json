@@ -1,0 +1,19 @@
+{
+  "title": "More Test-Time Compute Can Hurt: Overestimation Bias in LLM Beam Search",
+  "link": "https://arxiv.org/abs/2603.15377v1",
+  "published": "2026-03-16T14:51:30Z",
+  "updated": "2026-03-16T14:51:30Z",
+  "summary": "Wider beam search should improve LLM reasoning, but when should you stop widening? Prior work on beam width selection has focused on inference efficiency \\citep{qin2025dsbd, freitag2017beam}, without analyzing whether wider search can \\emph{hurt} output quality. We present an analysis, grounded in Extreme Value Theory, that answers this question. Beam selection over noisy scorer outputs introduces a systematic overestimation bias that grows with the candidate pool size, and we derive a maximum useful beam width $\\hat{k}$ beyond which search degrades performance. This critical width depends on the signal-to-noise ratio of the scorer: $\\hat{k}$ grows exponentially with $(Δ/σ)^2$, where $Δ> 0$ is the quality advantage of correct paths over incorrect ones and $σ$ is the scorer noise. We validate this theory by comparing perplexity-guided and PRM-guided beam search across three 7B-parameter models and ten domains on MR-BEN (5,975 questions). Perplexity scoring, with its high noise, yields $\\hat{k} = 1$: search provides no benefit at any width tested. PRM scoring, with lower noise, yields $\\hat{k} \\geq 4$, with gains of up to 8.9 percentage points. The same model, the same algorithm, but different scorers place $\\hat{k}$ at opposite ends of the beam width range. Our analysis identifies the scorer's signal-to-noise ratio as the key quantity governing beam width selection, and we propose diagnostic indicators for choosing the beam width in practice.",
+  "id": "http://arxiv.org/abs/2603.15377v1",
+  "authors": [
+    "Gal Dalal",
+    "Assaf Hallak",
+    "Gal Chechik",
+    "Yftach Ziser"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.15377v1"
+}

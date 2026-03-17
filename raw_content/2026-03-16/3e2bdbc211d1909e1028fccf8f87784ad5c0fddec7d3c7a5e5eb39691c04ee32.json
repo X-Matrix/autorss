@@ -1,0 +1,21 @@
+{
+  "title": "A Closer Look into LLMs for Table Understanding",
+  "link": "https://arxiv.org/abs/2603.15402v1",
+  "published": "2026-03-16T15:16:38Z",
+  "updated": "2026-03-16T15:16:38Z",
+  "summary": "Despite the success of Large Language Models (LLMs) in table understanding, their internal mechanisms remain unclear. In this paper, we conduct an empirical study on 16 LLMs, covering general LLMs, specialist tabular LLMs, and Mixture-of-Experts (MoE) models, to explore how LLMs understand tabular data and perform downstream tasks. Our analysis focus on 4 dimensions including the attention dynamics, the effective layer depth, the expert activation, and the impacts of input designs. Key findings include: (1) LLMs follow a three-phase attention pattern -- early layers scan the table broadly, middle layers localize relevant cells, and late layers amplify their contributions; (2) tabular tasks require deeper layers than math reasoning to reach stable predictions; (3) MoE models activate table-specific experts in middle layers, with early and late layers sharing general-purpose experts; (4) Chain-of-Thought prompting increases table attention, further enhanced by table-tuning. We hope these findings and insights can facilitate interpretability and future research on table-related tasks.",
+  "id": "http://arxiv.org/abs/2603.15402v1",
+  "authors": [
+    "Jia Wang",
+    "Chuanyu Qin",
+    "Mingyu Zheng",
+    "Qingyi Si",
+    "Peize Li",
+    "Zheng Lin"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.15402v1"
+}

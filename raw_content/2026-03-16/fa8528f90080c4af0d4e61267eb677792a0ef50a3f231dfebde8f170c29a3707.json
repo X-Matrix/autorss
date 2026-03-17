@@ -1,0 +1,19 @@
+{
+  "title": "In-Context Symbolic Regression for Robustness-Improved Kolmogorov-Arnold Networks",
+  "link": "https://arxiv.org/abs/2603.15250v1",
+  "published": "2026-03-16T13:21:26Z",
+  "updated": "2026-03-16T13:21:26Z",
+  "summary": "Symbolic regression aims to replace black-box predictors with concise analytical expressions that can be inspected and validated in scientific machine learning. Kolmogorov-Arnold Networks (KANs) are well suited to this goal because each connection between adjacent units (an \"edge\") is parametrised by a learnable univariate function that can, in principle, be replaced by a symbolic operator. In practice, however, symbolic extraction is a bottleneck: the standard KAN-to-symbol approach fits operators to each learned edge function in isolation, making the discrete choice sensitive to initialisation and non-convex parameter fitting, and ignoring how local substitutions interact through the full network. We study in-context symbolic regression for operator extraction in KANs, and present two complementary instantiations. Greedy in-context Symbolic Regression (GSR) performs greedy, in-context selection by choosing edge replacements according to end-to-end loss improvement after brief fine-tuning. Gated Matching Pursuit (GMP) amortises this in-context selection by training a differentiable gated operator layer that places an operator library behind sparse gates on each edge; after convergence, gates are discretised (optionally followed by a short in-context greedy refinement pass). We quantify robustness via one-factor-at-a-time (OFAT) hyper-parameter sweeps and assess both predictive error and qualitative consistency of recovered formulas. Across several experiments, greedy in-context symbolic regression achieves up to 99.8% reduction in median OFAT test MSE.",
+  "id": "http://arxiv.org/abs/2603.15250v1",
+  "authors": [
+    "Francesco Sovrano",
+    "Lidia Losavio",
+    "Giulia Vilone",
+    "Marc Langheinrich"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.15250v1"
+}
