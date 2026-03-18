@@ -1,0 +1,22 @@
+{
+  "title": "DexGrasp-Zero: A Morphology-Aligned Policy for Zero-Shot Cross-Embodiment Dexterous Grasping",
+  "link": "https://arxiv.org/abs/2603.16806v1",
+  "published": "2026-03-17T17:10:29Z",
+  "updated": "2026-03-17T17:10:29Z",
+  "summary": "To meet the demands of increasingly diverse dexterous hand hardware, it is crucial to develop a policy that enables zero-shot cross-embodiment grasping without redundant re-learning. Cross-embodiment alignment is challenging due to heterogeneous hand kinematics and physical constraints. Existing approaches typically predict intermediate motion targets and retarget them to each embodiment, which may introduce errors and violate embodiment-specific limits, hindering transfer across diverse hands. To overcome these limitations, we propose \\textit{DexGrasp-Zero}, a policy that learns universal grasping skills from diverse embodiments, enabling zero-shot transfer to unseen hands. We first introduce a morphology-aligned graph representation that maps each hand's kinematic keypoints to anatomically grounded nodes and equips each node with tri-axial orthogonal motion primitives, enabling structural and semantic alignment across different morphologies. Relying on this graph-based representation, we design a \\textit{Morphology-Aligned Graph Convolutional Network} (MAGCN) to encode the graph for policy learning. MAGCN incorporates a \\textit{Physical Property Injection} mechanism that fuses hand-specific physical constraints into the graph features, enabling adaptive compensation for varying link lengths and actuation limits for precise and stable grasping. Our extensive simulation evaluations on the YCB dataset demonstrate that our policy, jointly trained on four heterogeneous hands (Allegro, Shadow, Schunk, Ability), achieves an 85\\% zero-shot success rate on unseen hardware (LEAP, Inspire), outperforming the state-of-the-art method by 59.5\\%. Real-world experiments further evaluate our policy on three robot platforms (LEAP, Inspire, Revo2), achieving an 82\\% average success rate on unseen objects.",
+  "id": "http://arxiv.org/abs/2603.16806v1",
+  "authors": [
+    "Yuliang Wu",
+    "Yanhan Lin",
+    "WengKit Lao",
+    "Yuhao Lin",
+    "Yi-Lin Wei",
+    "Wei-Shi Zheng",
+    "Ancong Wu"
+  ],
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.16806v1"
+}

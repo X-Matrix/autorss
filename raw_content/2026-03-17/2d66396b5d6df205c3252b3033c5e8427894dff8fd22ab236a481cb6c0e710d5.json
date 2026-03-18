@@ -1,0 +1,21 @@
+{
+  "title": "DST-Net: A Dual-Stream Transformer with Illumination-Independent Feature Guidance and Multi-Scale Spatial Convolution for Low-Light Image Enhancement",
+  "link": "https://arxiv.org/abs/2603.16482v1",
+  "published": "2026-03-17T13:07:32Z",
+  "updated": "2026-03-17T13:07:32Z",
+  "summary": "Low-light image enhancement aims to restore the visibility of images captured by visual sensors in dim environments by addressing their inherent signal degradations, such as luminance attenuation and structural corruption. Although numerous algorithms attempt to improve image quality, existing methods often cause a severe loss of intrinsic signal priors. To overcome these challenges, we propose a Dual-Stream Transformer Network (DST-Net) based on illumination-agnostic signal prior guidance and multi-scale spatial convolutions. First, to address the loss of critical signal features under low-light conditions, we design a feature extraction module. This module integrates Difference of Gaussians (DoG), LAB color space transformations, and VGG-16 for texture extraction, utilizing decoupled illumination-agnostic features as signal priors to continuously guide the enhancement process. Second, we construct a dual-stream interaction architecture. By employing a cross-modal attention mechanism, the network leverages the extracted priors to dynamically rectify the deteriorated signal representation of the enhanced image, ultimately achieving iterative enhancement through differentiable curve estimation. Furthermore, to overcome the inability of existing methods to preserve fine structures and textures, we propose a Multi-Scale Spatial Fusion Block (MSFB) featuring pseudo-3D and 3D gradient operator convolutions. This module integrates explicit gradient operators to recover high-frequency edges while capturing inter-channel spatial correlations via multi-scale spatial convolutions. Extensive evaluations and ablation studies demonstrate that DST-Net achieves superior performance in subjective visual quality and objective metrics. Specifically, our method achieves a PSNR of 25.64 dB on the LOL dataset. Subsequent validation on the LSRW dataset further confirms its robust cross-scene generalization.",
+  "id": "http://arxiv.org/abs/2603.16482v1",
+  "authors": [
+    "Yicui Shi",
+    "Yuhan Chen",
+    "Xiangfei Huang",
+    "Zhenguo Wang",
+    "Wenxuan Yu",
+    "Ying Fang"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.16482v1"
+}

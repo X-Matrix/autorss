@@ -1,0 +1,19 @@
+{
+  "title": "Unlearning for One-Step Generative Models via Unbalanced Optimal Transport",
+  "link": "https://arxiv.org/abs/2603.16489v1",
+  "published": "2026-03-17T13:19:04Z",
+  "updated": "2026-03-17T13:19:04Z",
+  "summary": "Recent advances in one-step generative frameworks, such as flow map models, have significantly improved the efficiency of image generation by learning direct noise-to-data mappings in a single forward pass. However, machine unlearning for ensuring the safety of these powerful generators remains entirely unexplored. Existing diffusion unlearning methods are inherently incompatible with these one-step models, as they rely on a multi-step iterative denoising process. In this work, we propose UOT-Unlearn, a novel plug-and-play class unlearning framework for one-step generative models based on the Unbalanced Optimal Transport (UOT). Our method formulates unlearning as a principled trade-off between a forget cost, which suppresses the target class, and an $f$-divergence penalty, which preserves overall generation fidelity via relaxed marginal constraints. By leveraging UOT, our method enables the probability mass of the forgotten class to be smoothly redistributed to the remaining classes, rather than collapsing into low-quality or noise-like samples. Experimental results on CIFAR-10 and ImageNet-256 demonstrate that our framework achieves superior unlearning success (PUL) and retention quality (u-FID), significantly outperforming baselines.",
+  "id": "http://arxiv.org/abs/2603.16489v1",
+  "authors": [
+    "Hyundo Choi",
+    "Junhyeong An",
+    "Jinseong Park",
+    "Jaewoong Choi"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.16489v1"
+}
