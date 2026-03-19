@@ -1,0 +1,17 @@
+{
+  "title": "Identifying Latent Actions and Dynamics from Offline Data via Demonstrator Diversity",
+  "link": "https://arxiv.org/abs/2603.17577v1",
+  "published": "2026-03-18T10:33:38Z",
+  "updated": "2026-03-18T10:33:38Z",
+  "summary": "Can latent actions and environment dynamics be recovered from offline trajectories when actions are never observed? We study this question in a setting where trajectories are action-free but tagged with demonstrator identity. We assume that each demonstrator follows a distinct policy, while the environment dynamics are shared across demonstrators and identity affects the next observation only through the chosen action. Under these assumptions, the conditional next-observation distribution $p(o_{t+1}\\mid o_t,e)$ is a mixture of latent action-conditioned transition kernels with demonstrator-specific mixing weights. We show that this induces, for each state, a column-stochastic nonnegative matrix factorization of the observable conditional distribution. Using sufficiently scattered policy diversity and rank conditions, we prove that the latent transitions and demonstrator policies are identifiable up to permutation of the latent action labels. We extend the result to continuous observation spaces via a Gram-determinant minimum-volume criterion, and show that continuity of the transition map over a connected state space upgrades local permutation ambiguities to a single global permutation. A small amount of labeled action data then suffices to fix this final ambiguity. These results establish demonstrator diversity as a principled source of identifiability for learning latent actions and dynamics from offline RL data.",
+  "id": "http://arxiv.org/abs/2603.17577v1",
+  "authors": [
+    "Felix Schur"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ML"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.17577v1"
+}
