@@ -1,0 +1,20 @@
+{
+  "title": "PRIOR: Perceptive Learning for Humanoid Locomotion with Reference Gait Priors",
+  "link": "https://arxiv.org/abs/2603.18979v1",
+  "published": "2026-03-19T14:42:07Z",
+  "updated": "2026-03-19T14:42:07Z",
+  "summary": "Training perceptive humanoid locomotion policies that traverse complex terrains with natural gaits remains an open challenge, typically demanding multi-stage training pipelines, adversarial objectives, or extensive real-world calibration. We present PRIOR, an efficient and reproducible framework built on Isaac Lab that achieves robust terrain traversal with human-like gaits through a simple yet effective design: (i) a parametric gait generator that supplies stable reference trajectories derived from motion capture without adversarial training, (ii) a GRU-based state estimator that infers terrain geometry directly from egocentric depth images via self-supervised heightmap reconstruction, and (iii) terrain-adaptive footstep rewards that guide foot placement toward traversable regions. Through systematic analysis of depth image resolution trade-offs, we identify configurations that maximize terrain fidelity under real-time constraints, substantially reducing perceptual overhead without degrading traversal performance. Comprehensive experiments across terrains of varying difficulty-including stairs, boxes, and gaps-demonstrate that each component yields complementary and essential performance gains, with the full framework achieving a 100% traversal success rate. We will open-source the complete PRIOR framework, including the training pipeline, parametric gait generator, and evaluation benchmarks, to serve as a reproducible foundation for humanoid locomotion research on Isaac Lab.",
+  "id": "http://arxiv.org/abs/2603.18979v1",
+  "authors": [
+    "Chenxi Han",
+    "Shilu He",
+    "Yi Cheng",
+    "Linqi Ye",
+    "Houde Liu"
+  ],
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.18979v1"
+}

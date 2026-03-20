@@ -1,0 +1,18 @@
+{
+  "title": "Regret Bounds for Competitive Resource Allocation with Endogenous Costs",
+  "link": "https://arxiv.org/abs/2603.18999v1",
+  "published": "2026-03-19T15:04:50Z",
+  "updated": "2026-03-19T15:04:50Z",
+  "summary": "We study online resource allocation among N interacting modules over T rounds. Unlike standard online optimization, costs are endogenous: they depend on the full allocation vector through an interaction matrix W encoding pairwise cooperation and competition.   We analyze three paradigms: (I) uniform allocation (cost-ignorant), (II) gated allocation (cost-estimating), and (III) competitive allocation via multiplicative weights update with interaction feedback (cost-revealing). Our main results establish a strict separation under adversarial sequences with bounded variation: uniform incurs Omega(T) regret, gated achieves O(T^{2/3}), and competitive achieves O(sqrt(T log N)). The performance gap stems from competitive allocation's ability to exploit endogenous cost information revealed through interactions.   We further show that W's topology governs a computation-regret tradeoff. Full interaction (|E|=O(N^2)) yields the tightest bound but highest per-step cost, while sparse topologies (|E|=O(N)) increase regret by at most O(sqrt(log N)) while reducing per-step cost from O(N^2) to O(N). Ring-structured topologies with both cooperative and competitive links - of which the five-element Wuxing topology is canonical - minimize the computation x regret product.   These results provide the first formal regret-theoretic justification for decentralized competitive allocation in modular architectures and establish cost endogeneity as a fundamental challenge distinct from partial observability.   Keywords: online learning, regret bounds, resource allocation, endogenous costs, interaction topology, multiplicative weights, modular systems, Wuxing topology",
+  "id": "http://arxiv.org/abs/2603.18999v1",
+  "authors": [
+    "Rui Chai"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.DS",
+    "cs.GT",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.18999v1"
+}
