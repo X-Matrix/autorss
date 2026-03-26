@@ -1,0 +1,19 @@
+{
+  "title": "Comparative analysis of dual-form networks for live land monitoring using multi-modal satellite image time series",
+  "link": "https://arxiv.org/abs/2603.24109v1",
+  "published": "2026-03-25T09:14:42Z",
+  "updated": "2026-03-25T09:14:42Z",
+  "summary": "Multi-modal Satellite Image Time Series (SITS) analysis faces significant computational challenges for live land monitoring applications. While Transformer architectures excel at capturing temporal dependencies and fusing multi-modal data, their quadratic computational complexity and the need to reprocess entire sequences for each new acquisition limit their deployment for regular, large-area monitoring. This paper studies various dual-form attention mechanisms for efficient multi-modal SITS analysis, that enable parallel training while supporting recurrent inference for incremental processing. We compare linear attention and retention mechanisms within a multi-modal spectro-temporal encoder. To address SITS-specific challenges of temporal irregularity and unalignment, we develop temporal adaptations of dual-form mechanisms that compute token distances based on actual acquisition dates rather than sequence indices. Our approach is evaluated on two tasks using Sentinel-1 and Sentinel-2 data: multi-modal SITS forecasting as a proxy task, and real-world solar panel construction monitoring. Experimental results demonstrate that dual-form mechanisms achieve performance comparable to standard Transformers while enabling efficient recurrent inference. The multimodal framework consistently outperforms mono-modal approaches across both tasks, demonstrating the effectiveness of dual mechanisms for sensor fusion. The results presented in this work open new opportunities for operational land monitoring systems requiring regular updates over large geographic areas.",
+  "id": "http://arxiv.org/abs/2603.24109v1",
+  "authors": [
+    "Iris Dumeur",
+    "Jérémy Anger",
+    "Gabriele Facciolo"
+  ],
+  "categories": [
+    "eess.IV",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.24109v1"
+}
