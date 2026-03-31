@@ -1,0 +1,29 @@
+{
+  "title": "HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention",
+  "link": "https://arxiv.org/abs/2603.28458v1",
+  "published": "2026-03-30T13:59:51Z",
+  "updated": "2026-03-30T13:59:51Z",
+  "summary": "Token-level sparse attention mechanisms, exemplified by DeepSeek Sparse Attention (DSA), achieve fine-grained key selection by scoring every historical token for each query using a lightweight indexer, and then computing attention only over the selected subset. While the downstream sparse attention scales efficiently, the indexer still scans the entire prefix for every query, introducing an O($L^2$) per-layer bottleneck that becomes prohibitive as context length grows. We propose HISA (Hierarchical Indexed Sparse Attention), a drop-in replacement for the indexer that transforms the search process from a flat token scan into a two-stage hierarchical procedure. First, a block-level coarse filter scores pooled block representatives to prune irrelevant regions. Then, a token-level refinement applies the original indexer only within the remaining candidate blocks. HISA preserves the exact token-level top-k sparsity pattern required by the downstream Sparse MLA operator and requires no additional training. On kernel-level benchmarks, HISA achieves a 2$\\times$ speedup at 32K context length and 4$\\times$ at 128K. On Needle-in-a-Haystack and LongBench, we directly replace the indexer in DeepSeek-V3.2 with HISA, without any fine-tuning. HISA closely matches the original DSA in quality while significantly outperforming block-sparse baselines. Moreover, the token selection sets produced by HISA and the original DSA exhibit a mean IoU greater than 99%, indicating that the efficiency gains come with virtually no impact on selection fidelity.",
+  "id": "http://arxiv.org/abs/2603.28458v1",
+  "authors": [
+    "Yufei Xu",
+    "Fanxu Meng",
+    "Fan Jiang",
+    "Yuxuan Wang",
+    "Ruijie Zhou",
+    "Jiexi Wu",
+    "Zhixin Pan",
+    "Zhaohui Wang",
+    "Xiaojuan Tang",
+    "Wenjie Pei",
+    "Tongxuan Liu",
+    "Di yin",
+    "Xing Sun",
+    "Muhan Zhang"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.28458v1"
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Critic-Free Deep Reinforcement Learning for Maritime Coverage Path Planning on Irregular Hexagonal Grids",
+  "link": "https://arxiv.org/abs/2603.28385v1",
+  "published": "2026-03-30T12:56:38Z",
+  "updated": "2026-03-30T12:56:38Z",
+  "summary": "Maritime surveillance missions, such as search and rescue and environmental monitoring, rely on the efficient allocation of sensing assets over vast and geometrically complex areas. Traditional Coverage Path Planning (CPP) approaches depend on decomposition techniques that struggle with irregular coastlines, islands, and exclusion zones, or require computationally expensive re-planning for every instance. We propose a Deep Reinforcement Learning (DRL) framework to solve CPP on hexagonal grid representations of irregular maritime areas. Unlike conventional methods, we formulate the problem as a neural combinatorial optimization task where a Transformer-based pointer policy autoregressively constructs coverage tours. To overcome the instability of value estimation in long-horizon routing problems, we implement a critic-free Group-Relative Policy Optimization (GRPO) scheme. This method estimates advantages through within-instance comparisons of sampled trajectories rather than relying on a value function. Experiments on 1,000 unseen synthetic maritime environments demonstrate that a trained policy achieves a 99.0% Hamiltonian success rate, more than double the best heuristic (46.0%), while producing paths 7% shorter and with 24% fewer heading changes than the closest baseline. All three inference modes (greedy, stochastic sampling, and sampling with 2-opt refinement) operate under 50~ms per instance on a laptop GPU, confirming feasibility for real-time on-board deployment.",
+  "id": "http://arxiv.org/abs/2603.28385v1",
+  "authors": [
+    "Carlos S. Sepúlveda",
+    "Gonzalo A. Ruz"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.NE",
+    "cs.RO"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.28385v1"
+}

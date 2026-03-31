@@ -1,0 +1,21 @@
+{
+  "title": "Next-Token Prediction and Regret Minimization",
+  "link": "https://arxiv.org/abs/2603.28499v1",
+  "published": "2026-03-30T14:34:41Z",
+  "updated": "2026-03-30T14:34:41Z",
+  "summary": "We consider the question of how to employ next-token prediction algorithms in adversarial online decision-making environments. Specifically, if we train a next-token prediction model on a distribution $\\mathcal{D}$ over sequences of opponent actions, when is it the case that the induced online decision-making algorithm (by approximately best responding to the model's predictions) has low adversarial regret (i.e., when is $\\mathcal{D}$ a \\emph{low-regret distribution})?   For unbounded context windows (where the prediction made by the model can depend on all the actions taken by the adversary thus far), we show that although not every distribution $\\mathcal{D}$ is a low-regret distribution, every distribution $\\mathcal{D}$ is exponentially close (in TV distance) to one low-regret distribution, and hence sublinear regret can always be achieved at negligible cost to the accuracy of the original next-token prediction model. In contrast to this, for bounded context windows (where the prediction made by the model can depend only on the past $w$ actions taken by the adversary, as may be the case in modern transformer architectures), we show that there are some distributions $\\mathcal{D}$ of opponent play that are $Θ(1)$-far from any low-regret distribution $\\mathcal{D'}$ (even when $w = Ω(T)$ and such distributions exist). Finally, we complement these results by showing that the unbounded context robustification procedure can be implemented by layers of a standard transformer architecture, and provide empirical evidence that transformer models can be efficiently trained to represent these new low-regret distributions.",
+  "id": "http://arxiv.org/abs/2603.28499v1",
+  "authors": [
+    "Mehryar Mohri",
+    "Clayton Sanford",
+    "Jon Schneider",
+    "Kiran Vodrahalli",
+    "Yifan Wu"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.GT"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.28499v1"
+}

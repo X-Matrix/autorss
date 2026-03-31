@@ -1,0 +1,18 @@
+{
+  "title": "Learning Partial Action Replacement in Offline MARL",
+  "link": "https://arxiv.org/abs/2603.28573v1",
+  "published": "2026-03-30T15:28:13Z",
+  "updated": "2026-03-30T15:28:13Z",
+  "summary": "Offline multi-agent reinforcement learning (MARL) faces a critical challenge: the joint action space grows exponentially with the number of agents, making dataset coverage exponentially sparse and out-of-distribution (OOD) joint actions unavoidable. Partial Action Replacement (PAR) mitigates this by anchoring a subset of agents to dataset actions, but existing approach relies on enumerating multiple subset configurations at high computational cost and cannot adapt to varying states. We introduce PLCQL, a framework that formulates PAR subset selection as a contextual bandit problem and learns a state-dependent PAR policy using Proximal Policy Optimisation with an uncertainty-weighted reward. This adaptive policy dynamically determines how many agents to replace at each update step, balancing policy improvement against conservative value estimation. We prove a value-error bound showing that the estimation error scales linearly with the expected number of deviating agents. Compared with the previous PAR-based method SPaCQL, PLCQL reduces the number of per-iteration Q-function evaluations from n to 1, significantly improving computational efficiency. Empirically, PLCQL achieves the highest normalised scores on 66% of tasks across MPE, MaMuJoCo, and SMAC benchmarks, outperforming SPaCQL on 84% of tasks while substantially reducing computational cost.",
+  "id": "http://arxiv.org/abs/2603.28573v1",
+  "authors": [
+    "Yue Jin",
+    "Giovanni Montana"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.MA"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.28573v1"
+}

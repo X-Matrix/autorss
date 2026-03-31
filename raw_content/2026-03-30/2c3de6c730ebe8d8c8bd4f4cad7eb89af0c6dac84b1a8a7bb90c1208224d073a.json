@@ -1,0 +1,21 @@
+{
+  "title": "MRI-to-CT synthesis using drifting models",
+  "link": "https://arxiv.org/abs/2603.28498v1",
+  "published": "2026-03-30T14:34:32Z",
+  "updated": "2026-03-30T14:34:32Z",
+  "summary": "Accurate MRI-to-CT synthesis could enable MR-only pelvic workflows by providing CT-like images with bone details while avoiding additional ionizing radiation. In this work, we investigate recently proposed drifting models for synthesizing pelvis CT images from MRI and benchmark them against convolutional neural networks (UNet, VAE), a generative adversarial network (WGAN-GP), a physics-inspired probabilistic model (PPFM), and diffusion-based methods (FastDDPM, DDIM, DDPM). Experiments are performed on two complementary datasets: Gold Atlas Male Pelvis and the SynthRAD2023 pelvis subset. Image fidelity and structural consistency are evaluated with SSIM, PSNR, and RMSE, complemented by qualitative assessment of anatomically critical regions such as cortical bone and pelvic soft-tissue interfaces. Across both datasets, the proposed drifting model achieves high SSIM and PSNR and low RMSE, surpassing strong diffusion baselines and conventional CNN-, VAE-, GAN-, and PPFM-based methods. Visual inspection shows sharper cortical bone edges, improved depiction of sacral and femoral head geometry, and reduced artifacts or over-smoothing, particularly at bone-air-soft tissue boundaries. Moreover, the drifting model attains these gains with one-step inference and inference times on the order of milliseconds, yielding a more favorable accuracy-efficiency trade-off than iterative diffusion sampling while remaining competitive in image quality. These findings suggest that drifting models are a promising direction for fast, high-quality pelvic synthetic CT generation from MRI and warrant further investigation for downstream applications such as MRI-only radiotherapy planning and PET/MR attenuation correction.",
+  "id": "http://arxiv.org/abs/2603.28498v1",
+  "authors": [
+    "Qing Lyu",
+    "Jianxu Wang",
+    "Jeremy Hudson",
+    "Ge Wang",
+    "Chirstopher T. Whitlow"
+  ],
+  "categories": [
+    "eess.IV",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.28498v1"
+}

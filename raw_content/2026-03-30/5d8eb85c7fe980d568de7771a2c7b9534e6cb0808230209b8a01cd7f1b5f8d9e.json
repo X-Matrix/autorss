@@ -1,0 +1,20 @@
+{
+  "title": "CoE: Collaborative Entropy for Uncertainty Quantification in Agentic Multi-LLM Systems",
+  "link": "https://arxiv.org/abs/2603.28360v1",
+  "published": "2026-03-30T12:28:26Z",
+  "updated": "2026-03-30T12:28:26Z",
+  "summary": "Uncertainty estimation in multi-LLM systems remains largely single-model-centric: existing methods quantify uncertainty within each model but do not adequately capture semantic disagreement across models. To address this gap, we propose Collaborative Entropy (CoE), a unified information-theoretic metric for semantic uncertainty in multi-LLM collaboration. CoE is defined on a shared semantic cluster space and combines two components: intra-model semantic entropy and inter-model divergence to the ensemble mean. CoE is not a weighted ensemble predictor; it is a system-level uncertainty measure that characterizes collaborative confidence and disagreement. We analyze several core properties of CoE, including non-negativity, zero-value certainty under perfect semantic consensus, and the behavior of CoE when individual models collapse to delta distributions. These results clarify when reducing per-model uncertainty is sufficient and when residual inter-model disagreement remains. We also present a simple CoE-guided, training-free post-hoc coordination heuristic as a practical application of the metric. Experiments on \\textit{TriviaQA} and \\textit{SQuAD} with LLaMA-3.1-8B-Instruct, Qwen-2.5-7B-Instruct, and Mistral-7B-Instruct show that CoE provides stronger uncertainty estimation than standard entropy- and divergence-based baselines, with gains becoming larger as additional heterogeneous models are introduced. Overall, CoE offers a useful uncertainty-aware perspective on multi-LLM collaboration.",
+  "id": "http://arxiv.org/abs/2603.28360v1",
+  "authors": [
+    "Kangkang Sun",
+    "Jun Wu",
+    "Jianhua Li",
+    "Minyi Guo",
+    "Xiuzhen Che",
+    "Jianwei Huang"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.28360v1"
+}
