@@ -1,0 +1,16 @@
+{
+  "title": "ScoringBench: A Benchmark for Evaluating Tabular Foundation Models with Proper Scoring Rules",
+  "link": "https://arxiv.org/abs/2603.29928v1",
+  "published": "2026-03-31T16:01:56Z",
+  "updated": "2026-03-31T16:01:56Z",
+  "summary": "Tabular foundation models such as TabPFN and TabICL already produce full predictive distributions yet prevailing regression benchmarks evaluate them almost exclusively via point estimate metrics RMSE R2 These aggregate measures often obscure model performance in the tails of the distribution a critical deficit for high stakes decision making in domains like finance and clinical research where asymmetric risk profiles are the norm We introduce ScoringBench an open benchmark that computes a comprehensive suite of proper scoring rules like CRPS CRLS Interval Score Energy Score weighted CRPS and Brier Score alongside standard point metrics providing a richer picture of probabilistic forecast quality We evaluate realTabPFNv2.5 fine tuned with different scoring rule objectives and TabICL relative to untuned realTabPFNv2.5 across a suite of regression benchmarks Our results confirm that model rankings depend on the chosen scoring rule and that no single pretraining objective is universally optimal This demonstrates that for applications sensitive to extreme events the choice of evaluation metric is as much a domain specific requirement as the data itself ScoringBench is available at https://github.com/jonaslandsgesell/ScoringBench A live preview of the current leaderboard is available at https://scoringbench.bolt.host The leaderboard is maintained via git pull requests to ensure transparency traceability agility and reproducibility",
+  "id": "http://arxiv.org/abs/2603.29928v1",
+  "authors": [
+    "Jonas Landsgesell",
+    "Pascal Knoll"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.29928v1"
+}

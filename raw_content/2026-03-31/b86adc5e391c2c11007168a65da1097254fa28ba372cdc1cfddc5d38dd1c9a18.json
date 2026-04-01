@@ -1,0 +1,20 @@
+{
+  "title": "End-to-End Image Compression with Segmentation Guided Dual Coding for Wind Turbines",
+  "link": "https://arxiv.org/abs/2603.29927v1",
+  "published": "2026-03-31T16:01:23Z",
+  "updated": "2026-03-31T16:01:23Z",
+  "summary": "Transferring large volumes of high-resolution images during wind turbine inspections introduces a bottleneck in assessing and detecting severe defects. Efficient coding must preserve high fidelity in blade regions while aggressively compressing the background. In this work, we propose an end-to-end deep learning framework that jointly performs segmentation and dual-mode (lossy and lossless) compression. The segmentation module accurately identifies the blade region, after which our region-of-interest (ROI) compressor encodes it at superior quality compared to the rest of the image. Unlike conventional ROI schemes that merely allocate more bits to salient areas, our framework integrates: (i) a robust segmentation network (BU-Netv2+P) with a CRF-regularized loss for precise blade localization, (ii) a hyperprior-based autoencoder optimized for lossy compression, and (iii) an extended bits-back coder with hierarchical models for fully lossless blade reconstruction. Furthermore, our ROI framework removes the sequential dependency in bits-back coding by reusing background-coded bits, enabling parallelized and efficient dual-mode compression. To the best of our knowledge, this is the first fully integrated learning-based ROI codec combining segmentation, lossy, and lossless compression, ensuring that subsequent defect detection is not compromised. Experiments on a large-scale wind turbine dataset demonstrate superior compression performance and efficiency, offering a practical solution for automated inspections.",
+  "id": "http://arxiv.org/abs/2603.29927v1",
+  "authors": [
+    "Raül Pérez-Gonzalo",
+    "Andreas Espersen",
+    "Søren Forchhammer",
+    "Antonio Agudo"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.29927v1"
+}

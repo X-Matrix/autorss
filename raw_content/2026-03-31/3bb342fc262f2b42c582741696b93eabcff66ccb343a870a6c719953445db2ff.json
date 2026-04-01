@@ -1,0 +1,18 @@
+{
+  "title": "Automatic Identification of Parallelizable Loops Using Transformer-Based Source Code Representations",
+  "link": "https://arxiv.org/abs/2603.30040v1",
+  "published": "2026-03-31T17:54:27Z",
+  "updated": "2026-03-31T17:54:27Z",
+  "summary": "Automatic parallelization remains a challenging problem in software engineering, particularly in identifying code regions where loops can be safely executed in parallel on modern multi-core architectures. Traditional static analysis techniques, such as dependence analysis and polyhedral models, often struggle with irregular or dynamically structured code. In this work, we propose a Transformer-based approach to classify the parallelization potential of source code, focusing on distinguishing independent (parallelizable) loops from undefined ones. We adopt DistilBERT to process source code sequences using subword tokenization, enabling the model to capture contextual syntactic and semantic patterns without handcrafted features. The approach is evaluated on a balanced dataset combining synthetically generated loops and manually annotated real-world code, using 10-fold cross-validation and multiple performance metrics. Results show consistently high performance, with mean accuracy above 99\\% and low false positive rates, demonstrating robustness and reliability. Compared to prior token-based methods, the proposed approach simplifies preprocessing while improving generalization and maintaining computational efficiency. These findings highlight the potential of lightweight Transformer models for practical identification of parallelization opportunities at the loop level.",
+  "id": "http://arxiv.org/abs/2603.30040v1",
+  "authors": [
+    "Izavan dos S. Correia",
+    "Henrique C. T. Santos",
+    "Tiago A. E. Ferreira"
+  ],
+  "categories": [
+    "cs.SE",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.30040v1"
+}

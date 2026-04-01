@@ -1,0 +1,23 @@
+{
+  "title": "MacTok: Robust Continuous Tokenization for Image Generation",
+  "link": "https://arxiv.org/abs/2603.29634v1",
+  "published": "2026-03-31T12:00:11Z",
+  "updated": "2026-03-31T12:00:11Z",
+  "summary": "Continuous image tokenizers enable efficient visual generation, and those based on variational frameworks can learn smooth, structured latent representations through KL regularization. Yet this often leads to posterior collapse when using fewer tokens, where the encoder fails to encode informative features into the compressed latent space. To address this, we introduce \\textbf{MacTok}, a \\textbf{M}asked \\textbf{A}ugmenting 1D \\textbf{C}ontinuous \\textbf{Tok}enizer that leverages image masking and representation alignment to prevent collapse while learning compact and robust representations. MacTok applies both random masking to regularize latent learning and DINO-guided semantic masking to emphasize informative regions in images, forcing the model to encode robust semantics from incomplete visual evidence. Combined with global and local representation alignment, MacTok preserves rich discriminative information in a highly compressed 1D latent space, requiring only 64 or 128 tokens. On ImageNet, MacTok achieves a competitive gFID of 1.44 at 256$\\times$256 and a state-of-the-art 1.52 at 512$\\times$512 with SiT-XL, while reducing token usage by up to 64$\\times$. These results confirm that masking and semantic guidance together prevent posterior collapse and achieve efficient, high-fidelity tokenization.",
+  "id": "http://arxiv.org/abs/2603.29634v1",
+  "authors": [
+    "Hengyu Zeng",
+    "Xin Gao",
+    "Guanghao Li",
+    "Yuxiang Yan",
+    "Jiaoyang Ruan",
+    "Junpeng Ma",
+    "Haoyu Albert Wang",
+    "Jian Pu"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.29634v1"
+}

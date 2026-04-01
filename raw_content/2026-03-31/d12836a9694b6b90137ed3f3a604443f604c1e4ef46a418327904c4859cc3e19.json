@@ -1,0 +1,16 @@
+{
+  "title": "Tracking vs. Deciding: The Dual-Capability Bottleneck in Searchless Chess Transformers",
+  "link": "https://arxiv.org/abs/2603.29761v1",
+  "published": "2026-03-31T14:01:39Z",
+  "updated": "2026-03-31T14:01:39Z",
+  "summary": "A human-like chess engine should mimic the style, errors, and consistency of a strong human player rather than maximize playing strength. We show that training from move sequences alone forces a model to learn two capabilities: state tracking, which reconstructs the board from move history, and decision quality, which selects good moves from that reconstructed state. These impose contradictory data requirements: low-rated games provide the diversity needed for tracking, while high-rated games provide the quality signal for decision learning. Removing low-rated data degrades performance.   We formalize this tension as a dual-capability bottleneck, P <= min(T,Q), where overall performance is limited by the weaker capability. Guided by this view, we scale the model from 28M to 120M parameters to improve tracking, then introduce Elo-weighted training to improve decisions while preserving diversity. A 2 x 2 factorial ablation shows that scaling improves tracking, weighting improves decisions, and their combination is superadditive. Linear weighting works best, while overly aggressive weighting harms tracking despite lower validation loss. We also introduce a coverage-decay formula, t* = log(N/kcrit)/log b, as a reliability horizon for intra-game degeneration risk.   Our final 120M-parameter model, without search, reached Lichess bullet 2570 over 253 rated games. On human move prediction it achieves 55.2% Top-1 accuracy, exceeding Maia-2 rapid and Maia-2 blitz. Unlike position-based methods, sequence input naturally encodes full game history, enabling history-dependent decisions that single-position models cannot exhibit.",
+  "id": "http://arxiv.org/abs/2603.29761v1",
+  "authors": [
+    "Quanhao Li",
+    "Wei Jiang"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.29761v1"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "SISA: A Scale-In Systolic Array for GEMM Acceleration",
+  "link": "https://arxiv.org/abs/2603.29913v1",
+  "published": "2026-03-31T15:55:31Z",
+  "updated": "2026-03-31T15:55:31Z",
+  "summary": "The currently dominant AI/ML workloads, such as Large Language Models (LLMs), rely on the efficient execution of General Matrix-Matrix Multiplication (GEMM) operations. Thus, most systems are equipped with dedicated matrix hardware accelerators based on square Systolic Arrays (SAs) of Processing Elements (PEs). While this organization was effective for traditional Deep Neural Networks (DNNs), LLMs introduce input-dependent and highly skewed matrices, leading to underutilized SA resources. To address this challenge, we propose SISA (Scale-In Systolic Array), a novel SA architecture that partitions the traditional square array into horizontal rectangular slabs. With minimal overhead, SISA exposes parallelism through independently scheduled slabs for efficient execution of small or skewed matrix shapes, while retaining full-array operation for large GEMMs. SISA achieves up to 8.52x speedup and 93% energy-delay-product (EDP) reduction for representative LLMs compared to a state-of-the-art monolithic SA with the same number of PEs.",
+  "id": "http://arxiv.org/abs/2603.29913v1",
+  "authors": [
+    "Luigi Altamura",
+    "Alessio Cicero",
+    "Mateo Vázquez Maceiras",
+    "Mohammad Ali Maleki",
+    "Pedro Trancoso"
+  ],
+  "categories": [
+    "cs.AR",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.29913v1"
+}

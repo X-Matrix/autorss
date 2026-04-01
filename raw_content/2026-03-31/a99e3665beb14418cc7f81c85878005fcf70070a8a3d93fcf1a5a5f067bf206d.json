@@ -1,0 +1,21 @@
+{
+  "title": "Exploring the Impact of Skin Color on Skin Lesion Segmentation",
+  "link": "https://arxiv.org/abs/2603.29694v1",
+  "published": "2026-03-31T12:49:10Z",
+  "updated": "2026-03-31T12:49:10Z",
+  "summary": "Skin cancer, particularly melanoma, remains a major cause of morbidity and mortality, making early detection critical. AI-driven dermatology systems often rely on skin lesion segmentation as a preprocessing step to delineate the lesion from surrounding skin and support downstream analysis. While fairness concerns regarding skin tone have been widely studied for lesion classification, the influence of skin tone on the segmentation stage remains under-quantified and is frequently assessed using coarse, discrete skin tone categories. In this work, we evaluate three strong segmentation architectures (UNet, DeepLabV3 with a ResNet50 backbone, and DINOv2) on two public dermoscopic datasets (HAM10000 and ISIC2017) and introduce a continuous pigment or contrast analysis that treats pixel-wise ITA values as distributions. Using Wasserstein distances between within-image distributions for skin-only, lesion-only, and whole-image regions, we quantify lesion skin contrast and relate it to segmentation performance across multiple metrics. Within the range represented in these datasets, global skin tone metrics (Fitzpatrick grouping or mean ITA) show weak association with segmentation quality. In contrast, low lesion-skin contrast is consistently associated with larger segmentation errors in models, indicating that boundary ambiguity and low contrast are key drivers of failure. These findings suggest that fairness improvements in dermoscopic segmentation should prioritize robust handling of low-contrast lesions, and the distribution-based pigment measures provide a more informative audit signal than discrete skin-tone categories.",
+  "id": "http://arxiv.org/abs/2603.29694v1",
+  "authors": [
+    "Kuniko Paxton",
+    "Medina Kapo",
+    "Amila Akagić",
+    "Koorosh Aslansefat",
+    "Dhavalkumar Thakker",
+    "Yiannis Papadopoulos"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.29694v1"
+}

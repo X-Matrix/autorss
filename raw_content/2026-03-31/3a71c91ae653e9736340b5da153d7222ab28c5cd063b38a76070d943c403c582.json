@@ -1,0 +1,26 @@
+{
+  "title": "Training deep learning based dynamic MR image reconstruction using synthetic fractals",
+  "link": "https://arxiv.org/abs/2603.29922v1",
+  "published": "2026-03-31T15:59:40Z",
+  "updated": "2026-03-31T15:59:40Z",
+  "summary": "Purpose: To investigate whether synthetically generated fractal data can be used to train deep learning (DL) models for dynamic MRI reconstruction, thereby avoiding the privacy, licensing, and availability limitations associated with cardiac MR training datasets. Methods: A training dataset was generated using quaternion Julia fractals to produce 2D+time images. Multi-coil MRI acquisition was simulated to generate paired fully sampled and radially undersampled k-space data. A 3D UNet deep artefact suppression model was trained using these fractal data (F-DL) and compared with an identical model trained on cardiac MRI data (CMR-DL). Both models were evaluated on prospectively acquired radial real-time cardiac MRI from 10 patients. Reconstructions were compared against compressed sensing(CS) and low-rank deep image prior (LR-DIP). All reconstrctuions were ranked for image quality, while ventricular volumes and ejection fraction were compared with reference breath-hold cine MRI. Results: There was no significant difference in qualitative ranking between F-DL and CMR-DL (p=0.9), while both outperformed CS and LR-DIP (p<0.001). Ventricular volumes and function derived from F-DL were similar to CMR-DL, showing no significant bias and accptable limits of agreement compared to reference cine imaging. However, LR-DIP had a signifcant bias (p=0.016) and wider lmits of agreement. Conclusion: DL models trained using synthetic fractal data can reconstruct real-time cardiac MRI with image quality and clinical measurements comparable to models trained on true cardiac MRI data. Fractal training data provide an open, scalable alternative to clinical datasets and may enable development of more generalisable DL reconstruction models for dynamic MRI.",
+  "id": "http://arxiv.org/abs/2603.29922v1",
+  "authors": [
+    "Anirudh Raman",
+    "Olivier Jaubert",
+    "Mark Wrobel",
+    "Tina Yao",
+    "Ruaraidh Campbell",
+    "Rebecca Baker",
+    "Ruta Virsinskaite",
+    "Daniel Knight",
+    "Michael Quail",
+    "Jennifer Steeden",
+    "Vivek Muthurangu"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2603.29922v1"
+}
