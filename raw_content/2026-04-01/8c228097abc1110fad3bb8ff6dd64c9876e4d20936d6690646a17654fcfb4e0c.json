@@ -1,0 +1,20 @@
+{
+  "title": "Scalable Pretraining of Large Mixture of Experts Language Models on Aurora Super Computer",
+  "link": "https://arxiv.org/abs/2604.00785v1",
+  "published": "2026-04-01T11:46:17Z",
+  "updated": "2026-04-01T11:46:17Z",
+  "summary": "Pretraining Large Language Models (LLMs) from scratch requires massive amount of compute. Aurora super computer is an ExaScale machine with 127,488 Intel PVC (Ponte Vechio) GPU tiles. In this work, we showcase LLM pretraining on Aurora at the scale of 1000s of GPU tiles. Towards this effort, we developed Optimus, an inhouse training library with support for standard large model training techniques. Using Optimus, we first pretrained Mula-1B, a 1 Billion dense model and Mula-7B-A1B, a 7 Billion Mixture of Experts (MoE) model from scratch on 3072 GPU tiles for the full 4 trillion tokens of the OLMoE-mix-0924 dataset. We then demonstrated model scaling by pretraining three large MoE models Mula-20B-A2B, Mula-100B-A7B, and Mula-220B-A10B till 100 Billion tokens on the same dataset. On our largest model Mula-220B-A10B, we pushed the compute scaling from 384 to 12288 GPU tiles and observed scaling efficiency of around 90% at 12288 GPU tiles. We significantly improved the runtime performance of MoE models using custom GPU kernels for expert computation, and a novel EP-Aware sharded optimizer resulting in training speedups up to 1.71x. As part of the Optimus library, we also developed a robust set of reliability and fault tolerant features to improve training stability and continuity at scale.",
+  "id": "http://arxiv.org/abs/2604.00785v1",
+  "authors": [
+    "Dharma Teja Vooturi",
+    "Dhiraj Kalamkar",
+    "Dipankar Das",
+    "Bharat Kaul"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.DC"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.00785v1"
+}

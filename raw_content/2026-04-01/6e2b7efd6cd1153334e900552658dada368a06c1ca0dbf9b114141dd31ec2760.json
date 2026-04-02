@@ -1,0 +1,21 @@
+{
+  "title": "WARP: Guaranteed Inner-Layer Repair of NLP Transformers",
+  "link": "https://arxiv.org/abs/2604.00938v1",
+  "published": "2026-04-01T14:12:49Z",
+  "updated": "2026-04-01T14:12:49Z",
+  "summary": "Transformer-based NLP models remain vulnerable to adversarial perturbations, yet existing repair methods face a fundamental trade-off: gradient-based approaches offer flexibility but lack verifiability and often overfit; methods that do provide repair guarantees are restricted to the final layer or small networks, significantly limiting the parameter search space available for repair. We present WARP (Weight-Adjusted Repair with Provability), a constraint-based repair framework that extends repair beyond the last layer of Transformer models. WARP formulates repair as a convex quadratic program derived from a first-order linearization of the logit gap, enabling tractable optimization over a high-dimensional parameter space. Under the condition that the first-order approximation holds, this formulation induces three per-sample guarantees: (i) a positive margin constraint ensuring correct classification on repaired inputs, (ii) preservation constraints over a designated remain set, and (iii) a certified robustness radius derived from Lipschitz continuity. To ensure feasibility across varying model architectures, we introduce a sensitivity-based preprocessing step that conditions the optimization landscape accordingly. We further show that the iterative optimization procedure converges to solutions satisfying all repair constraints under mild assumptions. Empirical evaluation on encoder-only Transformers with varying layer architectures validates that these guarantees hold in practice while improving robustness to adversarial inputs. Our results demonstrate that guaranteed, generalizable Transformer repair is achievable through principled constraint-based optimization.",
+  "id": "http://arxiv.org/abs/2604.00938v1",
+  "authors": [
+    "Hsin-Ling Hsu",
+    "Min-Yu Chen",
+    "Nai-Chia Chen",
+    "Yan-Ru Chen",
+    "Yi-Ling Chang",
+    "Fang Yu"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.00938v1"
+}

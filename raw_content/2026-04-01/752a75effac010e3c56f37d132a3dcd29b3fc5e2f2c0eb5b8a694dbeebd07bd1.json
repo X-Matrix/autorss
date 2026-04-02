@@ -1,0 +1,16 @@
+{
+  "title": "CircuitProbe: Predicting Reasoning Circuits in Transformers via Stability Zone Detection",
+  "link": "https://arxiv.org/abs/2604.00716v1",
+  "published": "2026-04-01T10:26:12Z",
+  "updated": "2026-04-01T10:26:12Z",
+  "summary": "Transformer language models contain localized reasoning circuits, contiguous layer blocks that improve reasoning when duplicated at inference time. Finding these circuits currently requires brute-force sweeps costing 25 GPU hours per model. We propose CircuitProbe, which predicts circuit locations from activation statistics in under 5 minutes on CPU, providing a speedup of three to four orders of magnitude. We find that reasoning circuits come in two types: stability circuits in early layers, detected through the derivative of representation change, and magnitude circuits in late layers, detected through anomaly scoring. We validate across 9 models spanning 6 architectures, including 2025 models, confirming that CircuitProbe top predictions match or are within 2 layers of the optimal circuit in all validated cases. A scaling experiment across the Qwen 2.5 family reveals that layer duplication consistently benefits models under 3B parameters but degrades performance in 7B+ models, making this a practical scaling technique for small language models. CircuitProbe requires as few as 10 calibration examples and its predictions are stable across English, Hindi, Chinese, and French.",
+  "id": "http://arxiv.org/abs/2604.00716v1",
+  "authors": [
+    "Rajkiran Panuganti"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.00716v1"
+}

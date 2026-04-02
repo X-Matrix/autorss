@@ -1,0 +1,19 @@
+{
+  "title": "Approximating Pareto Frontiers in Stochastic Multi-Objective Optimization via Hashing and Randomization",
+  "link": "https://arxiv.org/abs/2604.01098v1",
+  "published": "2026-04-01T16:24:13Z",
+  "updated": "2026-04-01T16:24:13Z",
+  "summary": "Stochastic Multi-Objective Optimization (SMOO) is critical for decision-making trading off multiple potentially conflicting objectives in uncertain environments. SMOO aims at identifying the Pareto frontier, which contains all mutually non-dominating decisions. The problem is highly intractable due to the embedded probabilistic inference, such as computing the marginal, posterior probabilities, or expectations. Existing methods, such as scalarization, sample average approximation, and evolutionary algorithms, either offer arbitrarily loose approximations or may incur prohibitive computational costs. We propose XOR-SMOO, a novel algorithm that with probability $1-δ$, obtains $γ$-approximate Pareto frontiers ($γ>1$) for SMOO by querying an SAT oracle poly-log times in $γ$ and $δ$. A $γ$-approximate Pareto frontier is only below the true frontier by a fixed, multiplicative factor $γ$. Thus, XOR-SMOO solves highly intractable SMOO problems (\\#P-hard) with only queries to SAT oracles while obtaining tight, constant factor approximation guarantees. Experiments on real-world road network strengthening and supply chain design problems demonstrate that XOR-SMOO outperforms several baselines in identifying Pareto frontiers that have higher objective values, better coverage of the optimal solutions, and the solutions found are more evenly distributed. Overall, XOR-SMOO significantly enhanced the practicality and reliability of SMOO solvers.",
+  "id": "http://arxiv.org/abs/2604.01098v1",
+  "authors": [
+    "Jinzhao Li",
+    "Nan Jiang",
+    "Yexiang Xue"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.LO"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.01098v1"
+}

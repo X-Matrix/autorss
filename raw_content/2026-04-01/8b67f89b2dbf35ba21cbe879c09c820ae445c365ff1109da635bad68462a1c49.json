@@ -1,0 +1,16 @@
+{
+  "title": "Thinking Wrong in Silence: Backdoor Attacks on Continuous Latent Reasoning",
+  "link": "https://arxiv.org/abs/2604.00770v1",
+  "published": "2026-04-01T11:34:55Z",
+  "updated": "2026-04-01T11:34:55Z",
+  "summary": "A new generation of language models reasons entirely in continuous hidden states, producing no tokens and leaving   no audit trail. We show that this silence creates a fundamentally new attack surface. ThoughtSteer perturbs a   single embedding vector at the input layer; the model's own multi-pass reasoning amplifies this perturbation into a   hijacked latent trajectory that reliably produces the attacker's chosen answer, while remaining structurally   invisible to every token-level defense. Across two architectures (Coconut and SimCoT), three reasoning benchmarks,   and model scales from 124M to 3B parameters, ThoughtSteer achieves >=99% attack success rate with near-baseline   clean accuracy, transfers to held-out benchmarks without retraining (94-100%), evades all five evaluated active   defenses, and survives 25 epochs of clean fine-tuning. We trace these results to a unifying mechanism: Neural   Collapse in the latent space pulls triggered representations onto a tight geometric attractor, explaining both why   defenses fail and why any effective backdoor must leave a linearly separable signature (probe AUC>=0.999). Yet a   striking paradox emerges: individual latent vectors still encode the correct answer even as the model outputs the   wrong one. The adversarial information is not in any single vector but in the collective trajectory, establishing   backdoor perturbations as a new lens for mechanistic interpretability of continuous reasoning. Code and checkpoints   are available.",
+  "id": "http://arxiv.org/abs/2604.00770v1",
+  "authors": [
+    "Swapnil Parekh"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.00770v1"
+}

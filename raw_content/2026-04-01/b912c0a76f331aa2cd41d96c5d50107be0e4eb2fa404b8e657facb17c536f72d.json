@@ -1,0 +1,18 @@
+{
+  "title": "Representation Selection via Cross-Model Agreement using Canonical Correlation Analysis",
+  "link": "https://arxiv.org/abs/2604.00921v1",
+  "published": "2026-04-01T14:01:41Z",
+  "updated": "2026-04-01T14:01:41Z",
+  "summary": "Modern vision pipelines increasingly rely on pretrained image encoders whose representations are reused across tasks and models, yet these representations are often overcomplete and model-specific. We propose a simple, training-free method to improve the efficiency of image representations via a post-hoc canonical correlation analysis (CCA) operator. By leveraging the shared structure between representations produced by two pre-trained image encoders, our method finds linear projections that serve as a principled form of representation selection and dimensionality reduction, retaining shared semantic content while discarding redundant dimensions. Unlike standard dimensionality reduction techniques such as PCA, which operate on a single embedding space, our approach leverages cross-model agreement to guide representation distillation and refinement. The technique allows representations to be reduced by more than 75% in dimensionality with improved downstream performance, or enhanced at fixed dimensionality via post-hoc representation transfer from larger or fine-tuned models. Empirical results on ImageNet-1k, CIFAR-100, MNIST, and additional benchmarks show consistent improvements over both baseline and PCA-projected representations, with accuracy gains of up to 12.6%.",
+  "id": "http://arxiv.org/abs/2604.00921v1",
+  "authors": [
+    "Dylan B. Lewis",
+    "Jens Gregor",
+    "Hector Santos-Villalobos"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.00921v1"
+}

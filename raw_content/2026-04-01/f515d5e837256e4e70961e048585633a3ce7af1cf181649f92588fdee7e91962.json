@@ -1,0 +1,25 @@
+{
+  "title": "Fast and Accurate Probing of In-Training LLMs' Downstream Performances",
+  "link": "https://arxiv.org/abs/2604.01025v1",
+  "published": "2026-04-01T15:32:56Z",
+  "updated": "2026-04-01T15:32:56Z",
+  "summary": "The paradigm of scaling Large Language Models (LLMs) in both parameter size and test time has pushed the boundaries of AI capabilities, but at the cost of making the traditional generative evaluation paradigm prohibitively expensive, therefore making the latency of LLM's in-training downstream performance evaluation unbearable. However, simple metrics like training loss (perplexity) are not always correlated with downstream performance, as sometimes their trends diverge from the actual task outcomes. This dilemma calls for a method that is computationally efficient and sufficiently accurate in measuring model capabilities. To address this challenge, we introduce a new in-training evaluation paradigm that uses a lightweight probe for monitoring downstream performance. The probes take the internal representations of LLM checkpoints (during training) as input and directly predict the checkpoint's performance on downstream tasks measured by success probability (i.e., pass@1). We design several probe architectures, validating their effectiveness using the OLMo3-7B's checkpoints across a diverse set of downstream tasks. The probes can accurately predict a checkpoint's performance (with avg. AUROC$>$0.75), have decent generalizability across checkpoints (earlier predicts later), and reduce the computation latency from $\\sim$1 hr (using conventional generative evaluation method) to $\\sim$3 min. In sum, this work presents a practical and scalable in-training downstream evaluation paradigm, enabling a more agile, informed, and efficient LLM development process.",
+  "id": "http://arxiv.org/abs/2604.01025v1",
+  "authors": [
+    "Zhichen Liu",
+    "Tianle Lun",
+    "Zhibin Wen",
+    "Hao An",
+    "Yulin Ou",
+    "Jianhui Xu",
+    "Hao Zhang",
+    "Wenyi Fang",
+    "Yang Zheng",
+    "Yang Xu"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.01025v1"
+}

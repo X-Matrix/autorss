@@ -1,0 +1,20 @@
+{
+  "title": "Learning to Learn-at-Test-Time: Language Agents with Learnable Adaptation Policies",
+  "link": "https://arxiv.org/abs/2604.00830v1",
+  "published": "2026-04-01T12:41:01Z",
+  "updated": "2026-04-01T12:41:01Z",
+  "summary": "Test-Time Learning (TTL) enables language agents to iteratively refine their performance through repeated interactions with the environment at inference time. At the core of TTL is an adaptation policy that updates the actor policy based on experience from previous episodes, thereby improving future behavior. Existing methods rely on fixed, hand-crafted adaptation policies rather than optimizing them for downstream improvement. We argue that optimal adaptation policies should be learned from task environments, not hand-engineered based on human intuition. To achieve this, we introduce Meta-TTL, a framework that formulates the discovery of effective adaptation policies as a bi-level optimization problem. Within this framework, the inner loop executes the standard TTL process, measuring how effectively a candidate adaptation policy helps an agent correct errors across sequential episodes. Guided by the agent's performance, the outer loop employs evolutionary search over a diverse distribution of training tasks to iteratively refine the adaptation policy. We evaluate Meta-TTL on Jericho and WebArena-Lite across both in-distribution (ID) and out-of-distribution (OOD) settings, using multiple meta-agent backbones. Results on both benchmarks show that Meta-TTL consistently outperforms hand-crafted baselines, suggesting that the optimized adaptation policy encodes transferable strategies that generalize beyond the training task distribution.",
+  "id": "http://arxiv.org/abs/2604.00830v1",
+  "authors": [
+    "Zhanzhi Lou",
+    "Hui Chen",
+    "Yibo Li",
+    "Qian Wang",
+    "Bryan Hooi"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.00830v1"
+}

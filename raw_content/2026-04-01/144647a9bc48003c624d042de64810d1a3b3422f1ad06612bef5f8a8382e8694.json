@@ -1,0 +1,20 @@
+{
+  "title": "ORBIT: Scalable and Verifiable Data Generation for Search Agents on a Tight Budget",
+  "link": "https://arxiv.org/abs/2604.01195v1",
+  "published": "2026-04-01T17:42:41Z",
+  "updated": "2026-04-01T17:42:41Z",
+  "summary": "Search agents, which integrate language models (LMs) with web search, are becoming crucial for answering complex user queries. Constructing training datasets for deep research tasks, involving multi-step retrieval and reasoning, remains challenging due to expensive human annotation, or cumbersome prerequisites. In this work, we introduce ORBIT, a training dataset with 20K reasoning-intensive queries with short verifiable answers, generated using a frugal framework without relying on paid API services. The modular framework relies on four stages: seed creation, question--answer pair generation, and two stages of verification: self and external. ORBIT spans 15 domains and each training pair requires 4--5 reasoning steps, with external search verification required from the complete web. We train Qwen3-4B as the base model on ORBIT using GRPO and evaluate it on Wikipedia question answering tasks. Extensive experiment results demonstrate that ORBIT-4B achieves strong performance among sub-4B LLMs as search agents, proving the utility of synthetic datasets. Our framework, code and datasets are open-sourced and available publicly.",
+  "id": "http://arxiv.org/abs/2604.01195v1",
+  "authors": [
+    "Nandan Thakur",
+    "Zijian Chen",
+    "Xueguang Ma",
+    "Jimmy Lin"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.IR"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.01195v1"
+}

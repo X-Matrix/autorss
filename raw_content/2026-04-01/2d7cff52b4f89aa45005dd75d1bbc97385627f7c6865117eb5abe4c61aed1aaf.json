@@ -1,0 +1,20 @@
+{
+  "title": "TRACE: Training-Free Partial Audio Deepfake Detection via Embedding Trajectory Analysis of Speech Foundation Models",
+  "link": "https://arxiv.org/abs/2604.01083v1",
+  "published": "2026-04-01T16:12:31Z",
+  "updated": "2026-04-01T16:12:31Z",
+  "summary": "Partial audio deepfakes, where synthesized segments are spliced into genuine recordings, are particularly deceptive because most of the audio remains authentic. Existing detectors are supervised: they require frame-level annotations, overfit to specific synthesis pipelines, and must be retrained as new generative models emerge. We argue that this supervision is unnecessary. We hypothesize that speech foundation models implicitly encode a forensic signal: genuine speech forms smooth, slowly varying embedding trajectories, while splice boundaries introduce abrupt disruptions in frame-level transitions. Building on this, we propose TRACE (Training-free Representation-based Audio Countermeasure via Embedding dynamics), a training-free framework that detects partial audio deepfakes by analyzing the first-order dynamics of frozen speech foundation model representations without any training, labeled data, or architectural modification. We evaluate TRACE on four benchmarks that span two languages using six speech foundation models. In PartialSpoof, TRACE achieves 8.08% EER, competitive with fine-tuned supervised baselines. In LlamaPartialSpoof, the most challenging benchmark featuring LLM-driven commercial synthesis, TRACE surpasses a supervised baseline outright (24.12% vs. 24.49% EER) without any target-domain data. These results show that temporal dynamics in speech foundation models provide an effective, generalize signal for training-free audio forensics.",
+  "id": "http://arxiv.org/abs/2604.01083v1",
+  "authors": [
+    "Awais Khan",
+    "Muhammad Umar Farooq",
+    "Kutub Uddin",
+    "Khalid Malik"
+  ],
+  "categories": [
+    "cs.SD",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.01083v1"
+}
