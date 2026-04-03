@@ -1,0 +1,19 @@
+{
+  "title": "Answering the Wrong Question: Reasoning Trace Inversion for Abstention in LLMs",
+  "link": "https://arxiv.org/abs/2604.02230v1",
+  "published": "2026-04-02T16:23:46Z",
+  "updated": "2026-04-02T16:23:46Z",
+  "summary": "For Large Language Models (LLMs) to be reliably deployed, models must effectively know when not to answer: abstain. Reasoning models, in particular, have gained attention for impressive performance on complex tasks. However, reasoning models have been shown to have worse abstention abilities. Taking the vulnerabilities of reasoning models into account, we propose our Query Misalignment Framework. Hallucinations resulting in failed abstention can be reinterpreted as LLMs answering the wrong question (rather than answering a question incorrectly). Based on this framework, we develop a new class of state-of-the-art abstention methods called Trace Inversion. First, we generate the reasoning trace of a model. Based on only the trace, we then reconstruct the most likely query that the model responded to. Finally, we compare the initial query with the reconstructed query. Low similarity score between the initial query and reconstructed query suggests that the model likely answered the question incorrectly and is flagged to abstain. Extensive experiments demonstrate that Trace Inversion effectively boosts abstention performance in four frontier LLMs across nine abstention QA datasets, beating competitive baselines in 33 out of 36 settings.",
+  "id": "http://arxiv.org/abs/2604.02230v1",
+  "authors": [
+    "Abinitha Gourabathina",
+    "Inkit Padhi",
+    "Manish Nagireddy",
+    "Subhajit Chaudhury",
+    "Prasanna Sattigeri"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.02230v1"
+}

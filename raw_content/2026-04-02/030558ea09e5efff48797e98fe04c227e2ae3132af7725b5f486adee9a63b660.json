@@ -1,0 +1,20 @@
+{
+  "title": "GenGait: A Transformer-Based Model for Human Gait Anomaly Detection and Normative Twin Generation",
+  "link": "https://arxiv.org/abs/2604.01997v1",
+  "published": "2026-04-02T13:06:27Z",
+  "updated": "2026-04-02T13:06:27Z",
+  "summary": "Gait analysis provides an objective characterization of locomotor function and is widely used to support diagnosis and rehabilitation monitoring across neurological and orthopedic disorders. Deep learning has been increasingly applied to this domain, yet most approaches rely on supervised classifiers trained on disease-labeled data, limiting generalization to heterogeneous pathological presentations. This work proposes a label-free framework for joint-level anomaly detection and kinematic correction based on a Transformer masked autoencoder trained exclusively on normative gait sequences from 150 adults, acquired with a markerless multi-camera motion-capture system. At inference, a two-pass procedure is applied to potentially pathological input sequences, first it estimates joint inconsistency scores by occluding individual joints and measuring deviations from the learned normative prior. Then, it withholds the flagged joints from the encoder input and reconstructs the full skeleton from the remaining spatiotemporal context, yielding corrected kinematic trajectories at the flagged positions. Validation on 10 held-out normative participants, who mimicked seven simulated gait abnormalities, showed accurate localization of biomechanically inconsistent joints, a significant reduction in angular deviation across all analyzed joints with large effect sizes, and preservation of normative kinematics. The proposed approach enables interpretable, subject-specific localization of gait impairments without requiring disease labels. Video is available at https://youtu.be/Rcm3jqR5pN4.",
+  "id": "http://arxiv.org/abs/2604.01997v1",
+  "authors": [
+    "Elisa Motta",
+    "Marta Lorenzini",
+    "Clara Mouawad",
+    "Alberto Ranavolo",
+    "Mariano Serrao",
+    "Arash Ajoudani"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.01997v1"
+}

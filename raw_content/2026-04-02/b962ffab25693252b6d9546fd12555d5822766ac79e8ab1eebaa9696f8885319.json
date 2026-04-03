@@ -1,0 +1,19 @@
+{
+  "title": "SenseMath: Do LLMs Have Number Sense? Evaluating Shortcut Use, Judgment, and Generation",
+  "link": "https://arxiv.org/abs/2604.01988v1",
+  "published": "2026-04-02T12:50:42Z",
+  "updated": "2026-04-02T12:50:42Z",
+  "summary": "Large language models often default to step-by-step computation even when efficient numerical shortcuts are available. This raises a basic question: do they exhibit number sense in a human-like behavioral sense, i.e., the ability to recognize numerical structure, apply shortcuts when appropriate, and avoid them when they are not? We introduce SenseMath, a controlled benchmark for evaluating structure-sensitive numerical reasoning in LLMs. SenseMath contains 4,800 items spanning eight shortcut categories and four digit scales, with matched strong-shortcut, weak-shortcut, and control variants. It supports three evaluation settings of increasing cognitive demand: Shortcut Use (whether models can apply shortcuts on shortcut-amenable problems); Applicability Judgment (whether they can recognize when a shortcut is appropriate or misleading); and Problem Generation (whether they can generate new problem items that correctly admit a given type of shortcut). Our evaluation across five LLMs, ranging from GPT-4o-mini to Llama-3.1-8B, shows a consistent pattern: when explicitly prompted, models readily adopt shortcut strategies and achieve substantial accuracy gains on shortcut-amenable items (up to 15%), yet under standard chain-of-thought prompting they spontaneously employ such strategies in fewer than 40% of cases, even when they demonstrably possess the requisite capability. Moreover, this competence is confined to the Use level; models systematically over-generalise shortcuts to problems where they do not apply, and fail to generate valid shortcut-bearing problems from scratch. Together, these results suggest that current LLMs exhibit procedural shortcut fluency without the structural understanding of when and why shortcuts work that underlies human number sense.",
+  "id": "http://arxiv.org/abs/2604.01988v1",
+  "authors": [
+    "Haomin Zhuang",
+    "Xiangqi Wang",
+    "Yili Shen",
+    "Ying Cheng",
+    "Xiangliang Zhang"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.01988v1"
+}
