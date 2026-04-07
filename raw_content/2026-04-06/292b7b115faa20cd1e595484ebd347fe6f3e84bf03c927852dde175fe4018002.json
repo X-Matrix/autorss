@@ -1,0 +1,17 @@
+{
+  "title": "Receding-Horizon Control via Drifting Models",
+  "link": "https://arxiv.org/abs/2604.04528v1",
+  "published": "2026-04-06T08:48:10Z",
+  "updated": "2026-04-06T08:48:10Z",
+  "summary": "We study the problem of trajectory optimization in settings where the system dynamics are unknown and it is not possible to simulate trajectories through a surrogate model. When an offline dataset of trajectories is available, an agent could directly learn a trajectory generator by distribution matching. However, this approach only recovers the behavior distribution in the dataset, and does not in general produce a model that minimizes a desired cost criterion. In this work, we propose Drifting MPC, an offline trajectory optimization framework that combines drifting generative models with receding-horizon planning under unknown dynamics. The goal of Drifting MPC is to learn, from an offline dataset of trajectories, a conditional distribution over trajectories that is both supported by the data and biased toward optimal plans. We show that the resulting distribution learned by Drifting MPC is the unique solution of an objective that trades off optimality with closeness to the offline prior. Empirically, we show that Drifting MPC can generate near-optimal trajectories while retaining the one-step inference efficiency of drifting models and substantially reducing generation time relative to diffusion-based baselines.",
+  "id": "http://arxiv.org/abs/2604.04528v1",
+  "authors": [
+    "Daniele Foffano",
+    "Alessio Russo",
+    "Alexandre Proutiere"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.04528v1"
+}

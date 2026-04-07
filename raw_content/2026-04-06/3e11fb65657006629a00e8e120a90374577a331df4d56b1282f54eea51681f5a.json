@@ -1,0 +1,21 @@
+{
+  "title": "ENCRUST: Encapsulated Substitution and Agentic Refinement on a Live Scaffold for Safe C-to-Rust Translation",
+  "link": "https://arxiv.org/abs/2604.04527v1",
+  "published": "2026-04-06T08:46:14Z",
+  "updated": "2026-04-06T08:46:14Z",
+  "summary": "We present Encapsulated Substitution and Agentic Refinement on a Live Scaffold for Safe C-to-Rust Translation, a two-phase pipeline for translating real-world C projects to safe Rust. Existing approaches either produce unsafe output without memory-safety guarantees or translate functions in isolation, failing to detect cross-unit type mismatches or handle unsafe constructs requiring whole-program reasoning. Furthermore, function-level LLM pipelines require coordinated caller updates when type signatures change, while project-scale systems often fail to produce compilable output under real-world dependency complexity. Encrust addresses these limitations by decoupling boundary adaptation from function logic via an Application Binary Interface (ABI)-preserving wrapper pattern and validating each intermediate state against the integrated codebase. Phase 1 (Encapsulated Substitution) translates each function using an ABI-preserving wrapper that splits it into two components: a caller-transparent shim retaining the original raw-pointer signature, and a safe inner function targeted by the LLM with a clean, scope-limited prompt. This enables independent per-function type changes with automatic rollback on failure, without coordinated caller updates. A deterministic, type-directed wrapper elimination pass then removes wrappers after successful translation. Phase 2 (Agentic Refinement) resolves unsafe constructs beyond per-function scope, including static mut globals, skipped wrapper pairs, and failed translations, using an LLM agent operating on the whole codebase under a baseline-aware verification gate. We evaluate Encrust on 7 GNU Coreutils programs and 8 libraries from the Laertes benchmark, showing substantial unsafe-construct reduction across all 15 programs while maintaining full test-vector correctness.",
+  "id": "http://arxiv.org/abs/2604.04527v1",
+  "authors": [
+    "Hohyun Sim",
+    "Hyeonjoong Cho",
+    "Ali Shokri",
+    "Zhoulai Fu",
+    "Binoy Ravindran"
+  ],
+  "categories": [
+    "cs.SE",
+    "cs.AI",
+    "cs.PL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.04527v1"
+}

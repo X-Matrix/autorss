@@ -1,0 +1,22 @@
+{
+  "title": "Sampling Parallelism for Fast and Efficient Bayesian Learning",
+  "link": "https://arxiv.org/abs/2604.04736v1",
+  "published": "2026-04-06T15:03:35Z",
+  "updated": "2026-04-06T15:03:35Z",
+  "summary": "Machine learning models, and deep neural networks in particular, are increasingly deployed in risk-sensitive domains such as healthcare, environmental forecasting, and finance, where reliable quantification of predictive uncertainty is essential. However, many uncertainty quantification (UQ) methods remain difficult to apply due to their substantial computational cost. Sampling-based Bayesian learning approaches, such as Bayesian neural networks (BNNs), are particularly expensive since drawing and evaluating multiple parameter samples rapidly exhausts memory and compute resources. These constraints have limited the accessibility and exploration of Bayesian techniques thus far. To address these challenges, we introduce sampling parallelism, a simple yet powerful parallelization strategy that targets the primary bottleneck of sampling-based Bayesian learning: the samples themselves. By distributing sample evaluations across multiple GPUs, our method reduces memory pressure and training time without requiring architectural changes or extensive hyperparameter tuning. We detail the methodology and evaluate its performance on a few example tasks and architectures, comparing against distributed data parallelism (DDP) as a baseline. We further demonstrate that sampling parallelism is complementary to existing strategies by implementing a hybrid approach that combines sample and data parallelism. Our experiments show near-perfect scaling when the sample number is scaled proportionally to the computational resources, confirming that sample evaluations parallelize cleanly. Although DDP achieves better raw speedups under scaling with constant workload, sampling parallelism has a notable advantage: by applying independent stochastic augmentations to the same batch on each GPU, it increases augmentation diversity and thus reduces the number of epochs required for convergence.",
+  "id": "http://arxiv.org/abs/2604.04736v1",
+  "authors": [
+    "Asena Karolin Özdemir",
+    "Lars H. Heyen",
+    "Arvid Weyrauch",
+    "Achim Streit",
+    "Markus Götz",
+    "Charlotte Debus"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.DC"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.04736v1"
+}

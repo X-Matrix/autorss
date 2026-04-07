@@ -1,0 +1,21 @@
+{
+  "title": "Training-Free Refinement of Flow Matching with Divergence-based Sampling",
+  "link": "https://arxiv.org/abs/2604.04646v1",
+  "published": "2026-04-06T12:54:58Z",
+  "updated": "2026-04-06T12:54:58Z",
+  "summary": "Flow-based models learn a target distribution by modeling a marginal velocity field, defined as the average of sample-wise velocities connecting each sample from a simple prior to the target data. When sample-wise velocities conflict at the same intermediate state, however, this averaged velocity can misguide samples toward low-density regions, degrading generation quality. To address this issue, we propose the Flow Divergence Sampler (FDS), a training-free framework that refines intermediate states before each solver step. Our key finding reveals that the severity of this misguidance is quantified by the divergence of the marginal velocity field that is readily computable during inference with a well-optimized model. FDS exploits this signal to steer states toward less ambiguous regions. As a plug-and-play framework compatible with standard solvers and off-the-shelf flow backbones, FDS consistently improves fidelity across various generation tasks including text-to-image synthesis, and inverse problems.",
+  "id": "http://arxiv.org/abs/2604.04646v1",
+  "authors": [
+    "Yeonwoo Cha",
+    "Jaehoon Yoo",
+    "Semin Kim",
+    "Yunseo Park",
+    "Jinhyeon Kwon",
+    "Seunghoon Hong"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.04646v1"
+}

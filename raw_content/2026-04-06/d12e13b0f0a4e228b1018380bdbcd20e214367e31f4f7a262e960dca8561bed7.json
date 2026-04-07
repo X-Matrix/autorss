@@ -1,0 +1,18 @@
+{
+  "title": "Noise Immunity in In-Context Tabular Learning: An Empirical Robustness Analysis of TabPFN's Attention Mechanisms",
+  "link": "https://arxiv.org/abs/2604.04868v1",
+  "published": "2026-04-06T17:16:37Z",
+  "updated": "2026-04-06T17:16:37Z",
+  "summary": "Tabular foundation models (TFMs) such as TabPFN (Tabular Prior-Data Fitted Network) are designed to generalize across heterogeneous tabular datasets through in-context learning (ICL). They perform prediction in a single forward pass conditioned on labeled examples without dataset-specific parameter updates. This paradigm is particularly attractive in industrial domains (e.g., finance and healthcare) where tabular prediction is pervasive. Retraining a bespoke model for each new table can be costly or infeasible in these settings, while data quality issues such as irrelevant predictors, correlated feature groups, and label noise are common. In this paper, we provide strong empirical evidence that TabPFN is highly robust under these sub-optimal conditions. We study TabPFN and its attention mechanisms for binary classification problems with controlled synthetic perturbations that vary: (i) dataset width by injecting random uncorrelated features and by introducing nonlinearly correlated features, (ii) dataset size by increasing the number of training rows, and (iii) label quality by increasing the fraction of mislabeled targets. Beyond predictive performance, we analyze internal signals including attention concentration and attention-based feature ranking metrics. Across these parametric tests, TabPFN is remarkably resilient: ROC-AUC remains high, attention stays structured and sharp, and informative features are highly ranked by attention-based metrics. Qualitative visualizations with attention heatmaps, feature-token embeddings, and SHAP plots further support a consistent pattern across layers in which TabPFN increasingly concentrates on useful features while separating their signals from noise. Together, these findings suggest that TabPFN is a robust TFM capable of maintaining both predictive performance and coherent internal behavior under various scenarios of data imperfections.",
+  "id": "http://arxiv.org/abs/2604.04868v1",
+  "authors": [
+    "James Hu",
+    "Mahdi Ghelichi"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.ML"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.04868v1"
+}
