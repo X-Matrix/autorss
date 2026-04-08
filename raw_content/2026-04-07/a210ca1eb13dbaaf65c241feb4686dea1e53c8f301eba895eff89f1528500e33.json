@@ -1,0 +1,21 @@
+{
+  "title": "Graph-PiT: Enhancing Structural Coherence in Part-Based Image Synthesis via Graph Priors",
+  "link": "https://arxiv.org/abs/2604.06074v1",
+  "published": "2026-04-07T16:53:23Z",
+  "updated": "2026-04-07T16:53:23Z",
+  "summary": "Achieving fine-grained and structurally sound controllability is a cornerstone of advanced visual generation. Existing part-based frameworks treat user-provided parts as an unordered set and therefore ignore their intrinsic spatial and semantic relationships, which often results in compositions that lack structural integrity. To bridge this gap, we propose Graph-PiT, a framework that explicitly models the structural dependencies of visual components using a graph prior. Specifically, we represent visual parts as nodes and their spatial-semantic relationships as edges. At the heart of our method is a Hierarchical Graph Neural Network (HGNN) module that performs bidirectional message passing between coarse-grained part-level super-nodes and fine-grained IP+ token sub-nodes, refining part embeddings before they enter the generative pipeline. We also introduce a graph Laplacian smoothness loss and an edge-reconstruction loss so that adjacent parts acquire compatible, relation-aware embeddings. Quantitative experiments on controlled synthetic domains (character, product, indoor layout, and jigsaw), together with qualitative transfer to real web images, show that Graph-PiT improves structural coherence over vanilla PiT while remaining compatible with the original IP-Prior pipeline. Ablation experiments confirm that explicit relational reasoning is crucial for enforcing user-specified adjacency constraints. Our approach not only enhances the plausibility of generated concepts but also offers a scalable and interpretable mechanism for complex, multi-part image synthesis. The code is available at https://github.com/wolf-bailang/Graph-PiT.",
+  "id": "http://arxiv.org/abs/2604.06074v1",
+  "authors": [
+    "Junbin Zhang",
+    "Meng Cao",
+    "Feng Tan",
+    "Yikai Lin",
+    "Yuexian Zou"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.MM"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.06074v1"
+}

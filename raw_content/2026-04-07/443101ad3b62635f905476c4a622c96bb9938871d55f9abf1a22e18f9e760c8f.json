@@ -1,0 +1,28 @@
+{
+  "title": "A Multi-Stage Validation Framework for Trustworthy Large-scale Clinical Information Extraction using Large Language Models",
+  "link": "https://arxiv.org/abs/2604.06028v1",
+  "published": "2026-04-07T16:23:52Z",
+  "updated": "2026-04-07T16:23:52Z",
+  "summary": "Large language models (LLMs) show promise for extracting clinically meaningful information from unstructured health records, yet their translation into real-world settings is constrained by the lack of scalable and trustworthy validation approaches. Conventional evaluation methods rely heavily on annotation-intensive reference standards or incomplete structured data, limiting feasibility at population scale. We propose a multi-stage validation framework for LLM-based clinical information extraction that enables rigorous assessment under weak supervision. The framework integrates prompt calibration, rule-based plausibility filtering, semantic grounding assessment, targeted confirmatory evaluation using an independent higher-capacity judge LLM, selective expert review, and external predictive validity analysis to quantify uncertainty and characterize error modes without exhaustive manual annotation. We applied this framework to extraction of substance use disorder (SUD) diagnoses across 11 substance categories from 919,783 clinical notes. Rule-based filtering and semantic grounding removed 14.59% of LLM-positive extractions that were unsupported, irrelevant, or structurally implausible. For high-uncertainty cases, the judge LLM's assessments showed substantial agreement with subject matter expert review (Gwet's AC1=0.80). Using judge-evaluated outputs as references, the primary LLM achieved an F1 score of 0.80 under relaxed matching criteria. LLM-extracted SUD diagnoses also predicted subsequent engagement in SUD specialty care more accurately than structured-data baselines (AUC=0.80). These findings demonstrate that scalable, trustworthy deployment of LLM-based clinical information extraction is feasible without annotation-intensive evaluation.",
+  "id": "http://arxiv.org/abs/2604.06028v1",
+  "authors": [
+    "Maria Mahbub",
+    "Gregory M. Dams",
+    "Josh Arnold",
+    "Caitlin Rizy",
+    "Sudarshan Srinivasan",
+    "Elliot M. Fielstein",
+    "Minu A. Aghevli",
+    "Kamonica L. Craig",
+    "Elizabeth M. Oliva",
+    "Joseph Erdos",
+    "Jodie Trafton",
+    "Ioana Danciu"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.IR"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.06028v1"
+}

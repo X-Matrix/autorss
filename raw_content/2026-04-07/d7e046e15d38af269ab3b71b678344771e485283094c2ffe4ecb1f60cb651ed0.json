@@ -1,0 +1,20 @@
+{
+  "title": "When Do We Need LLMs? A Diagnostic for Language-Driven Bandits",
+  "link": "https://arxiv.org/abs/2604.05859v1",
+  "published": "2026-04-07T13:20:06Z",
+  "updated": "2026-04-07T13:20:06Z",
+  "summary": "We study Contextual Multi-Armed Bandits (CMABs) for non-episodic sequential decision making problems where the context includes both textual and numerical information (e.g., recommendation systems, dynamic portfolio adjustments, offer selection; all frequent problems in finance). While Large Language Models (LLMs) are increasingly applied to these settings, utilizing LLMs for reasoning at every decision step is computationally expensive and uncertainty estimates are difficult to obtain. To address this, we introduce LLMP-UCB, a bandit algorithm that derives uncertainty estimates from LLMs via repeated inference. However, our experiments demonstrate that lightweight numerical bandits operating on text embeddings (dense or Matryoshka) match or exceed the accuracy of LLM-based solutions at a fraction of their cost. We further show that embedding dimensionality is a practical lever on the exploration-exploitation balance, enabling cost--performance tradeoffs without prompt complexity. Finally, to guide practitioners, we propose a geometric diagnostic based on the arms' embedding to decide when to use LLM-driven reasoning versus a lightweight numerical bandit. Our results provide a principled deployment framework for cost-effective, uncertainty-aware decision systems with broad applicability across AI use cases in financial services.",
+  "id": "http://arxiv.org/abs/2604.05859v1",
+  "authors": [
+    "Uljad Berdica",
+    "Fernando Acero",
+    "Anton Ipsen",
+    "Parisa Zehtabi",
+    "Michael Cashmore",
+    "Manuela Veloso"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.05859v1"
+}

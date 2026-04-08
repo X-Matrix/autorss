@@ -1,0 +1,22 @@
+{
+  "title": "The Model Agreed, But Didn't Learn: Diagnosing Surface Compliance in Large Language Models",
+  "link": "https://arxiv.org/abs/2604.05995v1",
+  "published": "2026-04-07T15:20:41Z",
+  "updated": "2026-04-07T15:20:41Z",
+  "summary": "Large Language Models (LLMs) internalize vast world knowledge as parametric memory, yet inevitably inherit the staleness and errors of their source corpora. Consequently, ensuring the reliability and malleability of these internal representations is imperative for trustworthy real-world deployment. Knowledge editing offers a pivotal paradigm for surgically modifying memory without retraining. However, while recent editors demonstrate high success rates on standard benchmarks, it remains questionable whether current evaluation frameworks that rely on assessing output under specific prompting conditions can reliably authenticate genuine memory modification. In this work, we introduce a simple diagnostic framework that subjects models to discriminative self-assessment under in-context learning (ICL) settings that better reflect real-world application environments, specifically designed to scrutinize the subtle behavioral nuances induced by memory modifications. This probing reveals a pervasive phenomenon of Surface Compliance, where editors achieve high benchmark scores by merely mimicking target outputs without structurally overwriting internal beliefs. Moreover, we find that recursive modifications accumulate representational residues, triggering cognitive instability and permanently diminishing the reversibility of the model's memory state. These insights underscore the risks of current editing paradigms and highlight the pivotal role of robust memory modification in building trustworthy, long-term sustainable LLM systems. Code is available at https://github.com/XiaojieGu/SA-MCQ.",
+  "id": "http://arxiv.org/abs/2604.05995v1",
+  "authors": [
+    "Xiaojie Gu",
+    "Ziying Huang",
+    "Weicong Hong",
+    "Jian Xie",
+    "Renze Lou",
+    "Kai Zhang"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.05995v1"
+}

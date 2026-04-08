@@ -1,0 +1,26 @@
+{
+  "title": "Does Pass Rate Tell the Whole Story? Evaluating Design Constraint Compliance in LLM-based Issue Resolution",
+  "link": "https://arxiv.org/abs/2604.05955v1",
+  "published": "2026-04-07T14:47:27Z",
+  "updated": "2026-04-07T14:47:27Z",
+  "summary": "Repository-level issue resolution benchmarks have become a standard testbed for evaluating LLM-based agents, yet success is still predominantly measured by test pass rates. In practice, however, acceptable patches must also comply with project-specific design constraints, such as architectural conventions, error-handling policies, and maintainability requirements, which are rarely encoded in tests and are often documented only implicitly in code review discussions. This paper introduces \\textit{design-aware issue resolution} and presents \\bench{}, a benchmark that makes such implicit design constraints explicit and measurable. \\bench{} is constructed by mining and validating design constraints from real-world pull requests, linking them to issue instances, and automatically checking patch compliance using an LLM-based verifier, yielding 495 issues and 1,787 validated constraints across six repositories, aligned with SWE-bench-Verified and SWE-bench-Pro. Experiments with state-of-the-art agents show that test-based correctness substantially overestimates patch quality: fewer than half of resolved issues are fully design-satisfying, design violations are widespread, and functional correctness exhibits negligible statistical association with design satisfaction. While providing issue-specific design guidance reduces violations, substantial non-compliance remains, highlighting a fundamental gap in current agent capabilities and motivating design-aware evaluation beyond functional correctness.",
+  "id": "http://arxiv.org/abs/2604.05955v1",
+  "authors": [
+    "Kai Yu",
+    "Zhenhao Zhou",
+    "Junhao Zeng",
+    "Ying Wang",
+    "Xueying Du",
+    "Zhiqiang Yuan",
+    "Junwei Liu",
+    "Ziyu Zhou",
+    "Yujia Wang",
+    "Chong Wang",
+    "Xin Peng"
+  ],
+  "categories": [
+    "cs.SE",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.05955v1"
+}
