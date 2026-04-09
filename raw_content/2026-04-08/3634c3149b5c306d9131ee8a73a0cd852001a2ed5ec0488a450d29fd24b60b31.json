@@ -1,0 +1,16 @@
+{
+  "title": "A First Guess is Rarely the Final Answer: Learning to Search in the Travelling Salesperson Problem",
+  "link": "https://arxiv.org/abs/2604.06940v1",
+  "published": "2026-04-08T11:04:45Z",
+  "updated": "2026-04-08T11:04:45Z",
+  "summary": "Most neural solvers for the Traveling Salesperson Problem (TSP) are trained to output a single solution, even though practitioners rarely stop there: at test time, they routinely spend extra compute on sampling or post-hoc search. This raises a natural question: can the search procedure itself be learned? Neural improvement methods take this perspective by learning a policy that applies local modifications to a candidate solution, accumulating gains over an improvement trajectory. Yet learned improvement for TSP remains comparatively immature, with existing methods still falling short of robust, scalable performance. We argue that a key reason is design mismatch: many approaches reuse state representations, architectural choices, and training recipes inherited from single-solution methods, rather than being built around the mechanics of local search. This mismatch motivates NICO-TSP (Neural Improvement for Combinatorial Optimization): a 2-opt improvement framework for TSP. NICO-TSP represents the current tour with exactly $n$ edge tokens aligned with the neighborhood operator, scores 2-opt moves directly without tour positional encodings, and trains via a two-stage procedure: imitation learning to short-horizon optimal trajectories, followed by critic-free group-based reinforcement learning over longer rollouts. Under compute-matched evaluations that measure improvement as a function of both search steps and wall-clock time, NICO-TSP delivers consistently stronger and markedly more step-efficient improvement than prior learned and heuristic search baselines, generalizes far more reliably to larger out-of-distribution instances, and serves both as a competitive replacement for classical local search and as a powerful test-time refinement module for constructive solvers.",
+  "id": "http://arxiv.org/abs/2604.06940v1",
+  "authors": [
+    "Andoni Irazusta Garmendia"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.06940v1"
+}

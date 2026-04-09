@@ -1,0 +1,20 @@
+{
+  "title": "Q-Zoom: Query-Aware Adaptive Perception for Efficient Multimodal Large Language Models",
+  "link": "https://arxiv.org/abs/2604.06912v1",
+  "published": "2026-04-08T10:12:30Z",
+  "updated": "2026-04-08T10:12:30Z",
+  "summary": "MLLMs require high-resolution visual inputs for fine-grained tasks like document understanding and dense scene perception. However, current global resolution scaling paradigms indiscriminately flood the quadratic self-attention mechanism with visually redundant tokens, severely bottlenecking inference throughput while ignoring spatial sparsity and query intent. To overcome this, we propose Q-Zoom, a query-aware adaptive high-resolution perception framework that operates in an efficient coarse-to-fine manner. First, a lightweight Dynamic Gating Network safely bypasses high-resolution processing when coarse global features suffice. Second, for queries demanding fine-grained perception, a Self-Distilled Region Proposal Network (SD-RPN) precisely localizes the task-relevant Region-of-Interest (RoI) directly from intermediate feature spaces. To optimize these modules efficiently, the gating network uses a consistency-aware generation strategy to derive deterministic routing labels, while the SD-RPN employs a fully self-supervised distillation paradigm. A continuous spatio-temporal alignment scheme and targeted fine-tuning then seamlessly fuse the dense local RoI with the coarse global layout. Extensive experiments demonstrate that Q-Zoom establishes a dominant Pareto frontier. Using Qwen2.5-VL-7B as a primary testbed, Q-Zoom accelerates inference by 2.52 times on Document & OCR benchmarks and 4.39 times in High-Resolution scenarios while matching the baseline's peak accuracy. Furthermore, when configured for maximum perceptual fidelity, Q-Zoom surpasses the baseline's peak performance by 1.1% and 8.1% on these respective benchmarks. These robust improvements transfer seamlessly to Qwen3-VL, LLaVA, and emerging RL-based thinking-with-image models. Project page is available at https://yuhengsss.github.io/Q-Zoom/.",
+  "id": "http://arxiv.org/abs/2604.06912v1",
+  "authors": [
+    "Yuheng Shi",
+    "Xiaohuan Pei",
+    "Linfeng Wen",
+    "Minjing Dong",
+    "Chang Xu"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.06912v1"
+}

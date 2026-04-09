@@ -1,0 +1,18 @@
+{
+  "title": "MedDialBench: Benchmarking LLM Diagnostic Robustness under Parametric Adversarial Patient Behaviors",
+  "link": "https://arxiv.org/abs/2604.06846v1",
+  "published": "2026-04-08T09:09:08Z",
+  "updated": "2026-04-08T09:09:08Z",
+  "summary": "Interactive medical dialogue benchmarks have shown that LLM diagnostic accuracy degrades significantly when interacting with non-cooperative patients, yet existing approaches either apply adversarial behaviors without graded severity or case-specific grounding, or reduce patient non-cooperation to a single ungraded axis, and none analyze cross-dimension interactions.   We introduce MedDialBench, a benchmark enabling controlled, dose-response characterization of how individual patient behavior dimensions affect LLM diagnostic robustness. It decomposes patient behavior into five dimensions -- Logic Consistency, Health Cognition, Expression Style, Disclosure, and Attitude -- each with graded severity levels and case-specific behavioral scripts. This controlled factorial design enables graded sensitivity analysis, dose-response profiling, and cross-dimension interaction detection.   Evaluating five frontier LLMs across 7,225 dialogues (85 cases x 17 configurations x 5 models), we find a fundamental asymmetry: information pollution (fabricating symptoms) produces 1.7-3.4x larger accuracy drops than information deficit (withholding information), and fabricating is the only configuration achieving statistical significance across all five models (McNemar p < 0.05). Among six dimension combinations, fabricating is the sole driver of super-additive interaction: all three fabricating-involving pairs produce O/E ratios of 0.70-0.81 (35-44% of eligible cases fail under the combination despite succeeding under each dimension alone), while all non-fabricating pairs show purely additive effects (O/E ~ 1.0). Inquiry strategy moderates deficit but not pollution: exhaustive questioning recovers withheld information, but cannot compensate for fabricated inputs. Models exhibit distinct vulnerability profiles, with worst-case drops ranging from 38.8 to 54.1 percentage points.",
+  "id": "http://arxiv.org/abs/2604.06846v1",
+  "authors": [
+    "Xiaotian Luo",
+    "Xun Jiang",
+    "Jiangcheng Wu"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.06846v1"
+}

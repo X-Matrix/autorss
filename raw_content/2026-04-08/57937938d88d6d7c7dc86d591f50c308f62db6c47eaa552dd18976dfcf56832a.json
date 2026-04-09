@@ -1,0 +1,19 @@
+{
+  "title": "Do We Need Distinct Representations for Every Speech Token? Unveiling and Exploiting Redundancy in Large Speech Language Models",
+  "link": "https://arxiv.org/abs/2604.06871v1",
+  "published": "2026-04-08T09:33:44Z",
+  "updated": "2026-04-08T09:33:44Z",
+  "summary": "Large Speech Language Models (LSLMs) typically operate at high token rates (tokens/s) to ensure acoustic fidelity, yet this results in sequence lengths that far exceed the underlying semantic content, incurring prohibitive inference costs. In this paper, we empirically revisit the necessity of such granular token-level processing. Through layer-wise oracle interventions, we unveil a structured redundancy hierarchy: while shallow layers encode essential acoustic details, deep layers exhibit extreme redundancy, allowing for aggressive compression. Motivated by these findings, we introduce Affinity Pooling, a training-free, similarity-based token merging mechanism. By strategically applying this method at both input and deep layers, we effectively compress speech representations without compromising semantic information. Extensive evaluations across three tasks demonstrate that our approach reduces prefilling FLOPs by 27.48\\% while maintaining competitive accuracy. Practical deployment further confirms significant efficiency gains, yielding up to $\\sim$1.7$\\times$ memory savings and $\\sim$1.1$\\times$ faster time-to-first-token on long utterances. Our results challenge the necessity of fully distinct token representations, providing new perspectives on LSLM efficiency.",
+  "id": "http://arxiv.org/abs/2604.06871v1",
+  "authors": [
+    "Bajian Xiang",
+    "Tingwei Guo",
+    "Xuan Chen",
+    "Yang Han"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.06871v1"
+}
