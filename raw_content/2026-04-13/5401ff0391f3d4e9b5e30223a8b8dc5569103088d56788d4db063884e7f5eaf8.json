@@ -1,0 +1,17 @@
+{
+  "title": "Problem Reductions at Scale: Agentic Integration of Computationally Hard Problems",
+  "link": "https://arxiv.org/abs/2604.11535v1",
+  "published": "2026-04-13T14:32:08Z",
+  "updated": "2026-04-13T14:32:08Z",
+  "summary": "Solving an NP-hard optimization problem often requires reformulating it for a specific solver -- quantum hardware, a commercial optimizer, or a domain heuristic. A tool for polynomial-time reductions between hard problems would let practitioners route any supported problem to any supported solver through a single interface. Building such a library at scale, however, has remained out of reach. We show that harness engineering, the practice of designing constraints, verification systems, and feedback loops that channel AI coding agents, can overcome this barrier. Our harness combines a no-code contribution route for domain experts, a multilayer verification stack ranging from type-level checks to agentic feature tests (AI agents role-playing as end users), and a fully automated implementation-review-integration pipeline. In about three months, we built a command-line tool backed by a library of 100+ problem types and 200+~reduction rules in over 170k lines of Rust. The result suggests that a well-engineered harness lets agents build well-tested software at a scale and pace beyond prior reduction-library efforts. Because the reduction graph composes transitively, a new solver registered for any single problem type instantly becomes available to every problem connected by a reduction path. The source code is available at https://github.com/CodingThrust/problem-reductions.",
+  "id": "http://arxiv.org/abs/2604.11535v1",
+  "authors": [
+    "Xi-Wei Pan",
+    "Shi-Wen An",
+    "Jin-Guo Liu"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.11535v1"
+}

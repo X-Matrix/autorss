@@ -1,0 +1,16 @@
+{
+  "title": "Why Do Large Language Models Generate Harmful Content?",
+  "link": "https://arxiv.org/abs/2604.11663v1",
+  "published": "2026-04-13T16:11:38Z",
+  "updated": "2026-04-13T16:11:38Z",
+  "summary": "Large Language Models (LLMs) have been shown to generate harmful content. However, the underlying causes of such behavior remain under explored. We propose a causal mediation analysis-based approach to identify the causal factors responsible for harmful generation. Our method performs a multi-granular analysis across model layers, modules (MLP and attention blocks), and individual neurons. Extensive experiments on state-of-the-art LLMs indicate that harmful generation arises in the later layers of the model, results primarily from failures in MLP blocks rather than attention blocks, and is associated with neurons that act as a gating mechanism for harmful generation. The results indicate that the early layers in the model are used for a contextual understanding of harmfulness in a prompt, which is then propagated through the model, to generate harmfulness in the late layers, as well as a signal indicating harmfulness through MLP blocks. This is then further propagated to the last layer of the model, specifically to a sparse set of neurons, which receives the signal and determines the generation of harmful content accordingly.",
+  "id": "http://arxiv.org/abs/2604.11663v1",
+  "authors": [
+    "Rajesh Ganguli",
+    "Raha Moraffah"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.11663v1"
+}
