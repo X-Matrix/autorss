@@ -1,0 +1,20 @@
+{
+  "title": "Learning Chain Of Thoughts Prompts for Predicting Entities, Relations, and even Literals on Knowledge Graphs",
+  "link": "https://arxiv.org/abs/2604.12651v1",
+  "published": "2026-04-14T12:21:15Z",
+  "updated": "2026-04-14T12:21:15Z",
+  "summary": "Knowledge graph embedding (KGE) models perform well on link prediction but struggle with unseen entities, relations, and especially literals, limiting their use in dynamic, heterogeneous graphs. In contrast, pretrained large language models (LLMs) generalize effectively through prompting. We reformulate link prediction as a prompt learning problem and introduce RALP, which learns string-based chain-of-thought (CoT) prompts as scoring functions for triples. Using Bayesian Optimization through MIPRO algorithm, RALP identifies effective prompts from fewer than 30 training examples without gradient access. At inference, RALP predicts missing entities, relations or whole triples and assigns confidence scores based on the learned prompt. We evaluate on transductive, numerical, and OWL instance retrieval benchmarks. RALP improves state-of-the-art KGE models by over 5% MRR across datasets and enhances generalization via high-quality inferred triples. On OWL reasoning tasks with complex class expressions (e.g., $\\exists hasChild.Female$, $\\geq 5 \\; hasChild.Female$), it achieves over 88% Jaccard similarity. These results highlight prompt-based LLM reasoning as a flexible alternative to embedding-based methods. We release our implementation, training, and evaluation pipeline as open source: https://github.com/dice-group/RALP .",
+  "id": "http://arxiv.org/abs/2604.12651v1",
+  "authors": [
+    "Alkid Baci",
+    "Luke Friedrichs",
+    "Caglar Demir",
+    "N'Dah Jean Kouagou",
+    "Axel-Cyrille Ngonga Ngomo"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.12651v1"
+}

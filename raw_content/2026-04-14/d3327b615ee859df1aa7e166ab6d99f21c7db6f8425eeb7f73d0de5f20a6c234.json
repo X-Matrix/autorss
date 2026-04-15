@@ -1,0 +1,18 @@
+{
+  "title": "CoDe-R: Refining Decompiler Output with LLMs via Rationale Guidance and Adaptive Inference",
+  "link": "https://arxiv.org/abs/2604.12913v1",
+  "published": "2026-04-14T15:58:38Z",
+  "updated": "2026-04-14T15:58:38Z",
+  "summary": "Binary decompilation is a critical reverse engineering task aimed at reconstructing high-level source code from stripped executables. Although Large Language Models (LLMs) have recently shown promise, they often suffer from \"logical hallucinations\" and \"semantic misalignment\" due to the irreversible semantic loss during compilation, resulting in generated code that fails to re-execute. In this study, we propose Cognitive Decompiler Refinement with Robustness (CoDe-R), a lightweight two-stage code refinement framework. The first stage introduces Semantic Cognitive Enhancement (SCE), a Rationale-Guided Semantic Injection strategy that trains the model to recover high-level algorithmic intent alongside code. The second stage introduces a Dynamic Dual-Path Fallback (DDPF) mechanism during inference, which adaptively balances semantic recovery and syntactic stability via a hybrid verification strategy. Evaluation on the HumanEval-Decompile benchmark demonstrates that CoDe-R (using a 1.3B backbone) establishes a new State-of-the-Art (SOTA) in the lightweight regime. Notably, it is the first 1.3B model to exceed an Average Re-executability Rate of 50.00%, significantly outperforming the baseline and effectively bridging the gap between efficient models and expert-level performance. Our code is available at https://github.com/Theaoi/CoDe-R.",
+  "id": "http://arxiv.org/abs/2604.12913v1",
+  "authors": [
+    "Qiang Zhang",
+    "Zhongnian Li"
+  ],
+  "categories": [
+    "cs.SE",
+    "cs.AI",
+    "cs.CR"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.12913v1"
+}
