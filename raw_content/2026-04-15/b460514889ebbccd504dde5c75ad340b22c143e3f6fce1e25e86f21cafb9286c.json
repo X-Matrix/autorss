@@ -1,0 +1,16 @@
+{
+  "title": "Hierarchical Reinforcement Learning with Runtime Safety Shielding for Power Grid Operation",
+  "link": "https://arxiv.org/abs/2604.14032v1",
+  "published": "2026-04-15T16:11:10Z",
+  "updated": "2026-04-15T16:11:10Z",
+  "summary": "Reinforcement learning has shown promise for automating power-grid operation tasks such as topology control and congestion management. However, its deployment in real-world power systems remains limited by strict safety requirements, brittleness under rare disturbances, and poor generalization to unseen grid topologies. In safety-critical infrastructure, catastrophic failures cannot be tolerated, and learning-based controllers must operate within hard physical constraints.   This paper proposes a safety-constrained hierarchical control framework for power-grid operation that explicitly decouples long-horizon decision-making from real-time feasibility enforcement. A high-level reinforcement learning policy proposes abstract control actions, while a deterministic runtime safety shield filters unsafe actions using fast forward simulation. Safety is enforced as a runtime invariant, independent of policy quality or training distribution.   The proposed framework is evaluated on the Grid2Op benchmark suite under nominal conditions, forced line-outage stress tests, and zero-shot deployment on the ICAPS 2021 large-scale transmission grid without retraining. Results show that flat reinforcement learning policies are brittle under stress, while safety-only methods are overly conservative. In contrast, the proposed hierarchical and safety-aware approach achieves longer episode survival, lower peak line loading, and robust zero-shot generalization to unseen grids.   These results indicate that safety and generalization in power-grid control are best achieved through architectural design rather than increasingly complex reward engineering, providing a practical path toward deployable learning-based controllers for real-world energy systems.",
+  "id": "http://arxiv.org/abs/2604.14032v1",
+  "authors": [
+    "Gitesh Malik"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.14032v1"
+}
