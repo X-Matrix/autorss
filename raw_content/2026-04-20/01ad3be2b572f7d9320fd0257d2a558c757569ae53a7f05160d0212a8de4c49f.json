@@ -1,0 +1,20 @@
+{
+  "title": "PARM: Pipeline-Adapted Reward Model",
+  "link": "https://arxiv.org/abs/2604.18327v1",
+  "published": "2026-04-20T14:29:08Z",
+  "updated": "2026-04-20T14:29:08Z",
+  "summary": "Reward models (RMs) are central to aligning large language models (LLMs) with human preferences, powering RLHF and advanced decoding strategies. While most prior work focuses on single-step generation, real-world applications increasingly adopt multi-stage LLM pipelines, where effective reward guidance remains underexplored. We investigate this through code generation for combinatorial optimization, constructing a pipeline that integrates reward models into both formulation and solution stages. We identify a critical challenge: inconsistency between reward model predictions and actual pipeline execution outcomes. To address this, we propose the Pipeline-Adapted Reward Model (PARM), which leverages pipeline-specific data and direct preference optimization to align rewards with downstream feedback. We instantiate PARM as a two-stage pipeline (formulation -> code generation) and evaluate it on four public optimization benchmarks, measuring execution rate and solving accuracy against baselines and sampling methods. A supplementary cross-domain experiment on GSM8K assesses transferability. Results demonstrate that PARM consistently improves pipeline output quality and stability, providing new insights into reward modeling for multi-stage LLM reasoning.",
+  "id": "http://arxiv.org/abs/2604.18327v1",
+  "authors": [
+    "Xingyu Fan",
+    "Wei Shao",
+    "Jiacheng Liu",
+    "Linqi Song",
+    "Pheng Ann Heng"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.18327v1"
+}

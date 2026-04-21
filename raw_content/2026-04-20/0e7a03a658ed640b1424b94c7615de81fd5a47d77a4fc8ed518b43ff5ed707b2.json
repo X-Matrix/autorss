@@ -1,0 +1,21 @@
+{
+  "title": "LLM Safety From Within: Detecting Harmful Content with Internal Representations",
+  "link": "https://arxiv.org/abs/2604.18519v1",
+  "published": "2026-04-20T17:17:07Z",
+  "updated": "2026-04-20T17:17:07Z",
+  "summary": "Guard models are widely used to detect harmful content in user prompts and LLM responses. However, state-of-the-art guard models rely solely on terminal-layer representations and overlook the rich safety-relevant features distributed across internal layers. We present SIREN, a lightweight guard model that harnesses these internal features. By identifying safety neurons via linear probing and combining them through an adaptive layer-weighted strategy, SIREN builds a harmfulness detector from LLM internals without modifying the underlying model. Our comprehensive evaluation shows that SIREN substantially outperforms state-of-the-art open-source guard models across multiple benchmarks while using 250 times fewer trainable parameters. Moreover, SIREN exhibits superior generalization to unseen benchmarks, naturally enables real-time streaming detection, and significantly improves inference efficiency compared to generative guard models. Overall, our results highlight LLM internal states as a promising foundation for practical, high-performance harmfulness detection.",
+  "id": "http://arxiv.org/abs/2604.18519v1",
+  "authors": [
+    "Difan Jiao",
+    "Yilun Liu",
+    "Ye Yuan",
+    "Zhenwei Tang",
+    "Linfeng Du",
+    "Haolun Wu",
+    "Ashton Anderson"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.18519v1"
+}

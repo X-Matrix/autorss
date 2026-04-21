@@ -1,0 +1,18 @@
+{
+  "title": "Evaluating Multi-Hop Reasoning in RAG Systems: A Comparison of LLM-Based Retriever Evaluation Strategies",
+  "link": "https://arxiv.org/abs/2604.18234v1",
+  "published": "2026-04-20T13:20:57Z",
+  "updated": "2026-04-20T13:20:57Z",
+  "summary": "Retrieval-augmented generation (RAG) enhances large language models (LLMs) with external knowledge to answer questions more accurately.   However, research on evaluating RAG systems-particularly the retriever component-remains limited, as most existing work focuses on single-context retrieval rather than multi-hop queries, where individual contexts may appear irrelevant in isolation but are essential when combined. In this research, we use the HotPotQA, MuSiQue, and SQuAD datasets to simulate a RAG system and compare three LLM-as-judge evaluation strategies, including our proposed Context-Aware Retriever Evaluation (CARE). Our goal is to better understand how multi-hop reasoning can be most effectively evaluated in RAG systems.   Experiments with LLMs from OpenAI, Meta, and Google demonstrate that CARE consistently outperforms existing methods for evaluating multi-hop reasoning in RAG systems. The performance gains are most pronounced in models with larger parameter counts and longer context windows, while single-hop queries show minimal sensitivity to context-aware evaluation. Overall, the results highlight the critical role of context-aware evaluation in improving the reliability and accuracy of retrieval-augmented generation systems, particularly in complex query scenarios. To ensure reproducibility, we provide the complete data of our experiments at https://github.com/lorenzbrehme/CARE.",
+  "id": "http://arxiv.org/abs/2604.18234v1",
+  "authors": [
+    "Lorenz Brehme",
+    "Thomas Ströhle",
+    "Ruth Breu"
+  ],
+  "categories": [
+    "cs.IR",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.18234v1"
+}
