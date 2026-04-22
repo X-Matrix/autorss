@@ -1,0 +1,19 @@
+{
+  "title": "Revisiting Catastrophic Forgetting in Continual Knowledge Graph Embedding",
+  "link": "https://arxiv.org/abs/2604.19401v1",
+  "published": "2026-04-21T12:26:56Z",
+  "updated": "2026-04-21T12:26:56Z",
+  "summary": "Knowledge Graph Embeddings (KGEs) support a wide range of downstream tasks over Knowledge Graphs (KGs). In practice, KGs evolve as new entities and facts are added, motivating Continual Knowledge Graph Embedding (CKGE) methods that update embeddings over time. Current CKGE approaches address catastrophic forgetting (i.e., the performance degradation on previously learned tasks) primarily by limiting changes to existing embeddings.   However, we show that this view is incomplete. When new entities are introduced, their embeddings can interfere with previously learned ones, causing the model to predict them in place of previously correct answers. This phenomenon, which we call entity interference, has been largely overlooked and is not accounted for in current CKGE evaluation protocols. As a result, the assessment of catastrophic forgetting becomes misleading, and CKGE methods performance is systematically overestimated.   To address this issue, we introduce a corrected CKGE evaluation protocol that accounts for entity interference. Through experiments on multiple benchmarks, we show that ignoring this effect can lead to performance overestimation of up to 25%, particularly in scenarios with significant entity growth. We further analyze how different CKGE methods and KGE models are affected by the different sources of forgetting, and introduce a catastrophic forgetting metric tailored to CKGE.",
+  "id": "http://arxiv.org/abs/2604.19401v1",
+  "authors": [
+    "Gerard Pons",
+    "Carlos Escolano",
+    "Besim Bilalli",
+    "Anna Queralt"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.19401v1"
+}

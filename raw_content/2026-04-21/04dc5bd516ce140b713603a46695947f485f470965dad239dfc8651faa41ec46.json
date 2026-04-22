@@ -1,0 +1,19 @@
+{
+  "title": "Detecting Hallucinations in SpeechLLMs at Inference Time Using Attention Maps",
+  "link": "https://arxiv.org/abs/2604.19565v1",
+  "published": "2026-04-21T15:18:10Z",
+  "updated": "2026-04-21T15:18:10Z",
+  "summary": "Hallucinations in Speech Large Language Models (SpeechLLMs) pose significant risks, yet existing detection methods typically rely on gold-standard outputs that are costly or impractical to obtain. Moreover, hallucination detection methods developed for text-based LLMs do not directly capture audio-specific signals. We investigate four attention-derived metrics: AUDIORATIO, AUDIOCONSISTENCY, AUDIOENTROPY, and TEXTENTROPY, designed to capture pathological attention patterns associated with hallucination, and train lightweight logistic regression classifiers on these features for efficient inference-time detection. Across automatic speech recognition and speech-to-text translation tasks, evaluations on Qwen-2-Audio and Voxtral-3B show that our approach outperforms uncertainty-based and prior attention-based baselines on in-domain data, achieving improvements of up to +0.23 PR-AUC, and generalises to out-of-domain ASR settings. We further find that strong performance can be achieved with approximately 100 attention heads, improving out-of-domain generalisation compared to using all heads. While effectiveness is model-dependent and task-specific training is required, our results demonstrate that attention patterns provide a valuable tool for hallucination detection in SpeechLLMs.",
+  "id": "http://arxiv.org/abs/2604.19565v1",
+  "authors": [
+    "Jonas Waldendorf",
+    "Bashar Awwad Shiekh Hasan",
+    "Evgenii Tsymbalov"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.19565v1"
+}

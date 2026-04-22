@@ -1,0 +1,16 @@
+{
+  "title": "Mesh Memory Protocol: Semantic Infrastructure for Multi-Agent LLM Systems",
+  "link": "https://arxiv.org/abs/2604.19540v1",
+  "published": "2026-04-21T15:00:25Z",
+  "updated": "2026-04-21T15:00:25Z",
+  "summary": "Teams of LLM agents increasingly collaborate on tasks spanning days or weeks: multi-day data-generation sprints where generator, reviewer, and auditor agents coordinate in real time on overlapping batches; specialists carrying findings forward across session restarts; product decisions compounding over many review rounds. This requires agents to share, evaluate, and combine each other's cognitive state in real time across sessions. We call this cross-session agent-to-agent cognitive collaboration, distinct from parallel agent execution. To enable it, three problems must be solved together. (P1) Each agent decides field by field what to accept from peers, not accept or reject whole messages. (P2) Every claim is traceable to source, so returning claims are recognised as echoes of the receiver's own prior thinking. (P3) Memory that survives session restarts is relevant because of how it was stored, not how it is retrieved. These are protocol-level properties at the semantic layer of agent communication, distinct from tool-access and task-delegation protocols at lower layers. We call this missing protocol layer \"semantic infrastructure,\" and the Mesh Memory Protocol (MMP) specifies it. Four composable primitives work together: CAT7, a fixed seven-field schema for every Cognitive Memory Block (CMB); SVAF, which evaluates each field against the receiver's role-indexed anchors and realises P1; inter-agent lineage, carried as parents and ancestors of content-hash keys and realising P2; and remix, which stores only the receiver's own role-evaluated understanding of each accepted CMB, never the raw peer signal, realising P3. MMP is specified, shipped, and running in production across three reference deployments, where each session runs an autonomous agent as a mesh peer with its own identity and memory, collaborating with other agents across the network for collective intelligence.",
+  "id": "http://arxiv.org/abs/2604.19540v1",
+  "authors": [
+    "Hongwei Xu"
+  ],
+  "categories": [
+    "cs.MA",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.19540v1"
+}

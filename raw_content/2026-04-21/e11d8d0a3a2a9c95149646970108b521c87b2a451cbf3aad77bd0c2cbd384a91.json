@@ -1,0 +1,19 @@
+{
+  "title": "Do LLMs Game Formalization? Evaluating Faithfulness in Logical Reasoning",
+  "link": "https://arxiv.org/abs/2604.19459v1",
+  "published": "2026-04-21T13:37:49Z",
+  "updated": "2026-04-21T13:37:49Z",
+  "summary": "Formal verification guarantees proof validity but not formalization faithfulness. For natural-language logical reasoning, where models construct axiom systems from scratch without library constraints, this gap between valid proofs and faithful translations is especially acute. We investigate whether frontier models exploit this gap when generating Lean 4 proofs, a behavior we term formalization gaming.   We evaluate GPT-5 and DeepSeek-R1 on 303 first-order logic problems (203 from FOLIO, 100 from Multi-LogiEval), comparing unified generation against a two-stage pipeline that separates formalization from proving. Despite compilation rates of 87-99%, we find no evidence of systematic gaming in unified generation: models prefer reporting failure over forcing proofs, even under prompting designed to encourage it. However, unfaithfulness that evades our detection signals may still occur. The two-stage pipeline reveals two distinct modes of unfaithfulness: GPT-5 fabricates axioms during proof generation, a reactive fallback detectable via cross-stage comparison, while DeepSeek-R1 mistranslates premises during formalization, producing internally consistent outputs that evade detection entirely. These findings show that high compilation rates or accuracies should not be equated with faithful reasoning. Code and data are available at https://github.com/koreankiwi99/formalization-gaming.",
+  "id": "http://arxiv.org/abs/2604.19459v1",
+  "authors": [
+    "Kyuhee Kim",
+    "Auguste Poiroux",
+    "Antoine Bosselut"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LO"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.19459v1"
+}

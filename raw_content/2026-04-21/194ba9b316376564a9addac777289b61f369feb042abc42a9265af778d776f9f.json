@@ -1,0 +1,29 @@
+{
+  "title": "EVPO: Explained Variance Policy Optimization for Adaptive Critic Utilization in LLM Post-Training",
+  "link": "https://arxiv.org/abs/2604.19485v1",
+  "published": "2026-04-21T14:07:39Z",
+  "updated": "2026-04-21T14:07:39Z",
+  "summary": "Reinforcement learning (RL) for LLM post-training faces a fundamental design choice: whether to use a learned critic as a baseline for policy optimization. Classical theory favors critic-based methods such as PPO for variance reduction, yet critic-free alternatives like GRPO have gained widespread adoption due to their simplicity and competitive performance. We show that in sparse-reward settings, a learned critic can inject estimation noise that exceeds the state signal it captures, increasing rather than reducing advantage variance. By casting baseline selection as a Kalman filtering problem, we unify PPO and GRPO as two extremes of the Kalman gain and prove that explained variance (EV), computable from a single training batch, identifies the exact boundary: positive EV indicates the critic reduces variance, while zero or negative EV signals that it inflates variance. Building on this insight, we propose Explained Variance Policy Optimization (EVPO), which monitors batch-level EV at each training step and adaptively switches between critic-based and batch-mean advantage estimation, provably achieving no greater variance than the better of the two at every step. Across four tasks spanning classical control, agentic interaction, and mathematical reasoning, EVPO consistently outperforms both PPO and GRPO regardless of which fixed baseline is stronger on a given task. Further analysis confirms that the adaptive gating tracks critic maturation over training and that the theoretically derived zero threshold is empirically optimal.",
+  "id": "http://arxiv.org/abs/2604.19485v1",
+  "authors": [
+    "Chengjun Pan",
+    "Shichun Liu",
+    "Jiahang Lin",
+    "Dingwei Zhu",
+    "Jiazheng Zhang",
+    "Shihan Dou",
+    "Songyang Gao",
+    "Zhenhua Han",
+    "Binghai Wang",
+    "Rui Zheng",
+    "Xuanjing Huang",
+    "Tao Gui",
+    "Yansong Feng"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.19485v1"
+}

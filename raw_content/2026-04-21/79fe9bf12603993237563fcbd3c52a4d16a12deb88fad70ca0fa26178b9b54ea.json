@@ -1,0 +1,16 @@
+{
+  "title": "Safety-Critical Contextual Control via Online Riemannian Optimization with World Models",
+  "link": "https://arxiv.org/abs/2604.19639v1",
+  "published": "2026-04-21T16:28:36Z",
+  "updated": "2026-04-21T16:28:36Z",
+  "summary": "Modern world models are becoming too complex to admit explicit dynamical descriptions. We study safety-critical contextual control, where a Planner must optimize a task objective using only feasibility samples from a black-box Simulator, conditioned on a context signal $ξ_t$. We develop a sample-based Penalized Predictive Control (PPC) framework grounded in online Riemannian optimization, in which the Simulator compresses the feasibility manifold into a score-based density $\\hat{p}(u \\mid ξ_t)$ that endows the action space with a Riemannian geometry guiding the Planner's gradient descent. The barrier curvature $κ(ξ_t)$, the minimum curvature of the conditional log-density $-\\ln\\hat{p}(\\cdot\\midξ_t)$, governs both convergence rate and safety margin, replacing the Lipschitz constant of the unknown dynamics. Our main result is a contextual safety bound showing that the distance from the true feasibility manifold is controlled by the score estimation error and a ratio that depends on $κ(ξ_t)$, both of which improve with richer context. Simulations on a dynamic navigation task confirm that contextual PPC substantially outperforms marginal and frozen density models, with the advantage growing after environment shifts.",
+  "id": "http://arxiv.org/abs/2604.19639v1",
+  "authors": [
+    "Tongxin Li"
+  ],
+  "categories": [
+    "eess.SY",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.19639v1"
+}

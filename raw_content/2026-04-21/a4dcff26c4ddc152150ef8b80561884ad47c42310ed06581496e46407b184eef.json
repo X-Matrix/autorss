@@ -1,0 +1,21 @@
+{
+  "title": "An AI Agent Execution Environment to Safeguard User Data",
+  "link": "https://arxiv.org/abs/2604.19657v1",
+  "published": "2026-04-21T16:45:30Z",
+  "updated": "2026-04-21T16:45:30Z",
+  "summary": "AI agents promise to serve as general-purpose personal assistants for their users, which requires them to have access to private user data (e.g., personal and financial information). This poses a serious risk to security and privacy. Adversaries may attack the AI model (e.g., via prompt injection) to exfiltrate user data. Furthermore, sharing private data with an AI agent requires users to trust a potentially unscrupulous or compromised AI model provider with their private data.   This paper presents GAAP (Guaranteed Accounting for Agent Privacy), an execution environment for AI agents that guarantees confidentiality for private user data. Through dynamic and directed user prompts, GAAP collects permission specifications from users describing how their private data may be shared, and GAAP enforces that the agent's disclosures of private user data, including disclosures to the AI model and its provider, comply with these specifications. Crucially, GAAP provides this guarantee deterministically, without trusting the agent with private user data, and without requiring any AI model or the user prompt to be free of attacks.   GAAP enforces the user's permission specification by tracking how the AI agent accesses and uses private user data. It augments Information Flow Control with novel persistent data stores and annotations that enable it to track the flow of private information both across execution steps within a single task, and also over multiple tasks separated in time. Our evaluation confirms that GAAP blocks all data disclosure attacks, including those that make other state-of-the-art systems disclose private user data to untrusted parties, without a significant impact on agent utility.",
+  "id": "http://arxiv.org/abs/2604.19657v1",
+  "authors": [
+    "Robert Stanley",
+    "Avi Verma",
+    "Lillian Tsai",
+    "Konstantinos Kallas",
+    "Sam Kumar"
+  ],
+  "categories": [
+    "cs.CR",
+    "cs.AI",
+    "cs.OS"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.19657v1"
+}

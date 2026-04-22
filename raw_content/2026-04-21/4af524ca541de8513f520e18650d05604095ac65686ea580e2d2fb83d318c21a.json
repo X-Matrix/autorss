@@ -1,0 +1,21 @@
+{
+  "title": "SimDiff: Depth Pruning via Similarity and Difference",
+  "link": "https://arxiv.org/abs/2604.19520v1",
+  "published": "2026-04-21T14:43:21Z",
+  "updated": "2026-04-21T14:43:21Z",
+  "summary": "Depth pruning improves the deployment efficiency of large language models (LLMs) by identifying and removing redundant layers. A widely accepted standard for this identification process is to measure the similarity between layers using cosine distance. However, we find that methods relying solely on this one-dimensional heuristic can exhibit unpredictable performance and even catastrophic collapse across different architectures. To address this issue, we propose SimDiff, a novel layer importance criterion that jointly evaluates layers from two orthogonal perspectives: representational similarity and transformation difference. The difference is quantified using two distinct metrics: MSSD, which is sensitive to outliers and identifies layers that make decisive corrections, and MASD, which robustly measures a layer's average contribution. Extensive experiments on multiple models ranging from 0.5B to 13B parameters demonstrate that SimDiff significantly outperforms state-of-the-art baselines across various pruning ratios. Notably, our method retains over 91% of LLaMA2-7B's performance at a 25% pruning ratio and achieves up to a 1.49x inference speedup when pruning 12 layers on LLaMA3.1-8B. We also show that pruned models can be effectively recovered with minimal fine-tuning.",
+  "id": "http://arxiv.org/abs/2604.19520v1",
+  "authors": [
+    "Yuli Chen",
+    "Shuhao Zhang",
+    "Fanshen Meng",
+    "Bo Cheng",
+    "Jiale Han",
+    "Qiang Tong",
+    "Xiulei Liu"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.19520v1"
+}
