@@ -1,0 +1,21 @@
+{
+  "title": "Unbiased Prevalence Estimation with Multicalibrated LLMs",
+  "link": "https://arxiv.org/abs/2604.21549v1",
+  "published": "2026-04-23T11:23:34Z",
+  "updated": "2026-04-23T11:23:34Z",
+  "summary": "Estimating the prevalence of a category in a population using imperfect measurement devices (diagnostic tests, classifiers, or large language models) is fundamental to science, public health, and online trust and safety. Standard approaches correct for known device error rates but assume these rates remain stable across populations. We show this assumption fails under covariate shift and that multicalibration, which enforces calibration conditional on the input features rather than just on average, is sufficient for unbiased prevalence estimation under such shift. Standard calibration and quantification methods fail to provide this guarantee. Our work connects recent theoretical work on fairness to a longstanding measurement problem spanning nearly all academic disciplines. A simulation confirms that standard methods exhibit bias growing with shift magnitude, while a multicalibrated estimator maintains near-zero bias. While we focus the discussion mostly on LLMs, our theoretical results apply to any classification model. Two empirical applications -- estimating employment prevalence across U.S. states using the American Community Survey, and classifying political texts across four countries using an LLM -- demonstrate that multicalibration substantially reduces bias in practice, while highlighting that calibration data should cover the key feature dimensions along which target populations may differ.",
+  "id": "http://arxiv.org/abs/2604.21549v1",
+  "authors": [
+    "Fridolin Linder",
+    "Thomas Leeper",
+    "Daniel Haimovich",
+    "Niek Tax",
+    "Lorenzo Perini",
+    "Milan Vojnovic"
+  ],
+  "categories": [
+    "cs.AI",
+    "stat.ME"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.21549v1"
+}
