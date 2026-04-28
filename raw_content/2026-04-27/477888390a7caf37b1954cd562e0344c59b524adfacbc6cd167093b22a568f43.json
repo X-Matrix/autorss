@@ -1,0 +1,16 @@
+{
+  "title": "Governing What You Cannot Observe: Adaptive Runtime Governance for Autonomous AI Agents",
+  "link": "https://arxiv.org/abs/2604.24686v1",
+  "published": "2026-04-27T16:46:15Z",
+  "updated": "2026-04-27T16:46:15Z",
+  "summary": "Autonomous AI agents can remain fully authorized and still become unsafe as behavior drifts, adversaries adapt, and decision patterns shift without any code change. We propose the \\textbf{Informational Viability Principle}: governing an agent reduces to estimating a bound on unobserved risk $\\hat{B}(x) = U(x) + SB(x) + RG(x)$ and allowing an action only when its capacity $S(x)$ exceeds $\\hat{B}(x)$ by a safety margin. The \\textbf{Agent Viability Framework}, grounded in Aubin's viability theory, establishes three properties -- monitoring (P1), anticipation (P2), and monotonic restriction (P3) -- as individually necessary and collectively sufficient for documented failure modes. \\textbf{RiskGate} instantiates the framework with dedicated statistical estimators (KL divergence, segment-vs-rest $z$-tests, sequential pattern matching), a fail-secure monotonic pipeline, and a closed-loop Autopilot formalised as an instance of Aubin's regulation map with kill-switch-as-last-resort; a scalar Viability Index $VI(t) \\in [-1,+1]$ with first-order $t^*$ prediction transforms governance from reactive to predictive. Contributions are the theoretical framework, the reference implementation, and analytical coverage against published agent-failure taxonomies; quantitative empirical evaluation is scoped as follow-up work.",
+  "id": "http://arxiv.org/abs/2604.24686v1",
+  "authors": [
+    "German Marin",
+    "Jatin Chaudhary"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.24686v1"
+}
