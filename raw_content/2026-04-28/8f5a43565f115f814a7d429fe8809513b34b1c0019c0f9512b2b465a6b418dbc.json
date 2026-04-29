@@ -1,0 +1,18 @@
+{
+  "title": "Can Code Evaluation Metrics Detect Code Plagiarism?",
+  "link": "https://arxiv.org/abs/2604.25778v1",
+  "published": "2026-04-28T15:45:44Z",
+  "updated": "2026-04-28T15:45:44Z",
+  "summary": "Source Code Plagiarism Detection (SCPD) plays an important role in maintaining fairness and academic integrity in software engineering education. Code Evaluation Metrics (CEMs) are developed for assessing code generation tasks. However, it remains unclear whether such metrics can reliably detect plagiarism across different levels of modification (L1-L6), increasing in complexity.   In this paper, we perform a comparative empirical study using two open-source labelled datasets, ConPlag (raw and template-free versions) and IRPlag. We evaluate five CEMs, namely CodeBLEU, CrystalBLEU, RUBY, Tree Structured Edit Distance (TSED), and CodeBERTScore. The performance is evaluated using threshold-free ranking-based measures to assess overall, per dataset, and per-level plagiarism performance. The results are compared against state-of-the-art (SOTA) Source Code Plagiarism Detection Tools (SCPDTs), JPlag and Dolos.   Our findings show that without preprocessing, Dolos achieves the highest overall ranking performance, while among the individual metrics, CrystalBLEU, CodeBLEU, and RUBY outperform JPlag. Performance is strongest at L1 and drops from L4 onward, while CrystalBLEU remains competitive on L6. With preprocessing, CrystalBLEU surpasses Dolos overall. Per dataset, Dolos achieved the best ranking on the ConPlag raw dataset, while CrystalBLEU was the best-performing metric on the remaining datasets. At the plagiarism levels, Dolos remains strongest on L4, while Crystal-BLEU leads most of the remaining difficult levels. These results indicate that CEMs are comparable to dedicated tools in terms of ranking metrics.",
+  "id": "http://arxiv.org/abs/2604.25778v1",
+  "authors": [
+    "Fahad Ebrahim",
+    "Mike Joy"
+  ],
+  "categories": [
+    "cs.SE",
+    "cs.AI",
+    "cs.IR"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.25778v1"
+}

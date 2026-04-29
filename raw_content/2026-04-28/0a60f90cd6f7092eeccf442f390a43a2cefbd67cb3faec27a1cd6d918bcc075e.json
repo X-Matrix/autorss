@@ -1,0 +1,17 @@
+{
+  "title": "StratFormer: Adaptive Opponent Modeling and Exploitation in Imperfect-Information Games",
+  "link": "https://arxiv.org/abs/2604.25796v1",
+  "published": "2026-04-28T16:03:14Z",
+  "updated": "2026-04-28T16:03:14Z",
+  "summary": "We present StratFormer, a transformer-based meta-agent that learns to simultaneously model and exploit opponents in imperfect-information games through a two-phase curriculum. The first phase trains an opponent modeling head to identify behavioral patterns from action histories while the agent plays a game-theoretic optimal (GTO) policy. The second phase progressively shifts the policy toward best-response (BR) exploitation, guided by a per-opponent regularization schedule tied to exploitability. Our architecture introduces dual-turn tokens -- feature vectors constructed at both agent and opponent decision points -- coupled with bucket-rate features that encode opponent tendencies across five strategic contexts. On Leduc Hold'em, a small poker variant with six cards and two betting rounds, we test against six opponent archetypes at two strength levels each, with exploitability ranging from 0.15 to 1.26 Big Blinds (BB) per hand. StratFormer achieves an average exploitation gain of +0.106 BB per hand over GTO, with peak gains of +0.821 against highly exploitable opponents, while maintaining near-equilibrium safety.",
+  "id": "http://arxiv.org/abs/2604.25796v1",
+  "authors": [
+    "Andy Caen",
+    "Mark H. M. Winands",
+    "Dennis J. N. J. Soemers"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.25796v1"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Semi-Markov Reinforcement Learning for City-Scale EV Ride-Hailing with Feasibility-Guaranteed Actions",
+  "link": "https://arxiv.org/abs/2604.25848v1",
+  "published": "2026-04-28T16:54:03Z",
+  "updated": "2026-04-28T16:54:03Z",
+  "summary": "We study city-scale control of electric-vehicle (EV) ride-hailing fleets where dispatch, repositioning, and charging decisions must respect charger and feeder limits under uncertain, spatially correlated demand and travel times. We formulate the problem as a hex-grid semi-Markov decision process (semi-MDP) with mixed actions -- discrete actions for serving, repositioning, and charging, together with continuous charging power -- and variable action durations. To guarantee physical feasibility during both training and deployment, the policy learns over high-level intentions produced by a masked, temperature-annealed actor. These intentions are projected at every decision step through a time-limited rolling mixed-integer linear program (MILP) that strictly enforces state-of-charge, port, and feeder constraints. To mitigate distributional shifts, we optimize a Soft Actor--Critic (SAC) agent against a Wasserstein-1 ambiguity set with a graph-aligned Mahalanobis ground metric that captures spatial correlations. The robust backup uses the Kantorovich--Rubinstein dual, a projected subgradient inner loop, and a primal--dual risk-budget update. Our architecture combines a two-layer Graph Convolutional Network (GCN) encoder, twin critics, and a value network that drives the adversary. Experiments on a large-scale EV fleet simulator built from NYC taxi data show that PD--RSAC achieves the highest net profit, reaching \\$1.22M, compared with \\$0.58M--\\$0.70M for strong heuristic, single-agent RL, and multi-agent RL baselines, including Greedy, SAC, MAPPO, and MADDPG, while maintaining zero feeder-limit violations.",
+  "id": "http://arxiv.org/abs/2604.25848v1",
+  "authors": [
+    "An Nguyen",
+    "Hoang Nguyen",
+    "Phuong Le",
+    "Hung Pham",
+    "Cuong Do",
+    "Laurent El Ghaoui"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.25848v1"
+}

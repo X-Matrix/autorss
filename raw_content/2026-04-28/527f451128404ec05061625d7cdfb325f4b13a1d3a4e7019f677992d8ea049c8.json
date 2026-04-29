@@ -1,0 +1,20 @@
+{
+  "title": "Prefill-Time Intervention for Mitigating Hallucination in Large Vision-Language Models",
+  "link": "https://arxiv.org/abs/2604.25642v1",
+  "published": "2026-04-28T13:42:27Z",
+  "updated": "2026-04-28T13:42:27Z",
+  "summary": "Large Vision-Language Models (LVLMs) have achieved remarkable progress in visual-textual understanding, yet their reliability is critically undermined by hallucinations, i.e., the generation of factually incorrect or inconsistent responses. While recent studies using steering vectors demonstrated promise in reducing hallucinations, a notable challenge remains: they inadvertently amplify the severity of residual hallucinations. We attribute this to their exclusive focus on the decoding stage, where errors accumulate autoregressively and progressively worsen subsequent hallucinatory outputs. To address this, we propose Prefill-Time Intervention (PTI), a novel steering paradigm that intervenes only once during the prefill stage, enhancing the initial Key-Value (KV) cache before error accumulation occurs. Specifically, PTI is modality-aware, deriving distinct directions for visual and textual representations. This intervention is decoupled to steer keys toward visually-grounded objects and values to filter background noise, correcting hallucination-prone representations at their source. Extensive experiments demonstrate PTI's significant performance in mitigating hallucinations and its generalizability across diverse decoding strategies, LVLMs, and benchmarks. Moreover, PTI is orthogonal to existing decoding-stage methods, enabling plug-and-play integration and further boosting performance. Code is available at: https://github.com/huaiyi66/PTI.",
+  "id": "http://arxiv.org/abs/2604.25642v1",
+  "authors": [
+    "Chengsheng Zhang",
+    "Chenghao Sun",
+    "Xinyan Jiang",
+    "Wei Li",
+    "Xinmei Tian"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.25642v1"
+}
