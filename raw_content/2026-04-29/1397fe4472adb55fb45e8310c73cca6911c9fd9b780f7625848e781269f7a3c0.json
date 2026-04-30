@@ -1,0 +1,18 @@
+{
+  "title": "Lyapunov-Guided Self-Alignment: Test-Time Adaptation for Offline Safe Reinforcement Learning",
+  "link": "https://arxiv.org/abs/2604.26516v1",
+  "published": "2026-04-29T10:32:18Z",
+  "updated": "2026-04-29T10:32:18Z",
+  "summary": "Offline reinforcement learning (RL) agents often fail when deployed, as the gap between training datasets and real environments leads to unsafe behavior. To address this, we present SAS (Self-Alignment for Safety), a transformer-based framework that enables test-time adaptation in offline safe RL without retraining. In SAS, the main mechanism is self-alignment: at test time, the pretrained agent generates several imagined trajectories and selects those satisfying the Lyapunov condition. These feasible segments are then recycled as in-context prompts, allowing the agent to realign its behavior toward safety while avoiding parameter updates. In effect, SAS turns Lyapunov-guided imagination into control-invariant prompts, and its transformer architecture admits a hierarchical RL interpretation where prompting functions as Bayesian inference over latent skills. Across Safety Gymnasium and MuJoCo benchmarks, SAS consistently reduces cost and failure while maintaining or improving return.",
+  "id": "http://arxiv.org/abs/2604.26516v1",
+  "authors": [
+    "Seungyub Han",
+    "Hyungjin Kim",
+    "Jungwoo Lee"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.26516v1"
+}

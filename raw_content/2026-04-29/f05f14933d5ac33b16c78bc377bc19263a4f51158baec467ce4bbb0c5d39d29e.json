@@ -1,0 +1,18 @@
+{
+  "title": "STLGT: A Scalable Trace-Based Linear Graph Transformer for Tail Latency Prediction in Microservices",
+  "link": "https://arxiv.org/abs/2604.26422v1",
+  "published": "2026-04-29T08:32:14Z",
+  "updated": "2026-04-29T08:32:14Z",
+  "summary": "Accurate end-to-end tail-latency forecasting is critical for proactive SLO management in microservice systems. However, modeling long-range dependency propagation and non-stationary, bursty workloads while maintaining inference efficiency at scale remains challenging. We present STLGT (Scalable Trace-based Linear Graph Transformer), a per-API predictor that encodes traces as span graphs for multi-step p95 tail-latency forecasting. STLGT uses a structure-aware linear graph Transformer to propagate cross-service dependencies with inference time linear in span graph size, and a decoupled temporal module to capture workload dynamics. Across a personalized education microservice application, DeathStarBench, and Alibaba traces, STLGT improves forecasting accuracy over PERT-GNN by 8.5% MAPE on average and achieves up to 12x faster CPU inference at N=32, matching the maximum span graph size after preprocessing the Alibaba traces. Ablation studies further demonstrate the effectiveness of each component, especially under bursty traffic.",
+  "id": "http://arxiv.org/abs/2604.26422v1",
+  "authors": [
+    "Yongliang Ding",
+    "Qigong Bi",
+    "Peng Pu"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.26422v1"
+}

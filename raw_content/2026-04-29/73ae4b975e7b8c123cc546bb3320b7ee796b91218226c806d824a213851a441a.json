@@ -1,0 +1,19 @@
+{
+  "title": "Tatemae: Detecting Alignment Faking via Tool Selection in LLMs",
+  "link": "https://arxiv.org/abs/2604.26511v1",
+  "published": "2026-04-29T10:20:08Z",
+  "updated": "2026-04-29T10:20:08Z",
+  "summary": "Alignment faking (AF) occurs when an LLM strategically complies with training objectives to avoid value modification, reverting to prior preferences once monitoring is lifted. Current detection methods focus on conversational settings and rely primarily on Chain-of-Thought (CoT) analysis, which provides a reliable signal when strategic reasoning surfaces, but cannot distinguish deception from capability failures if traces are absent or unfaithful. We formalize AF as a composite behavioural event and detect it through observable tool selection, where the LLM selects the safe tool when unmonitored, but switches to the unsafe tool under monitoring that rewards helpfulness over safety, while its reasoning still acknowledges the safe choice. We release a dataset of 108 enterprise IT scenarios spanning Security, Privacy, and Integrity domains under Corruption and Sabotage pressures. Evaluating six frontier LLMs across five independent runs, we find mean AF detection rates between 3.5% and 23.7%, with vulnerability profiles varying by domain and pressure type. These results suggest that susceptibility reflects training methodology rather than capability alone.",
+  "id": "http://arxiv.org/abs/2604.26511v1",
+  "authors": [
+    "Matteo Leonesi",
+    "Francesco Belardinelli",
+    "Flavio Corradini",
+    "Marco Piangerelli"
+  ],
+  "categories": [
+    "cs.CR",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.26511v1"
+}

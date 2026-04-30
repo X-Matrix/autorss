@@ -1,0 +1,19 @@
+{
+  "title": "QYOLO: Lightweight Object Detection via Quantum Inspired Shared Channel Mixing",
+  "link": "https://arxiv.org/abs/2604.26435v1",
+  "published": "2026-04-29T08:47:27Z",
+  "updated": "2026-04-29T08:47:27Z",
+  "summary": "The rapid advancement of object detection architectures has positioned single stage detectors as the dominant solution for real-time visual perception. A primary source of computational overhead in these models lies in the deep backbone stages, where C2f bottleneck modules at high stride levels accumulate a disproportionate share of parameters due to quadratic scaling with channel width. This work introduces QYOLO, a quantum-inspired channel mixing framework that achieves genuine architectural compression by replacing the two deepest backbone C2f modules at P4/16 (512 channels) and P5/32 (1024 channels) with a compact QMixBlock. The proposed block performs global channel recalibration through a sinusoidal mixing mechanism with shared learnable parameters across both backbone stages, enforcing consistent channel importance without requiring independent per-stage parameter sets. The neck and detection head remain fully classical and unchanged. Evaluation on the VisDrone2019 benchmark demonstrates that QYOLOv8n achieves a 20.2% reduction in parameter count (3.01M to 2.40M) and 12.3% GFLOPs reduction with only 0.4 pp mAP@50 degradation. QYOLOv8s achieves 21.8% reduction with 0.1 pp degradation. When combined with knowledge distillation, full accuracy parity is recovered at no cost to compression. An expanded backbone plus neck variant achieved 38 to 41% reduction at the cost of greater accuracy degradation, motivating the backbone-only final design.",
+  "id": "http://arxiv.org/abs/2604.26435v1",
+  "authors": [
+    "Garvit Kumar Mittal",
+    "Sahil Tomar",
+    "Sandeep Kumar"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.ET"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.26435v1"
+}

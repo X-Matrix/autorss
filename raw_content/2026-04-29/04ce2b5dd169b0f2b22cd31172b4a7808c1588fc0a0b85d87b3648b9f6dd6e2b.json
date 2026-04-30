@@ -1,0 +1,19 @@
+{
+  "title": "ViCrop-Det: Spatial Attention Entropy Guided Cropping for Training-Free Small-Object Detection",
+  "link": "https://arxiv.org/abs/2604.26806v1",
+  "published": "2026-04-29T15:35:03Z",
+  "updated": "2026-04-29T15:35:03Z",
+  "summary": "Transformer-based architectures have established a dominant paradigm in global semantic perception; however, they remain fundamentally constrained by the profound spatial heterogeneity inherent in natural images. Specifically, the imposition of a uniform global receptive field across regions of varying information density inevitably leads to local feature degradation, particularly in dense conflict zones populated by microscopic targets. To address this mechanistic limitation, we propose ViCrop-Det, a training-free inference framework that introduces adaptive spatial trust region shrinkage. Inspired by the use of attention entropy in anomaly segmentation, ViCrop-Det leverages the detection decoder's cross-attention distribution as an endogenous probe. By utilizing Spatial Attention Entropy (SAE) to heuristically evaluate local spatial ambiguity, the framework executes dynamic spatial routing, allocating a fixed computational budget exclusively to regions exhibiting both high target saliency and high cognitive uncertainty. By shrinking the spatial trust region and injecting high-frequency localized observations, ViCrop-Det actively resolves spatial ambiguity and recovers fine-grained features without requiring architectural modifications. Extensive evaluations on VisDrone and DOTA-v1.5 demonstrate that ViCrop-Det yields competitive performance enhancements, consistently adding +1-3 mAP@50 to RT-DETR-R50 and Deformable DETR with a marginal 20-23\\% latency overhead. On MS COCO, $AP_{S}$ improves while $AP_{M}/AP_{L}$ remains stable, indicating precise fine-scale refinement without compromising the global spatial prior. Under compute-matched settings, our adaptive routing strategy comprehensively surpasses uniform slicing baselines, achieving a highly optimized accuracy-speed trade-off.",
+  "id": "http://arxiv.org/abs/2604.26806v1",
+  "authors": [
+    "Hui Wang",
+    "Hongze Li",
+    "Wei Chen",
+    "Xiaojin Zhang"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.26806v1"
+}
