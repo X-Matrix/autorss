@@ -1,0 +1,23 @@
+{
+  "title": "RuC: HDL-Agnostic Rule Completion Benchmark Generation",
+  "link": "https://arxiv.org/abs/2604.27780v1",
+  "published": "2026-04-30T12:19:40Z",
+  "updated": "2026-04-30T12:19:40Z",
+  "summary": "Large Language Models (LLMs) have rapidly improved in performance across code-related tasks, making their integration into Register Transfer Level (RTL) development increasingly attractive. Mimicking the behavior of inline code assistants, many benchmarks evaluate LLMs' capabilities in code completion, either assessing the generation of entire hardware modules or the completion of a single line within a module. However both of these approaches lack the ability to control the granularity of the code-completion sample size and the syntactic range of completions. To overcome these limitations, we present a framework for language-agnostic rule completion (RuC), a grammar-driven, rule-selectable benchmark generator that automatically produces RTL code-completion tasks from a set of input hardware description sources. RuC uses the target Hardware Description Language (HDL) grammar to mask syntactically defined code regions and prompts a model to regenerate them using the surrounding unmasked code as context, enabling a controlled and scalable evaluation of the domain-specific model's code-understanding capabilities, ranging from assignments to the reconstruction of entire logic blocks. We use RuC to generate two SystemVerilog rule-completion benchmarks from the Tiny Tapeout shuttle TT07 and the CVE2 RISC-V core to demonstrate RuC's applicability to a broad range of designs, and conduct a comparative study of the code completion capabilities of modern open-source LLMs across diverse settings. Results indicate that completion performance strongly depends on the model type, the grammatical structure of the masked region, and the prompting strategy. Specifically, the highest scores are obtained with Fill-in-the-Middle (FIM) prompting. These findings highlight the value of grammar-driven, arbitrarily granular benchmarks for meaningful evaluation of LLM capabilities in RTL development workflows.",
+  "id": "http://arxiv.org/abs/2604.27780v1",
+  "authors": [
+    "Arnau Ayguadé Domingo",
+    "Miquel Alberti-Binimelis",
+    "Cristian Gutierrez-Gomez",
+    "Emanuele Parisi",
+    "Razine Moundir Ghorab",
+    "Miquel Moreto",
+    "Gokcen Kestor",
+    "Dario Garcia-Gasulla"
+  ],
+  "categories": [
+    "cs.AR",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.27780v1"
+}

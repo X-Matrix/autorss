@@ -1,0 +1,17 @@
+{
+  "title": "Post-Optimization Adaptive Rank Allocation for LoRA",
+  "link": "https://arxiv.org/abs/2604.27796v1",
+  "published": "2026-04-30T12:40:11Z",
+  "updated": "2026-04-30T12:40:11Z",
+  "summary": "Exponential growth in the scale of modern foundation models has led to the widespread adoption of Low-Rank Adaptation (LoRA) as a parameter-efficient fine-tuning technique. However, standard LoRA implementations disregard the varying intrinsic dimensionality of model layers and enforce a uniform rank, leading to parameter redundancy. We propose Post-Optimization Adaptive Rank Allocation (PARA), a data-free compression method for LoRA that integrates seamlessly into existing fine-tuning pipelines. PARA leverages Singular Value Decomposition to prune LoRA ranks using a global threshold over singular values across all layers. This results in non-uniform rank allocation based on layer-wise spectral importance. As a post-hoc method, PARA circumvents the training modifications and resulting instabilities that dynamic architectures typically incur. We empirically demonstrate that PARA reduces parameter count by 75-90\\% while preserving the predictive performance of the original, uncompressed LoRA across multiple vision and language benchmarks. Code will be published upon acceptance.",
+  "id": "http://arxiv.org/abs/2604.27796v1",
+  "authors": [
+    "Vishnuprasadh Kumaravelu",
+    "Sunil Gupta",
+    "P. K. Srijith"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2604.27796v1"
+}
