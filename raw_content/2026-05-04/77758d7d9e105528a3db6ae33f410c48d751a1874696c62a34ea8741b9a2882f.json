@@ -1,0 +1,27 @@
+{
+  "title": "ViewSAM: Learning View-aware Cross-modal Semantics for Weakly Supervised Cross-view Referring Multi-Object Tracking",
+  "link": "https://arxiv.org/abs/2605.02638v1",
+  "published": "2026-05-04T14:23:38Z",
+  "updated": "2026-05-04T14:23:38Z",
+  "summary": "Cross-view Referring Multi-Object Tracking (CRMOT) aims to track multiple objects specified by natural language across multiple camera views, with globally consistent identities. Despite recent progress, existing methods rely heavily on costly frame-level spatial annotations and cross-view identity supervision. To reduce such reliance, we explore CRMOT under weak supervision by leveraging the capabilities of foundation models. However, our empirical study shows that directly applying foundation models such as SAM2 and SAM3, even with task-specific modifications, fails to accurately understand referring expressions and maintain consistent identities across views. Yet, they remain effective at producing reliable object tracklets that can serve as pseudo supervision. We therefore repurpose foundation models as pseudo-label generators and propose a two-stage framework for weakly supervised CRMOT, using only object category labels as coarse-grained supervision. In the first stage, we design an Affinity-guided Cross-view Re-prompting strategy to refine and associate SAM3-generated tracklets across cameras, producing reliable cross-view pseudo labels for subsequent training. In the second stage, we introduce ViewSAM, a CRMOT model built upon SAM2 that explicitly models view-aware cross-modal semantics. By formulating view-induced variations as learnable conditions, ViewSAM bridges the gap between view-variant visual observations and view-invariant textual expressions, enabling robust cross-view referring tracking with only approximately 10% additional parameters. Extensive experiments demonstrate that ViewSAM achieves SOTA performance under weak supervision and remains competitive with fully supervised methods.",
+  "id": "http://arxiv.org/abs/2605.02638v1",
+  "authors": [
+    "Jiawei Ge",
+    "Xintian Zhang",
+    "Jiuxin Cao",
+    "Bo Liu",
+    "Fabian Deuser",
+    "Chang Liu",
+    "Gong Wenkang",
+    "Siyou Li",
+    "Juexi Shao",
+    "Wenqing Wu",
+    "Chen Feng",
+    "Ioannis Patras"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.02638v1"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Recurrent Deep Reinforcement Learning for Chemotherapy Control under Partial Observability",
+  "link": "https://arxiv.org/abs/2605.02552v1",
+  "published": "2026-05-04T13:00:55Z",
+  "updated": "2026-05-04T13:00:55Z",
+  "summary": "Chemotherapy dose optimization can be formulated as a dynamic treatment regime, requiring sequential decisions under uncertainty that must balance tumor suppression against toxicity. However, most reinforcement learning approaches assume full observability of the patient state, a condition rarely met in clinical practice. We investigate whether memory-augmented policies can improve chemotherapy control under partial observability. To this end, we employ a recurrent TD3-based approach with separate LSTM actor-critic networks and evaluate it on the AhnChemoEnv benchmark from DTR-Bench, considering both off-policy and on-policy recurrent architectures against feed-forward TD3 and Soft Actor-Critic. Pharmacokinetic and pharmacodynamic variability are held fixed to isolate hidden-state uncertainty and observation noise and to avoid confounding effects from inter-patient variability. Across ten random seeds, recurrence yields modest benefit under full observability but substantially stronger and more stable performance under partial observability, with more consistent tumor suppression and improved normal-cell preservation. These findings indicate that memory-based policies are particularly beneficial when clinically relevant state information is incomplete or noisy.",
+  "id": "http://arxiv.org/abs/2605.02552v1",
+  "authors": [
+    "Firas Mohamed Elamine Kiram",
+    "Imane Youkana",
+    "Rachida Saouli",
+    "Gian Antonio Susto",
+    "Laid Kahloul"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.02552v1"
+}

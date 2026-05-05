@@ -1,0 +1,22 @@
+{
+  "title": "Strategy-Aware Optimization Modeling with Reasoning LLMs",
+  "link": "https://arxiv.org/abs/2605.02545v1",
+  "published": "2026-05-04T12:48:01Z",
+  "updated": "2026-05-04T12:48:01Z",
+  "summary": "Large language models (LLMs) can generate syntactically valid optimization programs, yet often struggle to reliably choose an effective modeling strategy, leading to incorrect formulations and inefficient solver behavior. We propose SAGE, a strategy-aware framework that makes Modeling Strategy explicit in both data construction and post-training. SAGE builds a solver-verified multi-strategy dataset and trains a student model with supervised fine-tuning followed by Segment-Weighted GRPO using a composite reward over format compliance, correctness, and solver efficiency. Across eight benchmarks spanning synthetic and real-world settings, SAGE improves average pass@1 from 72.7 to 80.3 over the strongest open-source baseline. With multiple generations, SAGE discovers more distinct correct formulations and improves component-level diversity at pass@16 by 19-29%. At the largest scale, SAGE produces more compact constraint systems with 14.2% fewer constraints than the baseline, consistent with solver-efficient modeling. Overall, these results show that making Modeling Strategy explicit improves automated optimization modeling. Code is available at https://github.com/rachhhhing/SAGE.",
+  "id": "http://arxiv.org/abs/2605.02545v1",
+  "authors": [
+    "Ruiqing Zhao",
+    "Fengzhi Li",
+    "Yuan Zuo",
+    "Rui Liu",
+    "Yansong Liu",
+    "Yunfei Ma",
+    "Fanyu Meng",
+    "Junlan Feng"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.02545v1"
+}

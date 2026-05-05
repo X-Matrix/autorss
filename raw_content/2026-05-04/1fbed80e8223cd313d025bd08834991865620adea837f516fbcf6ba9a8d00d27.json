@@ -1,0 +1,23 @@
+{
+  "title": "Caliper-in-the-Loop: Black-Box Optimization for Hyperledger Fabric Performance Tuning",
+  "link": "https://arxiv.org/abs/2605.02690v1",
+  "published": "2026-05-04T15:04:38Z",
+  "updated": "2026-05-04T15:04:38Z",
+  "summary": "Hyperledger Fabric performance depends on many interacting configuration parameters, making manual tuning difficult. We study automated throughput tuning by treating benchmarking as a noisy black-box optimization problem and applying Bayesian optimization (BO) with dimensionality reduction (DR). We implement an end-to-end Caliper-in-the-loop pipeline that deploys candidate configurations, benchmarks them, and updates the optimizer from observed throughput. The search space, derived from Fabric configuration files, has 317 dimensions. In a cloud testbed, we evaluate 16 BO+DR variants and a random-search baseline. The best method, DYCORS-PCA, achieves a 12% TPS improvement relative to the first evaluated configuration, while MPI-REMBO achieves 9%. These results suggest that BO with DR is a practical approach for high-dimensional Hyperledger Fabric tuning, while also highlighting the role of measurement noise in interpreting gains.",
+  "id": "http://arxiv.org/abs/2605.02690v1",
+  "authors": [
+    "Yash Madhwal",
+    "Arseny Bolotnikov",
+    "Mark Prikhno",
+    "Irina Lebedeva",
+    "Ivan Laishevskiy",
+    "Vladimir Gorgadze",
+    "Artem Barger",
+    "Yury Yanovich"
+  ],
+  "categories": [
+    "cs.DC",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.02690v1"
+}

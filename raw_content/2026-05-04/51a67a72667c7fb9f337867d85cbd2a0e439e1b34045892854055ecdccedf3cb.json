@@ -1,0 +1,21 @@
+{
+  "title": "Hyp2Former: Hierarchy-Aware Hyperbolic Embeddings for Open-Set Panoptic Segmentation",
+  "link": "https://arxiv.org/abs/2605.02580v1",
+  "published": "2026-05-04T13:33:43Z",
+  "updated": "2026-05-04T13:33:43Z",
+  "summary": "Recognizing unknown objects is crucial for safety-critical applications such as autonomous driving and robotics. Open-Set Panoptic Segmentation (OPS) aims to segment known thing and stuff classes while identifying valid unknown objects as separate instances. Prior OPS approaches largely treat known categories as a flat label set, ignoring the semantic hierarchy that provides valuable structural priors for distinguishing unknown objects from in-distribution classes. In this work, we propose Hyp2Former, an end-to-end framework for OPS that does not require explicit modeling of unknowns during training, and instead learns hierarchical semantic similarities continuously in hyperbolic space. By explicitly encoding hierarchical relationships among known categories, the model learns a structured embedding space that captures multiple levels of semantic abstraction. As a result, unknown objects that cannot be confidently classified as known categories still remain in close proximity to higher-level concepts (e.g., an unknown animal remains closer to \"animal\" or \"object\" than to unrelated concepts such as \"electronics\" or \"stuff\") and can therefore be reliably detected, even if their fine-grained category was not represented during training. Empirical evaluations across multiple public datasets such as MS COCO, Cityscapes, and Lost&Found demonstrate that Hyp2Former outperforms existing methods on OPS, achieving the best balance between unknown object discovery and in-distribution robustness.",
+  "id": "http://arxiv.org/abs/2605.02580v1",
+  "authors": [
+    "Yao Lu",
+    "Rohit Mohan",
+    "Florian Drews",
+    "Yakov Miron",
+    "Abhinav Valada"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.RO"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.02580v1"
+}

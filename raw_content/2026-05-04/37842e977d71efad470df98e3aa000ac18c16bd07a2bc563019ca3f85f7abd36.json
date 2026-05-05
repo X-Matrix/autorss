@@ -1,0 +1,20 @@
+{
+  "title": "SCGNN: Semantic Consistency enhanced Graph Neural Network Guided by Granular-ball Computing",
+  "link": "https://arxiv.org/abs/2605.02617v1",
+  "published": "2026-05-04T14:09:56Z",
+  "updated": "2026-05-04T14:09:56Z",
+  "summary": "Capturing semantic consistency among nodes is crucial for effective graph representation learning. Existing approaches typically rely on $k$-nearest neighbors ($k$NN) or other node-level full search algorithms (FSA) to mine semantic relationships via exhaustive pairwise similarity computation, which suffer from high computational complexity and rigid neighbor selection, limiting scalability and introducing noisy connections. In this paper, we propose the Semantic Consistency enhanced Graph Neural Network (SCGNN), a novel plug-and-play framework that leverages granular-ball computing (GBC) to efficiently capture semantic consistency in a scalable manner. Unlike node-level FSA methods, SCGNN models group-level semantic structure by adaptively partitioning nodes into granular balls, significantly reducing computational cost while improving robustness to noise. To effectively utilize the discovered group-level semantic consistency, we design a dual enhancement strategy. Specifically, (1) a structure enhancement module constructs an anchor-based graph structure, where each anchor is a virtual node representing the group-level semantic carried by a granular ball, then injecting group-level semantic information into the graph structure; and (2) a supervision enhancement module performs label consistency checking (LCC) by combining GBC predictions with model-generated pseudo-labels, thereby producing more reliable supervision signals. SCGNN is compatible with various GNN backbones. During the forward propagation of SCGNN, the vanilla graph and the augment graph are jointly encoded, and their predictions are fused; during the backpropagation, the supervision enhancement module provides enhanced supervision signals to guide parameter updates.",
+  "id": "http://arxiv.org/abs/2605.02617v1",
+  "authors": [
+    "Genhao Tian",
+    "Taihua Xu",
+    "Shuyin Xia",
+    "Qinghua Zhang",
+    "Jie Yang",
+    "Jianjun Chen"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.02617v1"
+}

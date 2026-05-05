@@ -1,0 +1,20 @@
+{
+  "title": "Hybrid Inspection and Task-Based Access Control in Zero-Trust Agentic AI",
+  "link": "https://arxiv.org/abs/2605.02682v1",
+  "published": "2026-05-04T15:00:37Z",
+  "updated": "2026-05-04T15:00:37Z",
+  "summary": "Authorizing Large Language Model (LLM)-driven agents to dynamically invoke tools and access protected resources introduces significant security risks, and the risks grow dramatically as agents engage in multi-turn conversations and scale toward distributed collaboration. A compromised or malicious agentic application can tamper with tool calls, falsify results, or request permissions beyond the scope of the subject's intended tasks, which could go unnoticed with current delegated authorization flows given their lack of visibility into the original subject's intent. In light of this, we make the following contributions towards Continuous Agent Semantic Authorization (CASA). First, we propose a hybrid runtime enforcement model that combines deterministic and semantic controls enabled by a zero-trust interception layer. Five deterministic controls enforce structural and data-integrity guarantees over the message flow, while a semantic inspection layer evaluates whether tool call choices align with the intended tasks commissioned to the agent. Second, differently from prior Task-Based Access Control (TBAC) techniques that operate on single-turn interactions, we decompose the semantic layer into two stages: i) a task-extraction step that distills the subject's objectives from multi-turn conversations at the interception layer, and ii) a task-tool semantic matching step at the authorization server that evaluates whether the requested tools are appropriate for the extracted tasks. Third, we extend the ASTRA dataset that we introduced in a prior work, by generating novel conversation-tool datasets with multi-turn interactions containing relevant and irrelevant tool calls for a given task. Lastly, we provide the first experimental results for TBAC under multi-turn conversations.",
+  "id": "http://arxiv.org/abs/2605.02682v1",
+  "authors": [
+    "Majed El Helou",
+    "Benjamin Ryder",
+    "Chiara Troiani",
+    "Jean Diaconu",
+    "Hervé Muyal",
+    "Marcelo Yannuzzi"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.02682v1"
+}
