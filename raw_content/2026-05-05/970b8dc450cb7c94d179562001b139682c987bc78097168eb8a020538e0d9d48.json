@@ -1,0 +1,26 @@
+{
+  "title": "Self-Improvement for Fast, High-Quality Plan Generation",
+  "link": "https://arxiv.org/abs/2605.03625v1",
+  "published": "2026-05-05T10:55:18Z",
+  "updated": "2026-05-05T10:55:18Z",
+  "summary": "Generative models trained on synthetic plan data are a promising approach to generalized planning. Recent work has focused on finding any valid plan, rather than a high-quality solution. We address the challenge of producing high-quality plans, a computationally hard problem, in sub-exponential time. First, we demonstrate that, given optimal data, a decoder-only transformer can generate high-quality plans for unseen problem instances. Second, we show how to self-improve an initial model trained on sub-optimal data. Each round of self-improvement combines multiple model calls with graph search to generate improved plans, used for model fine-tuning. An experimental study on four domains: Blocksworld, Logistics, Labyrinth, and Sokoban, shows on average a 30% reduction in plan length over the source symbolic planner, with over 80% of plans being optimal, where the optimum is known. Plan quality is further improved by inference-time search. The model's latency scales sub-exponentially in contrast to the satisficing and optimal symbolic planners to which we compare. Together, these results suggest that self-improvement with generative models offers a scalable approach for high-quality plan generation.",
+  "id": "http://arxiv.org/abs/2605.03625v1",
+  "authors": [
+    "Robert Gieselmann",
+    "Henrike von Huelsen",
+    "Mihai Samson",
+    "Marie-Christine Meyer",
+    "Dariusz Piotrowski",
+    "Oleksandr Radomskyi",
+    "Justin Okamoto",
+    "Turan Gojayev",
+    "Michael Painter",
+    "Gavin Brown",
+    "Federico Pecora",
+    "Jeremy L. Wyatt"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.03625v1"
+}
