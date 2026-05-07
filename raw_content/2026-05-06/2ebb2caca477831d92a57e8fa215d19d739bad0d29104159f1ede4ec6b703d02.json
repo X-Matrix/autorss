@@ -1,0 +1,17 @@
+{
+  "title": "The Impossibility Triangle of Long-Context Modeling",
+  "link": "https://arxiv.org/abs/2605.05066v1",
+  "published": "2026-05-06T16:01:43Z",
+  "updated": "2026-05-06T16:01:43Z",
+  "summary": "We identify and prove a fundamental trade-off governing long-sequence models: no model can simultaneously achieve (i) per-step computation independent of sequence length (Efficiency), (ii) state size independent of sequence length (Compactness), and (iii) the ability to recall a number of historical facts proportional to sequence length (Recall). We formalize this trade-off within an Online Sequence Processor abstraction that unifies Transformers, state space models, linear recurrent networks, and their hybrids. Using the Data Processing Inequality and Fano's Inequality, we prove that any model satisfying Efficiency and Compactness can recall at most O(poly(d)/log V) key-value pairs from a sequence of arbitrary length, where d is the model dimension and V is the vocabulary size. We classify 52 architectures published before March 2026 into the triangle, showing that each achieves at most two of the three properties and that hybrid architectures trace continuous trajectories in the interior. Experiments on synthetic associative recall tasks with five representative architectures validate the theoretical bound: empirical recall capacity lies strictly below the information-theoretic limit, and no architecture escapes the triangle.",
+  "id": "http://arxiv.org/abs/2605.05066v1",
+  "authors": [
+    "Yan Zhou"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.05066v1"
+}
