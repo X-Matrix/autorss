@@ -1,0 +1,18 @@
+{
+  "title": "Discrete Flow Matching for Offline-to-Online Reinforcement Learning",
+  "link": "https://arxiv.org/abs/2605.12379v1",
+  "published": "2026-05-12T16:44:02Z",
+  "updated": "2026-05-12T16:44:02Z",
+  "summary": "Many reinforcement learning (RL) tasks have discrete action spaces, but most generative policy methods based on diffusion and flow matching are designed for continuous control. Meanwhile, generative policies usually rely heavily on offline datasets and offline-to-online RL is itself challenging, as the policy must improve from new interaction without losing useful behavior learned from static data. To address those challenges, we introduce DRIFT, an online fine-tuning method that updates an offline pretrained continuous-time Markov chain (CTMC) policy with an advantage-weighted discrete flow matching loss. To preserve useful pretrained knowledge, we add a path-space penalty that regularizes the full CTMC trajectory distribution, rather than only the final action distribution. For large discrete action spaces, we introduce a candidate-set approximation that updates the actor over a small subset of actions sampled from reference-policy rollouts and uniform exploration. Our theoretical analysis shows that the candidate-set error is controlled by missing target probability mass, and the induced CTMC generator error decreases as the candidate set covers more high-probability actions. Experiments on prevailing discrete action RL task show that our method provides stable offline-to-online improvement across all tasks, achieving the highest average score on Jericho with a simple GRU encoder while outperforming methods that use pretrained language models. Controlled experiments further confirm that the path-space penalty remains bounded during fine-tuning and that the CTMC generator adapts to shifted rewards faster than deterministic baselines. The candidate-set mechanism is supported by a stability analysis showing that the generator error decreases exponentially with candidate coverage.",
+  "id": "http://arxiv.org/abs/2605.12379v1",
+  "authors": [
+    "Fairoz Nower Khan",
+    "Nabuat Zaman Nahim",
+    "Peizhong Ju"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12379v1"
+}

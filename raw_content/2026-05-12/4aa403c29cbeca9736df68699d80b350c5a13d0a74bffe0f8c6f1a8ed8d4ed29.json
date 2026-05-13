@@ -1,0 +1,17 @@
+{
+  "title": "KAN-CL: Per-Knot Importance Regularization for Continual Learning with Kolmogorov-Arnold Networks",
+  "link": "https://arxiv.org/abs/2605.12306v1",
+  "published": "2026-05-12T15:55:09Z",
+  "updated": "2026-05-12T15:55:09Z",
+  "summary": "Catastrophic forgetting remains the central obstacle in continual learning (CL): parameters shared across tasks interfere with one another, and existing regularization methods such as EWC and SI apply uniform penalties without awareness of which input region a parameter serves. We propose KAN-CL, a continual learning framework that exploits the compact-support spline parameterization of Kolmogorov-Arnold Networks (KANs) to perform importance-weighted anchoring at per-knot granularity. Deployed as a classification head on a convolutional backbone with standard EWC regularization on the backbone (bbEWC) KAN-CL achieves forgetting reductions of 88% and 93% over a head-only KAN baseline on Split-CIFAR-10/5T and Split-CIFAR-100/10T respectively, while matching or exceeding the accuracy of all baselines on both benchmarks. We further provide a Neural Tangent Kernel (NTK) analysis showing that KAN's spline locality induces a structural rank deficit in the cross-task NTK, yielding a forgetting bound that holds even in the feature-learning regime. These results establish that combining an architecture with natural parameter locality (KAN head) with a complementary backbone regularizer (bbEWC) yields a compositional and principled approach to catastrophic forgetting.",
+  "id": "http://arxiv.org/abs/2605.12306v1",
+  "authors": [
+    "Minjong Cheon"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12306v1"
+}

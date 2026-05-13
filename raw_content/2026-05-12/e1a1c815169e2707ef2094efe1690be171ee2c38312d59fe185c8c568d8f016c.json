@@ -1,0 +1,20 @@
+{
+  "title": "Predicting Decisions of AI Agents from Limited Interaction through Text-Tabular Modeling",
+  "link": "https://arxiv.org/abs/2605.12411v1",
+  "published": "2026-05-12T17:09:32Z",
+  "updated": "2026-05-12T17:09:32Z",
+  "summary": "AI agents negotiate and transact in natural language with unfamiliar counterparts: a buyer bot facing an unknown seller, or a procurement assistant negotiating with a supplier. In such interactions, the counterpart's LLM, prompts, control logic, and rule-based fallbacks are hidden, while each decision can have monetary consequences. We ask whether an agent can predict an unfamiliar counterpart's next decision from a few interactions. To avoid real-world logging confounds, we study this problem in controlled bargaining and negotiation games, formulating it as target-adaptive text-tabular prediction: each decision point is a table row combining structured game state, offer history, and dialogue, while $K$ previous games of the same target agent, i.e., the counterpart being modeled, are provided in the prompt as labeled adaptation examples. Our model is built on a tabular foundation model that represents rows using game-state features and LLM-based text representations, and adds LLM-as-Observer as an additional representation: a small frozen LLM reads the decision-time state and dialogue; its answer is discarded, and its hidden state becomes a decision-oriented feature, making the LLM an encoder rather than a direct few-shot predictor. Training on 13 frontier-LLM agents and testing on 91 held-out scaffolded agents, the full model outperforms direct LLM-as-Predictor prompting and game+text features baselines. Within this tabular model, Observer features contribute beyond the other feature schemes: at $K=16$, they improve response-prediction AUC by about 4 points across both tasks and reduce bargaining offer-prediction error by 14%. These results show that formulating counterpart prediction as a target-adaptive text-tabular task enables effective adaptation, and that hidden LLM representations expose decision-relevant signals that direct prompting does not surface.",
+  "id": "http://arxiv.org/abs/2605.12411v1",
+  "authors": [
+    "Eilam Shapira",
+    "Moshe Tennenholtz",
+    "Roi Reichart"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL",
+    "cs.MA"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12411v1"
+}

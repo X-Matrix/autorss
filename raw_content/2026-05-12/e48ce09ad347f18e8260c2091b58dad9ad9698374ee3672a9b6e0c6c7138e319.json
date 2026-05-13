@@ -1,0 +1,19 @@
+{
+  "title": "QAP-Router: Tackling Qubit Routing as Dynamic Quadratic Assignment with Reinforcement Learning",
+  "link": "https://arxiv.org/abs/2605.12365v1",
+  "published": "2026-05-12T16:34:01Z",
+  "updated": "2026-05-12T16:34:01Z",
+  "summary": "Qubit routing is a fundamental problem in quantum compilation, known to be NP-hard. Its dynamic nature makes local routing decisions propagate and compound over time, making global efficient solutions challenging. Existing heuristic methods rely on local rules with limited lookahead, while recent learning-based approaches often treat routing as a generic sequential decision problem without fully exploiting its underlying structure. In this paper, we introduce QAP-Router, framing qubit routing based on a dynamic Quadratic Assignment Problem (QAP) formulation. By modeling logical interactions, or quantum gates, as flow matrices and hardware topology as a distance matrix, our approach captures the interaction-distance coupling in a unified objective, which defines the reward in the reinforcement learning environment. To further exploit this structure, the policy network employs a solution-aware Transformer backbone that encodes the interaction between the flow matrix and the distance matrix into the attention mechanism. We also integrate a lookahead mechanism that blends naturally into the QAP framework, preventing myopic decisions. Extensive experiments on 1,831 real-world quantum circuits from the MQTBench, AgentQ and QUEKO datasets show that our method substantially reduces the CNOT gate count of routed circuits by 15.7%, 30.4% and 12.1%, respectively, relative to existing industry compilers.",
+  "id": "http://arxiv.org/abs/2605.12365v1",
+  "authors": [
+    "Kien X. Nguyen",
+    "Ankit Kulshrestha",
+    "Ilya Safro",
+    "Xiaoyuan Liu"
+  ],
+  "categories": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12365v1"
+}

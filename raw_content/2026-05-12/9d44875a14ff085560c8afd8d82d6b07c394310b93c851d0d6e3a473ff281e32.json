@@ -1,0 +1,17 @@
+{
+  "title": "Overtrained, Not Misaligned",
+  "link": "https://arxiv.org/abs/2605.12199v1",
+  "published": "2026-05-12T14:37:55Z",
+  "updated": "2026-05-12T14:37:55Z",
+  "summary": "Emergent misalignment (EM), where fine-tuning on a narrow task (like insecure code) causes broad misalignment across unrelated domains, was first demonstrated by Betley et al. (2025). We conduct the most comprehensive EM study to date, reproducing the original GPT-4o finding and expanding to 12 open-source models across 4 families (Llama, Qwen, DeepSeek, GPT-OSS) ranging from 8B to 671B parameters, evaluating over one million model responses with multiple random seeds. We find that EM replicates in GPT-4o but is far from universal: only 2 of 12 open-source models (17%) exhibit consistent EM across seeds, with a significant correlation between model size and EM susceptibility. Through checkpoint-level analysis during fine-tuning, we demonstrate that EM emerges late in training, distinct from and subsequent to near convergence of the primary task, suggesting EM emerges from continued training past task convergence. This yields practical mitigations: early stopping eliminates EM while retaining an average of 93% of task performance, and careful learning rate selection further minimizes risk. Cross-domain validation on medical fine-tuning confirms these patterns generalize: the size-EM correlation strengthens (r = 0.90), and overgeneralization to untruthfulness remains avoidable via early stopping in 67% of cases, though semantically proximate training domains produce less separable misalignment. As LLMs become increasingly integrated into real-world systems, fine-tuning and reinforcement learning remain the primary methods for adapting model behavior. Our findings demonstrate that with proper training practices, EM can be avoided, reframing it from an unforeseen fine-tuning risk to an avoidable training artifact.",
+  "id": "http://arxiv.org/abs/2605.12199v1",
+  "authors": [
+    "Joel Schreiber",
+    "Ariel Goldstein"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12199v1"
+}

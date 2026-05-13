@@ -1,0 +1,20 @@
+{
+  "title": "Goal-Oriented Reasoning for RAG-based Memory in Conversational Agentic LLM Systems",
+  "link": "https://arxiv.org/abs/2605.12213v1",
+  "published": "2026-05-12T14:51:02Z",
+  "updated": "2026-05-12T14:51:02Z",
+  "summary": "LLM-based conversational AI agents struggle to maintain coherent behavior over long horizons due to limited context. While RAG-based approaches are increasingly adopted to overcome this limitation by storing interactions in external memory modules and performing retrieval from them, their effectiveness in answering challenging questions (e.g., multi-hop, commonsense) ultimately depends on the agent's ability to reason over the retrieved information. However, existing methods typically retrieve memory based on semantic similarity to the raw user utterance, which lacks explicit reasoning about missing intermediate facts and often returns evidence that is irrelevant or insufficient for grounded reasoning. In this work, we introduce Goal-Mem, a goal-oriented reasoning framework for RAG-based agentic memory that performs explicit backward chaining from the user's utterance as a goal. Rather than progressively expanding from retrieved context, Goal-Mem decomposes each goal into atomic subgoals, performs targeted memory retrieval to satisfy each subgoal, and iteratively identifies what information from memory should be retrieved when intermediate goals cannot be resolved. We formalize this process in Natural Language Logic, a logical system that combines the verifiability of reasoning provided by FOL with the expressivity of natural language. Through extensive experiments on two datasets and comparing to nine strong memory baselines, we show that Goal-Mem consistently improves performance, particularly on tasks requiring multi-hop reasoning and implicit inference.",
+  "id": "http://arxiv.org/abs/2605.12213v1",
+  "authors": [
+    "Jiazhou Liang",
+    "Armin Toroghi",
+    "Yifan Simon Liu",
+    "Faeze Moradi Kalarde",
+    "Liam Gallagher",
+    "Scott Sanner"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12213v1"
+}

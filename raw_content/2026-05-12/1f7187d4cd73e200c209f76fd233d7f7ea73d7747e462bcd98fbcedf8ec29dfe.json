@@ -1,0 +1,21 @@
+{
+  "title": "BSO: Safety Alignment Is Density Ratio Matching",
+  "link": "https://arxiv.org/abs/2605.12339v1",
+  "published": "2026-05-12T16:19:42Z",
+  "updated": "2026-05-12T16:19:42Z",
+  "summary": "Aligning language models for both helpfulness and safety typically requires complex pipelines-separate reward and cost models, online reinforcement learning, and primal-dual updates. Recent direct preference optimization approaches simplify training but incorporate safety through ad-hoc modifications such as multi-stage procedures or heuristic margin terms, lacking a principled derivation. We show that the likelihood ratio of the optimal safe policy admits a closed-form decomposition that reduces safety alignment to a density ratio matching problem. Minimizing Bregman divergences between the data and model ratios yields Bregman Safety Optimization (BSO), a family of single-stage loss functions, each induced by a convex generator, that provably recover the optimal safe policy. BSO is both general and simple: it requires no auxiliary models, introduces only one hyperparameter beyond standard preference optimization, and recovers existing safety-aware methods as special cases. Experiments across safety alignment benchmarks show that BSO consistently improves the safety-helpfulness trade-off.",
+  "id": "http://arxiv.org/abs/2605.12339v1",
+  "authors": [
+    "Tien-Phat Nguyen",
+    "Truong Nguyen",
+    "Thin Nguyen",
+    "Duy Minh Ho Nguyen",
+    "Ngoc-Thanh Dinh",
+    "Trung Le"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12339v1"
+}

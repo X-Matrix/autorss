@@ -1,0 +1,19 @@
+{
+  "title": "Manifold Sampling via Entropy Maximization",
+  "link": "https://arxiv.org/abs/2605.12338v1",
+  "published": "2026-05-12T16:19:32Z",
+  "updated": "2026-05-12T16:19:32Z",
+  "summary": "Sampling from constrained distributions has a wide range of applications, including in Bayesian optimization and robotics. Prior work establishes convergence and feasibility guarantees for constrained sampling, but assumes that the feasible set is connected. However, in practice, the feasible set often decomposes into multiple disconnected components, which makes efficient sampling under constraints challenging. In this paper, we propose MAnifold Sampling via Entropy Maximization (MASEM) for sampling on a manifold with an unknown number of disconnected components, implicitly defined by smooth equality and inequality constraints. The presented method uses a resampling scheme to maximize the entropy of the empirical distribution based on k-nearest neighbor density estimation. We show that, in the mean field, MASEM decreases the KL-divergence between the empirical distribution and the maximum-entropy target exponentially in the number of resampling steps. We instantiate MASEM with multiple local samplers and demonstrate its versatility and efficiency on synthetic and robotics-based benchmarks. MASEM enables fast and scalable mixing across a range of constrained sampling problems, improving over alternatives by an order of magnitude in Sinkhorn distance with competitive runtime.",
+  "id": "http://arxiv.org/abs/2605.12338v1",
+  "authors": [
+    "Cornelius V. Braun",
+    "Tilman Burghoff",
+    "Marc Toussaint"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "stat.CO"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12338v1"
+}

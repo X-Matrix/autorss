@@ -1,0 +1,20 @@
+{
+  "title": "Towards Automated Air Traffic Safety Assessment Around Non-Towered Airports Using Large Language Models",
+  "link": "https://arxiv.org/abs/2605.12332v1",
+  "published": "2026-05-12T16:15:15Z",
+  "updated": "2026-05-12T16:15:15Z",
+  "summary": "We investigate frameworks for post-flight safety analysis at non-towered airports using large language models (LLMs). Non-towered airports rely on the Common Traffic Advisory Frequency (CTAF) for air traffic coordination and experience frequent near mid-air collisions due to the pilot self-announcement communication protocol. We propose a general vision-language model (VLM) approach to analyze the transcribed CTAF radio communications in natural language, METeorological Aerodrome Report (METAR) weather data, Automatic Dependent Surveillance-Broadcast (ADS-B) flight trajectories, and Visual Flight Rules sectional charts of the airfield. We provide a preliminary study at Half Moon Bay Airport, with a qualitative real world case study and a quantitative evaluation using a new synthetic dataset of communications and weather modalities. We qualitatively evaluate our framework on real flight data using Gemini 2.5 Pro, demonstrating accurate identification of a right-of-way violation. The synthetic dataset is derived from real examples and includes a 12-category hazard taxonomy, and is used to benchmark three open-source (Qwen 2.5-7B, Mistral-7B, Gemma-2-9B) and three closed-source (GPT-4o, GPT-5.4, Claude Sonnet 4.6) LLM models on the subset of inputs related to CTAF and METAR. Even limited to CTAF and METAR inputs and open source LLMs, instances of our framework typically achieve a macro F1 score above 0.85 on a binary nominal/danger classification task. Future work includes a quantitative evaluation across all modalities and a larger number of real world examples. Taken together, our results suggest that VLM analysis of safety at non-towered airports may be a valuable future capability.",
+  "id": "http://arxiv.org/abs/2605.12332v1",
+  "authors": [
+    "Torsten Darrell",
+    "Mahyar Ghazanfari",
+    "Jordan Kam",
+    "Alexandre Bayen",
+    "Amin Tabrizian",
+    "Peng Wei"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12332v1"
+}

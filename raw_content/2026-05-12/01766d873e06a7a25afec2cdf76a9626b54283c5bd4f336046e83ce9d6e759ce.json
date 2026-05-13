@@ -1,0 +1,18 @@
+{
+  "title": "SEMIR: Semantic Minor-Induced Representation Learning on Graphs for Visual Segmentation",
+  "link": "https://arxiv.org/abs/2605.12389v1",
+  "published": "2026-05-12T16:52:02Z",
+  "updated": "2026-05-12T16:52:02Z",
+  "summary": "Segmenting small and sparse structures in large-scale images is fundamentally constrained by voxel-level, lattice-bound computation and extreme class imbalance -- dense, full-resolution inference scales poorly and forces most pipelines to rely on fixed regionization or downsampling, coupling computational cost to image resolution and attenuating boundary evidence precisely where minority structures are most informative. We introduce SEMIR (Semantic Minor-Induced Representation Learning), a representation framework that decouples inference from the native grid by learning a task-adapted, topology-preserving latent graph representation with exact decoding. SEMIR transforms the underlying grid graph into a compact, boundary-aligned graph minor through parameterized edge contraction, node deletion, and edge deletion, while preserving an exact lifting map from minor predictions to lattice labels. Minor construction is formalized as a few-shot structure learning problem that replaces hand-tuned preprocessing with a boundary-alignment objective: minor parameters are learned by maximizing agreement between predicted boundary elements and target-specific semantic edges under a boundary Dice criterion, and the induced minor is annotated with scale- and rotation-robust geometric and intensity descriptors and supports efficient region-level inference via message passing on a graph neural network (GNN) with relational edge features. We benchmark SEMIR on three tumor segmentation datasets -- BraTS 2021, KiTS23, and LiTS -- where targets exhibit high structural variability and distributional uncertainty. SEMIR yields consistent improvements in minority-structure Dice at practical runtime. More broadly, SEMIR establishes a framework for learning task-adapted, topology-preserving latent representations with exact decoding for high-resolution structured visual data.",
+  "id": "http://arxiv.org/abs/2605.12389v1",
+  "authors": [
+    "Luke James Miller",
+    "Yugyung Lee"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12389v1"
+}

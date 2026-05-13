@@ -1,0 +1,18 @@
+{
+  "title": "Not How Many, But Which: Parameter Placement in Low-Rank Adaptation",
+  "link": "https://arxiv.org/abs/2605.12207v1",
+  "published": "2026-05-12T14:46:00Z",
+  "updated": "2026-05-12T14:46:00Z",
+  "summary": "We study the \\textit{parameter placement problem}: given a fixed budget of $k$ trainable entries within the B matrix of a LoRA adapter (A frozen), does the choice of which $k$ matter? Under supervised fine-tuning, random and informed subsets achieve comparable performance. Under GRPO on base models, random placement fails to improve over the base model, while gradient-informed placement recovers standard LoRA accuracy. This regime dependence traces to gradient structure: SFT gradients are low-rank and directionally stable, so any subset accumulates coherent updates; GRPO gradients are high-rank and near-orthogonal across steps, so only elements with consistently signed gradients retain the learning signal. Our scoring procedure identifies these critical parameters in under 10 seconds at less than 0.5% of training cost. Selected parameters concentrate on residual-stream-writing projections (V, O, Down), stable across model families and scales (1.5B - 8B).",
+  "id": "http://arxiv.org/abs/2605.12207v1",
+  "authors": [
+    "Arijit Sehanobish",
+    "Charles Lovering"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12207v1"
+}

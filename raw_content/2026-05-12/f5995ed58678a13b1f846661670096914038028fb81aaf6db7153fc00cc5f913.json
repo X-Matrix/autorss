@@ -1,0 +1,17 @@
+{
+  "title": "Detecting overfitting in Neural Networks during long-horizon grokking using Random Matrix Theory",
+  "link": "https://arxiv.org/abs/2605.12394v1",
+  "published": "2026-05-12T16:57:48Z",
+  "updated": "2026-05-12T16:57:48Z",
+  "summary": "Training Neural Networks (NNs) without overfitting is difficult; detecting that overfitting is difficult as well. We present a novel Random Matrix Theory method that detects the onset of overfitting in deep learning models without access to train or test data. For each model layer, we randomize each weight matrix element-wise, $\\mathbf{W} \\to \\mathbf{W}_{\\mathrm{rand}}$, fit the randomized empirical spectral distribution with a Marchenko-Pastur distribution, and identify large outliers that violate self-averaging. We call these outliers Correlation Traps. During the onset of overfitting, which we call the \"anti-grokking\" phase in long-horizon grokking, Correlation Traps form and grow in number and scale as test accuracy decreases while train accuracy remains high. Traps may be benign or may harm generalization; we provide an empirical approach to distinguish between them by passing random data through the trained model and evaluating the JS divergence of output logits. Our findings show that anti-grokking is an additional grokking phase with high train accuracy and decreasing test accuracy, structurally distinct from pre-grokking through its Correlation Traps. More broadly, we find that some foundation-scale LLMs exhibit the same Correlation Traps, indicating potentially harmful overfitting.",
+  "id": "http://arxiv.org/abs/2605.12394v1",
+  "authors": [
+    "Hari K. Prakash",
+    "Charles H Martin"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12394v1"
+}

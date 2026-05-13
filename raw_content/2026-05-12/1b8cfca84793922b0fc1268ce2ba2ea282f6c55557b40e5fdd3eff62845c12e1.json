@@ -1,0 +1,24 @@
+{
+  "title": "Missingness-MDPs: Bridging the Theory of Missing Data and POMDPs",
+  "link": "https://arxiv.org/abs/2605.12262v1",
+  "published": "2026-05-12T15:28:34Z",
+  "updated": "2026-05-12T15:28:34Z",
+  "summary": "We introduce missingness-MDPs (miss-MDPs), a novel subclass of partially observable Markov decision processes (POMDPs) that incorporates the theory of missing data. A miss-MDP is a POMDP whose observation function is a missingness function, specifying the probability that individual state features are missing (i.e., unobserved) at a time step. The literature distinguishes three canonical missingness types: missing (1) completely at random (MCAR), (2) at random (MAR), and (3) not at random (MNAR). Our planning problem is to compute near-optimal policies for a miss-MDP with an unknown missingness function, given a dataset of action-observation trajectories. Achieving such optimality guarantees for policies requires learning the missingness function from data, which is infeasible for general POMDPs. To overcome this challenge, we exploit the structural properties of different missingness types to derive probably approximately correct (PAC) algorithms for learning the missingness function. These algorithms yield an approximate but fully specified miss-MDP that we solve using off-the-shelf planning methods. We prove that, with high probability, the resulting policies are epsilon-optimal in the true miss-MDP. Empirical results confirm the theory and demonstrate superior performance of our approach over two model-free POMDP methods.",
+  "id": "http://arxiv.org/abs/2605.12262v1",
+  "authors": [
+    "Joshua Wendland",
+    "Markel Zubia",
+    "Roman Andriushchenko",
+    "Maris F. L. Galesloot",
+    "Milan Ceska",
+    "Henrik von Kleist",
+    "Thiago D. Simao",
+    "Maximilian Weininger",
+    "Nils Jansen"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12262v1"
+}

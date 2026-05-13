@@ -1,0 +1,21 @@
+{
+  "title": "Scalable Token-Level Hallucination Detection in Large Language Models",
+  "link": "https://arxiv.org/abs/2605.12384v1",
+  "published": "2026-05-12T16:47:40Z",
+  "updated": "2026-05-12T16:47:40Z",
+  "summary": "Large language models (LLMs) have demonstrated remarkable capabilities, but they still frequently produce hallucinations. These hallucinations are difficult to detect in reasoning-intensive tasks, where the content appears coherent but contains errors like logical flaws and unreliable intermediate results. While step-level analysis is commonly used to detect internal hallucinations, it suffers from limited granularity and poor scalability due to its reliance on step segmentation. To address these limitations, we propose TokenHD, a holistic pipeline for training token-level hallucination detectors. Specifically, TokenHD consists of a scalable data engine for synthesizing large-scale hallucination annotations along with a training recipe featuring an importance-weighted strategy for robust model training. To systematically assess the detection performance, we also provide a rigorous evaluation protocol. Through training within TokenHD, our detector operates directly on free-form text to identify hallucinations, eliminating the need for predefined step segmentation or additional text reformatting. Our experiments show that even a small detector (0.6B) achieves substantial performance gains after training, surpassing much larger reasoning models (e.g., QwQ-32B), and detection performance scales consistently with model size from 0.6B to 8B. Finally, we show that our detector can generalize well across diverse practical scenarios and explore strategies to further enhance its cross-domain generalization capability.",
+  "id": "http://arxiv.org/abs/2605.12384v1",
+  "authors": [
+    "Rui Min",
+    "Tianyu Pang",
+    "Chao Du",
+    "Minhao Cheng",
+    "Yi R. Fung"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12384v1"
+}

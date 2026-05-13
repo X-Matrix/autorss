@@ -1,0 +1,24 @@
+{
+  "title": "$δ$-mem: Efficient Online Memory for Large Language Models",
+  "link": "https://arxiv.org/abs/2605.12357v1",
+  "published": "2026-05-12T16:31:44Z",
+  "updated": "2026-05-12T16:31:44Z",
+  "summary": "Large language models increasingly need to accumulate and reuse historical information in long-term assistants and agent systems. Simply expanding the context window is costly and often fails to ensure effective context utilization. We propose $δ$-mem, a lightweight memory mechanism that augments a frozen full-attention backbone with a compact online state of associative memory. $δ$-mem compresses past information into a fixed-size state matrix updated by delta-rule learning, and uses its readout to generate low-rank corrections to the backbone's attention computation during generation. With only an $8\\times8$ online memory state, $δ$-mem improves the average score to $1.10\\times$ that of the frozen backbone and $1.15\\times$ that of the strongest non-$δ$-mem memory baseline. It achieves larger gains on memory-heavy benchmarks, reaching $1.31\\times$ on MemoryAgentBench and $1.20\\times$ on LoCoMo, while largely preserving general capabilities. These results show that effective memory can be realized through a compact online state directly coupled with attention computation, without full fine-tuning, backbone replacement, or explicit context extension.",
+  "id": "http://arxiv.org/abs/2605.12357v1",
+  "authors": [
+    "Jingdi Lei",
+    "Di Zhang",
+    "Junxian Li",
+    "Weida Wang",
+    "Kaixuan Fan",
+    "Xiang Liu",
+    "Qihan Liu",
+    "Xiaoteng Ma",
+    "Baian Chen",
+    "Soujanya Poria"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.12357v1"
+}
