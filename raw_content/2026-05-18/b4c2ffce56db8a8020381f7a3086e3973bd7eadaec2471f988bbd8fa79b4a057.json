@@ -1,0 +1,20 @@
+{
+  "title": "KairosHope: A Next-Generation Time-Series Foundation Model for Specialized Classification via Dual-Memory Architecture",
+  "link": "https://arxiv.org/abs/2605.18657v1",
+  "published": "2026-05-18T17:02:30Z",
+  "updated": "2026-05-18T17:02:30Z",
+  "summary": "Time Series Foundation Models (TSFMs) have demonstrated notable success in general-purpose forecasting tasks; however, their adaptation to specialized classification problems remains constrained by the computational bottleneck of standard attention and the systematic omission of classical statistical knowledge. This technical report introduces KairosHope, a next-generation TSFM designed to reconcile massive generalization with analytical precision in classification tasks. The core of the proposal is the HOPE block, an architecture that replaces quadratic attention with a dual-memory system: Titans modules for dynamic short-term retention and a Continuum Memory System (CMS) for the abstraction of long-term historical context. To enrich the inductive bias, a Hybrid Decision Head is introduced, which fuses deep latent representations with deterministic statistical features extracted via tsfeatures package. KairosHope undergoes self-supervised pre-training on the massive Monash archive, combining Masked Time Series Modeling (MTSM) and contrastive learning (InfoNCE). Its subsequent adaptation to the UCR benchmark datasets is conducted through a rigorous Linear Probing and Full Fine-Tuning (LP-FT) protocol to prevent catastrophic forgetting. Empirical results demonstrate superior performance in domains characterized by strict temporal causality such as HAR or Sensor data. Consequently, KairosHope establishes a robust and efficient framework for the adaptation of foundation models to time series analysis.",
+  "id": "http://arxiv.org/abs/2605.18657v1",
+  "authors": [
+    "Luis Balderas",
+    "José Alberto Rodríguez",
+    "Miguel Lastra",
+    "Antonio Arauzo-Azofra",
+    "José M. Benítez"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.18657v1"
+}

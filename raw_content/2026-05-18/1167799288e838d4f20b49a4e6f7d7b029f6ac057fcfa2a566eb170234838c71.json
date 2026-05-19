@@ -1,0 +1,16 @@
+{
+  "title": "Randomized Advantage Transformation (RAT): Computing Natural Policy Gradients via Direct Backpropagation",
+  "link": "https://arxiv.org/abs/2605.18591v1",
+  "published": "2026-05-18T16:05:36Z",
+  "updated": "2026-05-18T16:05:36Z",
+  "summary": "Natural policy gradients improve optimization by accounting for the geometry of distribution space, but their practical use is limited by the cost of estimating and inverting the Fisher matrix. We present Randomized Advantage Transformation (RAT), a method for estimating Tikhonov-regularized natural policy gradients via direct backpropagation. By applying the Woodbury formula, we reformulate the regularized natural policy gradients as vanilla policy gradients with a transformed advantage. RAT computes this transformation efficiently via randomized block Kaczmarz iterations on on-policy mini-batches, avoiding explicit Fisher construction, conjugate-gradient solvers, and architecture-specific approximations. We provide convergence guarantees for RAT and demonstrate empirically that it matches or exceeds established natural-gradient methods across continuous and visual control benchmarks, while remaining simple to implement and compatible with various architectures.",
+  "id": "http://arxiv.org/abs/2605.18591v1",
+  "authors": [
+    "Mingfei Sun"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.18591v1"
+}

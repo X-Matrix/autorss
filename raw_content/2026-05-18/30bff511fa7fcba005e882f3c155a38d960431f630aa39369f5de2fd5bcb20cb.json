@@ -1,0 +1,31 @@
+{
+  "title": "Post-Trained MoE Can Skip Half Experts via Self-Distillation",
+  "link": "https://arxiv.org/abs/2605.18643v1",
+  "published": "2026-05-18T16:50:48Z",
+  "updated": "2026-05-18T16:50:48Z",
+  "summary": "Mixture-of-Experts (MoE) scales language models efficiently through sparse expert activation, and its dynamic variant further reduces computation by adjusting the activated experts in an input-dependent manner. Existing dynamic MoE methods usually rely on pre-training from scratch or task-specific adaptation, leaving the practical conversion of fully trained MoE underexplored. Enabling such adaptation would directly alleviate the inference costs by allowing easy tokens to bypass unnecessary expert during serving. This paper introduces Zero-Expert Self-Distillation Adaptation (ZEDA), a low-cost framework that transforms post-trained static MoE models into efficient dynamic ones. To stabilize this architectural conversion, ZEDA injects parameter-free zero-output experts into each MoE layer and adapts the augmented model through two-stage self-distillation, utilizing the original MoE as a frozen teacher and applying a group-level balancing loss. On Qwen3-30B-A3B and GLM-4.7-Flash across 11 benchmarks spanning math, code, and instruction following, ZEDA eliminates over 50% of expert FLOPs at marginal accuracy loss. It outperforms the strongest dynamic MoE baseline by 6.1 and 4.0 points on the two models, and delivers ~1.20$\\times$ end-to-end inference speedup.",
+  "id": "http://arxiv.org/abs/2605.18643v1",
+  "authors": [
+    "Xingtai Lv",
+    "Li Sheng",
+    "Kaiyan Zhang",
+    "Yichen You",
+    "Siyan Gao",
+    "Xueheng Luo",
+    "Yuxin Zuo",
+    "Yuchen Fan",
+    "Junlin Yang",
+    "Ganqu Cui",
+    "Bingning Wang",
+    "Fan Yang",
+    "Youbang Sun",
+    "Ning Ding",
+    "Bowen Zhou"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.18643v1"
+}
