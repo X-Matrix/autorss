@@ -1,0 +1,21 @@
+{
+  "title": "A Measure-Theoretic Analysis of Reasoning: Structural Generalization and Approximation Limits",
+  "link": "https://arxiv.org/abs/2605.19944v1",
+  "published": "2026-05-19T15:00:51Z",
+  "updated": "2026-05-19T15:00:51Z",
+  "summary": "While empirical scaling laws for LLM reasoning are well-documented, the theoretical mechanisms governing out-of-distribution (OOD) generalization remain elusive. We formalize reasoning via optimal transport, projecting discrete trajectories into a continuous metric space to quantify domain shifts using the Wasserstein-1 distance. Invoking Kantorovich duality, we bound OOD generalization via architectural Lipschitz continuity and functional approximation limits. This exposes two primary constraints. First, position-dependent attention (e.g., Absolute Positional Encoding) fails to preserve shift invariance, yielding an $Ω(1)$ Lipschitz constant and expected risk, whereas shift-invariant mechanisms (e.g., Rotary Embeddings) preserve equivariance and bound the error. Second, by mapping sequential backtracking to a Dyck-$k$ language, we establish a strict circuit depth lower bound for $\\text{TC}^0$ Transformers. Scaling physical layer depth is necessary to avert representation collapse -- a constraint that scaling representation width cannot bypass due to irreducible approximation bounds in Barron spaces. Evaluations across 54 Transformer configurations on combinatorial search corroborate these bounds, demonstrating that generalization risk degrades monotonically with the Wasserstein domain shift.",
+  "id": "http://arxiv.org/abs/2605.19944v1",
+  "authors": [
+    "Yuyang Zhang",
+    "Yifu Zhang",
+    "Xuehai Zhou",
+    "Xiaoyin Chen"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CC",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.19944v1"
+}
