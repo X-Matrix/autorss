@@ -1,0 +1,16 @@
+{
+  "title": "Geometric Evolution Maps: Extracting Stable Concept Probes from Transformer Residual Streams",
+  "link": "https://arxiv.org/abs/2605.25848v1",
+  "published": "2026-05-25T13:40:15Z",
+  "updated": "2026-05-25T13:40:15Z",
+  "summary": "Concept probes extracted from transformer residual streams are only as reliable as the layer from which they are extracted. The common practice of probing at a fixed late layer or at the peak of a separation score function ignores a fundamental structural feature: concept representations undergo substantial directional rotation during their assembly phase, and do not settle into a stable direction until a characteristic handoff layer after the primary Concept Allocation Zone (CAZ). We introduce Geometric Evolution Maps (GEMs), which track the full directional trajectory of a concept through residual stream activations, identify the handoff layer where rotation ceases, and extract the settled probe direction from that layer. Across 23 architectures spanning 70M to 14B parameters and 17 concept types, the entry-to-exit cosine similarity within CAZs has a mean of 0.233, showing that probe direction at CAZ entry does not reliably predict probe direction at exit. Ablation experiments across 391 concept x model pairs (23 models x 17 concepts) show that GEM-extracted probes are at least as precise as peak-layer probes in 268/391 trials (68.5%), and strictly outperform in 259/391 (66.2%). The architecture split is pronounced: MHA models favour the handoff in 173/221 trials (78.3%); GQA models favour the handoff in only 56/119 trials (47.1%). Model-level Wilcoxon: W=214, N=23, p=0.010 (one-sided). An adaptive ablation width rule targets the 79/391 near-final-layer cases: it improves probe quality in 60/79 triggered cases (75.9%), mean gain +7.44pp. A direction-specificity control confirms the ablation effect is concept-direction specific: median 377x suppression rate versus random-direction ablation (99.1% of concept directions beat all 10 random seeds). Reference implementation: rosetta_tools v1.3.1 (doi:10.5281/zenodo.20361433).",
+  "id": "http://arxiv.org/abs/2605.25848v1",
+  "authors": [
+    "James Henry"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.25848v1"
+}

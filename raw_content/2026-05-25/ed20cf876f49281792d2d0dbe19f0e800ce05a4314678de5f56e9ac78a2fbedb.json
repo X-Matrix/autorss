@@ -1,0 +1,22 @@
+{
+  "title": "TTPrint: Evidence-Grounded TTP Extraction via Diverge-then-Converge Verification",
+  "link": "https://arxiv.org/abs/2605.25836v1",
+  "published": "2026-05-25T13:31:49Z",
+  "updated": "2026-05-25T13:31:49Z",
+  "summary": "Extracting MITRE ATT&CK techniques from cyber threat intelligence (CTI) reports is an open-set, multi-label problem requiring both high recall (not missing techniques) and high precision (not hallucinating unsupported ones). Existing methods--rule-based, supervised, and LLM-based--struggle to achieve both: rule-based and supervised approaches lack generalizability across diverse attack descriptions, while LLM-based approaches that couple candidate generation and validation within a single inference step suffer from limited recall and precision simultaneously. We propose TTPrint, which addresses this challenge through a diverge-then-converge design inspired by how human analysts work: first extracting broadly, then verifying rigorously. In the divergent phase, reports are decomposed into atomic behaviors and candidate techniques are proposed broadly. A deterministic span localization stage then anchors each candidate to a specific evidence window in the source text. A convergent verification stage retains only candidates supported by both the localized evidence and the authoritative MITRE definition. We contribute two evaluation resources--a cleaned TRAM benchmark (TRAM-Clean) and a new annotated dataset (TTPrint-Bench)--to address known annotation noise in existing benchmarks and elevate the task to document-level TTP extraction. On TRAM-Clean and TTPrint-Bench, TTPrint achieves 76.48% and 87.39% macro-F1 respectively, outperforming the leading baseline by 63.5% and 29.4%. A multi-backbone analysis across six LLMs and a threshold sensitivity study further demonstrate generalizability across model choices and provide practical guidance for parameter selection.",
+  "id": "http://arxiv.org/abs/2605.25836v1",
+  "authors": [
+    "Yutong Cheng",
+    "Changze Li",
+    "Raihan Sultan Pasha Basuki",
+    "Qian Cui",
+    "Wei Ding",
+    "Peng Gao"
+  ],
+  "categories": [
+    "cs.CR",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.25836v1"
+}

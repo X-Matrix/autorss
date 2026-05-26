@@ -1,0 +1,20 @@
+{
+  "title": "Neural Scalable Symbolic Search Framework for Complex Logical Queries with Multiple Free Variables",
+  "link": "https://arxiv.org/abs/2605.25985v1",
+  "published": "2026-05-25T16:04:57Z",
+  "updated": "2026-05-25T16:04:57Z",
+  "summary": "Complex Query Answering (CQA) is a fundamental knowledge representation and reasoning task over incomplete knowledge graphs (KGs). Answering existential first-order queries with $k$ free variables (i.e., $\\text{EFO}_k$ queries) is a crucial yet challenging problem, as it requires ranking answer tuples in $\\mathcal{E}^k$, where $\\mathcal{E}$ denotes the entity set of a KG. This quickly becomes intractable as $k$ grows. Consequently, existing benchmarks and methods rely on marginal rankings over individual variables; however, marginal rankings are a poor proxy for the true joint ranking of tuples. Building on neural symbolic search for $\\text{EFO}_1$ queries, we propose Neural Scalable Symbolic Search (NS3), a budgeted framework that approximates joint ranking without enumerating $\\mathcal{E}^k$. NS3 (i) answers marginalized sub-queries to obtain necessary candidate sets, (ii) merges multiple free variables into hypernodes whose domains are pruned and controlled by a dynamic budget $B$, and (iii) progressively reduces an $\\text{EFO}_k$ query to an $\\text{EFO}_{k-1}$ query over a budgeted reduced domain. Across three standard KG datasets, NS3 substantially improves joint ranking performance while retaining strong marginal accuracy. We further release a joint-ranking benchmark that extends existing $\\text{EFO}_1$ datasets to $k=3$, enabling systematic evaluation of multi-variable queries. Our code is provided in https://github.com/HKUST-KnowComp/NS3_KDD2026.",
+  "id": "http://arxiv.org/abs/2605.25985v1",
+  "authors": [
+    "Weizhi Fei",
+    "Hang Yin",
+    "Zihao Wang",
+    "Shukai Zhao",
+    "Wei Zhang",
+    "Yangqiu Song"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.25985v1"
+}

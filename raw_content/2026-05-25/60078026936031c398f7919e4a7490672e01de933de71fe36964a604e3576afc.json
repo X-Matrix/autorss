@@ -1,0 +1,16 @@
+{
+  "title": "Retrying vs Resampling in AI Control",
+  "link": "https://arxiv.org/abs/2605.26047v1",
+  "published": "2026-05-25T17:10:41Z",
+  "updated": "2026-05-25T17:10:41Z",
+  "summary": "AI coding scaffolds like Claude Code and Codex use \\textit{retrying}: blocking actions flagged as risky and continuing the trajectory. We study retrying from an AI control perspective, which treats the model as potentially adversarial. We find that while retrying reduces honest suspicion scores, the untrusted model can exploit monitor rationale to construct sneakier attacks, negating safety gains. We also study \\textit{resampling}: drawing multiple samples from the same context, which does not leak exploitable information. We disentangle design choices that previous work on resampling had bundled together. In BashArena, with Claude Opus 4.6 as the untrusted model and MiMo-V2-Flash as the trusted monitor, drawing five samples per step and auditing on the maximum suspicion score raises safety from 61\\% to 71\\% at a 0.3\\% audit budget, at no cost to usefulness. Selectively resampling only the steps that look suspicious on the first draw recovers 6.2 percentage points of the gain while drawing only 10\\% as many extra samples. Two of our findings in this setting contradict earlier work on resampling. The first is that auditing based on the maximum across resampled suspicion scores outperforms using the minimum, which is the opposite of what Ctrl-Z found. The second is that executing the least suspicious sample, which is the central mechanism in earlier defer-to-resample protocols, gives only a small empirical safety gain in our setting (+3.9 pp, with the confidence interval overlapping zero).",
+  "id": "http://arxiv.org/abs/2605.26047v1",
+  "authors": [
+    "James Lucassen",
+    "Adam Kaufman"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.26047v1"
+}

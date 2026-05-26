@@ -1,0 +1,19 @@
+{
+  "title": "Continual Speaker Identity Unlearning with Minimal Interference",
+  "link": "https://arxiv.org/abs/2605.25962v1",
+  "published": "2026-05-25T15:40:04Z",
+  "updated": "2026-05-25T15:40:04Z",
+  "summary": "Machine unlearning removes designated concepts or knowledge from pre-trained models. Recent work has extended this paradigm to speaker identity unlearning in zero-shot text-to-speech (ZS-TTS), the task of selectively erasing a model's ability to replicate a speaker's voice. Existing methods, however, quietly assume all unlearning requests arrive at once; an unrealistic assumption, since privacy-motivated removals arrive sequentially over time. We show this assumption breaks state-of-the-art methods: unlearning each new speaker fully revives previously unlearned speakers, reintroducing the very privacy risk unlearning was meant to eliminate. We present Cumulative ORThogonal Identity Suppression (CORTIS), the first framework for continual speaker identity unlearning in ZS-TTS that requires no access to previously-unlearned speaker data. CORTIS combines Fisher-information-based parameter masking, which localizes updates to speaker-relevant weights, with orthogonal projection against subspaces spanned by prior unlearning updates. With VoiceBox, CORTIS unlearns each requested speaker while keeping previously unlearned speakers forgotten across long request sequences, substantially outperforming sequential application of prior methods. The demo is available at https://cumulativeortis.github.io/ .",
+  "id": "http://arxiv.org/abs/2605.25962v1",
+  "authors": [
+    "Jinju Kim",
+    "Yunsung Kang",
+    "Gyeong-Moon Park",
+    "Jong Hwan Ko"
+  ],
+  "categories": [
+    "cs.SD",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.25962v1"
+}

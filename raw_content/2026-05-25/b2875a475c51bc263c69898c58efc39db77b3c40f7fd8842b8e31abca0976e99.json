@@ -1,0 +1,17 @@
+{
+  "title": "From Latent Space to Training Data: Explainable Specialization in Minimal MLPs",
+  "link": "https://arxiv.org/abs/2605.25939v1",
+  "published": "2026-05-25T15:18:22Z",
+  "updated": "2026-05-25T15:18:22Z",
+  "summary": "We here study whether training biases can make hidden neurons specialize in minimal one-hidden-layer MLPs, and whether such specialization improves prototype-based reconstruction of the training dataset from the learned weights. We consider Gaussianactivation MLPs of width equal to dataset size and compare three structural losses that respectively encourage coverage of the training samples, separation between neuron-induced prototypes, and low overlap of hidden responses, against the standard fitting baseline. Experiments on uniformly sampled one-dimensional datasets show a stable pattern from N = 3 to N = 100 across 480 controlled runs. Coverage regularization gives the lowest mean reconstruction error at every tested size and raises the prototype-usage specialization ratio relative to the standard baseline, while separation has mixed effects and overlap penalties are systematically harmful. We show that the harm is not an optimization failure: overlap-active approaches fit the data as well as overlap-free ones but route the optimizer to a degenerate equilibrium in which prototype centers are pushed outside the convex hull of the training inputs. Coverage cannot reward this expulsion and acts as an attractor: separation admits it only at large temperature and overlap admits it at the nominal hyperparameter choice. A direct τ-sweep on the separation-only mask and a prototype-position visualization at N = 100 confirm the mechanism. The findings yield a simple design principle for prototype-recoverability-aware training: every repulsive structural loss must be compensated by a compatible attractor, or it will collapse the latent geometry it was meant to refine.",
+  "id": "http://arxiv.org/abs/2605.25939v1",
+  "authors": [
+    "Enrique Alba",
+    "Ezequiel Lopez-Rubio"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.25939v1"
+}

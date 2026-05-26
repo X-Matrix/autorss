@@ -1,0 +1,25 @@
+{
+  "title": "CausaLab: A Scalable Environment for Interactive Causal Discovery Toward AI Scientists",
+  "link": "https://arxiv.org/abs/2605.26029v1",
+  "published": "2026-05-25T16:57:06Z",
+  "updated": "2026-05-25T16:57:06Z",
+  "summary": "We introduce CausaLab, a scalable environment for evaluating interactive causal discovery by LLM agents. Unlike prior evaluations, CausaLab evaluates both whether an agent can solve a problem using causal evidence and whether its answer is supported by a correct hypothesis about the underlying causal mechanism. Each episode places an agent in a synthetic laboratory: it receives prior measurement records, intervenes on a manipulator crystal, and predicts the resonance frequency of a held-out reactor crystal governed by the same mechanism. The hidden data-generating process is a randomly sampled structural causal model (SCM), so success requires recovering both a causal graph and structural equations rather than recalling prior knowledge. CausaLab also includes a domain-specific language that records the agent's evolving SCM hypothesis, making trajectories inspectable and comparable with ground truth. Experiments show a persistent gap between prediction and mechanism recovery: in the purely observational 6-node setting, GPT-5.2-high reaches 92% task accuracy but only 0.471 all-edge $F_1$. This observation further motivates our exploration of different interaction strategies: Mixed observation--intervention strategies improve structural fidelity: in the mixed 6-node setting, GPT-5.2-high achieves 80% on both task accuracy and all-edge $F_1$. Yet even strong agents struggle to design informative interventions, as pure intervention strategies perform poorly on both task accuracy and all-edge $F_1$. We identify premature stopping as a major weakness of agents, and show that asking the model to verify the consistency between its hypothesis and past data can help mitigate this issue. CausaLab therefore separates predictive success from causal understanding and exposes current LLM agents' limits as experimental causal reasoners.",
+  "id": "http://arxiv.org/abs/2605.26029v1",
+  "authors": [
+    "Junlin Yang",
+    "Dylan Zhang",
+    "Xiangchen Song",
+    "Qirun Dai",
+    "Xiao Liu",
+    "Yuen Chen",
+    "Aniket Vashishtha",
+    "Jing Shi",
+    "Chenhao Tan",
+    "Hao Peng"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.26029v1"
+}

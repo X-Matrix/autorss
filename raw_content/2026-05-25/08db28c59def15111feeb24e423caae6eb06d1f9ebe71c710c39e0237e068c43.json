@@ -1,0 +1,23 @@
+{
+  "title": "TIAR: Trajectory-Informed Advantage Reweighting for LLM Abstention Learning",
+  "link": "https://arxiv.org/abs/2605.25850v1",
+  "published": "2026-05-25T13:42:37Z",
+  "updated": "2026-05-25T13:42:37Z",
+  "summary": "This paper investigates large language model (LLM) abstention learning, specifically using ternary reward, which incentivize truthfulness in large language models. This paper extends that idea by moving from a ternary reward to a Trajectory-Informed advantage reweighting, dynamically re-weights the abstention reward during Group Relative Policy Optimization (GRPO) training. The objective of this work focuses on abstention learning instead of improving truthfulness, serving as an exploration into hallucination reduction. The novelty of this paper lies in methodological innovation, advantage re-weighting, and benchmark selection. Leveraging GRPO's multiple trajectories as a natural abstention signal, this method uses a reward signal to explore knowledge boundaries and encourage consistency. By demonstrating that trajectories can be used as a confidence indicator of the policy relative to the query, they are then used to dynamically calculate the abstention advantage. AbstentionBench is used as the evaluation benchmark, as this work aims to contribute to the field of abstention learning. All datasets on the benchmark were tested against this method and various baselines. Empirical results demonstrate that TIAR achieves state-of-the-art abstention F1 scores across five of six evaluation categories, outperforming the static ternary baseline on 17 of 31 benchmark datasets while fully preserving baseline accuracy.",
+  "id": "http://arxiv.org/abs/2605.25850v1",
+  "authors": [
+    "Muyu Pan",
+    "Shu Zhao",
+    "Nan Zhang",
+    "Philip Shin",
+    "Varun Parekh",
+    "Vijaykrishnan Narayanan",
+    "Rui Zhang"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.25850v1"
+}

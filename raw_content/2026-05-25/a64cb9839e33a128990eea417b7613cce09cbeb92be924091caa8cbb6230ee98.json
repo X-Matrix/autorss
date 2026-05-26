@@ -1,0 +1,17 @@
+{
+  "title": "When Can We Trust Early Warnings? Leakage-Excluded Early Outcome Prediction from LMS Interaction Logs",
+  "link": "https://arxiv.org/abs/2605.25794v1",
+  "published": "2026-05-25T12:41:40Z",
+  "updated": "2026-05-25T12:41:40Z",
+  "summary": "Early-warning models built from Learning Management System (LMS) logs aim to predict end-of-course outcomes early enough to enable timely learner support. However, reported \"early\" performance is often inflated by temporal leakage. This occurs when the pipeline uses information that would not yet be available at the time of prediction. We formalize cutoff-based early outcome prediction under a temporal availability constraint and introduce LEAP (Leakage-Excluded Early-Availability Protocol), which enforces cutoff-first truncation prior to joins and aggregation and audits feature provenance to prevent post-cutoff evidence from entering the benchmark. We instantiate LEAP on the public Open University Learning Analytics Dataset (OULAD) as a multi-step protocol for leakage-controlled evaluation across weekly cutoffs. Using several standard learning methods, we evaluate performance using ROC-AUC, PR-AUC, Brier score, and F1@0.5. Results show improving performance as the observation window expands, with a marked gain around week~3; Random Forest performs best at the earliest cutoffs, while Gradient Boosting dominates thereafter. Leakage ablations further show that temporal violations, especially through assessment information, can inflate apparent \"early\" performance.",
+  "id": "http://arxiv.org/abs/2605.25794v1",
+  "authors": [
+    "Ngoc Luyen Le",
+    "Marie-Hélène Abel",
+    "Bertrand Laforge"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.25794v1"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "When Search Becomes Memory: Turning Robot Design Trials into Transferable Skills",
+  "link": "https://arxiv.org/abs/2605.25832v1",
+  "published": "2026-05-25T13:29:45Z",
+  "updated": "2026-05-25T13:29:45Z",
+  "summary": "Large language models (LLMs) are increasingly used as proposal generators for evolutionary robot design, yet most loops remain memoryless: simulator results shape the next population but are not preserved as reusable design knowledge. We present Auto-Robotist, a self-evolving LLM agent that distills morphology-search traces into an explicit natural-language skill library. Each skill stores a structural archetype, evidence-grounded positive and negative rules, and the evaluated designs that support them, making design memory inspectable rather than implicit in a population. During search, the agent retrieves skills to condition LLM edits of elite bodies while retaining a Genetic Algorithm (GA) mutation path for exploration; after evaluation, it updates the library through Add, Diagnose, and Merge. Across seven EvoGym tasks spanning locomotion, traversal, and object interaction, Auto-Robotist improves cold-start 5x5 search and transfers learned skills to 10x10 design spaces, where reference-conditioned transfer outperforms GA on every task. These results suggest that LLM agents can convert expensive physical evaluations into reusable, auditable design principles. Our code will be released upon acceptance.",
+  "id": "http://arxiv.org/abs/2605.25832v1",
+  "authors": [
+    "Yunfei Wang",
+    "Xiaohao Xu",
+    "Yang Li",
+    "Xiaonan Huang"
+  ],
+  "categories": [
+    "cs.RO",
+    "cs.AI",
+    "cs.CL",
+    "cs.CV"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.25832v1"
+}
