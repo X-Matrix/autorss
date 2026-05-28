@@ -1,0 +1,21 @@
+{
+  "title": "LACUNA: Safe Agents as Recursive Program Holes",
+  "link": "https://arxiv.org/abs/2605.28617v1",
+  "published": "2026-05-27T15:27:25Z",
+  "updated": "2026-05-27T15:27:25Z",
+  "summary": "LLM agents increasingly act by writing code, yet a split persists between the runtime that drives the agent and the code the model writes. The runtime owns the loop, context, and control flow, and the model has little say over any of them. Letting model-written code shape the runtime itself would make agents more expressive, but it would also sharpen safety problems. A model can be diverted by a prompt injection, call the wrong tool, or fail partway and leave an inconsistent state, and each such failure reaches further when the code shapes the runtime than when it expresses a single action. We present LACUNA, a programming model for agents that closes this split while preserving safety. Each agent action is a typed call $\\texttt{agent[T](task)}$ that the LLM fills with code when execution reaches it, and the code is type-checked against the surrounding program before it runs. Because each action is accepted or rejected as a whole, a rejected one leaves the environment untouched, and its compiler diagnostics drive a retry. The same check also bounds which tools and data an action may use and how they flow. Our primitive expresses ReAct loops, sub-agents, skills, parallel decomposition, and multi-model planning as ordinary control flow. We evaluate LACUNA on a collection of test cases, BrowseComp-Plus, and $τ^2$-bench. On BrowseComp-Plus, $8.6\\%$ of generations are rejected before execution, with 0.7 retries per query on average, and the agent reaches $27.1\\%$ accuracy. On $τ^2$-bench, LACUNA solves $76.0\\%$ of $392$ tasks across four domains with a capable model, on par with the baseline agent.",
+  "id": "http://arxiv.org/abs/2605.28617v1",
+  "authors": [
+    "Yaoyu Zhao",
+    "Yichen Xu",
+    "Oliver Bračevac",
+    "Cao Nguyen Pham",
+    "Frank Zhengqing Wu",
+    "Martin Odersky"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.PL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.28617v1"
+}

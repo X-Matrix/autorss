@@ -1,0 +1,18 @@
+{
+  "title": "BIRDNet: Mining and Encoding Boolean Implication Knowledge Graphs as Interpretable Deep Neural Networks",
+  "link": "https://arxiv.org/abs/2605.28739v1",
+  "published": "2026-05-27T16:59:01Z",
+  "updated": "2026-05-27T16:59:01Z",
+  "summary": "Tabular data in knowledge-rich domains often carries a latent prior in the form of Boolean implication relationships (BIRs) between pairs of features. We mine such relationships with a sparse-exception binomial test. The mined implications form a typed directed graph, equivalent to a propositional rule base of 2-literal clauses. We encode this graph as the connectivity of a layered neural network, called BIRDNet, in which each hidden unit corresponds to one mined rule and binds only to its two features. We show two consequences of this design: First, the architecture is sparse by construction: at most $2/d$ of the weights in each BIR layer are active, where $d$ is the input dimension. Second, the model is interpretable: every trained unit keeps a stable symbolic identity, so rules can be read off the network without surrogate models. Unlike most neurosymbolic models, BIRDNet does not consume an external rule base; its structural prior is mined from the data. We evaluate BIRDNet on six transcriptomic and proteomic benchmarks. Our results show that BIRDNet stays within 0.02 AUROC of the strongest dense baseline, at a small accuracy cost, while using up to $96\\times$ fewer active parameters than an architecture-matched dense MLP. First-layer rules recover known biological signatures across multiple cancer subtypes and tissue types, including canonical amplicons, lineage-defining co-expression modules, and immune-infiltration markers. Data and code are available at: https://github.com/MAHI-Group/BIRDNet.",
+  "id": "http://arxiv.org/abs/2605.28739v1",
+  "authors": [
+    "Tirtharaj Dash"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.NE",
+    "q-bio.QM"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.28739v1"
+}

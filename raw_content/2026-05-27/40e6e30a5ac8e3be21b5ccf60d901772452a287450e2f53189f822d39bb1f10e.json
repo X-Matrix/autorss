@@ -1,0 +1,23 @@
+{
+  "title": "Extrapolative Weight Averaging Reveals Correctness-Efficiency Frontiers in Code RL",
+  "link": "https://arxiv.org/abs/2605.28751v1",
+  "published": "2026-05-27T17:09:30Z",
+  "updated": "2026-05-27T17:09:30Z",
+  "summary": "Linear interpolation between fine-tuned checkpoints has been shown to trace the Pareto front between competing objectives, but whether extrapolative weight averaging can extend such frontiers to new checkpoints useful at inference time, without additional RL training, remains unclear. We study this question in RL for competitive programming, where hidden unit tests under time and memory limits enforce both functional correctness and computational efficiency. Starting from a shared initialization, we train checkpoints under nested unit-test coverage: low-coverage rewards require passing smaller-input tests, while high-coverage rewards require passing progressively larger tests up to the full suite. This sweep reveals the emergence of a correctness-efficiency frontier: on hard problems, higher-coverage reward reduces optimization failures but increases correctness failures, leaving solve rate nearly unchanged. Interpolation between low- and high-coverage checkpoints recovers this frontier, while extrapolation extends it beyond the trained endpoints. Both the frontier and its extrapolative continuation appear across three inference settings, pure reasoning, tool use, and agentic coding, and across two model scales, 32B and 7B. At the problem level, moving along the frontier changes which problems are solved, making extrapolated checkpoints complementary policies in inference-time scaling. Ensembles with extrapolative weight averaging broaden coverage and improve pass@250 on LCB/hard by 3.3% over the best single checkpoint at matched sample budget. These results show that nested unit-test coverage in code RL induces a frontier that extrapolative weight averaging can navigate, extend, and exploit.",
+  "id": "http://arxiv.org/abs/2605.28751v1",
+  "authors": [
+    "Kunhao Zheng",
+    "Pierre Chambon",
+    "Juliette Decugis",
+    "Jonas Gehring",
+    "Taco Cohen",
+    "Benjamin Negrevergne",
+    "Gabriel Synnaeve"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.28751v1"
+}

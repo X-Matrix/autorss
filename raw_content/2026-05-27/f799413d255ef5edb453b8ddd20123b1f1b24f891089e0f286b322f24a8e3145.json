@@ -1,0 +1,17 @@
+{
+  "title": "OpenURMA: A Clean-Room Open Implementation of the Unified Bus Protocol",
+  "link": "https://arxiv.org/abs/2605.28717v1",
+  "published": "2026-05-27T16:38:57Z",
+  "updated": "2026-05-27T16:38:57Z",
+  "summary": "Modern datacenter RDMA is bottlenecked at the network interface, not the wire. A NIC running RoCE or InfiniBand holds per-connection state for every (application, remote-endpoint) pair - hundreds of megabytes at 1024-application fanout - and pays a four-traversal PCIe round trip on a 64-byte operation, inflating latency an order of magnitude beyond the wire. Both follow from the Queue Pair over PCIe abstraction RDMA inherits from InfiniBand.   Huawei's Unified Bus (UB), a public 2025 specification, changes the abstraction: it decouples per-application endpoint state from per-host transport state so connection context grows additively, exposes ordering as opt-in, and reaches remote memory through native CPU load/store to an on-chip-bus controller. UB ships in Huawei's closed Ascend 950 silicon.   OpenURMA is the first clean-room open implementation of UB's transport and transaction layers, realised at three tiers - synthesisable RTL on Alveo U50, a cycle-level two-node SystemC simulator, and a gem5 full-system scaffold - each with a matched OpenRoCE (RoCEv2 RC) baseline. The contribution is the implementation, harness, and controlled comparison closed silicon does not admit. On the canonical 64-byte remote fetch - LOAD on UB-spec Sec.8.3, READ on RoCEv2 RC - UB's load/store path delivers ~500 ns end-to-end, 4.37x below the matched baseline (2186 ns), sustains 2.80x higher throughput, and fits in ~14% of a U50's LUTs.",
+  "id": "http://arxiv.org/abs/2605.28717v1",
+  "authors": [
+    "Bojie Li"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.AR",
+    "cs.NI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.28717v1"
+}

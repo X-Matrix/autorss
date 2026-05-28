@@ -1,0 +1,21 @@
+{
+  "title": "Multi-Adapter Representation Interventions via Energy Calibration",
+  "link": "https://arxiv.org/abs/2605.28722v1",
+  "published": "2026-05-27T16:39:58Z",
+  "updated": "2026-05-27T16:39:58Z",
+  "summary": "Representation intervention has emerged as a promising paradigm for aligning large language models toward desired behaviors without modifying model weights. Existing methods typically apply a fixed intervention uniformly across all inputs. However, we find that the appropriate intervention direction and strength vary substantially across samples, and such indiscriminate intervention leads to degradation of general capabilities on benign inputs. To address these challenges, we propose Multi-Adapter Representation Interventions via Energy Calibration (MARI). Specifically, we introduce a competitive multi-adapter mechanism in which specialized experts capture non-linear correction patterns and adaptively determine the appropriate intervention direction and strength for different samples. Furthermore, we design an energy-based gating module that leverages internal propagation dynamics to distinguish inputs that are applicable for intervention. Extensive experiments across diverse model families and parameter scales demonstrate that MARI achieves state-of-the-art alignment performance. Our method significantly improves performance on TruthfulQA, BBQ, and safety benchmarks, while maintaining and even improving general capabilities on tasks such as MMLU and ARC. Our code is available at https://github.com/V1centNevwake/MARI.",
+  "id": "http://arxiv.org/abs/2605.28722v1",
+  "authors": [
+    "Manjiang Yu",
+    "Hongji Li",
+    "Junwei Chen",
+    "Xue Li",
+    "Priyanka Singh",
+    "Yang Cao",
+    "Lijie Hu"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.28722v1"
+}

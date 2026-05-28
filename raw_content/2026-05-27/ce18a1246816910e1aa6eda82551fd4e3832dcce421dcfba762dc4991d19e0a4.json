@@ -1,0 +1,18 @@
+{
+  "title": "Token Optimization Strategies for LLM-Based Oracle-to-PostgreSQL Migration",
+  "link": "https://arxiv.org/abs/2605.28557v1",
+  "published": "2026-05-27T14:46:35Z",
+  "updated": "2026-05-27T14:46:35Z",
+  "summary": "LLMs are increasingly used for software modernization, code translation, and database migration. However, LLM-based Oracle2PostgreSQL migration remains constrained by high token consumption, long-context degradation, dialect-specific semantic differences, and the risk of semantic drift during query transformation. Direct inclusion of large Oracle SQL/PL-SQL artefacts, schema definitions, procedural logic, and migration instructions into the model context increases cost and may reduce generation quality. This paper shows token optimization as a constrained transformation problem in LLM-based Oracle2PostgreSQL migration. The study formalizes and evaluates twelve token optimization strategies: baseline representation, context pruning, minification, DSL-based semantic compression, metadata augmentation, context refactoring, schema distillation, adaptive routing, AST-based minification, identifier masking, output constraint enforcement, and hybrid optimization. The strategies are evaluated on samples of 10 and 100 Oracle SQL queries using Valid Syntax Rate, Exact Match, Semantic Match, CodeBLEU, and Token Efficiency. The results show that mild context pruning preserves semantic quality almost at the baseline level, achieving 89.75% Semantic Match on the 100-query sample compared with 89.80% for the unoptimized baseline. Adaptive routing provides the best practical trade-off, reducing input tokens by 8.72% and output tokens by 5.49% while maintaining 88.40% Semantic Match and increasing Token Efficiency by 6.67%. Aggressive schema distillation increases Token Efficiency by 132.22% but results in a 44.50-percentage-point decrease in Semantic Match. The findings demonstrate that token optimization cannot be treated as simple prompt shortening; it must be evaluated as a multi-objective migration problem balancing cost, syntactic validity, semantic preservation, and structural fidelity.",
+  "id": "http://arxiv.org/abs/2605.28557v1",
+  "authors": [
+    "Oleg Grynets",
+    "Dmytro Babarytskyi",
+    "Vasyl Lyashkevych"
+  ],
+  "categories": [
+    "cs.LO",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.28557v1"
+}

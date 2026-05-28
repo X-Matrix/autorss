@@ -1,0 +1,19 @@
+{
+  "title": "Satisfiability Solving with LLMs: A Matched-Pair Evaluation of Reasoning Capability",
+  "link": "https://arxiv.org/abs/2605.28602v1",
+  "published": "2026-05-27T15:18:45Z",
+  "updated": "2026-05-27T15:18:45Z",
+  "summary": "Large language models (LLMs) are increasingly used for tasks that implicitly reduce to Boolean satisfiability (SAT), yet their reasoning ability on SAT remains unclear. We present a systematic study of LLMs on 2-SAT and 3-SAT, together with two canonical reductions, Vertex Cover and discrete 3D packing, to probe representation-invariant reasoning. We first evaluate models using conventional metrics, including accuracy, precision, recall, and F1, as well as the SAT phase-transition setting. We find that these metrics can be misleading: many models obtain high scores by over-predicting satisfiable formulas, fail to reproduce the classical easy-hard-easy signature around the 3-SAT threshold, and degrade sharply as the number of variables grows.   To address this problem, we introduce a paired-formula protocol based on minimally different satisfiable and unsatisfiable instances, together with Accurate Differentiation Rate (ADR), which requires both members of each pair to be classified correctly. ADR separates reasoning-oriented models from heuristic ones and correlates with witness validity. Beyond CNF, we test cross-representation consistency by converting CNF to Vertex Cover and 3-SAT to discrete 3D packing. Model decisions on CNF and on the corresponding graph or packing instances agree for most models on more than 80 percent of instances, suggesting stable decision rules across representations. Overall, our results show that SAT is a conservative probe for LLM reasoning, and that paired evaluation with ADR provides a more faithful and representation-robust assessment than conventional metrics.",
+  "id": "http://arxiv.org/abs/2605.28602v1",
+  "authors": [
+    "Leizhen Zhang",
+    "Shuhan Chen",
+    "Sheng Chen"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LO"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.28602v1"
+}

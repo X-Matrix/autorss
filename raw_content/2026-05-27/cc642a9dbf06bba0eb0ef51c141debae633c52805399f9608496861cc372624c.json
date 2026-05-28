@@ -1,0 +1,22 @@
+{
+  "title": "Verified Misguidance: Measuring Structural Citation Failures in Search-Augmented LLMs",
+  "link": "https://arxiv.org/abs/2605.28565v1",
+  "published": "2026-05-27T14:54:05Z",
+  "updated": "2026-05-27T14:54:05Z",
+  "summary": "Users of search-augmented LLMs rely on citations as evidence that responses are grounded in real sources, and rarely verify the cited pages themselves. Millions of queries per day now pass through these systems, making citation quality a silent determinant of whether users are informed or misled-yet existing benchmarks each address one facet in isolation, leaving the joint structure that determines citation trustworthiness unmeasured. We construct CITETRACE, a large-scale dataset that traces the full citation chain from user query through retrieved source to generated answer: 11,200 real-world queries from 28 communities paired with 112,000 responses from ten models across five providers, yielding 761,495 evaluable citation pairs. We design a three-dimension evaluation framework that scores each citation on intent-purpose alignment, source suitability, and answer-source fidelity, using expert-validated predefined matrices and a five-level fidelity rubric; the framework applies to any system that produces citation-bearing responses. Applying this framework at scale, we identify a systematic pattern we call VERIFIED MISGUIDANCE (VM): models cite real, accessible sources yet fail along one or more dimensions, producing a fidelity-suitability trade-off in which faithful models select inappropriate sources and vice versa. Across our pool, 30.6% of citations distort their sources and 27.1% originate from domain-inappropriate sources; at the response level, up to 96% of users encounter at least one structurally misleading citation. Provider-level differences explain 88-96% of citation-quality variance, suggesting that source selection is governed more by factors beyond individual model capability than by the LLMs themselves. Together, CITETRACE and its evaluation framework provide the first resource for diagnosing structural citation failures in deployed search-augmented systems.",
+  "id": "http://arxiv.org/abs/2605.28565v1",
+  "authors": [
+    "Yongsik Seo",
+    "Wooseok Jeong",
+    "Eunyoung Kim",
+    "Hyeonseo Jang",
+    "Dongha Lee"
+  ],
+  "categories": [
+    "cs.DL",
+    "cs.AI",
+    "cs.CL",
+    "cs.IR"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2605.28565v1"
+}
