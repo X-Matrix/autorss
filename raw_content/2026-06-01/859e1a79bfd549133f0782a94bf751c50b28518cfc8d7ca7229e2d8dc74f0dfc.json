@@ -1,0 +1,19 @@
+{
+  "title": "Evolutionary Discovery of Bivariate Bicycle Codes with LLM-Guided Search",
+  "link": "https://arxiv.org/abs/2606.02418v1",
+  "published": "2026-06-01T15:58:52Z",
+  "updated": "2026-06-01T15:58:52Z",
+  "summary": "Quantum LDPC code discovery requires searching large algebraic design spaces while reliably certifying the parameters and equivalence classes of any candidates found. We introduce an LLM-guided evolutionary workflow in which language models mutate Python programs that generate bivariate-bicycle and perturbed bivariate-bicycle code ansätze. Across five campaigns, the system performed approximately 1{,}650 evolutionary iterations, screened about $2 \\times 10^5$ candidate codes, and required ${\\sim}140$ hours of computation and ${\\sim}$US\\$400 in LLM inference cost. Candidate codes are evaluated through a staged validation pipeline combining $\\mathrm{GF}(2)$ rank computation, distance estimation and certification, mixed-integer linear programming, BLISS Tanner-graph deduplication, decomposability analysis, and local-Clifford equivalence checks. At block length $n \\leq 360$, the workflow identifies 465 distinct candidate codes: 97 CSS bivariate-bicycle codes and 368 non-CSS perturbed variants. The CSS search recovers known high-performing codes and finds new finite-length representatives, including an indecomposable [[288,16,12]] code and higher-weight codes with up to $k = 50$ at distance $d = 8$. The non-CSS search produces perturbed codes matching the gross-code figure of merit at [[144,12,12]], along with additional high-distance candidates reported as certified values or upper bounds according to MILP status. Overall, these results show that LLM-guided program evolution can serve as a practical tool for structured quantum-code discovery when paired with independent evaluation.",
+  "id": "http://arxiv.org/abs/2606.02418v1",
+  "authors": [
+    "Juan Cruz-Benito",
+    "Andrew W. Cross",
+    "David Kremer",
+    "Ismael Faro"
+  ],
+  "categories": [
+    "quant-ph",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.02418v1"
+}

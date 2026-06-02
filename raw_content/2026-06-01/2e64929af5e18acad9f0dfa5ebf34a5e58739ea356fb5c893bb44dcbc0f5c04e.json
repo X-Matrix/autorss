@@ -1,0 +1,18 @@
+{
+  "title": "Forget Attention: Importance-Aware Attention Is All You Need",
+  "link": "https://arxiv.org/abs/2606.02332v1",
+  "published": "2026-06-01T14:42:06Z",
+  "updated": "2026-06-01T14:42:06Z",
+  "summary": "Combining attention's global retrieval with the sequential importance signal of state space models (SSMs) is the open challenge of hybrid language modeling. Transformers see everywhere but cannot prioritize; SSMs know what matters but cannot revisit. Existing hybrids -- Jamba (block level) and Hymba (head level) -- place the two in separate compartments, so neither informs the other during the attention computation itself. We propose SISA (SSM-Informed Softmax Attention), which adds an SSM-derived importance term directly inside the attention score and realizes the full operation as a single SDPA call on augmented query/key vectors -- no recurrent state, no custom kernel. At 152M / 5B tokens, SISA reaches LAMBADA-greedy 17.3% (vs. Transformer 13.9 and Mamba-3 15.5) and attains NIAH 100% from step 1K, 7x faster than Transformer's retrieval convergence; at 369M, Mamba-3 leads LAMBADA while SISA preserves perfect NIAH and stock-SDPA execution. SISA thus defines a third design axis for SSM-attention hybrids -- score-level fusion -- beyond the block-level and head-level paradigms that have dominated the field.",
+  "id": "http://arxiv.org/abs/2606.02332v1",
+  "authors": [
+    "Soohyeong Shin",
+    "Yeongwook Yang"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.02332v1"
+}

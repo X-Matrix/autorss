@@ -1,0 +1,23 @@
+{
+  "title": "PaSBench-Video: A Streaming Video Benchmark for Proactive Safety Warning",
+  "link": "https://arxiv.org/abs/2606.02443v1",
+  "published": "2026-06-01T16:14:01Z",
+  "updated": "2026-06-01T16:14:01Z",
+  "summary": "Between the first visible sign of danger and the moment an accident occurs, there is often a window where intervention remains possible. Video-capable multimodal large language models (MLLMs) could serve as always-on safety monitors that issue warnings during this window. Yet current benchmarks do not test this ability: they rely on static inputs, ignore timing precision, and omit false-positive measurement on safe scenes. We present PaSBench-Video, a 740-video benchmark with 481 risk and 259 no-risk videos across four domains: driving, healthcare, daily life, and industrial production. Risk videos are annotated with frame-level risk onset and accident boundaries. A model must observe the video causally and produce a warning that is both temporally calibrated and content-correct. Testing 13 MLLMs, we find that no model exceeds 20.0% on our strictest metric, and recall is tightly coupled with false-positive rate, with Pearson correlation 0.64: higher detection comes only at the cost of triggering warnings on the majority of safe clips. Performance splits sharply by domain: models achieve moderate recall at low false-positive rates in daily life, where risks are inherently anomalous, yet fire indiscriminately in driving, where routine and hazardous scenes look alike. These results indicate that current models rely on scene-level activity cues rather than reasoning about emerging harm.",
+  "id": "http://arxiv.org/abs/2606.02443v1",
+  "authors": [
+    "Yusong Zhao",
+    "Yuejin Xie",
+    "Youliang Yuan",
+    "Junjie Hu",
+    "Jitian Guo",
+    "Yujiu Yang",
+    "Pinjia He"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.02443v1"
+}

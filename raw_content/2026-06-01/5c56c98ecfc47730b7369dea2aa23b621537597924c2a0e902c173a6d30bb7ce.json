@@ -1,0 +1,18 @@
+{
+  "title": "Initialization is Half the Battle: Generating Diverse Images from a Guidance Potential Posterior",
+  "link": "https://arxiv.org/abs/2606.02453v1",
+  "published": "2026-06-01T16:25:10Z",
+  "updated": "2026-06-01T16:25:10Z",
+  "summary": "Despite the remarkable fidelity of generative models, they frequently suffer from mode collapse. Existing strategies for enhancing diversity predominantly focus on intervening during the generation trajectory. We identify a critical oversight that the standard Gaussian initialization often causes trajectories to collapse into dominant modes because it is agnostic to the guidance potential landscape. In this work, we formulate selecting the initial noise from a guidance potential posterior, which effectively re-weights the prior towards diversity-rich regions. To sample from this distribution efficiently, we introduce Diversity-inducing Initialization (DivIn), which leverages Langevin dynamics to actively navigate the initialization landscape, steering initial noise away from collapsing regions while anchoring them to the valid data manifold. Our method serves as an inference-time diversity enhancement compatible with both diffusion and flow matching models. Extensive experiments show that DivIn exhibits a superior performance in both class-to-image and text-to-image scenarios. Furthermore, we highlight that as DivIn is orthogonal to trajectory-based methods, combining them significantly expands the diversity-quality Pareto frontier beyond what either achieves in isolation.",
+  "id": "http://arxiv.org/abs/2606.02453v1",
+  "authors": [
+    "Xiang Li",
+    "Dianbo Liu",
+    "Kenji Kawaguchi"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.02453v1"
+}

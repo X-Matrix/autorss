@@ -1,0 +1,22 @@
+{
+  "title": "CityTrajBench: A Unified Benchmark for City-Scale Vehicle Trajectory Generation",
+  "link": "https://arxiv.org/abs/2606.02287v1",
+  "published": "2026-06-01T14:08:56Z",
+  "updated": "2026-06-01T14:08:56Z",
+  "summary": "Urban trajectory generation is a fundamental task for transportation simulation, urban planning, and mobility analytics. However, systematic comparison across trajectory generation methods remains difficult because existing studies often rely on different datasets, preprocessing pipelines, trajectory representations, and evaluation metrics. This fragmentation makes it unclear whether reported performance differences arise from the generation mechanism itself or from inconsistent experimental protocols. To address this issue, we present CityTrajBench, a unified benchmark framework and protocol for city-scale vehicle trajectory generation. CityTrajBench standardizes data ingestion, trajectory normalization, feature construction, model adaptation, map-aware post-processing, model selection, and multi-level evaluation under a common setting. It supports heterogeneous generators, including statistical baselines, VAE-based, GAN-based, diffusion-based, and flow-matching-based models, and evaluates them on three real-world urban trajectory datasets. The benchmark measures global spatial realism, trip-level distribution fidelity, trajectory-level geometric similarity, conditional mobility consistency, and efficiency. Experiments reveal clear trade-offs across model families: DiffTraj is strongest on trajectory-level geometric fidelity, DiffRNTraj is competitive on structure-sensitive global realism, and TrajFlow provides a strong balance across realism, quality, conditional consistency, and efficiency. Meanwhile, a simple Markov baseline remains competitive on coarse-grained trip and local-movement statistics. These findings show that urban trajectory generation quality is inherently multi-objective, that no single model dominates all criteria equally, and that CityTrajBench provides a reproducible benchmark protocol and testbed for future research on urban mobility generation.",
+  "id": "http://arxiv.org/abs/2606.02287v1",
+  "authors": [
+    "Shibo Zhu",
+    "Xiaodan Shi",
+    "Dayin Chen",
+    "Yuntian Chen",
+    "Haoran Zhang",
+    "Tianhao Wu",
+    "Jinyue Yan"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.02287v1"
+}

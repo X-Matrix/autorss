@@ -1,0 +1,27 @@
+{
+  "title": "SIRI: Self-Internalizing Reinforcement Learning with Intrinsic Skills for LLM Agent Training",
+  "link": "https://arxiv.org/abs/2606.02355v1",
+  "published": "2026-06-01T15:02:59Z",
+  "updated": "2026-06-01T15:02:59Z",
+  "summary": "Long-horizon LLM agents can benefit from reusable skills, yet existing skill-based methods often rely on external skill generators during training or persistent skill retrieval at inference, increasing engineering complexity, context length, and deployment latency. We propose Self-Internalizing Reinforcement learning with Intrinsic skills (SIRI), a three-phase framework that enables agents to discover, validate, and internalize skills without external skill generators or inference-time skill banks. SIRI first warms up the policy with GiGPO to acquire basic interaction ability and collect successful skill-free trajectories. It then performs self-skill mining, where the current policy summarizes compact skills from its own successful plain rollouts and validates them through paired skill-augmented and skill-free rollouts. Finally, SIRI distills only beneficial skill-guided action tokens into the plain policy using trajectory-level utility and action-level advantage. At inference, the agent runs with the original prompt only. On ALFWorld and WebShop with Qwen2.5-7B-Instruct, SIRI improves GiGPO from 0.908 to 0.930 on ALFWorld and from 0.728 to 0.813 on WebShop, outperforming prompt-based, RL-based, and memory-augmented baselines. Further analysis shows that our self-mining strategy can achieve performance comparable to distillation with closed-source large model. Our code is available at https://github.com/kirito618/SIRI.",
+  "id": "http://arxiv.org/abs/2606.02355v1",
+  "authors": [
+    "Zhongyu He",
+    "Yuanfan Li",
+    "Fei Huang",
+    "Tianyu Chen",
+    "Siyuan Chen",
+    "Xingyang Li",
+    "Meng Hsuan Yu",
+    "Xiangrong Liu",
+    "Leyi Wei",
+    "Lu Pan",
+    "Ke Zeng",
+    "Xunliang Cai"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.02355v1"
+}

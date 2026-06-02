@@ -1,0 +1,21 @@
+{
+  "title": "AGENTCL: Toward Rigorous Evaluation of Continual Learning in Language Agents",
+  "link": "https://arxiv.org/abs/2606.02461v1",
+  "published": "2026-06-01T16:32:59Z",
+  "updated": "2026-06-01T16:32:59Z",
+  "summary": "Language agents spend substantial inference time solving individual tasks, yet the experience acquired in one episode is often underutilized in future episodes. Continual learning expects an agent to accumulate reusable experience across a stream of tasks, improve over time, and avoid interference from irrelevant experiences. Unfortunately, existing benchmarks struggle to evaluate continual learning in language agents rigorously. Most efforts focus on retrieval and reasoning over long-context conversations or documents, while recent lifelong-adaptation benchmarks often rely on naive task streams with limited analysis of cross-task relationships, making it difficult to understand what an agent learns and reuses over time. This paper presents an evaluation framework AgentCL for continual learning in agents, centered on controlled task streams and metrics for transfer gains. AGENTCL constructs compositional streams where earlier sub-solutions, evidence, or workflows are intentionally reusable in later tasks, and contrasts them with naive streams where such reusability is not guaranteed. We use the benchmark to evaluate non-parametric memory designs for continual learning. To diagnose how memory design choices affect continual learning, we develop MemProbe, a probing method that stores interactions, insights, and skills, while filtering unreliable experiences during consolidation. Empirical analysis across coding, deep research, and language understanding/reasoning tasks shows that naive streams offer limited ability to distinguish memory designs, whereas controlled streams more clearly distinguish their plasticity. Meanwhile, naive and held-out settings often yield limited gains and can expose memory-induced degradation. These results highlight the need for stronger memory designs that balance plasticity and stable reuse.",
+  "id": "http://arxiv.org/abs/2606.02461v1",
+  "authors": [
+    "Yiheng Shu",
+    "Bernal Jiménez Gutiérrez",
+    "Saisri Padmaja Jonnalagedda",
+    "Yuguang Yao",
+    "Huan Sun",
+    "Yu Su"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.02461v1"
+}

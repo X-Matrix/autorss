@@ -1,0 +1,19 @@
+{
+  "title": "Bridging the Sim-to-Real Gap in Semiconductor Visual Program Synthesis via Input Binarization",
+  "link": "https://arxiv.org/abs/2606.02434v1",
+  "published": "2026-06-01T16:06:20Z",
+  "updated": "2026-06-01T16:06:20Z",
+  "summary": "Precise parametric control over circuit geometry is essential for semiconductor inspection, yet obtaining sufficient real training data remains costly. Although generative models such as diffusion models and Generative Adversarial Networks (GANs) can augment training data, they cannot guarantee the nanometer-scale geometric accuracy required for metrology tasks. We propose a visual program synthesis framework in which a Vision-Language Model (VLM) converts inspection images into editable Domain-Specific Language (DSL) code describing circuit geometries, enabling controlled generation of training data with exact parameter manipulation. Because the VLM is trained solely on synthetic DSL-rendered data, a domain gap arises when processing real Scanning Electron Microscope (SEM) images. We bridge this gap with an input binarization strategy that strips SEM-specific texture and noise, letting the model focus on geometric structure. On the MIIC dataset, binarized inputs improve the mean Dice coefficient from 0.4393 to 0.5256 over the raw-input baseline, demonstrating that simple texture abstraction substantially mitigates the sim-to-real gap.",
+  "id": "http://arxiv.org/abs/2606.02434v1",
+  "authors": [
+    "Yusuke Ohtsubo",
+    "Kota Dohi",
+    "Koichiro Yawata",
+    "Koki Takeshita",
+    "Tatsuya Sasaki"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.02434v1"
+}

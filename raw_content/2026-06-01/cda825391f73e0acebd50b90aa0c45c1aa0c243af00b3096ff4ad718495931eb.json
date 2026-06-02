@@ -1,0 +1,20 @@
+{
+  "title": "Ghost Tool Calls: Issue-Time Privacy for Speculative Agent Tools",
+  "link": "https://arxiv.org/abs/2606.02483v1",
+  "published": "2026-06-01T16:53:19Z",
+  "updated": "2026-06-01T16:53:19Z",
+  "summary": "Tool-augmented language agents speculatively issue likely future tool calls to hide latency, but those calls leak inferred user intent to external services before the agent commits to the branch. Every external observer that received the call retains the disclosure after the agent abandons the branch. Timing is the issue, not authorization: no commit-time cleanup, read-only restriction, or access-control allow-list unsends what an observer already holds. We call these invocations ghost tool calls and propose Speculative Tool Privacy Contracts, a runtime abstraction that treats observation before commitment as a first-class effect, distinct from state mutation. We implement the contracts in a prototype runtime and evaluate twelve policies across three corpora. Speculative dispatch increases what an observer can infer about user intent; post-hoc filters, read-only restrictions, and access-control allow-lists leave that inference intact; only issue-time policies that change or suppress the speculative call's argument or destination projection before dispatch reduce it.",
+  "id": "http://arxiv.org/abs/2606.02483v1",
+  "authors": [
+    "Bardia Mohammadi",
+    "Lars Klein",
+    "Akhil Arora",
+    "Laurent Bindschaedler"
+  ],
+  "categories": [
+    "cs.CR",
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.02483v1"
+}

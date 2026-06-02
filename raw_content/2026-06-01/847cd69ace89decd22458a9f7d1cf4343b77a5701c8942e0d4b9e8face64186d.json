@@ -1,0 +1,17 @@
+{
+  "title": "Coordination Graphs for Constrained Multi-Agent Reinforcement Learning",
+  "link": "https://arxiv.org/abs/2606.02337v1",
+  "published": "2026-06-01T14:46:16Z",
+  "updated": "2026-06-01T14:46:16Z",
+  "summary": "Constrained Multi-agent reinforcement learning (CMARL) faces two intertwined challenges: the joint action space grows exponentially with the number of agents, and additional requirements couple agents in ways that reward structure alone does not capture. We introduce Coordination Graphs for Constrained Multi-Agent Reinforcement Learning (CG-CMARL), a framework that addresses both challenges by combining coordination graphs with Lagrangian duality. The system decomposes the joint problem into pairwise regions, each served by a set of shared Q-functions, one for the primary objective and one for each of the constraints, so that the number of learned models is independent of the number of agents. At execution time, Max-Sum message passing coordinates actions across the factor graph, while a Lagrangian multiplier controls the objective--constraint tradeoff, allowing a single trained model to trace a Pareto front without retraining. We provide convergence guarantees under mild conditions, together with a compositional error bound that decomposes into separate interpretable sources, each traceable to a specific design choice and independently controllable. Experiments on cooperative navigation tasks (where teams of up to 10 agents must coordinate to reach target positions while satisfying pairwise constraints) show that our method produces Pareto fronts dominating established baselines trained at fixed reward-shaping ratios, while scaling to team sizes where centralized approaches become intractable.",
+  "id": "http://arxiv.org/abs/2606.02337v1",
+  "authors": [
+    "Santiago Amaya-Corredor",
+    "Miguel Calvo-Fullana",
+    "Anders Jonsson"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.02337v1"
+}

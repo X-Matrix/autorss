@@ -1,0 +1,20 @@
+{
+  "title": "Monitoring Agentic Systems Before They're Reliable",
+  "link": "https://arxiv.org/abs/2606.02494v1",
+  "published": "2026-06-01T17:01:53Z",
+  "updated": "2026-06-01T17:01:53Z",
+  "summary": "Agentic systems entering production typically operate as partially integrated assemblies where structural defects, not task-level errors, dominate the failure landscape. At this maturity level, task-level error detection may be infeasible: structural failure modes mask the signal that task-level monitors are designed to detect.We present a monitoring and triage methodology that decomposes agentic system evaluation into three dimensions (quality, suitability, efficiency) at three monitoring scopes (within-run, cross-run, structural), using variance as a characterization signal. Findings are routed through severity classification adapted from FMEA, concentrating human attention on the subset that warrants investigation. We evaluate on a synthetic testbed of 220 runs across 120 document bundles with controlled error injection.Three results emerge. Monitor scope determines failure type: within-run monitors surface deterministic stage defects (CV = 0.02), cross-run monitors surface stochastic integration consequences (CV = 1.25, 24% at L2), and a structural monitor identifies an integration gap with perfect consistency (CV = 0.00). Injected task-level errors are indistinguishable from clean baselines, confirming structural defects mask task-level signal. Deterministic triage routes 97% of findings to automated tracking, leaving the 2% reflecting variable behavior for human investigation.We propose, on Stage 1 evidence, a maturity-staging model in which monitoring transitions from structural characterization to error detection to reliability tracking as integration defects resolve. The taxonomy, CV-based scope characterization, and severity model transfer architecturally to document-driven, multi-stage agentic workflows in regulated industries; specific calibrations are domain-specific. Deploy monitoring early: the first thing it finds is the most important thing to fix.",
+  "id": "http://arxiv.org/abs/2606.02494v1",
+  "authors": [
+    "Marisa Ferrara Boston",
+    "Glen Hanson",
+    "Effi Georgala",
+    "JD Hudgens",
+    "Heather Frase"
+  ],
+  "categories": [
+    "cs.SE",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.02494v1"
+}

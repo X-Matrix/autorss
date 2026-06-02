@@ -1,0 +1,15 @@
+{
+  "title": "Repair Before Veto: Repair-Augmented Constraint Learning for Contextual Decisions",
+  "link": "https://arxiv.org/abs/2606.02326v1",
+  "published": "2026-06-01T14:38:04Z",
+  "updated": "2026-06-01T14:38:04Z",
+  "summary": "Hard constraints are usually treated as terminal vetoes: once a candidate violates a requirement, the learned rule rejects it and any repair is handled outside the decision semantics. This misses a common deployed regime in which the system already knows a finite menu of modifications, such as adding a ticket option, changing a configuration, or requesting an available service upgrade. Existing constraint-learning, soft-relaxation, and recourse methods address nearby problems, but they do not learn whether an option should be repaired before being vetoed. We introduce Repair-Augmented Constraint Learning (RACL), a contextual decision framework that lifts known repair operators into the classifier semantics. A candidate is accepted when an affordable repair makes it feasible and preferred enough; otherwise the system returns a structured rejection credit and, when applicable, a repair plan. This repair-before-veto view strictly generalizes no-repair HASSLE-style semantics, reveals an irreducible false-veto gap for terminal-veto rules, separates binary-label non-identifiability from decision-rule learnability, and gives capacity and calibration bounds for the observed-feasibility shared-weight setting. Across controlled and DB1B-derived benchmarks, RACL recovers the intended credit and repair structure. On the hardest raw-data-derived tier, validation-selected RACL reduces false vetoes to 10/4039 (FVR 0.0025), versus about 1064/4039 for the strongest repair-search black-box baseline, while making the FVR/EDR trade-off explicit.",
+  "id": "http://arxiv.org/abs/2606.02326v1",
+  "authors": [
+    "Yifan Wang"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.02326v1"
+}

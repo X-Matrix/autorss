@@ -1,0 +1,17 @@
+{
+  "title": "RASER: Recoverability-Aware Selective Escalation Router for Multi-Hop Question Answering",
+  "link": "https://arxiv.org/abs/2606.02488v1",
+  "published": "2026-06-01T16:59:36Z",
+  "updated": "2026-06-01T16:59:36Z",
+  "summary": "Multi-hop question-answering systems often use expensive retrieval on every question. They may decompose the question, run several retrieval rounds, or search through bridge entities before answering. All of these strategies rely on repeated LLM calls to rewrite or decompose the question, which increases extra token cost, and it is not fitting when the LLM budget is tight. However, our analysis shows that lots of multi-hop questions are already answered correctly by a single one-shot RAG, so running an extra retrieval on every question wastes the budget. We introduce RASER (Recoverability-Aware Selective Escalation Router), a family of cheap routers built on one-shot RAG and six features from it. RASER-2 decides whether to stop or escalate to the extra-retrieval action PRUNE. RASER-3 chooses among one-shot RAG, PRUNE, and iterative retrieval IRCoT, using the same features but adding an explicit cost-accuracy trade-off. Neither router makes an extra LLM call to decide. Across six LLMs and three multi-hop QA benchmarks, both routers stay competitive with the other state-of-the-art (SOTA) baselines in F1 while spending only 41-49% of always-prune's tokens and also less than the iterative and decomposition retrieval baselines.",
+  "id": "http://arxiv.org/abs/2606.02488v1",
+  "authors": [
+    "Yuyang Li",
+    "Zihe Yan",
+    "Tobias Käfer"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.02488v1"
+}
