@@ -1,0 +1,23 @@
+{
+  "title": "What Do Deepfake Speech Detectors Actually Hear?",
+  "link": "https://arxiv.org/abs/2606.10912v1",
+  "published": "2026-06-09T14:21:45Z",
+  "updated": "2026-06-09T14:21:45Z",
+  "summary": "Deepfake speech detectors often output a single score without explaining why an audio sample is flagged, where in the signal the evidence lies, or what cues drive the decision. We propose an audio-native explainability pipeline using Integrated Gradients on time-aligned self-supervised representations to localize decision evidence over time. We apply the proposed method to three WavLM-based detectors (AASIST, CA-MHFA, SLS) on ASVspoof 5 and manually annotate the highest-attribution regions to provide a semantic meaning of the most important cues. Despite similar performance, the detectors rely on different cues: AASIST emphasizes non-speech/environment cues, CA-MHFA focuses on localized phoneme artifacts, and SLS relies on word boundaries and spectral integrity. We move beyond speculative reasoning and validate our findings by causal masking of the primary detector cues. Observed performance degradation further supports the explained detector semantics.",
+  "id": "http://arxiv.org/abs/2606.10912v1",
+  "authors": [
+    "Vojtěch Staněk",
+    "Veronika Jirmusová",
+    "Anton Firc",
+    "Kamil Malinka",
+    "Jakub Reš",
+    "Martin Perešíni"
+  ],
+  "categories": [
+    "cs.SD",
+    "cs.AI",
+    "cs.CR",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.10912v1"
+}
