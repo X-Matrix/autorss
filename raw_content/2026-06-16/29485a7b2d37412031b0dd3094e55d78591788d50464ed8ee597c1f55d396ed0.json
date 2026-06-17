@@ -1,0 +1,23 @@
+{
+  "title": "SegDINO: Introducing Multi-Scale Structure into DINO for Efficient Medical Image Segmentation",
+  "link": "https://arxiv.org/abs/2606.17972v1",
+  "published": "2026-06-16T14:27:50Z",
+  "updated": "2026-06-16T14:27:50Z",
+  "summary": "Self-supervised DINO models provide strong transferable visual representations, yet applying them directly to image segmentation remains challenging. Existing approaches commonly rely on heavy decoders with complex upsampling, introducing substantial parameter and computational overhead. We observe that introducing scale into DINO features is far more critical than increasing decoder capacity. In this work, we present SegDINO, an efficient segmentation framework that integrates a DINOv3 backbone with lightweight scale modeling. SegDINO introduces Token Pyramid Adaptation (TPA) to reorganize intermediate DINO features into a pseudo multi-scale hierarchy, and Scale-Aware Decoding (SAD) for efficient intra-scale refinement and top-down multi-scale propagation. We further curate PanCT, a new CT dataset containing 284 patients with expert-annotated pancreatic tumors, to assess SegDINO's ability to handle difficult small-lesion cases. Extensive experiments on PanCT and three public benchmarks demonstrate that SegDINO achieves state-of-the-art results with high efficiency. The code is available at https://github.com/script-Yang/segdino_v2.",
+  "id": "http://arxiv.org/abs/2606.17972v1",
+  "authors": [
+    "Sicheng Yang",
+    "Hongqiu Wang",
+    "Zhaohu Xing",
+    "Sixiang Chen",
+    "Qiuxia Yang",
+    "Yize Mao",
+    "Guang Yang",
+    "Lei Zhu"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.17972v1"
+}
