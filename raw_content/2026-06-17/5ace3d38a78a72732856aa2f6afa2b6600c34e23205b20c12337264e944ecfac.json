@@ -1,0 +1,27 @@
+{
+  "title": "Scaling Learning-based AEB with Massive Unlabeled Data",
+  "link": "https://arxiv.org/abs/2606.18864v1",
+  "published": "2026-06-17T09:44:28Z",
+  "updated": "2026-06-17T09:44:28Z",
+  "summary": "This paper studies how to scale learning-based automatic emergency braking (AEB) with massive unlabeled fleet data under production constraints. Our approach is based on meta-feedback semi-supervised learning (MF-SSL), where a teacher generates pseudo labels for unlabeled driving data and is updated using a small labeled anchor set as safety-critical feedback. In production, anchor ambiguity and labeled-unlabeled mismatch can amplify systematic pseudo-label errors, leading to spurious triggers. We propose a stabilized MF-SSL framework with (i) Noise-Aware Decoupling, which removes ambiguity-prone anchors from the teacher's supervised update path, and (ii) kinematics-gated pseudo-labeling with a teacher conflict penalty to suppress mismatch-induced risk hallucinations on unlabeled data while maintaining broad coverage. Extensive experiments show consistent gains as unlabeled data scale from 1M to 1B windows, improving safety while keeping comfort stable. The 1B-trained student model is deployed to hundreds of thousands of vehicles and validated over \\$10^9$ km of driving, achieving a positive-to-false activation ratio exceeding 100:1 and a 35% improvement in accident-free driving mileage over a production rule-only baseline.",
+  "id": "http://arxiv.org/abs/2606.18864v1",
+  "authors": [
+    "Xiangyu Wang",
+    "Yang Zhan",
+    "Mengxiang Hao",
+    "Chuanchuan Zhong",
+    "Yansong Jia",
+    "Junjie Zhang",
+    "Yu Han",
+    "Xin Jiang",
+    "Zhen Cao",
+    "Ying Wang",
+    "Yulun Song",
+    "Zhitao Xu"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.18864v1"
+}
