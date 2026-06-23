@@ -1,0 +1,22 @@
+{
+  "title": "P-JEPA: Procedural Video Representation Learning via Joint Embedding Predictive Architecture",
+  "link": "https://arxiv.org/abs/2606.23256v1",
+  "published": "2026-06-22T12:38:36Z",
+  "updated": "2026-06-22T12:38:36Z",
+  "summary": "The increasing maturity of embodied AI platforms has driven a growing interest in procedural video representation learning to support intelligent assistance systems for complex, multi-step tasks. Leveraging large-scale latent predictive training, video foundation models capture video dynamics, enabling downstream tasks such as activity understanding, spatiotemporal localization, and predictive control. However, procedural videos include actions with long-range dependencies that these models do not support, due to the quadratic complexity of self-attention. Distinct actions, for example, may be visually similar despite appearing at different points in the procedure, such as turning the stove on versus off. Here, we propose a backbone-agnostic approach that learns long-duration video representations by reducing the problem to a dense, frame-aligned action space and predicting pooled masked latent vectors. This approach allows our Procedural Joint Embedding Predictive Architecture (P-JEPA) to ingest videos over 30 minutes long, enabling effective long-form understanding of procedural steps. We evaluate P-JEPA using features extracted with VJEPA2.1, TSM, and I3D over the EgoExo4D, EgoProceL, and Assembly101 datasets, finding that it consistently improves linear separability, streaming inference, and temporal action segmentation performance, achieving state-of-the-art results on EgoExo4D fine-grained action classification while using an order of magnitude fewer parameters than LLM-based methods and running in real time.",
+  "id": "http://arxiv.org/abs/2606.23256v1",
+  "authors": [
+    "Felix Tristram",
+    "Stefano Gasperini",
+    "Benjamin Killeen",
+    "Marcel Walch",
+    "Christian Benz",
+    "Nassir Navab",
+    "Ghazal Ghazaei"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.23256v1"
+}

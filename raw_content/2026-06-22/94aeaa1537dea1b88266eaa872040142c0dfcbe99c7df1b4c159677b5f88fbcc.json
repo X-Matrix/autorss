@@ -1,0 +1,20 @@
+{
+  "title": "Discovering Latent Groups for Robust Classification",
+  "link": "https://arxiv.org/abs/2606.23609v1",
+  "published": "2026-06-22T17:09:35Z",
+  "updated": "2026-06-22T17:09:35Z",
+  "summary": "Machine learning models exploit spurious correlations, achieving high average accuracy but failing disproportionately on underrepresented subgroups. Existing methods address this by adjusting network parameters, guided either by subgroup annotations or inferred pseudo-group labels. Yet at inference, these methods produce only a class prediction, with no insight into a sample's latent subgroup. We propose neural classification trees (NCT), a framework that achieves robustness by encoding subgroup structure in its tree-shaped architecture. By routing each sample to an \"easy\" or \"hard\" node of this tree -- based on prediction correctness -- and reusing these routes as pseudo-labels for the next iteration, NCT disentangles conflicting subgroups, without requiring subgroup supervision. We evaluate NCT on five benchmarks spanning binary and multi-class spurious correlations. Our experiments show that the learned tree topology provides strong interpretability by consistently isolating minority subgroups, which provides a transparent mapping between the model architecture and the data's latent group structure, while yielding competitive robustness with state-of-the-art methods.",
+  "id": "http://arxiv.org/abs/2606.23609v1",
+  "authors": [
+    "Ankur Garg",
+    "Ulrich Aïvodji",
+    "Samira Ebrahimi Kahou",
+    "Vincent Michalski"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CV"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.23609v1"
+}
