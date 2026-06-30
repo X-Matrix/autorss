@@ -1,0 +1,21 @@
+{
+  "title": "Rehearsed Multi-Agent Live Product Demonstrations with Real-Time Voice Question Answering",
+  "link": "https://arxiv.org/abs/2606.30294v1",
+  "published": "2026-06-29T13:36:51Z",
+  "updated": "2026-06-29T13:36:51Z",
+  "summary": "Live product demonstrations are a recurring, high-cost activity in software organizations: a human presenter must select features, dispatch the corresponding interactions on a running application, narrate them coherently, and answer questions in real time. Existing automation addresses only fragments -- generalist browser agents target instruction-conditioned task completion, and demo-video tools produce fixed MP4 artifacts that cannot be questioned and silently break under interface drift. We propose Rhetor, a multi-agent system that takes a running web application and its source-code repository as input and produces a rehearsed live demonstration with segment-synchronized narration and real-time voice question answering. The architectural contributions are a cross-modal feature representation that merges UI exploration with source-code analysis into features tagged with discrete focus tiers, a grounded scripter constrained to UI elements observed during exploration and dispatched through multi-strategy semantic locators, a pre-presentation rehearsal loop with explicit convergence and graceful degradation to narration-only segments, and a runtime synchronization invariant that ties each browser action to the audio-end event of its narration segment. Across six pipeline sessions on four deployed applications -- including the public-domain whiteboard application Excalidraw -- the rehearser's internal locator-firing rate (sigma-bar) spans 0.31-1.00 over 147 scripted actions; on the substantial workload (53 actions, full tier differentiation), sigma-bar is approximately 0.92, and on the public-domain reference point the locator-repair step drives convergence to sigma-bar = 1.00 at iteration 2. We additionally define a benchmark protocol of ten metrics across six application categories that would establish, beyond the case study, whether each design choice contributes positively.",
+  "id": "http://arxiv.org/abs/2606.30294v1",
+  "authors": [
+    "Rahul Khedar",
+    "Mayank Malhotra",
+    "Avinash Karn",
+    "Mouli V",
+    "Prakhar Mehrotra"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.HC",
+    "cs.SE"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2606.30294v1"
+}
