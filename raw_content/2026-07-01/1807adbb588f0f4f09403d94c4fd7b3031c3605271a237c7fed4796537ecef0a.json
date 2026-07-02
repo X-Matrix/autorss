@@ -1,0 +1,16 @@
+{
+  "title": "Self-Evolving Agents with Anytime-Valid Certificates",
+  "link": "https://arxiv.org/abs/2607.00871v1",
+  "published": "2026-07-01T12:34:52Z",
+  "updated": "2026-07-01T12:34:52Z",
+  "summary": "Self-evolving agents violate the assumption behind most learning-theoretic guarantees: the data, evaluator, components, and hypothesis space are produced by the policy being updated. We present \\textbf{SEA}, an architecture that confines self-modification to a small steering adapter and a versioned harness around a \\emph{frozen} base model and admits each modification only through an anytime-valid gate that emits an auditable certificate against a fixed error budget. Five loop controllers compose published guarantees; because such gates can only \\emph{select} among behaviors the frozen base already produces, five verifier-in-the-loop mechanisms -- best-of-$N$, micro-step search, self-authored reproduction oracles, search-layer control, and self-repair -- supply the dense, grader-free signal the gates require, computed from the issue text alone. On a $52$-instance SWE-bench Verified subset across four base models, base capability is the dominant, confound-free effect, and on two strong base models a deliberate no-op-composite control isolates the suite's contribution at $+4$ and $+5$ (\\textsc{Glm}~5.2 $24\\to28$; \\textsc{Gpt} $29\\to34$, the $65\\%$ best), with event logs confirming that its mechanisms fire and prevent regressions. Results are single-run on expensive evaluations; confirming run-to-run variance and adapting the per-task algorithm mix are future work.",
+  "id": "http://arxiv.org/abs/2607.00871v1",
+  "authors": [
+    "Biswa Sengupta"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2607.00871v1"
+}

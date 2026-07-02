@@ -1,0 +1,23 @@
+{
+  "title": "ConRTF: Edge-Constrained Boundary Distribution Refinement for Realtime TransFormer Table Structure Recognition",
+  "link": "https://arxiv.org/abs/2607.00734v1",
+  "published": "2026-07-01T10:18:12Z",
+  "updated": "2026-07-01T10:18:12Z",
+  "summary": "Table Structure Recognition (TSR) aims to recover the row and column layout of tables from document images, a key step in document understanding pipelines. Accurate TSR depends on precise boundary localization: small errors in row or column boundaries can propagate into incorrect cell assignments and structural inconsistencies. Yet detection-based approaches treat table elements as generic objects, ignoring a fundamental property of table layout: rows and columns play structurally distinct roles and their boundaries carry unequal importance. We propose an Edge-constrained Fine-grained Localization loss (EFL) that formalizes this structural asymmetry by encoding table-specific geometric priors into the training objective: row-like elements are supervised with emphasis on their horizontal boundaries, while column-like elements prioritize vertical boundaries. Implemented within a real-time detector with distribution-based boundary refinement (D-FINE), EFL operates during training only and guides boundary refinement toward structurally meaningful adjustments with no change to the inference pipeline. The proposed approach, ConRTF, is also data-efficient, maintaining robust accuracy with as few as 2k--3k annotated tables. Experiments on PubTables-1M and two private datasets show consistent improvements over the optimized baseline and several real-time detectors including RT-DETRv2 and YOLOv10-11, with gains of up to +1.6 GriTS points at equal inference speed.",
+  "id": "http://arxiv.org/abs/2607.00734v1",
+  "authors": [
+    "Eliott Thomas",
+    "Tri-Cong Pham",
+    "Mickael Coustaty",
+    "Aurelie Joseph",
+    "Gaspar Deloin",
+    "Vincent Poulain d'Andecy",
+    "Jean-Marc Ogier",
+    "Antoine Doucet"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2607.00734v1"
+}
