@@ -1,0 +1,21 @@
+{
+  "title": "Self-Gating Attention for Efficient Time Series Forecasting",
+  "link": "https://arxiv.org/abs/2607.02344v1",
+  "published": "2026-07-02T15:49:14Z",
+  "updated": "2026-07-02T15:49:14Z",
+  "summary": "Transformer architectures have shown strong potential in time series forecasting, where multi-head self-attention is widely used to capture temporal dependencies across historical timestamps. However, standard self-attention has quadratic time and memory complexity with respect to the look-back length. This cost may limit its use in resource-constrained or high-throughput forecasting systems, where fast and memory-efficient inference is important. Through qualitative and quantitative analyses, we observe that self-attention maps in time series forecasting often contain redundant patterns across different timestamps. This phenomenon can be related to the repeated temporal patterns and relatively stable temporal correlations in many real-world time series. Motivated by this observation, we propose Self-Gating Attention (SGA), a plug-and-play attention mechanism that represents the attention score with a shared learnable matrix and an input-dependent residual component. The shared matrix captures common attention patterns, while the residual component captures input-dependent variations. In this way, SGA avoids the query and key projections used in standard attention score computation, leading to linear time and score-matrix memory complexity with respect to the look-back length. We integrate SGA into several forecasting backbones and compare it with standard self-attention and lightweight attention variants on nine publicly available real-world datasets covering electricity, finance, weather, medical monitoring, human activity, and climate records. The results show that SGA improves inference efficiency on public benchmarks while maintaining competitive forecasting performance against state-of-the-art attention mechanisms. These benchmark results provide deployment-oriented evidence.",
+  "id": "http://arxiv.org/abs/2607.02344v1",
+  "authors": [
+    "Dezheng Wang",
+    "Tong Chen",
+    "Wei Yuan",
+    "Congyan Chen",
+    "Shihua Li",
+    "Hongzhi Yin"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2607.02344v1"
+}

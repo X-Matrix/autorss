@@ -1,0 +1,18 @@
+{
+  "title": "Understanding Agent-Based Patching of Compiler Missed Optimizations",
+  "link": "https://arxiv.org/abs/2607.02370v1",
+  "published": "2026-07-02T16:12:32Z",
+  "updated": "2026-07-02T16:12:32Z",
+  "summary": "Compiler missed optimizations refer to cases in which compilers failed to optimize certain code. It takes many compiler developers' efforts to implement or patch such missed optimizations. In this paper, we present a systematic study of how well agents patch compiler missed optimizations. We identify a significant challenge that patching a missed optimization requires more than just fixing the reported case, and instead requires generalizing to similar cases. We construct a benchmark of real-world LLVM missed optimization issues and compare agent-generated patches with patches from developers in terms of optimization scope. Our results show that coding agents often optimize the given examples, but many generated patches either cover only part of the developer-intended scope or partially overlap with it; in some cases, they further generalize beyond the reference patch. We further introduce historical-knowledge augmentation techniques that leverage prior LLVM optimization pull requests through retrieval and distillation, showing that they improve developer-aligned generalization and yield practical benefits when applied to real-world IR.",
+  "id": "http://arxiv.org/abs/2607.02370v1",
+  "authors": [
+    "Batu Guan",
+    "Zirui Wang",
+    "Shaohua Li"
+  ],
+  "categories": [
+    "cs.SE",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2607.02370v1"
+}
