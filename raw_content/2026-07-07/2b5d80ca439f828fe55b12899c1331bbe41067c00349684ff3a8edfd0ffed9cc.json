@@ -1,0 +1,27 @@
+{
+  "title": "PVCap: Towards Accurate 3D Dense Captioning via PseudoCap and VoxelCapNet",
+  "link": "https://arxiv.org/abs/2607.06097v1",
+  "published": "2026-07-07T10:11:35Z",
+  "updated": "2026-07-07T10:11:35Z",
+  "summary": "3D dense captioning, an emerging vision-language task, aims to generate descriptive sentences for each object in the 3D scene. Despite the impressive results achieved by previous methods, they suffer from two limitations. First, current research often employs global rigid transformations, such as rotation, to augment scenes without changing their spatial layouts. However, diverse spatial layouts are crucial for training a 3D dense captioning model to describe spatial relations between objects. Second, previous works mainly focus on the design of the caption generation pipeline while utilizing a simple network architecture for other components, i.e., backbone and detection head, which is crucial for extracting rich semantic information for captioning. In this paper, we propose PVCap to alleviate the aforementioned problems. Our PVCap consists of PseudoCap and VoxelCapNet. Specifically, PseudoCap employs a random mixing technique on instances within the dataset, generating numerous pseudo frames with diverse spatial layouts at the instance level. By utilizing a teacher-student framework, PseudoCap obtains pseudo caption labels for these pseudo frames. This data augmentation approach significantly increases the number of training samples and enhances the model's ability to describe the environment effectively. Regarding VoxelCapNet, we introduce a robust caption network that utilizes voxel features and adapts the caption head to the voxel-based network architecture. Our VoxelCapNet can serve as a competitive baseline for future research on 3D dense captioning. Extensive experiments are conducted on two prevalent benchmarks, i.e., ScanRefer and Nr3D. Notably, our method surpasses current state-of-the-art by 11.41% and 13.99% in CIDEr@0.5IoU, respectively. Codes will be made publicly available.",
+  "id": "http://arxiv.org/abs/2607.06097v1",
+  "authors": [
+    "Xiaopei Wu",
+    "Chenshu Hou",
+    "Liang Peng",
+    "Dan Xu",
+    "Binbin Lin",
+    "Xiaoshui Huang",
+    "Yuenan Hou",
+    "Yu Li",
+    "Wenxiao Wang",
+    "Haifeng Liu",
+    "Deng Cai",
+    "Wanli Ouyang"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2607.06097v1"
+}
