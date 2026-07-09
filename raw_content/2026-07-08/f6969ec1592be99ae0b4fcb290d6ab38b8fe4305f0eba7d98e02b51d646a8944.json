@@ -1,0 +1,19 @@
+{
+  "title": "FedCVESA: Taking Away Training Data in Federated Learning via Correlation Value Encoding and Segmented Aggregation",
+  "link": "https://arxiv.org/abs/2607.07314v1",
+  "published": "2026-07-08T11:55:00Z",
+  "updated": "2026-07-08T11:55:00Z",
+  "summary": "Federated learning (FL) avoids explicit data exposure by keeping raw data on local clients, yet privacy risks remain in the training process and the learned model itself. Recently, centralized Taking Away Training Data (TATD) attacks have shown that malicious training could abuse the memorization capacity of deep models to store and later recover training data. However, this memorization-based threat has not been systematically studied under FL environments, where multi-client averaging could overwrite encoded training data. In this paper, we study a white-box TATD attack in which a malicious server selects n target clients from K participating clients and actively writes private training data into the global model during federated training. We propose FedCVESA, a federated variant of Correlation Value Encoding Attack (CVEA), by adding a Pearson-correlation regularizer to the loss function of target clients, so that private training data are gradually encoded into selected model parameters, referred to as carrier parameters. To reduce the overwriting of carrier parameters during server aggregation, we further propose segmented aggregation over dispersed carrier parameters, preserving selected carrier parameters while keeping standard averaging on the remaining parameters. Experiments on MNIST, Fashion-MNIST, and CIFAR-10 under Dirichlet non-IID partitions show that the proposed method can steal semantically meaningful private training images from the trained model while maintaining acceptable main-task utility in a controlled proof-of-concept setting. These results demonstrate that FL can become a parameter-level memorization channel for active TATD attack under the studied white-box malicious-server setting.",
+  "id": "http://arxiv.org/abs/2607.07314v1",
+  "authors": [
+    "Chongkai Li",
+    "Bang Zhang",
+    "Wenjian Luo"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.CR"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2607.07314v1"
+}
