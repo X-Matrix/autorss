@@ -1,0 +1,19 @@
+{
+  "title": "Spatio-Temporal Scheduling Prediction Under Backhaul Delay for Resilient Coordinated Beamforming",
+  "link": "https://arxiv.org/abs/2607.08454v1",
+  "published": "2026-07-09T13:17:22Z",
+  "updated": "2026-07-09T13:17:22Z",
+  "summary": "Coordinated beamforming in distributed 5G networks relies on the timely exchange of inter-cell scheduling information, but backhaul latency makes this information stale. Even a single transmission time interval (TTI) of delay can reduce CBF-SLNR performance below the uncoordinated baseline, because the precoder suppresses interference toward users that are no longer active. Coordination on stale information is therefore worse than no coordination at all. To address this, we propose a two-stage predictive framework in which a Spectral Temporal Graph Neural Network (StemGNN) predicts future user equipment (UE) scheduling states from delayed historical observations, and the predictions replace stale inputs to the CBF-SLNR precoder. Evaluated on a three-cell massive MIMO downlink with 60 UEs and 64 antennas per base station under Quadriga Urban Micro (UMi) channels and a proportional fair scheduler, StemGNN achieves a mean scheduling prediction accuracy of 87.57%, outperforming LSTM, GRU, Simple RNN, and Markov chain baselines at all evaluated horizons, with gains of up to 7.71% over LSTM at longer horizons where inter-UE structural dependencies dominate over temporal autocorrelation. When integrated into coordinated beamforming, the predictions recover 57-73% of the sum rate loss caused by one TTI of backhaul delay, improving sum rate by 9.58-14.35% over the no-prediction baseline and recovering up to 83% of the Lag-1 fairness loss for cell-edge users, with fairness gains persisting at higher lag values where throughput gains diminish. These results show that treating backhaul latency as a spatio-temporal forecasting problem is an effective approach for robust inter-cell coordination in delay-constrained networks.",
+  "id": "http://arxiv.org/abs/2607.08454v1",
+  "authors": [
+    "Prashant Kumar Singh",
+    "Shubham Vaishnav",
+    "Ahmet Hasim Gökceoglu",
+    "Li Wang"
+  ],
+  "categories": [
+    "cs.NI",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2607.08454v1"
+}

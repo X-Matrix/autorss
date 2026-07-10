@@ -1,0 +1,22 @@
+{
+  "title": "FSD-VLN: Fast-Slow Dual-System Modeling for Aerial Long-Horizon Vision-Language Navigation",
+  "link": "https://arxiv.org/abs/2607.08359v1",
+  "published": "2026-07-09T11:17:04Z",
+  "updated": "2026-07-09T11:17:04Z",
+  "summary": "Vision-Language Navigation (VLN) enables UAV autonomous navigation in unknown environments by mapping language instructions to real-time visual inputs. Compared with GPS-dependent or pre-programmed navigation, VLN supports intuitive human-machine interaction and stronger environmental adaptability, requiring tight integration of high-level semantic reasoning and low-latency flight control.Existing methods suffer from structural misalignment between global multimodal understanding and sequential action generation, causing jittery trajectories and severe decision latency for long-horizon aerial navigation. To solve this issue, we propose FSD-VLN, a fast-slow dual-system architecture disentangling semantic reasoning and low-latency flight command generation.The framework has two asynchronous branches: a slow stream extracting stable semantic priors from pre-trained vision-language models, and a Diffusion Transformer (DiT) fast stream modeling cross-temporal action distributions to produce consistent flight outputs. We further introduce a time-aware adaptive optimizer to stabilize long-sequence training and reduce gradient oscillation.Large-scale low-altitude simulation experiments show FSD-VLN achieves up to 2X higher navigation success rates on unseen scenes than SOTA methods, while cutting single-action inference delay and total task runtime by over 50%. Our work validates the benefit of decoupled semantic-control modeling and provides a practical paradigm for long-horizon aerial VLN.",
+  "id": "http://arxiv.org/abs/2607.08359v1",
+  "authors": [
+    "Xueke Zhu",
+    "Qingyan Meng",
+    "Liutao Yu",
+    "Wei Zhang",
+    "Zhengyu Ma",
+    "Huihui Zhou",
+    "Yonghong Tian"
+  ],
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2607.08359v1"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "PolyUQuest: Verifiable Structure-Aware Web RAG over Heterogeneous Graphs",
+  "link": "https://arxiv.org/abs/2607.08269v1",
+  "published": "2026-07-09T09:10:52Z",
+  "updated": "2026-07-09T09:10:52Z",
+  "summary": "Existing retrieval-augmented generation (RAG) systems treat web pages as flat text, losing the structural and semantic signals encoded in HTML. We present PolyUQuest, a verifiable, structure-aware web RAG framework built on a heterogeneous graph that unifies hyperlink topology between pages, DOM hierarchy within pages, and entity-relation knowledge across pages. A two-tier router dispatches each query to one of three retrieval modes matched to its structural need, including direct block retrieval, cross-page graph traversal, and multi-hop entity reasoning. Every answer is fully verifiable, as each cited block carries its source page, heading path, and entity links so that users can trace any claim back to its structural evidence. We evaluate on the official websites of the Hong Kong Polytechnic University (PolyU), comprising 4,240 pages, 31,086 DOM blocks, 29,119 entities, and 37,680 relations, together with a multi-type evaluation benchmark. PolyUQuest outperforms existing RAG systems in answer correctness, coverage, and faithfulness, while consuming significantly fewer LLM tokens per query. The demonstration provides an interactive interface for inspecting cited answers, comparing retrieval traces across routing modes, and exploring evidence graph paths. PolyUQuest is being prepared for deployment as a student-facing QA service at PolyU.",
+  "id": "http://arxiv.org/abs/2607.08269v1",
+  "authors": [
+    "Ying Liu",
+    "Yi Ye",
+    "Quanyu Feng",
+    "Mingxi Ye",
+    "Mingtao Zhang",
+    "Haoyang Li",
+    "Chen Jason Zhang",
+    "Qing Li"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2607.08269v1"
+}

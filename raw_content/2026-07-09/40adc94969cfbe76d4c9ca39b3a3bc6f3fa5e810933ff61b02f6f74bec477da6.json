@@ -1,0 +1,24 @@
+{
+  "title": "Track2Map: Online Deformable SLAM with Motion-Aware Pose Optimization in Robotic Surgery",
+  "link": "https://arxiv.org/abs/2607.08408v1",
+  "published": "2026-07-09T12:34:55Z",
+  "updated": "2026-07-09T12:34:55Z",
+  "summary": "Gaussian splatting is the current state-of-the-art for dense, deformable 3D anatomy reconstruction in robot-assisted minimally invasive surgery (RAMIS); however, most pipelines are offline and depend on accurate camera trajectory priors (often from robotic kinematics), limiting applicability when priors are missing or noisy. To address these limitations, we propose Track2Map, an online 3D Gaussian Splatting pipeline that jointly optimizes camera trajectory and 3D deformable scene representation directly from surgical video. Track2Map is therefore capable of robust 3D reconstructions when camera trajectory priors are either absent or noisy, and due to its online nature it effectively works as a Simultaneous Localisation and Mapping (SLAM) method. To stabilize optimization in the presence of tissue motion and ambiguous visual cues, we introduce a track-anchored deformation initialization using dense 2D point tracks. Track statistics are further utilized to disentangle camera motion from scene deformation by detecting static camera periods and reducing drift during incremental mapping. Experiments on StereoMIS show improved reconstruction quality and camera trajectory against competing SLAM methods, as well as compared to non-SLAM methods that utilize camera trajectory priors. The code is available at https://track2map.github.io/.",
+  "id": "http://arxiv.org/abs/2607.08408v1",
+  "authors": [
+    "Tianyi Song",
+    "Sierra Bonilla",
+    "Xinwei Ju",
+    "Evangelos Mazomenos",
+    "Danail Stoyanov",
+    "Adam Schmidt",
+    "Omid Mohareri",
+    "Sophia Bano",
+    "Francisco Vasconcelos"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2607.08408v1"
+}
