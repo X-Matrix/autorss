@@ -1,0 +1,18 @@
+{
+  "title": "OOD-RL-Bench: A Benchmark Framework for Out-of-Distribution Detection in Reinforcement Learning",
+  "link": "https://arxiv.org/abs/2607.12523v1",
+  "published": "2026-07-14T08:57:04Z",
+  "updated": "2026-07-14T08:57:04Z",
+  "summary": "Reliable reinforcement learning (RL) agents must maintain operational integrity amidst sensor malfunctions, dynamic disturbances, and slow environmental shifts. The detection of out-of-distribution conditions is pivotal to determining when an agent's observations, transitions, or trajectory dynamics deviate from the assumptions underpinning its policy training. Current out-of-distribution (OOD) detection benchmarks typically evaluate image classifiers or static low-dimensional datasets, failing to account for the complex, action-dependent temporal structure inherent in RL trajectories. To address this gap, we present OOD-RL-Bench, a comprehensive and extensible framework designed to evaluate OOD detectors against categories of anomalies injected into RL trajectories. Detectors and anomaly injectors are integrated through shared interfaces and configuration, which allows new scoring methods and perturbation families to be evaluated without modification of the core benchmark loop. We evaluate the utility of the framework using a Deep Q-Network policy within the LunarLander-v3 environment. We assess the performance of each detector across a suite of anomaly types using matched-time AUROC, matched-time AUPRC, matched-time false-positive rate, detection delay, and segmented-onset metrics. Our analysis reveals significant performance variance across anomaly types: observation perturbations and regime switches are identified with high accuracy by several methods, while observation delay and action-conditioned dynamics remain difficult even when post-onset anomaly scores are compared against clean scores from the same timesteps. We make the framework, trained policy checkpoint, and complete results publicly available as a reproducible artefact.",
+  "id": "http://arxiv.org/abs/2607.12523v1",
+  "authors": [
+    "Emil Mittag",
+    "Richard Dazeley",
+    "Peter Vamplew"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2607.12523v1"
+}
