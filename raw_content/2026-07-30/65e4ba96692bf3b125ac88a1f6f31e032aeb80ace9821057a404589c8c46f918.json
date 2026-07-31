@@ -1,0 +1,20 @@
+{
+  "title": "AgenticASR: Refining Speech Recognition in Real-World Scenarios via an Agentic Approach",
+  "link": "https://arxiv.org/abs/2607.28175v1",
+  "published": "2026-07-30T13:12:25Z",
+  "updated": "2026-07-30T13:12:25Z",
+  "summary": "Automatic speech recognition (ASR) has achieved substantial gains in transcription accuracy, yet verbatim transcription does not necessarily produce readily usable text. It retains fillers, repetitions, false starts, and self-corrections that increase reading effort, obscure the speaker's final intent, and propagate unresolved or abandoned content to downstream tasks. Existing spoken-to-written methods process completed audio or transcripts but cannot revise emitted text when later speech changes how preceding content should be interpreted. We therefore formulate Agentic Speech Recognition (AgenticSR), an audio-to-clean-text task that removes disfluencies, resolves self-corrections, and normalizes written form while preserving the speaker's final intent. AgenticASR implements this task through an ASR--Refiner architecture that repeatedly transforms a bounded active context and replaces its corresponding output span as audio arrives. This enables continual emission and revision over streams of arbitrary duration. We also introduce AASR-Bench, a bilingual benchmark with fine-grained atomic rubrics. Across multiple ASR front ends, AgenticASR attains the highest AASR-Bench scores among evaluated systems. A human--AI agreement study shows that rubric-based judgments align with independent expert assessments. Ablations characterize Refiner capacity, context length, and the quality--latency trade-off between online and offline inference. Together, these results establish AgenticASR as a practical framework for intent-preserving clean transcription during ongoing speech. Code, AASR-Bench, and a demo will be released at https://github.com/AnXMuy/AgenticASR.",
+  "id": "http://arxiv.org/abs/2607.28175v1",
+  "authors": [
+    "Zixuan Jiang",
+    "Binghao Qiang",
+    "Jiaying Chi",
+    "Yanqiao Zhu",
+    "Kai Yu",
+    "Xie Chen"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2607.28175v1"
+}

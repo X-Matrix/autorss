@@ -1,0 +1,20 @@
+{
+  "title": "HyperClaim: Fine-Grained Cross-Modal Hypergraph Reasoning for Video Misinformation Detection",
+  "link": "https://arxiv.org/abs/2607.28375v1",
+  "published": "2026-07-30T15:35:43Z",
+  "updated": "2026-07-30T15:35:43Z",
+  "summary": "Video misinformation detection is often approached through global multimodal fusion or free-form multimodal reasoning. Both paradigms can under-represent localized authenticity cues that arise from coupled interactions among query phrases, contextual text, and short temporal spans of frames. Because such interactions are inherently higher-order, pairwise graph formulations are insufficient to capture multi-way cross-modal dependencies, whereas hypergraphs offer a suitable representation for these relations. We propose HyperClaim, a discriminative temporal hypergraph framework for sample-level authenticity classification. Using the title or benchmark-provided paired text as a claim-like query, HyperClaim constructs a sparse heterogeneous hypergraph over query tokens, evidence tokens, and sampled frames; applies confidence-aware filtering and source budgeting to form compact text-frame and short-range temporal evidence units; performs adaptive soft-incidence reasoning with residual text-video calibration; and aggregates textual, visual, and hyperedge states through a discrepancy-aware readout. Without relying on generated rationales or external tool calls, HyperClaim preserves fine-grained cross-modal and temporal structure that global fusion tends to flatten. Under the FactGuard temporal protocol, it achieves 83.7%, 82.0%, and 87.3% accuracy on FakeSV, FakeTT, and FakeVV, respectively, outperforming strong discriminative and reasoning-centric baselines. Learned incidence and attention weights further reveal token- and frame-level structure.",
+  "id": "http://arxiv.org/abs/2607.28375v1",
+  "authors": [
+    "Xiangbo Wang",
+    "Jiasheng Zhang",
+    "Xingtong Yu",
+    "Luoqiang Lei",
+    "Delvin Ce Zhang"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.MM"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2607.28375v1"
+}

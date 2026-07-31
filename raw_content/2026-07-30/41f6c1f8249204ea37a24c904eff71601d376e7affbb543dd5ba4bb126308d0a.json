@@ -1,0 +1,17 @@
+{
+  "title": "LeanCSP: A Framework for Certifying Constraint Reformulation and Solving in Lean",
+  "link": "https://arxiv.org/abs/2607.28459v1",
+  "published": "2026-07-30T16:21:58Z",
+  "updated": "2026-07-30T16:21:58Z",
+  "summary": "Constraint programming is a core technology for solving complex combinatorial problems in scheduling, planning, configuration, and verification. Trusting its results therefore demands guarantees at two levels: that reformulations applied beforehand are semantics-preserving, and that solvers produce correct answers. In this work, we introduce a framework that addresses both verification levels in the Lean theorem prover: it can be used to prove formulation-level properties, such as equivalence, equisatisfiability, and the correctness of symmetry-breaking constraints, parametrically for entire problem families; and to check solver-produced certificates for individual instances via translation backends to external formats such as MiniZinc, SMT-LIB, and OPB. Combining both levels yields an end-to-end workflow that establishes the satisfiability or unsatisfiability of a constraint problem without trusting the external solver. Experimental results show that our framework's verified symmetry breaking also pays off in practice: a single parametric proof per problem family, reused across all instance sizes, reduces solver search effort by a factor of up to 2x10^7, while the entire in-Lean certification stays affordable, taking at most a few minutes for our largest instances.",
+  "id": "http://arxiv.org/abs/2607.28459v1",
+  "authors": [
+    "Pablo Manrique",
+    "Stefan Szeider"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.LO"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2607.28459v1"
+}
