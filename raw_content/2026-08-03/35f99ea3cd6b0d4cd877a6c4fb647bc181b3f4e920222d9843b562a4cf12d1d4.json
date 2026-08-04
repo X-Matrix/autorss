@@ -1,0 +1,21 @@
+{
+  "title": "PAC Approximation and DIRECT Optimization for Parametric Markov Models",
+  "link": "https://arxiv.org/abs/2608.02184v1",
+  "published": "2026-08-03T13:07:59Z",
+  "updated": "2026-08-03T13:07:59Z",
+  "summary": "In this paper, we consider the parameter synthesis and optimization problem for parametric Markov decision processes (pMDPs), the extension of classical MDPs where exact probability values are replaced by parametric expressions. Computing the rational function $f_{\\lsf}$ that maps parameter valuations to the satisfaction value of a PRCTL property $\\lsf$ is a computationally expensive task, particularly for pMDPs where the optimal policy may vary across the parameter space. We adopt the \\emph{scenario approach} to efficiently synthesize a probably approximately correct (PAC) approximation $\\ApproxFunOfProperty{f}$ of $f_{\\lsf}$: by sampling parameter configurations and solving a linear program, we obtain a polynomial approximation whose error margin $\\margin$ is guaranteed, with prescribed confidence, for all but an $\\errorRate$-fraction of the parameter domain under the sampling distribution. We further show how this PAC framework can be combined with statistical model checking (SMC), enabling the analysis of black-box parametric models. Building on the PAC approximation, we integrate the DIRECT (DIviding RECTangles) algorithm for derivative-free global optimization over the parameter space. We establish conditional optimality-gap guarantees: under explicit Lipschitz and PAC-good-set assumptions, the difference between the true optimum $f_{\\lsf}(\\parameters^{*})$ and the value found by DIRECT is bounded by a partition-diameter term and, in the PAC case, an additional approximation-error term. An empirical evaluation on 2997 benchmarks focuses on the new DIRECT-based optimization component. The results show that DIRECT variants solve fewer instances than the scenario optimizer, but on their common successful instances they often return slightly better objective values and usually run faster, while remaining close to the scenario values within the PAC margin.",
+  "id": "http://arxiv.org/abs/2608.02184v1",
+  "authors": [
+    "Zhiming Chi",
+    "Ying Liu",
+    "Andrea Turrini",
+    "Lijun Zhang",
+    "David N. Jansen"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.FL",
+    "cs.LO"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.02184v1"
+}
