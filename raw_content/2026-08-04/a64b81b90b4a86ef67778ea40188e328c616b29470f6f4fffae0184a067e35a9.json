@@ -1,0 +1,19 @@
+{
+  "title": "Oilbird: Training-Free Speculative Decoding with Keys the Verifier Already Computes",
+  "link": "https://arxiv.org/abs/2608.03839v1",
+  "published": "2026-08-04T15:47:51Z",
+  "updated": "2026-08-04T15:47:51Z",
+  "summary": "Training-free speculative decoding drafts by matching an exact suffix of the context against a pool of earlier context. That lookup misses correct drafts already in the pool, most visibly on tool-calling traffic, where a request repeats almost everything but the few values minted for it, and where one rejected token discards the correct continuation behind it. We diagnose the failure position by position across ten benchmarks and find it to be a problem of addressing rather than of coverage: on our densest tool-calling benchmark, about half of what the strongest exact-match drafter misses is present in the pool yet unreachable by exact matching. We therefore propose a second, semantic draft source: the same pool, re-keyed by the hidden state the verifier has already computed at each committed token, together with a merge that lets it ride inside an existing lexical drafter's tree. In three published drafters, at matched pool and budget, it lifts accepted length by 24-29%. Oilbird reaches 4.4x autoregressive decoding speed on API-Bank, against 3.9x for the strongest training-free baseline in our harness and 2.0x for EAGLE-3.",
+  "id": "http://arxiv.org/abs/2608.03839v1",
+  "authors": [
+    "Tao Jin",
+    "Phuong Minh Nguyen",
+    "Zhenzhu Yan",
+    "Teeradaj Racharak",
+    "Naoya Inoue"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.03839v1"
+}
