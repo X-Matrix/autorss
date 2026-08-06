@@ -1,0 +1,16 @@
+{
+  "title": "SVI-DAG: A Structured Variational Inference Approach to Bayesian Causal Discovery",
+  "link": "https://arxiv.org/abs/2608.04930v1",
+  "published": "2026-08-05T14:56:14Z",
+  "updated": "2026-08-05T14:56:14Z",
+  "summary": "Bayesian causal discovery seeks to determine the posterior distribution of causal theories, which are interpreted as directed acyclic graphs (DAGs) that explain the observed data. The resulting posterior allows systematic reasoning regarding epistemic uncertainty within these theories. Nonetheless, finding such graphs is difficult due to identifiability problems and limited observational data. Furthermore, precisely approximating posterior over graphs is challenging given vast range of potential DAGs. Recent Bayesian approaches have addressed some of these challenges, yet they remain limited as they fail to encode dependencies between edges, and lack principled ways to incorporate domain knowledge as inductive biases during the search process. To overcome these limitations, we propose SVI-DAG, a structured variational inference approach to Bayesian causal discovery using observational data and prior beliefs that uses normalizing flows to model dependencies between edges, supporting expressive and multimodal posterior learning over DAGs. To mitigate mode seeking behaviour in evidence lower bound optimization and promote mode coverage, we use stein variational gradient descent to update the node potentials using a kernel in acyclicity space. We evaluate SVI-DAG against 5 state-of-the-art Bayesian DAG learning methods and demonstrate superior performance in uncertainty quantification while remaining competitive in terms of structural accuracy.",
+  "id": "http://arxiv.org/abs/2608.04930v1",
+  "authors": [
+    "Shrenik Zinage"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.04930v1"
+}
