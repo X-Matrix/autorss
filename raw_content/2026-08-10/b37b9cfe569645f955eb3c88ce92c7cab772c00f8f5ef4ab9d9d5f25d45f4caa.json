@@ -1,0 +1,20 @@
+{
+  "title": "Agentic Auto-Research is Fuzz Testing",
+  "link": "https://arxiv.org/abs/2608.09855v1",
+  "published": "2026-08-10T17:13:02Z",
+  "updated": "2026-08-10T17:13:02Z",
+  "summary": "Autonomous research agents can generate experiments faster than researchers can validate them. Researchers have responded by scaling the proposer and ranking more samples with a learned judge or human reviewers. We argue that this *generate-and-rank* paradigm misses the problem of sparse feedback. Within a declared research problem, an agent follows the control loop of a greybox fuzzer: it proposes a candidate, executes it, observes feedback, and chooses what to try next. A fuzzer rarely finds a bug, but coverage makes partial progress observable on every execution. Fuzzers then use that signal to mutate inputs and allocate effort, rather than only to rank completed runs. Auto-research needs the same two capabilities. First, each experiment should expose a cheap, dense signal of epistemic progress before final scientific validation is available. Second, that signal should determine the next intervention so that the agent searches rather than repeatedly samples. Because the optimized progress signal is guidance rather than a verdict, final validation must still decide what counts as a discovery using evidence protected from adaptive reuse. We propose controlled tests of whether candidate signals predict validated progress, whether feedback-directed search yields more validated discoveries per unit cost than repeated sampling, and whether protected validation reduces false discoveries. Feedback architecture, not only generation, is a central bottleneck in auto-research.",
+  "id": "http://arxiv.org/abs/2608.09855v1",
+  "authors": [
+    "Yifeng He",
+    "Jicheng Wang",
+    "Yinzhe Zhao",
+    "Jiachen Liu",
+    "Hao Chen"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.09855v1"
+}

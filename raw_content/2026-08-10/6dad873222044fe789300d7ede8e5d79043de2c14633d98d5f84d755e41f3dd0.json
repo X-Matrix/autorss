@@ -1,0 +1,21 @@
+{
+  "title": "Distributed Optimization with Streaming Data: A Temporal Weighting Perspective",
+  "link": "https://arxiv.org/abs/2608.09565v1",
+  "published": "2026-08-10T13:02:58Z",
+  "updated": "2026-08-10T13:02:58Z",
+  "summary": "Optimization theory is a widely used tool for intelligent decision-making. While classical optimization deals with fixed, time-invariant objective functions, many modern applications operate in dynamic environments where data arrive sequentially, and the learning objective evolves over time, often under decentralized data and communication constraints. Motivated by these trends, we study decentralized optimization from streaming data through a structured time-varying formulation in which the global objective is a temporally weighted average of losses observed across the network. We analyze multi-iteration decentralized first-order methods, including decentralized gradient descent. For strongly convex and smooth losses, we develop guarantees for the Euclidean-norm \\emph{tracking error} through a contraction-mapping viewpoint. The resulting bounds decompose the tracking error into a fixed-point tracking component and a bias term induced by decentralization and data heterogeneity. We specialize our analysis to uniform and exponentially discounted weights, as well as their finite-memory \\emph{windowed} counterparts. The bounds explicitly characterize the roles of the temporal weighting rule, per-step iteration budget, step size, and network connectivity. Uniform weighting yields a vanishing fixed-point tracking contribution of order $\\mathcal O(1/t)$, whereas discounted and windowed strategies generally induce non-vanishing tracking floors governed by the discount factor and effective memory, respectively. In all cases, decentralization induces an additional non-zero bias floor under a constant step size. Numerical experiments illustrate the predicted trends.",
+  "id": "http://arxiv.org/abs/2608.09565v1",
+  "authors": [
+    "Muhammad Faraz Ul Abrar",
+    "Nicolò Michelusi",
+    "Erik G. Larsson"
+  ],
+  "categories": [
+    "eess.SP",
+    "cs.AI",
+    "cs.LG",
+    "eess.SY",
+    "math.OC"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.09565v1"
+}

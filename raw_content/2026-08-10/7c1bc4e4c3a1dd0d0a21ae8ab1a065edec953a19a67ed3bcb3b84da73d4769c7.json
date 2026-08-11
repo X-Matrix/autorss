@@ -1,0 +1,20 @@
+{
+  "title": "Confusion-Geometry Rebalancing for Long-Tailed Adversarial Training",
+  "link": "https://arxiv.org/abs/2608.09688v1",
+  "published": "2026-08-10T14:54:00Z",
+  "updated": "2026-08-10T14:54:00Z",
+  "summary": "Adversarial training under long tailed distributions suffers from a dual imbalance: the class imbalance skews the training objective toward head classes, and the adversarial inner maximization may further amplify this bias. Existing methods mitigate this issue by correcting class priors or adapting class wise robust supervision, yet they treat each class in isolation and fail to identify which boundaries drive long tailed collapse. We propose a Confusion Geometry Rebalancing method (CGRm) for long tail adversarial training, a plug in framework that leverages directed robust errors as training signals. CGRm leverages periodic robust evaluations to derive source class loss weights, class wise robust coefficients, and a directed confusion geometry graph. The method then couples feedback weighted robust optimization with graph guided margin correction, thereby boosting the robustness of vulnerable classes and sharpening the critical boundaries that drive long tailed performance degradation. Experiments on long tailed benchmarks show that CGRm achieves consistent robust performance gains over existing methods, with ablations validating the contribution of each component. We provide the code in the supplement.",
+  "id": "http://arxiv.org/abs/2608.09688v1",
+  "authors": [
+    "Mengnan Zhao",
+    "Geyong Min",
+    "Lihe Zhang",
+    "Tianhang Zheng",
+    "Jie Cui"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.09688v1"
+}

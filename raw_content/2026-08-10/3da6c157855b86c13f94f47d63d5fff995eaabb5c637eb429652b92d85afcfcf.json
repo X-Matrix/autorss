@@ -1,0 +1,23 @@
+{
+  "title": "Structure-Enhanced Features and Quality-Aware Dynamic Anchor Scoring for Robust Lane Detection",
+  "link": "https://arxiv.org/abs/2608.09610v1",
+  "published": "2026-08-10T13:52:04Z",
+  "updated": "2026-08-10T13:52:04Z",
+  "summary": "Lane detection requires recovering thin, elongated, and frequently occluded lane structures under challenging driving conditions. While anchor-based detectors provide efficient candidate generation, their performance is limited by two coupled issues: backbone features often lose structural continuity along partially visible lanes, and classification confidence may decouple from line-level localization quality, allowing inaccurate anchors to persist before non-maximum suppression (NMS). We propose a structure-enhanced and quality-aware framework that improves lane representation and dynamic-anchor scoring while preserving the inference pipeline of the Anchor Decomposition Network (ADNet). Specifically, a Gated Horizontal-Vertical Token (GHVT) module enhances mid- and high-level backbone features via lightweight directional token interactions with a learnable residual gate. In parallel, Line-Quality-Aware Dynamic Anchor Scoring (LQAS) calibrates existing classification logits using quality supervision, hard-negative suppression, and pairwise ranking without adding inference branches. On the VIL-100 dataset, our method improves ADNet-R34 from 89.97 to 91.28 in F1 score at the 0.5 intersection-over-union threshold (F1@50), reducing both false positives and false negatives. Additional experiments on CULane and TuSimple datasets, extensive ablations, score-distribution diagnostics, and runtime analysis confirm complementary structural and ranking improvements with minimal computational overhead.",
+  "id": "http://arxiv.org/abs/2608.09610v1",
+  "authors": [
+    "Weize Cai",
+    "Yongqi Dong",
+    "Zhida Shao",
+    "Yichen Liu",
+    "Zixin Fu"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG",
+    "eess.IV",
+    "eess.SP"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.09610v1"
+}
