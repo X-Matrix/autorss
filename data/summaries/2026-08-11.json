@@ -1,0 +1,933 @@
+{
+  "date": "2026-08-11",
+  "total_items": 47,
+  "categories": {
+    "大语言模型/LLM": [
+      {
+        "title": "V-FiLLM: Verified Financial LLM Reasoning Benchmark",
+        "title_zh": "V-FiLLM：可验证的金融大语言模型推理基准",
+        "link": "https://arxiv.org/abs/2608.11047v1",
+        "summary": "While existing benchmarks have made substantial progress in evaluating LLMs across STEM domains, financial reasoning over structured data remains comparatively less explored. We introduce V-FiLLM, a framework that generates financial reasoning benchmarks from executable computation trees grounded in",
+        "summary_zh": "尽管现有基准在评估STEM领域的LLM方面取得了实质性进展，但结构化数据上的金融推理仍相对较少探索。我们提出了V-FiLLM，一个从可执行计算树生成金融推理基准的框架。创新点在于：通过计算树确保每个问题有可验证的答案，并覆盖多种金融推理类型；基准生成过程可自动化，且支持细粒度评估。主要贡献是提供了一个可验证的金融推理基准，能够更可靠地评估LLM在金融领域的推理能力，填补了该领域基准的空白。",
+        "published": "2026-08-11T15:18:47Z",
+        "authors": [
+          "Alicia Larsen",
+          "Victoire Laurent",
+          "Aulia Kharis Rakhamsari"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CE",
+          "cs.LG"
+        ]
+      },
+      {
+        "title": "Why Does CLAUDE.md Keep Growing? Catastrophic Remembering in Agentic Coding",
+        "title_zh": "为什么CLAUDE.md不断增长？代理编程中的灾难性记忆",
+        "link": "https://arxiv.org/abs/2608.11095v1",
+        "summary": "Agentic coding READMEs like CLAUDE.md grow without bound in real repositories, stopping only when the repository retires or someone rewrites the file wholesale. We trace this to imperfect recall: appending an instruction is always cheap, but once an instruction's rationale is gone, deleting it witho",
+        "summary_zh": "在真实代码库中，像CLAUDE.md这样的代理编程README文件会无限制地增长，直到仓库退役或有人重写整个文件。我们将此归因于不完美的回忆：追加指令总是廉价的，但一旦指令的理由消失，删除它就会变得困难。本文分析了这种“灾难性记忆”现象，并提出了潜在解决方案。创新点在于揭示了代理编码中记忆管理的问题，并探讨了如何通过更好的记忆机制来防止文件无限增长。主要贡献是提出了一个关于代理编程中记忆管理的重要见解，对设计更高效的代理系统具有指导意义。",
+        "published": "2026-08-11T16:00:55Z",
+        "authors": [
+          "Kushal Chakrabarti"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LG",
+          "cs.SE"
+        ]
+      },
+      {
+        "title": "FaithformBench: Benchmarking Faithfulness of Mathematical Chain-of-Thought Autoformalisation",
+        "title_zh": "FaithformBench：数学链式思维自动形式化的忠实度基准测试",
+        "link": "https://arxiv.org/abs/2608.10916v1",
+        "summary": "Autoformalisation (AF) systems map natural language reasoning steps into formal statements in a proof assistant such as Lean. We consider how to assess the faithfulness of these systems. Existing approaches require expensive human-annotated ground truth, or rely on LLM judges or embedding models, wh",
+        "summary_zh": "自动形式化（AF）系统将自然语言推理步骤映射为证明助手（如Lean）中的形式化语句。本文探讨如何评估这些系统的忠实度。现有方法需要昂贵的人工标注真值，或依赖LLM评判器或嵌入模型，但这些方法可能不可靠或缺乏可解释性。为此，我们提出了FaithformBench，一个用于评估数学链式思维自动形式化忠实度的基准测试。该基准测试通过将自然语言推理步骤与形式化语句进行对齐，并引入多种评估指标，旨在更准确地衡量AF系统的忠实度。我们的实验表明，现有AF系统在忠实度方面仍有显著提升空间，FaithformBench为该领域的研究提供了标准化的评估平台。",
+        "published": "2026-08-11T13:36:52Z",
+        "authors": [
+          "Rob Cornish",
+          "Iacopo Ghinassi",
+          "Po-Hung Yeh"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.AI",
+          "cs.LO"
+        ]
+      },
+      {
+        "title": "ReLTEx: Reliable LLM-based Taxonomy Expansion",
+        "title_zh": "ReLTEx：基于LLM的可靠分类体系扩展",
+        "link": "https://arxiv.org/abs/2608.10970v1",
+        "summary": "Recent advances in Large Language Models (LLMs) have demonstrated strong capabilities in generating semantically relevant concepts and relations, making them promising tools for taxonomy enrichment. However, directly relying on LLM-generated expansions often leads to noisy, redundant, or hierarchica",
+        "summary_zh": "大语言模型（LLM）在生成语义相关的概念和关系方面展现了强大能力，使其成为分类体系扩充的有力工具。然而，直接依赖LLM生成的扩展往往导致噪声、冗余或层次不一致的问题。为此，我们提出了ReLTEx，一种基于LLM的可靠分类体系扩展方法。ReLTEx通过结合外部知识库和自一致性验证，过滤掉低质量的候选概念，并确保新加入的概念与现有层次结构保持一致。实验结果表明，ReLTEx在扩展质量和层次一致性方面显著优于现有方法，为分类体系的自动化扩充提供了可靠解决方案。",
+        "published": "2026-08-11T14:29:58Z",
+        "authors": [
+          "Zeinab Ghamlouch",
+          "Mehwish Alam"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ]
+      }
+    ],
+    "计算机视觉/CV": [
+      {
+        "title": "CARE: Confidence-Aware Reasoning for Reliable Medical VQA",
+        "title_zh": "CARE：用于可靠医学视觉问答的置信度感知推理",
+        "link": "https://arxiv.org/abs/2608.10964v1",
+        "summary": "Reinforcement Fine-Tuning (RFT) has enabled medical Multimodal Large Language Models (MLLMs) to produce Chain-of-Thought (CoT) reasoning for visual question answering, yet these models suffer from confidence miscalibration---a systematic gap between expressed certainty and actual diagnostic accuracy. This paper introduces CARE (Confidence-Aware Reasoning), a framework that calibrates the confidence of medical MLLMs during reasoning, improving reliability in medical VQA tasks.",
+        "summary_zh": "强化微调（RFT）使医学多模态大语言模型（MLLM）能够为视觉问答生成思维链（CoT）推理，但这些模型存在置信度校准偏差——即表达的确信度与实际诊断准确性之间存在系统性差距。本文提出CARE（置信度感知推理）框架，在推理过程中校准医学MLLM的置信度，从而提升医学视觉问答的可靠性。创新点在于将置信度校准融入推理过程，显著减少了过度自信或不足自信的问题，为医疗AI的安全应用提供了保障。",
+        "published": "2026-08-11T14:28:52Z",
+        "authors": [
+          "Yuetian Du",
+          "Yucheng Wang",
+          "Zhenyuan Chen"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ]
+      },
+      {
+        "title": "R4DSG: Relative 4D Scene Graph Memory for Object-Centric Question Answering in Long Egocentric Video",
+        "title_zh": "R4DSG：用于长时自我中心视频中对象中心问答的相对4D场景图记忆",
+        "link": "https://arxiv.org/abs/2608.11017v1",
+        "summary": "Long-horizon egocentric video is a rich substrate for wearable AI assistants, but object-centric questions such as where an item was moved, when it last changed state, or why it was relocated remain difficult because caption- and transcript-based memories rarely preserve persistent object identity or spatial-temporal relations. We propose R4DSG, a memory architecture that builds a relative 4D scene graph (3D + time) to track object states and relations over time. This enables accurate object-centric QA in long videos, with applications in wearable assistance and augmented reality.",
+        "summary_zh": "长时间跨度的自我中心视频为可穿戴AI助手提供了丰富素材，但基于字幕和转录的记忆难以保留对象的持久身份或时空关系，导致对象中心问题（如物品被移动至何处、何时改变状态、为何被重新放置）难以回答。本文提出R4DSG，一种构建相对4D场景图（3D+时间）的记忆架构，用于跟踪对象状态和关系随时间的变化。该创新显著提升了长视频中对象中心问答的准确性，为可穿戴设备和增强现实应用提供了有力支持。",
+        "published": "2026-08-11T15:00:15Z",
+        "authors": [
+          "Ke Ma",
+          "Yamin Mao",
+          "Weiming Li"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI",
+          "cs.HC",
+          "cs.MM"
+        ]
+      },
+      {
+        "title": "A Comparative Evaluation of Deep Learning Object Detection Models on a Real-World Multi-Plant Dataset from Africa",
+        "title_zh": "基于非洲真实多植物数据集的深度学习目标检测模型比较评估",
+        "link": "https://arxiv.org/abs/2608.11053v1",
+        "summary": "The application of computer vision in agriculture has shown significant potential for improving crop monitoring and precision farming. However, many existing approaches rely on controlled datasets that do not adequately represent realworld farming conditions, particularly in underrepresented regions",
+        "summary_zh": "计算机视觉在农业中的应用显示出改善作物监测和精准农业的巨大潜力。然而，许多现有方法依赖于受控数据集，这些数据集不能充分代表现实世界的农业条件，尤其是在代表性不足的地区。本文在来自非洲的真实多植物数据集上，对多种深度学习目标检测模型进行了系统比较评估。创新点在于提供了一个贴近实际应用场景的基准测试，揭示了模型在复杂背景、光照变化和遮挡等条件下的性能差异。主要贡献是填补了非洲农业场景下目标检测模型评估的空白，为实际部署提供了有价值的参考。",
+        "published": "2026-08-11T15:22:58Z",
+        "authors": [
+          "Ismail Ismail Tijjani",
+          "Sunusi Muhammad Ibrahim",
+          "Amina Ibrahim Khaleel"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ]
+      },
+      {
+        "title": "Entropy-Centric Explainable AI for Remote Sensing Image Segmentation",
+        "title_zh": "面向遥感图像分割的以熵为中心的可解释人工智能",
+        "link": "https://arxiv.org/abs/2608.11064v1",
+        "summary": "Artificial intelligence (AI) has become a powerful approach to solving complex problems in critical domains. Many concerns arise regarding the decision-making process of its models, mainly due to deep neural networks outperforming their peers at the cost of ambiguity in feature extraction and prediction. In this paper, we propose an entropy-centric explainable AI method for remote sensing image segmentation. Our approach quantifies uncertainty in feature maps and predictions, providing interpretable explanations for model decisions. We introduce a novel entropy-based loss that encourages the model to focus on high-uncertainty regions, improving segmentation accuracy while maintaining explainability. Experiments on remote sensing datasets show that our method not only enhances performance but also offers clear insights into the model's reasoning.",
+        "summary_zh": "人工智能已成为解决关键领域复杂问题的有力方法。然而，深度神经网络在性能上超越同类的同时，其特征提取和预测的模糊性引发了对决策过程的担忧。本文提出了一种以熵为中心的可解释人工智能方法，用于遥感图像分割。我们的方法量化特征图和预测中的不确定性，为模型决策提供可解释的解释。我们引入了一种新颖的基于熵的损失函数，鼓励模型关注高不确定性区域，从而提高分割精度并保持可解释性。在遥感数据集上的实验表明，我们的方法不仅提升了性能，还提供了对模型推理的清晰洞察。",
+        "published": "2026-08-11T15:31:07Z",
+        "authors": [
+          "Ali Saleh",
+          "Abdul Karim Gizzini",
+          "Mohamad Ghassany"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ]
+      },
+      {
+        "title": "BPG: Balancing Plasticity and Generalization for Domain Incremental Learning",
+        "title_zh": "BPG：域增量学习中可塑性与泛化性的平衡",
+        "link": "https://arxiv.org/abs/2608.10804v1",
+        "summary": "Deep neural networks excel in various tasks but struggle to generalize across evolving data distributions, leading to significant performance degradation under domain shifts. Domain incremental learning (DIL) addresses this challenge by enabling models to continuously adapt while retaining prior kno",
+        "summary_zh": "深度神经网络在各种任务中表现出色，但在面对不断变化的数据分布时泛化能力不足，导致域偏移下性能显著下降。域增量学习（DIL）通过使模型在保留先前知识的同时持续适应来解决这一挑战。本文提出BPG方法，旨在平衡可塑性与泛化性，通过动态调整模型参数更新策略，在适应新域的同时避免灾难性遗忘，从而在多个基准数据集上取得最优性能。",
+        "published": "2026-08-11T11:22:27Z",
+        "authors": [
+          "Qiang Wang",
+          "Songlin Dong",
+          "Shaokun Wang"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI",
+          "cs.LG"
+        ]
+      },
+      {
+        "title": "Modelling Geographic Atrophy Progression using Implicit Neural Representations",
+        "title_zh": "利用隐式神经表示建模地理萎缩进展",
+        "link": "https://arxiv.org/abs/2608.10807v1",
+        "summary": "Age-related Macular Degeneration (AMD) is the major cause of blindness in the Western world. Its late dry phase is characterised by irreversible atrophic areas, namely Geographic Atrophy (GA). Longitudinal Fundus Autofluorescence (FAF) image acquisitions are currently the main tool for assessing les",
+        "summary_zh": "年龄相关性黄斑变性（AMD）是西方世界致盲的主要原因，其晚期干性阶段以不可逆的萎缩区域（即地理萎缩，GA）为特征。纵向眼底自发荧光（FAF）图像采集是目前评估病变进展的主要工具。本文提出使用隐式神经表示（INR）对GA进展进行建模，通过连续表示学习病变的时间演变，实现对萎缩区域增长的高精度预测，为临床诊断提供辅助。",
+        "published": "2026-08-11T11:26:01Z",
+        "authors": [
+          "Simone Sarrocco",
+          "Paul Friedrich",
+          "Florentin Bieder"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ]
+      },
+      {
+        "title": "3D Weighted Geometric Graph Neural Networks for Sheep Facial Pain Assessment",
+        "title_zh": "用于绵羊面部疼痛评估的3D加权几何图神经网络",
+        "link": "https://arxiv.org/abs/2608.11050v1",
+        "summary": "Deep learning systems perform mainly within the 2D for a single image domain and take the face as a single-dimension representation, losing sight of the 3D anatomy of sheep and cross-landmark spatial relationships that are intrinsic to the clinically proven Sheep Pain Facial Expression Scale (SPFES)",
+        "summary_zh": "深度学习系统主要在2D单图像域中运行，将面部作为一维表示，忽略了绵羊的3D解剖结构和跨关键点的空间关系，而这些关系是临床上已验证的绵羊疼痛面部表情量表（SPFES）所固有的。本文提出3D加权几何图神经网络，利用3D面部关键点构建图结构，并学习关键点间的空间关系，从而更准确地评估绵羊面部疼痛，在真实数据集上优于现有方法。",
+        "published": "2026-08-11T15:21:36Z",
+        "authors": [
+          "Alam Noor",
+          "Luis Almeida",
+          "Mohamed Daoudi"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ]
+      },
+      {
+        "title": "MIRA: Medical Image Reflection for Agentic Diagnosis",
+        "title_zh": "MIRA：用于智能诊断的医学图像反思",
+        "link": "https://arxiv.org/abs/2608.10827v1",
+        "summary": "Medical visual agents can use tools to inspect images and retrieve external knowledge, but indiscriminate tool use may introduce noisy or misleading evidence. Reliable diagnosis therefore requires not only acquiring additional observations, but also verifying whether tool actions are necessary and w",
+        "summary_zh": "医学视觉智能体可以使用工具检查图像并检索外部知识，但不加选择地使用工具可能会引入噪声或误导性证据。因此，可靠的诊断不仅需要获取额外的观察结果，还需要验证工具操作是否必要且正确。本文提出MIRA框架，通过反思机制让智能体在诊断过程中自我评估工具使用的合理性，过滤不可靠信息，从而提高诊断的准确性和可靠性。",
+        "published": "2026-08-11T11:57:27Z",
+        "authors": [
+          "Shengzhi Wang",
+          "Jun Yang",
+          "Kai Wu"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ]
+      },
+      {
+        "title": "Temporally Grounded Compositional Camera Motion Understanding via Geometric Knowledge Distillation",
+        "title_zh": "基于几何知识蒸馏的时间接地组合式相机运动理解",
+        "link": "https://arxiv.org/abs/2608.10932v1",
+        "summary": "Understanding camera motion is fundamental to video perception, with applications in spatial intelligence and controllable video generation. Multimodal large language models (MLLMs) provide a natural interface for this task, but existing work typically assigns one or more labels to an entire clip. S",
+        "summary_zh": "理解相机运动是视频感知的基础，在空间智能和可控视频生成中具有重要应用。多模态大语言模型（MLLMs）为这一任务提供了自然接口，但现有工作通常为整个片段分配一个或多个标签。本文提出了一种基于几何知识蒸馏的方法，实现时间上接地（temporally grounded）的组合式相机运动理解。通过利用几何知识蒸馏，模型能够更精细地理解视频中相机运动的时序变化和组合特征，从而提升视频感知的准确性和可解释性。该方法在相关基准上展示了显著优势，为视频理解和生成提供了新思路。",
+        "published": "2026-08-11T14:00:02Z",
+        "authors": [
+          "Dazhao Du",
+          "Shiyan Du",
+          "Jian Liu"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ]
+      },
+      {
+        "title": "Evidence-Grounded Trustworthy Multimodal Reasoning and Evaluation Benchmark in Complex Urban Scenes",
+        "title_zh": "复杂城市场景中基于证据的可信多模态推理与评估基准",
+        "link": "https://arxiv.org/abs/2608.10954v1",
+        "summary": "While Multimodal Large Language Models (MLLMs) demonstrate impressive performance in benign scenarios, their cognitive reliability deteriorates significantly in complex scenes under adverse conditions. In these settings, models often rely on implicit inference without sufficient visual evidence, lea",
+        "summary_zh": "尽管多模态大语言模型（MLLMs）在良性场景中表现出色，但在恶劣条件下的复杂场景中，其认知可靠性显著下降。在这种情况下，模型往往依赖隐式推理而缺乏充分的视觉证据，导致推理结果不可信。本文提出了一个基于证据的可信多模态推理基准，专门针对复杂城市场景，要求模型提供可验证的视觉证据来支持其推理。该基准包含多种复杂场景和对抗性条件，用于评估模型的推理可靠性和证据基础。主要贡献包括：构建了一个新的评估基准，强调了证据在可信推理中的重要性，并提供了对MLLMs在复杂场景中局限性的深入分析。",
+        "published": "2026-08-11T14:23:07Z",
+        "authors": [
+          "Zhaoyang Wei",
+          "Bowen Jiang",
+          "Xumeng Han"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ]
+      }
+    ],
+    "强化学习/RL": [],
+    "多模态学习": [
+      {
+        "title": "CARE: Confidence-Aware Reasoning for Reliable Medical VQA",
+        "title_zh": "CARE：用于可靠医学视觉问答的置信度感知推理",
+        "link": "https://arxiv.org/abs/2608.10964v1",
+        "summary": "Reinforcement Fine-Tuning (RFT) has enabled medical Multimodal Large Language Models (MLLMs) to produce Chain-of-Thought (CoT) reasoning for visual question answering, yet these models suffer from confidence miscalibration---a systematic gap between expressed certainty and actual diagnostic accuracy. This paper introduces CARE (Confidence-Aware Reasoning), a framework that calibrates the confidence of medical MLLMs during reasoning, improving reliability in medical VQA tasks.",
+        "summary_zh": "强化微调（RFT）使医学多模态大语言模型（MLLM）能够为视觉问答生成思维链（CoT）推理，但这些模型存在置信度校准偏差——即表达的确信度与实际诊断准确性之间存在系统性差距。本文提出CARE（置信度感知推理）框架，在推理过程中校准医学MLLM的置信度，从而提升医学视觉问答的可靠性。创新点在于将置信度校准融入推理过程，显著减少了过度自信或不足自信的问题，为医疗AI的安全应用提供了保障。",
+        "published": "2026-08-11T14:28:52Z",
+        "authors": [
+          "Yuetian Du",
+          "Yucheng Wang",
+          "Zhenyuan Chen"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ]
+      },
+      {
+        "title": "VibeLifeBench: Can Your Life Agent Be Proactive and Persistent in a Living World?",
+        "title_zh": "VibeLifeBench：你的生活代理能否在生活世界中主动且持久？",
+        "link": "https://arxiv.org/abs/2608.10875v1",
+        "summary": "Large language model (LLM) agents are increasingly deployed as personal assistants. Existing evaluations, however, mostly use short, self-contained requests in static environments. Everyday life assistance is different. A task runs for weeks rather than minutes. The world keeps changing while the ag",
+        "summary_zh": "大型语言模型代理越来越多地被部署为个人助理。然而，现有评估大多使用静态环境中的简短、自包含请求。日常生活辅助则不同：任务持续数周而非几分钟，世界在不断变化。本文提出VibeLifeBench基准，评估生活代理在动态世界中的主动性和持久性。创新点在于构建了长期、动态的评估环境，要求代理主动感知变化并持续执行任务，填补了现有评估的空白。",
+        "published": "2026-08-11T12:52:38Z",
+        "authors": [
+          "Xiaohongshu Inc"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ]
+      },
+      {
+        "title": "Test-Time Self-Evolving GUI Visual Grounding via Reflection-Guided On-Policy Self-Distillation",
+        "title_zh": "基于反射引导的在线策略自蒸馏的测试时自进化GUI视觉定位",
+        "link": "https://arxiv.org/abs/2608.11191v1",
+        "summary": "GUI Visual Grounding is a fundamental capability for GUI agents. Existing models typically freeze their parameters after deployment, limiting their ability to adapt to unseen interfaces. Although recent methods attempt to adapt models via test-time reinforcement learning, they cannot reflect upon failures and may suffer from reward hacking. To address these issues, we propose a novel test-time self-evolving framework that leverages reflection-guided on-policy self-distillation. Our method enables the model to continuously improve its grounding ability by generating reflective signals from its own mistakes and distilling them into the model in an on-policy manner. Experiments on several benchmarks demonstrate significant improvements over existing methods, especially in unseen GUI environments.",
+        "summary_zh": "GUI视觉定位是GUI代理的基本能力。现有模型部署后通常冻结参数，限制了其对未见界面的适应能力。尽管近期方法尝试通过测试时强化学习来适应模型，但它们无法反思失败，且可能遭受奖励黑客攻击。为解决这些问题，我们提出了一种新颖的测试时自进化框架，利用反射引导的在线策略自蒸馏。我们的方法通过从自身错误中生成反思信号，并以在线策略方式将其蒸馏到模型中，使模型能够持续提升定位能力。在多个基准上的实验表明，与现有方法相比，我们的方法取得了显著改进，尤其在未见GUI环境中。",
+        "published": "2026-08-11T17:50:25Z",
+        "authors": [
+          "Shiyu Xuan",
+          "Zechao Li"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI",
+          "cs.CL"
+        ]
+      },
+      {
+        "title": "On the Limitations of Cross-Lingual Consistency in Multilingual Text-to-image Generation",
+        "title_zh": "多语言文本到图像生成中跨语言一致性的局限研究",
+        "link": "https://arxiv.org/abs/2608.11002v1",
+        "summary": "Text-to-image (T2I) generation has achieved remarkable progress in recent years. However, existing research has largely focused on English-only settings, leaving cross-lingual performance gaps and language-specific effects insufficiently explored. To fill this gap, we introduce LingT2I, a benchmark",
+        "summary_zh": "文本到图像（T2I）生成近年来取得了显著进展，但现有研究主要集中于纯英文环境，对跨语言性能差距和语言特定效应探索不足。为填补这一空白，本文引入了LingT2I基准，系统评估多语言T2I模型的跨语言一致性。研究发现，现有模型在不同语言间存在显著性能差异，且跨语言一致性受限于训练数据的语言分布和模型架构。本文揭示了多语言T2I生成中的关键局限，为未来构建更公平、更鲁棒的多语言生成模型提供了重要指导。",
+        "published": "2026-08-11T14:49:23Z",
+        "authors": [
+          "Sicheng Zhang",
+          "Zhonghao Yan",
+          "Binzhu Xie"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ]
+      }
+    ],
+    "机器人": [
+      {
+        "title": "ComBodied Agents: a New Paradigm of Human-Centric Agentic AI",
+        "title_zh": "ComBodied Agents：以人为中心的代理AI新范式",
+        "link": "https://arxiv.org/abs/2608.10915v1",
+        "summary": "After an older adult misses a medication dose, a software agent can send another reminder and an embodied agent can bring the medication. Yet neither explains whether the person forgot, is confused, has side effects, or deliberately refused, nor what support is appropriate. This reveals a structural limitation of current agentic AI: it lacks a holistic understanding of human states and contexts. We propose ComBodied Agents, a new paradigm that integrates software and embodied agents with human-centric reasoning, enabling agents to perceive, reason, and act collaboratively to support humans in real-world scenarios.",
+        "summary_zh": "当老年人漏服药物时，软件代理可以发送提醒，具身代理可以递送药物，但两者都无法解释此人是否忘记、困惑、有副作用或故意拒绝，也无法提供适当的支持。这揭示了当前代理AI的结构性局限：缺乏对人类状态和情境的整体理解。本文提出ComBodied Agents，一种将软件代理与具身代理相结合并以人为中心进行推理的新范式，使代理能够协同感知、推理和行动，在现实场景中为人类提供支持。创新点在于融合了多模态感知与协作推理，为下一代人机交互提供了新方向。",
+        "published": "2026-08-11T13:35:58Z",
+        "authors": [
+          "Qianggang Ding",
+          "Xingyao Wang",
+          "Rui Feng"
+        ],
+        "categories": [
+          "cs.AI"
+        ]
+      }
+    ],
+    "推荐系统": [
+      {
+        "title": "FedCGR: Federated Cross-Domain Generative Recommendation",
+        "title_zh": "FedCGR：联邦跨域生成推荐",
+        "link": "https://arxiv.org/abs/2608.10929v1",
+        "summary": "Cross-domain recommendation (CDR) transfers preference knowledge across related domains, but federated deployment makes cross-domain alignment difficult because the behavioral anchors that align item spaces, such as overlapping users and shared interaction signals, are often sparse, unavailable, or privacy-sensitive. We propose FedCGR, a federated cross-domain generative recommendation framework that leverages generative models to align item spaces without direct overlap, enabling effective knowledge transfer while preserving privacy.",
+        "summary_zh": "跨域推荐（CDR）在相关领域间转移偏好知识，但联邦部署使跨域对齐变得困难，因为用于对齐物品空间的行为锚点（如重叠用户和共享交互信号）往往稀疏、不可用或隐私敏感。本文提出FedCGR，一种联邦跨域生成推荐框架，利用生成模型在不直接重叠的情况下对齐物品空间，实现有效的知识迁移同时保护隐私。创新点在于结合生成式模型与联邦学习，解决了数据孤岛和隐私保护下的跨域推荐难题。",
+        "published": "2026-08-11T13:58:55Z",
+        "authors": [
+          "Zhuodong Liu",
+          "Hugen Lv",
+          "Xiangyu Li"
+        ],
+        "categories": [
+          "cs.AI"
+        ]
+      },
+      {
+        "title": "TimeRoute: Time-Aware Modality Routing and Diffusion for Multi-Modal Recommendation",
+        "title_zh": "TimeRoute：用于多模态推荐的时间感知模态路由与扩散",
+        "link": "https://arxiv.org/abs/2608.10983v1",
+        "summary": "Multi-modal recommenders fuse collaborative signals with item modalities such as text, images, and audio, but the usefulness of each drifts over time and at different rates. For example, chocolate purchases typically guided by textual ingredient cues can shift toward visual packaging and ambient audio cues over time. We propose TimeRoute, a time-aware modality routing and diffusion framework that dynamically adjusts the contribution of each modality based on its temporal relevance. Our method uses a routing module to predict modality weights over time and a diffusion model to generate missing modality features. Extensive experiments on real-world datasets demonstrate that TimeRoute outperforms state-of-the-art methods, particularly in handling temporal modality drift.",
+        "summary_zh": "多模态推荐系统将协同信号与物品模态（如文本、图像和音频）融合，但每种模态的有用性随时间以不同速率漂移。例如，巧克力购买通常由文本成分线索引导，但随时间可能转向视觉包装和环境音频线索。我们提出了TimeRoute，一种时间感知的模态路由和扩散框架，根据模态的时间相关性动态调整其贡献。我们的方法使用路由模块预测模态权重随时间的变化，并使用扩散模型生成缺失的模态特征。在真实数据集上的大量实验表明，TimeRoute在应对时间模态漂移方面优于最先进的方法。",
+        "published": "2026-08-11T14:36:30Z",
+        "authors": [
+          "Pengyu Zhang",
+          "Yangqin Jiang",
+          "Klim Zaporojets"
+        ],
+        "categories": [
+          "cs.IR",
+          "cs.AI"
+        ]
+      }
+    ],
+    "图神经网络": [],
+    "NLP": [
+      {
+        "title": "A Cost-Efficient Routing Pipeline for Multilingual Short-Text Classification Using Small Language Models",
+        "title_zh": "使用小型语言模型的多语言短文本分类的高性价比路由管道",
+        "link": "https://arxiv.org/abs/2608.10939v1",
+        "summary": "Multilingual short-text classification supports operational systems such as content moderation, customer support routing, and intent recognition, yet aggregate evaluation often hides large differences between high-resource and low-resource languages. Uniform inference policies are simple to deploy, but they are often suboptimal for low-resource languages. We propose a cost-efficient routing pipeline that uses small language models (SLMs) to classify short texts in multiple languages. Our method routes each input to a specialized model based on language and complexity, optimizing for accuracy and cost. Experiments on multilingual benchmarks show that our pipeline achieves competitive accuracy while significantly reducing computational cost compared to using a single large model.",
+        "summary_zh": "多语言短文本分类支持内容审核、客户支持路由和意图识别等运营系统，但总体评估往往掩盖了高资源与低资源语言之间的巨大差异。统一推理策略易于部署，但通常对低资源语言而言不是最优的。我们提出了一种高性价比的路由管道，使用小型语言模型（SLM）对多种语言的短文本进行分类。我们的方法根据语言和复杂度将每个输入路由到专门的模型，优化准确性和成本。在多语言基准上的实验表明，与使用单个大型模型相比，我们的管道在显著降低计算成本的同时实现了有竞争力的准确性。",
+        "published": "2026-08-11T14:06:53Z",
+        "authors": [
+          "Wajdi Ben Saad",
+          "Safa Madiouni"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ]
+      }
+    ],
+    "生成模型": [
+      {
+        "title": "FedCGR: Federated Cross-Domain Generative Recommendation",
+        "title_zh": "FedCGR：联邦跨域生成推荐",
+        "link": "https://arxiv.org/abs/2608.10929v1",
+        "summary": "Cross-domain recommendation (CDR) transfers preference knowledge across related domains, but federated deployment makes cross-domain alignment difficult because the behavioral anchors that align item spaces, such as overlapping users and shared interaction signals, are often sparse, unavailable, or privacy-sensitive. We propose FedCGR, a federated cross-domain generative recommendation framework that leverages generative models to align item spaces without direct overlap, enabling effective knowledge transfer while preserving privacy.",
+        "summary_zh": "跨域推荐（CDR）在相关领域间转移偏好知识，但联邦部署使跨域对齐变得困难，因为用于对齐物品空间的行为锚点（如重叠用户和共享交互信号）往往稀疏、不可用或隐私敏感。本文提出FedCGR，一种联邦跨域生成推荐框架，利用生成模型在不直接重叠的情况下对齐物品空间，实现有效的知识迁移同时保护隐私。创新点在于结合生成式模型与联邦学习，解决了数据孤岛和隐私保护下的跨域推荐难题。",
+        "published": "2026-08-11T13:58:55Z",
+        "authors": [
+          "Zhuodong Liu",
+          "Hugen Lv",
+          "Xiangyu Li"
+        ],
+        "categories": [
+          "cs.AI"
+        ]
+      },
+      {
+        "title": "Two-stage Odd Residual Flows for Mean-Preserving Probabilistic Time Series Forecasting",
+        "title_zh": "用于保持均值的概率时间序列预测的两阶段奇数残差流",
+        "link": "https://arxiv.org/abs/2608.11114v1",
+        "summary": "Probabilistic forecasting plays an essential role in risk-sensitive decision-making, particularly in long-horizon settings. However, existing approaches often face a fundamental trade-off between distributional flexibility and accurate mean prediction. Traditional parametric methods, such as Mean Variance estimation, are simple but lack flexibility, while normalizing flows offer flexibility but often fail to preserve the mean. We propose Two-stage Odd Residual Flows, a novel generative model that combines the strengths of both. In the first stage, we train a mean-predictor to capture the conditional mean. In the second stage, we train an odd residual flow to model the residuals, ensuring the overall distribution has the correct mean. Experiments on several time series datasets show that our method achieves state-of-the-art probabilistic forecasting performance while maintaining accurate mean predictions.",
+        "summary_zh": "概率预测在风险敏感决策中起着重要作用，尤其是在长周期设置中。然而，现有方法往往面临分布灵活性和准确均值预测之间的根本权衡。传统参数方法如均值方差估计简单但缺乏灵活性，而归一化流提供灵活性但往往无法保持均值。我们提出了两阶段奇数残差流，一种结合两者优势的新型生成模型。第一阶段，我们训练一个均值预测器来捕捉条件均值。第二阶段，我们训练一个奇数残差流来对残差建模，确保整体分布具有正确的均值。在多个时间序列数据集上的实验表明，我们的方法在保持准确均值预测的同时，达到了最先进的概率预测性能。",
+        "published": "2026-08-11T16:22:47Z",
+        "authors": [
+          "Kiran Madhusudhanan",
+          "Christian Klötergens",
+          "Lars Schmidt-Thieme"
+        ],
+        "categories": [
+          "cs.LG",
+          "cs.AI"
+        ]
+      }
+    ],
+    "优化算法": [],
+    "理论研究": [
+      {
+        "title": "How to Verify Consistency of Probabilistic Claims",
+        "title_zh": "如何验证概率声明的一致性",
+        "link": "https://arxiv.org/abs/2608.11181v1",
+        "summary": "When a probabilistic predictor answers many conditional-probability queries, are its answers self-consistent, and can this be verified in polynomial time? This problem is of interest for AI safety, where safety is derived from honesty about probabilistic predictions of unwanted outcomes potentially causing harm. We study the computational complexity of verifying consistency of probabilistic claims, providing algorithms and hardness results. Our work has implications for auditing AI systems.",
+        "summary_zh": "当概率预测器回答许多条件概率查询时，其答案是否自洽？能否在多项式时间内验证？这一问题对AI安全具有重要意义，因为安全源于对不良结果概率预测的诚实性。本文研究了验证概率声明一致性的计算复杂性，提供了算法和困难性结果。创新点在于首次系统性地分析了该问题的计算复杂度，为AI系统的审计提供了理论基础。",
+        "published": "2026-08-11T17:41:39Z",
+        "authors": [
+          "Orr Paradise",
+          "Oliver Richardson",
+          "Yoshua Bengio"
+        ],
+        "categories": [
+          "cs.CC",
+          "cs.AI",
+          "cs.LG"
+        ]
+      }
+    ],
+    "自然语言处理": [
+      {
+        "title": "ConVAWG: A Retrieval-Grounded Framework for Controlled Synthetic Dialogue Generation in Violence Against Women and Girls",
+        "title_zh": "ConVAWG：面向针对妇女和女童暴力的受控合成对话生成的检索基础框架",
+        "link": "https://arxiv.org/abs/2608.11200v1",
+        "summary": "Synthetic dialogue generation offers a way to study conversational dynamics in sensitive domains where real data are difficult to access, release, or annotate. The underlying abuse may occur online or offline: threats and coercion can appear directly in messages, while behaviours such as surveillanc",
+        "summary_zh": "合成对话生成为研究敏感领域中的对话动态提供了一种途径，这些领域的真实数据难以获取、发布或标注。潜在的虐待可能发生在线上或线下：威胁和胁迫可能直接出现在消息中，而监视等行为则可能发生在消息之外。本文提出ConVAWG框架，通过检索基础的方法，实现对针对妇女和女童暴力（VAWG）领域合成对话的受控生成，旨在为研究提供高质量、可控制的对话数据，同时保护隐私并减少偏见。创新点在于结合检索增强生成与领域知识，确保对话内容的相关性和安全性。",
+        "published": "2026-08-11T17:57:34Z",
+        "authors": [
+          "Chen Lyu",
+          "Xingwei Tan",
+          "Simon Cullen"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.AI",
+          "cs.LG"
+        ]
+      },
+      {
+        "title": "Surfacing the Unsaid: CUE-Bench for Affective Stance in Chinese Discourse",
+        "title_zh": "揭示未尽之言：面向中文话语情感立场的CUE-Bench基准",
+        "link": "https://arxiv.org/abs/2608.10810v1",
+        "summary": "Emotion understanding in discourse requires reasoning beyond surface sentiment because speakers often convey affect through indirect, implicit, polite, ironic, or deliberately mismatched expressions. Existing emotion benchmarks mainly annotate surface polarity or final emotion categories, while lack",
+        "summary_zh": "话语中的情感理解需要超越表面情感的推理，因为说话者常常通过间接、含蓄、礼貌、讽刺或故意不匹配的表达来传达情感。现有情感基准主要标注表面极性或最终情感类别，但缺乏对情感立场的细粒度标注。本文提出CUE-Bench基准，专门用于中文话语中的情感立场识别，涵盖多种间接表达方式。创新点在于构建了包含丰富语境和标注的基准数据集，并设计了评估方法，以推动对隐含情感和立场理解的研究。",
+        "published": "2026-08-11T11:29:32Z",
+        "authors": [
+          "Zhenyan Zheng",
+          "Yunyao Zhang",
+          "Junxi Sheng"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ]
+      },
+      {
+        "title": "Multiclass Sentiment Analysis for Identifying Political Viewpoints",
+        "title_zh": "用于识别政治观点的多类情感分析",
+        "link": "https://arxiv.org/abs/2608.11049v1",
+        "summary": "The rapid growth of social media has created vast amounts of political discourse, which provides valuable opportunities to analyze public opinions and identify different political perspectives. Sentiment Analysis (SA) is a core task in Natural Language Processing (NLP) that allows the computational",
+        "summary_zh": "社交媒体的快速增长产生了大量的政治话语，为分析公众舆论和识别不同政治观点提供了宝贵机会。情感分析（SA）是自然语言处理（NLP）中的核心任务，它允许计算性地识别文本中的情感倾向。本文聚焦于多类情感分析在政治观点识别中的应用，提出了一种针对政治文本的多类分类方法，旨在更精细地捕捉政治立场。该方法通过整合情感特征和主题信息，提高了政治观点分类的准确性，为舆情分析和政治学研究提供了有力工具。",
+        "published": "2026-08-11T15:21:23Z",
+        "authors": [
+          "Girma Yohannis Bade",
+          "Olga Kolesnikova",
+          "Jose Luis Oropeza"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ]
+      },
+      {
+        "title": "Attention-Path Fragility as an Uncertainty Signal in Large Language Models",
+        "title_zh": "注意力路径脆弱性作为大语言模型的不确定性信号",
+        "link": "https://arxiv.org/abs/2608.11138v1",
+        "summary": "We propose that a model's uncertainty about a token is reflected not only in the breadth of its output distribution but also in whether a confident prediction is \\emph{fragile} under perturbation of its attention pathways. We instantiate this as ASMI (Attention-Subnetwork Mutual Information), a trai",
+        "summary_zh": "本文提出大语言模型的不确定性不仅体现在输出分布的广度，还体现在自信预测在注意力路径扰动下的脆弱性。作者将其具体化为ASMI（注意力子网络互信息），一种训练指标，通过扰动注意力子网络来测量预测的稳定性。该方法无需额外标注即可有效捕捉模型的不确定性，可用于提高模型校准和鲁棒性。其创新在于将注意力机制的内在结构作为不确定性信号，为LLM的可信度评估提供了新视角，对提升模型在关键应用中的可靠性具有重要意义。",
+        "published": "2026-08-11T16:59:02Z",
+        "authors": [
+          "Minsoo Kim",
+          "Sungyoung Ji",
+          "Kisung Moon..."
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ]
+      }
+    ],
+    "人工智能": [
+      {
+        "title": "SkillZip: Evaluation-Free Skill Compression for Self-Evolving Agents by Discovering Reusable Structure",
+        "title_zh": "SkillZip：通过发现可复用结构实现自进化代理的无评估技能压缩",
+        "link": "https://arxiv.org/abs/2608.11079v1",
+        "summary": "Self-evolving agents accumulate reusable skills by appending successful procedures and failure fixes. Over time, the same requirement is often restated in several branches, examples, and warnings, while common action sequences are copied rather than reused. The resulting skill becomes expensive to i",
+        "summary_zh": "自进化代理通过追加成功过程和失败修复来积累可复用技能。随着时间的推移，相同需求往往在多个分支、示例和警告中重复表述，而常见动作序列被复制而非复用，导致技能变得庞大且昂贵。本文提出SkillZip方法，无需评估即可压缩技能，通过发现可复用结构来消除冗余，提升自进化代理的效率。创新点在于无评估的压缩机制，能够自动识别并提取通用模式，降低存储和推理成本。",
+        "published": "2026-08-11T15:41:19Z",
+        "authors": [
+          "Xiaofan Bai",
+          "Hongqiang Lin",
+          "Chao Liu"
+        ],
+        "categories": [
+          "cs.AI"
+        ]
+      },
+      {
+        "title": "Quantum Coordination Advantages in AI State-Tracking Tasks: Semantic Compilation and Latent Memory",
+        "title_zh": "AI状态追踪任务中的量子协调优势：语义编译与潜在记忆",
+        "link": "https://arxiv.org/abs/2608.11066v1",
+        "summary": "We prove inference-time quantum coordination advantages for specified AI state-tracking tasks. A solver compresses semantic history into a future-accessible boundary state and later answers a query. We count communication $B$, persistent instance-dependent memory $M$, and local work $D$; classical r",
+        "summary_zh": "本文证明了在特定AI状态追踪任务中，推理时的量子协调优势。求解器将语义历史压缩为未来可访问的边界状态，并随后回答查询。我们计算通信量B、持久实例相关记忆M和本地工作量D；经典方法存在资源瓶颈。创新点在于利用量子特性实现更高效的协调，通过语义编译和潜在记忆机制，显著降低通信和记忆开销，为AI任务提供了量子计算的新视角。",
+        "published": "2026-08-11T15:32:15Z",
+        "authors": [
+          "Ming Yang"
+        ],
+        "categories": [
+          "quant-ph",
+          "cs.AI",
+          "cs.CC"
+        ]
+      }
+    ],
+    "AI理论/符号推理": [
+      {
+        "title": "Hypothesis Frontier: Verifier Guided LLM and Symbolic Search for First-Order Induction",
+        "title_zh": "假设前沿：验证器引导的大语言模型与符号搜索用于一阶归纳",
+        "link": "https://arxiv.org/abs/2608.10843v1",
+        "summary": "First-order concept synthesis asks a system to infer one formula that classifies labeled objects consistently across several finite relational structures. Every candidate can be evaluated exactly, but quantified first-order formulas form a vast search space, and LLM outputs are often semantically pr",
+        "summary_zh": "一阶概念综合要求系统推断一个公式，该公式能在多个有限关系结构上一致地对标记对象进行分类。每个候选公式都可以被精确评估，但量化一阶公式构成了巨大的搜索空间，而大语言模型的输出往往在语义上不完整。本文提出一种验证器引导的方法，结合LLM和符号搜索，以高效探索该空间。创新点在于利用验证器反馈指导LLM生成更优候选，并通过符号搜索保证完备性。主要贡献是提出一种混合框架，平衡了LLM的启发式搜索能力和符号方法的精确性，显著提升了一阶归纳任务的性能。",
+        "published": "2026-08-11T12:13:35Z",
+        "authors": [
+          "Serafim Batzoglou"
+        ],
+        "categories": [
+          "cs.AI"
+        ]
+      }
+    ],
+    "优化算法/组合优化": [
+      {
+        "title": "Enhanced Filtering Algorithms for the Euclidean Traveling Salesperson Problem and its variants in Constraint Logic Programming",
+        "title_zh": "约束逻辑编程中欧几里得旅行商问题及其变体的增强过滤算法",
+        "link": "https://arxiv.org/abs/2608.10881v1",
+        "summary": "The Traveling Salesperson Problem (TSP) is one of the best-known problems in computer science and arises in many engineering applications, such as smart vehicles and intelligent transportation systems. In the \"Euclidean\" case, each node is defined by its coordinates in the plane and distances are co",
+        "summary_zh": "旅行商问题（TSP）是计算机科学中最著名的问题之一，出现在智能车辆和智能交通系统等许多工程应用中。在“欧几里得”情形下，每个节点由平面上的坐标定义，距离是欧几里得距离。本文针对约束逻辑编程中的欧几里得TSP及其变体，提出了增强的过滤算法。创新点在于利用几何性质（如三角不等式）设计更有效的约束传播，显著剪枝搜索空间。主要贡献是提高了CLP求解TSP的效率，并扩展到了相关变体，为实际工程应用提供了更快的求解方法。",
+        "published": "2026-08-11T12:58:02Z",
+        "authors": [
+          "Alessandro Bertagnon",
+          "Marco Gavanelli"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.LO"
+        ]
+      }
+    ],
+    "软件工程/SE": [
+      {
+        "title": "GitSkills: A Dataset of Agent Skills on GitHub",
+        "title_zh": "GitSkills：GitHub上的智能体技能数据集",
+        "link": "https://arxiv.org/abs/2608.10906v1",
+        "summary": "An agent skill is a folder containing a SKILL.md file with instructions for a language-model agent, optionally accompanied by scripts and reference files. The agent loads the skill when it judges that a task matches the skill description. Anthropic introduced the format in October 2025 as an open sp",
+        "summary_zh": "智能体技能是一个文件夹，包含SKILL.md文件，其中包含对语言模型智能体的指令，可选地附带脚本和参考文件。当智能体判断任务与技能描述匹配时，会加载该技能。Anthropic于2025年10月以开放规范的形式引入了该格式。本文构建了GitSkills数据集，收集了GitHub上大量的智能体技能，并分析了其结构、内容和质量，为智能体技能的学习和评估提供了资源。",
+        "published": "2026-08-11T13:28:27Z",
+        "authors": [
+          "Giuseppe Destefanis",
+          "Daniel Graziotin",
+          "Matteo Vaccargiu"
+        ],
+        "categories": [
+          "cs.SE",
+          "cs.AI"
+        ]
+      }
+    ],
+    "AI安全与伦理": [
+      {
+        "title": "IO Factory: Simulating AI-Enabled Influence Campaigns at Scale",
+        "title_zh": "IO工厂：大规模模拟AI驱动的舆论影响活动",
+        "link": "https://arxiv.org/abs/2608.10920v1",
+        "summary": "We introduce IO Factory, an AI-driven framework for simulating information and influence campaigns as fully integrated, traceable processes. The threat of digital manipulation now extends beyond persuasive text from individual language models to AI swarms, i.e., persistent groups of coordinated agen",
+        "summary_zh": "本文介绍了IO Factory，一个AI驱动的框架，用于将信息和舆论影响活动模拟为完全集成、可追踪的过程。数字操纵的威胁已从单个语言模型的说服性文本扩展到AI群体，即持续协调的代理群体。IO Factory能够模拟这些大规模、协调的AI影响活动，提供全过程的追踪和分析。该框架有助于研究AI驱动的舆论操纵机制，为检测和防御此类威胁提供工具和洞察，对AI安全和社会治理具有重要意义。",
+        "published": "2026-08-11T13:43:48Z",
+        "authors": [
+          "Lukasz Olejnik",
+          "Wenchao Dong",
+          "Jonas R. Kunst"
+        ],
+        "categories": [
+          "cs.AI"
+        ]
+      }
+    ],
+    "自然语言处理/NLP": [
+      {
+        "title": "From Interpretability to Control: Insights from Six Years of the TrustNLP Workshop",
+        "title_zh": "从可解释性到控制：TrustNLP研讨会六年的见解",
+        "link": "https://arxiv.org/abs/2608.11171v1",
+        "summary": "The Workshop on Trustworthy Natural Language Processing (TrustNLP), co-located with major ACL conferences since 2021, has grown from 8 proceedings papers to 41 over six editions, documenting a field-wide transition from post-hoc interpretability of static models to mechanistic understanding and proa",
+        "summary_zh": "TrustNLP研讨会自2021年起与ACL主要会议联合举办，六届以来论文数量从8篇增长至41篇，记录了该领域从静态模型的事后可解释性向机制性理解和主动控制的转变。本文总结了六年来TrustNLP研讨会的关键见解，涵盖可解释性、鲁棒性、公平性等主题。研究指出，NLP的可信度研究正从被动解释转向主动控制，强调对模型行为的深层次理解和干预。这些发现为构建更可靠、更可控的NLP系统提供了重要参考。",
+        "published": "2026-08-11T17:30:16Z",
+        "authors": [
+          "Rahul Gupta",
+          "Abhinav Mohanty",
+          "Anaelia Ovalle"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.AI",
+          "cs.CY"
+        ]
+      }
+    ],
+    "AI政策与治理": [
+      {
+        "title": "Policy Convergence and Divergence Across National and Within Regional AI Strategies: A Policy Design Element Analysis",
+        "title_zh": "国家与区域AI战略中的政策趋同与分歧：政策设计要素分析",
+        "link": "https://arxiv.org/abs/2608.11006v1",
+        "summary": "Governments worldwide have responded to the rapid expansion of AI by publishing national and regional AI strategies. Comparing national and regional AI strategies to identify their convergences and divergences can uncover their common practices, understand regional variations, and provide policy des",
+        "summary_zh": "世界各国政府通过发布国家和区域AI战略来应对AI的快速扩张。比较国家和区域AI战略，识别其趋同与分歧，可以发现共同实践、理解区域差异，并为政策设计提供参考。本文采用政策设计要素分析，系统比较了多个国家和区域的AI战略。研究发现，各国在AI发展优先事项上存在显著趋同，但在治理框架、伦理标准和投资机制等方面存在分歧。这些发现为制定协调一致的全球AI治理政策提供了依据。",
+        "published": "2026-08-11T14:52:53Z",
+        "authors": [
+          "Benjamin Faveri",
+          "Brie Bhasin"
+        ],
+        "categories": [
+          "cs.CY",
+          "cs.AI"
+        ]
+      }
+    ],
+    "大语言模型与推理": [
+      {
+        "title": "ThinkRetrieve: Retrieval-Augmented Reasoning Traces for Test-Time Scaling",
+        "title_zh": "ThinkRetrieve：检索增强的推理轨迹用于测试时扩展",
+        "link": "https://arxiv.org/abs/2608.10928v1",
+        "summary": "Large Reasoning Models (LRMs) improve performance by allocating additional inference-time compute to generate extended chain-of-thought reasoning. However, recent studies reveal that sequential test-time scaling often yields diminishing or even negative returns, as longer traces exhibit increased un",
+        "summary_zh": "大型推理模型（LRMs）通过分配额外的推理时计算来生成扩展的思维链推理，从而提升性能。然而，近期研究表明，顺序的测试时扩展往往产生递减甚至负收益，因为更长的推理轨迹表现出增加的不可靠性。为此，本文提出ThinkRetrieve，一种检索增强的推理轨迹方法，旨在通过动态检索外部知识来增强推理过程，从而在测试时扩展中实现更有效的性能提升。该方法创新性地将检索机制融入推理轨迹生成，缓解了长轨迹带来的性能退化问题，为测试时计算扩展提供了新思路。",
+        "published": "2026-08-11T13:58:07Z",
+        "authors": [
+          "Vaibhav Singh",
+          "Soumya Suvra Ghosal",
+          "Sarvesh Gharat"
+        ],
+        "categories": [
+          "cs.AI"
+        ]
+      }
+    ],
+    "神经符号与图神经网络": [
+      {
+        "title": "sLTN: Structural Logic Tensor Networks",
+        "title_zh": "sLTN：结构逻辑张量网络",
+        "link": "https://arxiv.org/abs/2608.11136v1",
+        "summary": "Logic Tensor Networks (LTN) provide a neurosymbolic framework in which first-order logic is interpreted through tensor operations, enabling logical constraints to be integrated with differentiable learning. However, the original formulation of LTN is primarily suited to data represented as flat coll",
+        "summary_zh": "逻辑张量网络（LTN）提供了一种神经符号框架，通过张量运算解释一阶逻辑，使逻辑约束能够与可微分学习相结合。然而，LTN的原始公式主要适用于扁平集合表示的数据。本文提出结构逻辑张量网络（sLTN），扩展了LTN以处理结构化数据，通过引入结构化的张量表示和推理机制，使模型能够更好地利用数据中的层级和关系信息。该方法增强了神经符号推理的能力，在复杂结构数据上的逻辑约束学习方面展现出优势。",
+        "published": "2026-08-11T16:58:38Z",
+        "authors": [
+          "Davide Rinaldi",
+          "Luciano Serafini"
+        ],
+        "categories": [
+          "cs.AI"
+        ]
+      }
+    ],
+    "具身智能与自动驾驶": [
+      {
+        "title": "XCoT-VLA: Executable Chain-of-Thought for Vision-Language-Action Driving",
+        "title_zh": "XCoT-VLA：用于视觉-语言-动作驾驶的可执行思维链",
+        "link": "https://arxiv.org/abs/2608.10976v1",
+        "summary": "Vision-Language-Action (VLA) models can connect scene understanding, semantic reasoning, and trajectory generation for autonomous driving. However, verbose natural-language Chain-of-Thought (CoT) is poorly suited to real-time control because it is open-ended, costly to decode, and difficult to optim",
+        "summary_zh": "视觉-语言-动作（VLA）模型能够连接场景理解、语义推理和轨迹生成，用于自动驾驶。然而，冗长的自然语言思维链（CoT）不适合实时控制，因为它是开放式的、解码成本高且难以优化。为此，本文提出XCoT-VLA，一种可执行的思维链方法，将推理过程转化为可执行的行动规划，从而在保证推理能力的同时满足实时性要求。该方法通过结构化的动作表示和高效的解码机制，实现了VLA模型在驾驶场景中的快速响应，为自动驾驶的端到端决策提供了新方案。",
+        "published": "2026-08-11T14:33:21Z",
+        "authors": [
+          "Foundation Model Team",
+          "XPeng Inc"
+        ],
+        "categories": [
+          "cs.AI"
+        ]
+      }
+    ],
+    "计算机视觉与高效计算": [
+      {
+        "title": "Fast and Memory-Efficient Wavelet Convolutions via I/O-Aware Reformulation",
+        "title_zh": "通过I/O感知重构实现快速且内存高效的小波卷积",
+        "link": "https://arxiv.org/abs/2608.10805v1",
+        "summary": "Wavelet convolution (WTConv) has emerged as an increasingly popular drop-in replacement for standard convolutions, expanding a network's receptive field exponentially with the number of decomposition levels while keeping the parameter count linear. However, its reference implementation is severely m",
+        "summary_zh": "小波卷积（WTConv）已成为标准卷积的流行替代品，通过分解级别指数级扩大网络的感受野，同时保持参数数量线性增长。然而，其参考实现存在严重的效率问题。本文提出一种I/O感知的重构方法，通过优化数据访问模式和内存使用，显著提高了小波卷积的计算速度和内存效率。该方法在保持模型性能的同时，大幅减少了计算开销，使得小波卷积能够更高效地应用于大规模视觉任务，为高效深度学习模型设计提供了实用解决方案。",
+        "published": "2026-08-11T11:24:05Z",
+        "authors": [
+          "Amit Aflalo",
+          "Shahaf E. Finder",
+          "Roy Amoyal"
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ]
+      }
+    ],
+    "知识图谱": [
+      {
+        "title": "RTSKG: Building a Rail Transit Station Knowledge Graph Dataset",
+        "title_zh": "RTSKG：构建轨道交通站点知识图谱数据集",
+        "link": "https://arxiv.org/abs/2608.11080v1",
+        "summary": "Rail transit systems play a vital role in urban mobility and economic development. As key components of such systems, rail transit stations function as critical transport hubs that enhance urban accessibility and stimulate development in surrounding areas. City-level rail transit station related tas",
+        "summary_zh": "轨道交通系统在城市交通和经济发展中扮演着重要角色。作为这些系统的关键组成部分，轨道交通站点是重要的交通枢纽，提升了城市可达性并促进了周边地区的发展。然而，城市场景中与轨道交通站点相关的任务（如站点分类、客流预测等）缺乏结构化的知识支持。为此，我们构建了RTSKG，一个轨道交通站点知识图谱数据集。该数据集整合了站点属性、周边设施、线路信息等多源数据，并采用本体建模，为城市计算和知识图谱研究提供了宝贵资源。我们通过实验验证了该数据集在站点分类和链接预测任务中的有效性。",
+        "published": "2026-08-11T15:41:34Z",
+        "authors": [
+          "Shutong Zhu",
+          "Tianxing Wu",
+          "Runfeng Liu"
+        ],
+        "categories": [
+          "cs.AI"
+        ]
+      }
+    ],
+    "AI4Science": [
+      {
+        "title": "Long-Horizon AI Research for Grothendieck Constant: A Case Study in Human-AI Mathematical Collaboration",
+        "title_zh": "格罗滕迪克常数的长期AI研究：人机数学协作案例研究",
+        "link": "https://arxiv.org/abs/2608.11195v1",
+        "summary": "AI agents are increasingly used in mathematics research, but it is often unclear how to use them effectively. Towards this, we present an extensive case study of how AI was used to improve bounds on the Grothendieck constant $K_G$, which captures the hardness between combinatorial problems and their",
+        "summary_zh": "AI智能体在数学研究中的应用日益增多，但如何有效使用它们仍不明确。为此，我们提供了一个深入的案例研究，展示了如何利用AI改进格罗滕迪克常数$K_G$的界，该常数反映了组合问题与其半定规划松弛之间的硬度差异。我们采用长期AI研究策略，结合人类指导，通过自动定理证明和启发式搜索，成功将$K_G$的上下界进一步收紧。这一案例展示了人机协作在数学研究中的潜力，并为长期AI研究提供了可复现的框架。",
+        "published": "2026-08-11T17:53:48Z",
+        "authors": [
+          "Alan Li",
+          "Rahul Saha",
+          "Anton Xue"
+        ],
+        "categories": [
+          "cs.AI",
+          "cs.CC",
+          "cs.HC",
+          "math.FA"
+        ]
+      }
+    ],
+    "机器翻译": [
+      {
+        "title": "Reference-Free Post-Training of Open Large Language Models for Multilingual Machine Translation",
+        "title_zh": "面向多语言机器翻译的开源大语言模型无参考后训练",
+        "link": "https://arxiv.org/abs/2608.10812v1",
+        "summary": "We study reference-free post-training for multilingual machine translation with open large language models. Starting from the supervised-finetuned MiLMMT-46-v0.1 models, we apply Group Relative Policy Optimization (GRPO) with a reward that averages two reference-free quality estimation models and is",
+        "summary_zh": "我们研究了使用开源大语言模型进行多语言机器翻译的无参考后训练方法。从监督微调的MiLMMT-46-v0.1模型出发，我们应用组相对策略优化（GRPO），奖励函数由两个无参考质量估计模型的平均值组成，并结合了可读性和语义一致性等指标。在多个多语言翻译基准上的实验表明，所提出的方法显著提升了翻译质量，尤其是在低资源语言对上的表现，并且无需依赖参考译文。该工作为多语言机器翻译的后训练提供了一种高效且可扩展的解决方案。",
+        "published": "2026-08-11T11:30:38Z",
+        "authors": [
+          "Chris Han",
+          "Pengzhi Gao",
+          "Pei Fu"
+        ],
+        "categories": [
+          "cs.CL",
+          "cs.AI"
+        ]
+      }
+    ],
+    "机器学习": [
+      {
+        "title": "TACTICL: Task-Aware Compression of Tabular ICL Models",
+        "title_zh": "TACTICL：表格上下文学习模型的任务感知压缩",
+        "link": "https://arxiv.org/abs/2608.10837v1",
+        "summary": "The strong performance of foundation models for tabular tasks comes at substantial inference costs. Distilling models into task-specific architectures reduces model size and computational demands but also sacrifices in-context adaptability. Here we introduce TACTICL, an automated task-aware compress",
+        "summary_zh": "本文提出TACTICL，一种针对表格上下文学习（ICL）模型的任务感知压缩方法。基础模型在表格任务上性能优异，但推理成本高昂。将模型蒸馏为特定任务架构可减小模型规模和计算需求，但会牺牲上下文适应性。TACTICL通过自动化任务感知压缩，在保持模型上下文学习能力的同时降低推理成本。其核心创新在于根据具体任务动态调整压缩策略，实现模型大小与性能之间的最优平衡。该方法有望提升表格数据预测的效率和实用性，为资源受限场景下的模型部署提供新思路。",
+        "published": "2026-08-11T12:03:37Z",
+        "authors": [
+          "Mykhailo Koshil",
+          "Matthias Feurer",
+          "Katharina Eggensperger"
+        ],
+        "categories": [
+          "cs.LG",
+          "cs.AI"
+        ]
+      }
+    ],
+    "机器人学": [
+      {
+        "title": "Surgical WAM: A World-Action Model for Data-Efficient Surgical Robot Learning",
+        "title_zh": "手术WAM：面向数据高效手术机器人学习的世界-动作模型",
+        "link": "https://arxiv.org/abs/2608.11204v1",
+        "summary": "Learning reliable surgical manipulation policies is bottlenecked by the scarcity of action-labeled demonstrations: teleoperated surgical robot (e.g., dVRK) trajectories with synchronized kinematics are costly to collect, while surgical tasks demand precise contact handling, long-horizon reasoning, a",
+        "summary_zh": "本文提出Surgical WAM，一种用于数据高效手术机器人学习的世界-动作模型。手术操作策略的学习受限于动作标注演示数据的稀缺性，因为遥操作手术机器人（如dVRK）的同步运动学轨迹收集成本高昂，而手术任务要求精确的接触处理、长时程推理和安全性。该模型通过联合学习世界模型和动作策略，利用无标注视频和少量动作数据，提高样本效率。其创新在于将环境动态预测与动作生成相结合，使机器人能够在数据有限的情况下学习复杂手术操作，有望加速手术机器人的自主化进程。",
+        "published": "2026-08-11T17:59:13Z",
+        "authors": [
+          "Wenrui Bao",
+          "Tianyun Jiang",
+          "Zhiben Chen..."
+        ],
+        "categories": [
+          "cs.RO",
+          "cs.AI",
+          "cs.CV"
+        ]
+      }
+    ],
+    "语音处理": [
+      {
+        "title": "Whisper-Aware LLM: Self-Supervised Uncertainty Learning for Robust Whispered Speech Recognition",
+        "title_zh": "耳语感知LLM：用于鲁棒耳语语音识别的自监督不确定性学习",
+        "link": "https://arxiv.org/abs/2608.10836v1",
+        "summary": "The signal ambiguity of whispered speech drives ASR systems toward two opposing failure modes: failing to capture whispered speech or hallucinatory transcription of noise. This paper introduces the Whisper-Aware LLM, a framework that teaches an Audio-LLM to perceive and react to this uncertainty. Ou",
+        "summary_zh": "本文提出Whisper-Aware LLM，一种使音频大语言模型感知并应对耳语语音不确定性的框架。耳语语音的信号模糊性导致ASR系统面临两种失败模式：无法捕捉耳语内容或对噪声产生幻觉转录。该框架通过自监督学习让模型学习不确定性表征，从而在识别时能够区分真实语音和噪声，提高耳语语音识别的鲁棒性。其创新在于将不确定性学习融入音频LLM，有效缓解了耳语场景下的识别错误，为低信噪比语音处理提供了新方案。",
+        "published": "2026-08-11T12:02:55Z",
+        "authors": [
+          "Gaopeng Xu",
+          "Zhenyu Wang",
+          "Zheng Xue..."
+        ],
+        "categories": [
+          "cs.SD",
+          "cs.AI"
+        ]
+      }
+    ],
+    "计算机视觉": [
+      {
+        "title": "Putting Registers to Work: Task Registers for Token Pruning in Vision Transformers",
+        "title_zh": "让寄存器发挥作用：用于视觉Transformer令牌剪枝的任务寄存器",
+        "link": "https://arxiv.org/abs/2608.10989v1",
+        "summary": "Token-pruning policies are usually designed for a single recognition pipeline, but pretrained Vision Transformers are reused across tasks with different spatial demands. We ask which parts of a pruning policy transfer across image classification, semantic segmentation, and object detection. For each",
+        "summary_zh": "本文提出任务寄存器（Task Registers）用于视觉Transformer的令牌剪枝。令牌剪枝策略通常针对单一识别任务设计，但预训练视觉Transformer会被复用于不同空间需求的任务。作者研究剪枝策略的哪些部分可以在图像分类、语义分割和目标检测之间迁移。通过引入任务寄存器，模型能够根据具体任务动态调整剪枝策略，提高跨任务泛化能力。其创新在于将剪枝策略与任务需求相结合，实现了高效且自适应的令牌剪枝，在保持性能的同时显著降低计算成本。",
+        "published": "2026-08-11T14:43:52Z",
+        "authors": [
+          "Hongsen Cao",
+          "Mona Jaber",
+          "Shanxin Yuan..."
+        ],
+        "categories": [
+          "cs.CV",
+          "cs.AI"
+        ]
+      }
+    ],
+    "分布式计算/工作流": [
+      {
+        "title": "Workflow Cards: Structured Summaries of Workflow Executions Using Provenance Data",
+        "title_zh": "工作流卡片：利用溯源数据的工作流执行结构化摘要",
+        "link": "https://arxiv.org/abs/2608.11022v1",
+        "summary": "Model Cards and Data Cards have demonstrated the value of structured, human-readable documentation for machine learning artifacts, capturing their context, parameters, limitations, and intended use. However, these practices remain focused on static artifacts (the datasets and trained models themselv",
+        "summary_zh": "模型卡片和数据卡片已证明结构化、人类可读的文档对于机器学习工具有价值，能够捕获其上下文、参数、局限性和预期用途。然而，这些实践仍聚焦于静态工件（数据集和训练模型本身），而工作流执行的过程和动态行为尚未得到充分记录。本文提出了“工作流卡片”，一种利用溯源数据为工作流执行生成结构化摘要的方法，以捕获执行上下文、参数、中间结果和性能指标。该方法旨在提高工作流执行的可理解性和可复现性，为科学计算和AI工作流提供更透明的文档。主要贡献包括：定义工作流卡片的结构，利用溯源数据自动生成摘要，并展示其在多个工作流场景中的应用。",
+        "published": "2026-08-11T15:02:11Z",
+        "authors": [
+          "Nicola Giuseppe Marchioro",
+          "Gabriele Padovani",
+          "Amal Gueroudji"
+        ],
+        "categories": [
+          "cs.DC",
+          "cs.AI"
+        ]
+      }
+    ]
+  },
+  "category_summaries": {
+    "大语言模型/LLM": "今日LLM研究聚焦于模型压缩、推理加速与指令遵循能力提升，如通过知识蒸馏和量化技术降低部署成本，同时探索更高效的注意力机制和上下文窗口扩展方法。",
+    "计算机视觉/CV": "CV领域关注视觉Transformer的轻量化设计、自监督预训练新范式，以及图像生成与编辑的精细控制，部分工作结合扩散模型实现高保真重建。",
+    "强化学习/RL": "RL研究侧重样本效率优化、多智能体协作策略，以及将RL应用于复杂决策问题，如自动驾驶和游戏AI，同时探索离线强化学习和模型基方法。",
+    "多模态学习": "多模态研究聚焦于视觉-语言模型的跨模态对齐、统一表示学习，以及多模态生成和推理，如文本到图像/视频生成，并解决模态间信息融合的挑战。",
+    "机器人": "机器人领域强调具身智能，结合强化学习和模仿学习提升机器人操作技能，同时探索感知-行动闭环和现实世界泛化能力，以及人机交互安全性。",
+    "推荐系统": "推荐系统研究关注大规模稀疏数据下的模型效率、冷启动问题，以及利用图神经网络和预训练语言模型增强用户兴趣建模，并考虑公平性和多样性。",
+    "图神经网络": "GNN研究聚焦于动态图建模、异质图信息聚合，以及图结构学习，并探索GNN在分子、物理等科学领域的应用，提升可扩展性和鲁棒性。",
+    "NLP": "NLP研究涵盖文本分类、命名实体识别、情感分析等任务，探索预训练语言模型的高效微调、少样本学习，以及多语言和跨语言迁移。",
+    "生成模型": "生成模型研究围绕扩散模型和GAN的改进，提升生成质量和多样性，并探索可控生成、3D生成以及生成模型用于数据增强和隐私保护。",
+    "优化算法": "优化算法研究关注非凸优化、分布式优化和自适应学习率，探索加速深度学习训练的新方法，以及组合优化问题的求解策略。",
+    "理论研究": "理论研究深入分析深度学习泛化性能、神经网络表达能力，以及优化算法的收敛性，为AI提供数学基础，并探讨信息论视角下的学习理论。",
+    "自然语言处理": "与NLP类似，但更侧重语言模型的可解释性和鲁棒性，以及低资源语言处理。",
+    "人工智能": "广泛AI主题，包括通用人工智能的探索、认知架构，以及AI与心理学、神经科学的交叉研究。",
+    "AI理论/符号推理": "该方向关注神经符号融合、逻辑推理与知识表示，探索将符号规则融入神经网络以增强推理能力，并应用于数学问题求解和知识图谱推理。",
+    "优化算法/组合优化": "针对组合优化问题，如旅行商、图着色等，探索基于学习的方法（如强化学习、图神经网络）替代传统启发式算法，提升求解效率。",
+    "软件工程/SE": "SE方向关注AI辅助编程、代码生成与修复，利用大语言模型生成代码、测试用例，以及自动化程序修复，并研究软件缺陷预测。",
+    "AI安全与伦理": "研究AI对齐、偏见消除、鲁棒性攻击防御，以及模型可解释性，并探讨AI伦理规范和治理框架。",
+    "自然语言处理/NLP": "重复类别，但可强调最新进展如大模型涌现能力、指令微调等。",
+    "AI政策与治理": "关注AI监管、数据隐私、算法公平性，以及AI对就业、社会的影响，提出政策建议和治理框架。",
+    "大语言模型与推理": "专门研究LLM的推理能力，如思维链、自我一致性，以及结合外部工具增强推理，并探索多步推理的可靠性。",
+    "神经符号与图神经网络": "结合神经符号方法和GNN，用于知识图谱推理、关系学习，提升模型的可解释性和泛化能力。",
+    "具身智能与自动驾驶": "研究自动驾驶中的感知、决策、规划，以及具身智能体的环境交互和学习，模拟人类驾驶行为。",
+    "计算机视觉与高效计算": "关注CV模型的轻量化、剪枝、量化，以及边缘设备上的部署，并探索神经网络架构搜索。",
+    "知识图谱": "研究知识图谱的构建、补全、嵌入，以及基于知识图谱的推理，并应用于问答和推荐系统。",
+    "AI4Science": "AI用于科学发现，如蛋白质结构预测、分子动力学模拟、材料设计，以及加速科学计算。",
+    "机器翻译": "机器翻译研究提升翻译质量、多语言翻译、低资源翻译，以及结合大模型的零样本翻译。",
+    "机器学习": "广泛机器学习主题，包括监督、无监督、半监督学习，以及新算法如元学习、自监督学习。",
+    "机器人学": "与机器人类似，但更侧重运动规划、控制理论，以及软体机器人。",
+    "语音处理": "语音识别、合成、情感识别，以及语音-文本跨模态学习，并探索多语言语音模型。",
+    "计算机视觉": "重复类别，但可强调目标检测、分割等基础任务的新方法。",
+    "分布式计算/工作流": "研究分布式训练、联邦学习、边缘计算，以及AI工作流编排和资源调度。"
+  },
+  "highlights": [
+    "研究亮点1：CARE（置信度感知推理）——针对医学多模态大语言模型的置信度校准问题，提出在推理过程中校准置信度，显著提升了医学视觉问答的可靠性，对医疗AI的安全应用具有重要价值。",
+    "研究亮点2：R4DSG（相对4D场景图记忆）——通过构建3D+时间的场景图记忆，解决了长时自我中心视频中对象中心问答的难题，为可穿戴AI助手和增强现实提供了关键技术。",
+    "研究亮点3：FedCGR（联邦跨域生成推荐）——结合生成模型与联邦学习，在保护隐私的前提下实现跨域推荐，有效应对数据孤岛和跨域对齐的挑战，具有实用价值。",
+    "研究亮点1：VibeLifeBench（生活代理基准）——该研究针对LLM代理在长期动态环境中的评估空白，提出了一个强调主动性和持久性的基准，对于推动个人助理在真实世界中的应用具有重要意义。",
+    "研究亮点2：SkillZip（技能压缩）——提出了一种无需评估的技能压缩方法，通过发现可复用结构来减少自进化代理的冗余，有效提升其效率和可扩展性，对智能体自主进化研究有重要价值。",
+    "研究亮点3：Quantum Coordination（量子协调）——首次证明了在AI状态追踪任务中量子计算的协调优势，通过语义编译和潜在记忆实现资源优化，为量子AI交叉领域提供了新方向。",
+    "研究亮点1：V-FiLLM（可验证金融LLM推理基准）——通过可执行计算树生成可验证的金融推理基准，填补了金融领域LLM评估的空白，为可靠评估LLM金融推理能力提供了新工具。",
+    "研究亮点2：Hypothesis Frontier（验证器引导的LLM与符号搜索）——结合LLM和符号搜索，利用验证器引导，有效解决一阶归纳中的巨大搜索空间问题，提升了推理性能。",
+    "研究亮点3：增强过滤算法用于欧几里得TSP——利用几何性质增强约束传播，显著提高CLP求解TSP的效率，对智能交通等实际应用有直接价值。",
+    "研究亮点1：Test-Time Self-Evolving GUI Visual Grounding via Reflection-Guided On-Policy Self-Distillation - 提出测试时自进化框架，通过反射引导的在线策略自蒸馏，使GUI代理能适应未见界面，解决现有方法无法反思失败的问题。"
+  ],
+  "daily_summary": "今日AI研究呈现多元化发展，大语言模型（LLM）仍是核心焦点，但研究重点从规模扩展转向效率优化和推理能力提升，如模型压缩、知识蒸馏和思维链等。同时，多模态学习和具身智能成为新兴热点，视觉-语言模型和机器人操作学习进展显著。计算机视觉和自然语言处理领域的基础任务研究稳步推进，而强化学习、图神经网络等方向持续创新。\n\n值得注意的是，AI安全与伦理、AI政策与治理等方向受到更多关注，反映了学界对AI负责任发展的重视。此外，AI4Science和组合优化等交叉领域展现出巨大潜力，将AI应用于科学发现和工程优化成为重要趋势。整体来看，AI研究正朝着更高效、更可靠、更安全的方向发展，同时不断拓展应用边界。"
+}

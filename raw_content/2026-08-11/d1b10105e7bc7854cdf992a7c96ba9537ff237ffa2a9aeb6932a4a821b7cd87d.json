@@ -1,0 +1,19 @@
+{
+  "title": "Putting Registers to Work: Task Registers for Token Pruning in Vision Transformers",
+  "link": "https://arxiv.org/abs/2608.10989v1",
+  "published": "2026-08-11T14:43:52Z",
+  "updated": "2026-08-11T14:43:52Z",
+  "summary": "Token-pruning policies are usually designed for a single recognition pipeline, but pretrained Vision Transformers are reused across tasks with different spatial demands. We ask which parts of a pruning policy transfer across image classification, semantic segmentation, and object detection. For each pipeline, controlled probes freeze the no-pruning checkpoint and apply a series of parameter-free reduction criteria at one eligible layer at a time without retraining. The probes reveal three differences: segmentation and detection rank the criteria differently, classification is especially sensitive to attention-based pruning in the earliest layers, and the dense tasks prefer opposite recovery endpoints. These findings motivate Task-Adaptive Pruning (TAP). Existing register tokens serve as task-agnostic storage for feature artifacts. TAP instead introduces one task register per task and activates only the current one. Its evolving state ranks tokens, distributes an exact removal budget over depth, and sets the recovery scale for dense features. At a final keep rate of $ρ=0.5$, our jointly adapted model, TAP-J, reaches $47.0$ mIoU at $1.30\\times$ encoder throughput on ADE20K and $53.7$ box AP at $1.32\\times$ encoder throughput on COCO while remaining competitive on ImageNet-1K.",
+  "id": "http://arxiv.org/abs/2608.10989v1",
+  "authors": [
+    "Hongsen Cao",
+    "Mona Jaber",
+    "Shanxin Yuan",
+    "Ahmed Sayed"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.10989v1"
+}
