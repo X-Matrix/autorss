@@ -1,0 +1,23 @@
+{
+  "title": "CoverPrune: Coverage-Driven Token Pruning for 3D VLMs via Optimal Transport",
+  "link": "https://arxiv.org/abs/2608.13226v1",
+  "published": "2026-08-13T13:29:15Z",
+  "updated": "2026-08-13T13:29:15Z",
+  "summary": "While 3D Vision-Language Models (3D VLMs) have demonstrated remarkable spatial reasoning capabilities, they suffer from massive visual token counts that create severe computational bottlenecks during inference. Existing token pruning methods primarily rely on diversity-based selection, discarding similar tokens to maximize dispersion. However, in 3D environments, this approach frequently drops representative prototype tokens in favor of outliers, breaking the multi-view consistencies and geometric structures essential for spatial reasoning. In this paper, we propose a paradigm shift for 3D VLM token pruning: from maximizing diversity to preserving visual evidence coverage. We introduce CoverPrune, a training-free framework that formulates inference-time token pruning as an Optimal Transport (OT) problem. To overcome the intractable combinatorial subset selection inherent in this formulation, we design the Feature-Spatial-Temporal (FST) transport cost and target capacity, along with an efficient Spatial-Guided Greedy Selection (SGS) algorithm to approximate the OT objective. Furthermore, we propose CoverPrune-Lite, an accelerated variant utilizing spatially structured local matching for minimal overhead. Extensive experiments across multiple 3D visual-spatial reasoning benchmarks demonstrate that our methods achieve state-of-the-art token efficiency, maintaining robust reasoning performance even under highly aggressive pruning budgets. Visit our project website at https://github.com/Brucess/CoverPrune.",
+  "id": "http://arxiv.org/abs/2608.13226v1",
+  "authors": [
+    "Peng Ling",
+    "Yingda Yin",
+    "Lingting Zhu",
+    "Weikai Chen",
+    "Shengju Qian",
+    "Zeyu Hu",
+    "Xin Wang",
+    "Wenming Yang"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.13226v1"
+}
