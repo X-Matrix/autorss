@@ -1,0 +1,16 @@
+{
+  "title": "Adversarial Entropy Inflation Against Gumbel-Based Inference Verification",
+  "link": "https://arxiv.org/abs/2608.23375v1",
+  "published": "2026-08-24T15:20:49Z",
+  "updated": "2026-08-24T15:20:49Z",
+  "summary": "Gumbel-based inference verification bounds LLM weight exfiltration by only forgiving token choices that plausibly arise from honest GPU nondeterminism, reporting a >200x slowdown for a steganographic adversary under benign prompt traffic. This bound assumes a passive attacker; we show it degrades sharply against an adversary who instead controls the prompt distribution. Because the verifier's admissible-token-set size is driven by the model's own output entropy, prompts engineered to break grammatical and sub-word structure -- rather than benign conversational traffic -- widen that set and open a materially larger covert channel. Across six instruction-tuned models spanning 1B to 32B parameters and three random seeds, our strongest attack (character- and script-level disruption) roughly doubles bits leaked per token relative to benign prompts, cutting the slowdown factor to 60x - 118x. These results indicate that static, benign-traffic-calibrated thresholds are insufficient for this defense, and that jitter-forgiveness thresholds should instead be calibrated dynamically against local token entropy.",
+  "id": "http://arxiv.org/abs/2608.23375v1",
+  "authors": [
+    "Nikita Kezins"
+  ],
+  "categories": [
+    "cs.CR",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.23375v1"
+}

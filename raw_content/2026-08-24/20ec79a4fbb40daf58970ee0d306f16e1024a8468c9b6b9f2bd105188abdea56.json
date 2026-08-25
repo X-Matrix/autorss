@@ -1,0 +1,20 @@
+{
+  "title": "ChebBooster: A Training-Free Approach for Efficient Diffusion Transformer Inference via Chebyshev-Inspired Extrapolation",
+  "link": "https://arxiv.org/abs/2608.23429v1",
+  "published": "2026-08-24T16:06:11Z",
+  "updated": "2026-08-24T16:06:11Z",
+  "summary": "Diffusion Transformers (DiTs) have shown strong performance in high-fidelity image generation, but their sampling process remains computationally intensive due to full model execution at every timestep. While cache-based acceleration has been explored to mitigate inference cost, naive reuse schemes suffer from low accuracy over long intervals, and Taylor-series-based extrapolation methods often face instability caused by Runge oscillations. In this paper, we propose ChebBooster, a training-free extrapolation framework based on Chebyshev polynomial theory that achieves stable and efficient acceleration for DiTs. Specifically, we adopt the Barycentric formulation to evaluate Chebyshev approximants with high numerical stability and minimal overhead, and further decouple the extrapolation into an offline weight precomputation phase and a lightweight online application stage. Extensive experiments across three representative DiT-based models, including DiT-XL/2, PixArt-$Σ$, and FLUX.1-dev, demonstrate that ChebBooster achieves consistent improvements in visual quality and inference efficiency, reaching up to $3.68\\times$ latency speedup and $5.12\\times$ FLOPs reduction, outperforming existing training-free baselines under diverse generation tasks and resolutions.",
+  "id": "http://arxiv.org/abs/2608.23429v1",
+  "authors": [
+    "Chengjie Lu",
+    "Tianchi Deng",
+    "Zhengqi He",
+    "Chengwen Luo",
+    "Xueliang Li"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.23429v1"
+}

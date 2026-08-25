@@ -1,0 +1,19 @@
+{
+  "title": "Counterfactual Transition Graphs: Evaluating Cross-Class Transition Quality",
+  "link": "https://arxiv.org/abs/2608.23164v1",
+  "published": "2026-08-24T12:11:46Z",
+  "updated": "2026-08-24T12:11:46Z",
+  "summary": "Counterfactual (CF) explanations for time-series classifiers are usually evaluated one example at a time: what minimal edit flips this single window's prediction? We argue that the more informative question for diagnostic interpretability is structural: how does the classifier connect its own classes to each other?   We propose a counterfactual transition graph (CGT) in which each node is a class and each edge weight is the CF reliability of the transition from one prototype to another under a proximity aware retrieval sweep. On a six-class hand-movement task, we induce a CGT that reveals a non-trivial topology, which is not predicted by the binary confusion matrix: it shows that counterfactual reachability does not align with classifier accuracy and even runs counter to it (Spearman $ρ=-0.37$ over the 15 pairs), i.e. the boundaries the classifier separates most confidently are among those an in-distribution edit can least often cross.   Our framework is method agnostic, i.e. any CF-explainers can be used. Presently, we use it to juxtapose replacement-based CFs with gradient-based CFs; gradient-based methods reach almost any class by stepping off the data manifold, while replacement-based methods stay on it and fail on precisely the rigid boundaries.",
+  "id": "http://arxiv.org/abs/2608.23164v1",
+  "authors": [
+    "Syed Muhammad Hamza Zaidi",
+    "Szymon Bobek",
+    "Grzegorz J. Nalepa",
+    "Myra Spiliopoulou"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.23164v1"
+}
