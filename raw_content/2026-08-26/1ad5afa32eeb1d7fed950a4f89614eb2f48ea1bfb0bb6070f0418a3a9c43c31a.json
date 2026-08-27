@@ -1,0 +1,23 @@
+{
+  "title": "EVOMAL: Self-Poisoning in Self-Evolving Coding Agents",
+  "link": "https://arxiv.org/abs/2608.25776v1",
+  "published": "2026-08-26T13:19:12Z",
+  "updated": "2026-08-26T13:19:12Z",
+  "summary": "Self-evolving LLM coding agents write their own tools by imitating retrieved skills from shared skill libraries. We identify a vulnerability in this loop: during authoring, a retrieved malicious skill can become the template for a new skill that preserves the payload. We call this self-poisoning: the agent authors, stores, and runs the resulting malicious skill. We exploit it through EvoMal, an attack that amplifies self-poisoning by wrapping an interchangeable payload in a banner, a set of benign-looking structural elements that induces an imitating agent to reproduce the enclosed code. The attacker plants malicious skills in the library without invoking them. The agent then authors and executes new skills carrying the harmful code. Each authored copy can re-enter the library and be imitated again, forming a self-propagating worm that persists after the planted skills are removed. We define the agent self-poisoning rate (ASPR) as the fraction of tasks that add a newly authored malicious skill to the library. Across six models on 153 tool-relevant SWE-bench Verified tasks, ASPR ranges from 20.3% to 41.8%, and the poisoned libraries hold 4.9 to 9.0 times as many malicious skills as were planted. The vulnerability also appears without a banner: DeepSeek-V4-Pro reaches 11.1% ASPR with the payload alone. Tailoring the planted skill descriptions to one task family raises ASPR to 86.7%. After the planted skills are removed, Qwen3 retains a round-5 ASPR of 68% because agent-authored copies remain. These copies evade existing defenses, which focus on attacker-submitted names, code, and signatures. We propose counter-prompt, a defense that discourages banner-style copying and reduces EvoMal's ASPR to at most 6.7% with no significant task-completion loss.",
+  "id": "http://arxiv.org/abs/2608.25776v1",
+  "authors": [
+    "Xiaodong Wu",
+    "Yu Shi",
+    "Qi Li",
+    "Zhimin Zhao",
+    "Xiangman Li",
+    "Bram Adams",
+    "Ahmed E. Hassan",
+    "Jianbing Ni"
+  ],
+  "categories": [
+    "cs.CR",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.25776v1"
+}

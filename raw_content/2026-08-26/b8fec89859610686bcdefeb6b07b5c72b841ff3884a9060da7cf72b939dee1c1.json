@@ -1,0 +1,18 @@
+{
+  "title": "ProgRouter: Online Progress-Guided Orchestration for Multi-Agent LLM Workflows under Quality-Cost Tradeoffs",
+  "link": "https://arxiv.org/abs/2608.25992v1",
+  "published": "2026-08-26T16:42:02Z",
+  "updated": "2026-08-26T16:42:02Z",
+  "summary": "Multi-agent large language model (LLM) workflows have emerged as a powerful paradigm for solving complex, open-ended tasks through collaborative reasoning among specialized LLM agents, but they incur substantial operating costs due to repeated LLM invocations and long-horizon context accumulation. Existing cascade routing methods make one-shot, query-level decisions and cannot adapt to the dynamic, state-dependent nature of multi-step workflows, in which the right LLM at each step depends on evolving task progress, remaining task difficulty, and cost-efficiency requirements. We present ProgRouter, an online progress-guided routing framework that adaptively selects LLM agents across workflow steps to preserve task-solving quality while adhering to time and cost budgets. ProgRouter introduces a multi-view task progress scorer that combines coarse workflow outcome regimes with fine-grained signals on subtask completion, progress trends, and workflow state quality. Then, a dual-path task progress predictor and an adaptive meta-gating mechanism estimate the progress gain for each candidate routed LLM. ProgRouter makes online step-wise routing decisions that balance progress gain, task time budgets, and long-term operating cost efficiency. Experiments on HumanEval Plus, MBPP, MATH-500, and ASQA, spanning agentic code generation, mathematical reasoning, and retrieval-augmented long-form question answering, demonstrate that ProgRouter reduces the operating cost relative to key baselines while maintaining strong task-solving performance.",
+  "id": "http://arxiv.org/abs/2608.25992v1",
+  "authors": [
+    "Somgyuan Li",
+    "Ahmed M. Abdelmoniem",
+    "Shiqiang Wang"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.MA"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.25992v1"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "AsymSpec: Context-Asymmetric Speculative Decoding for Agentic LLMs",
+  "link": "https://arxiv.org/abs/2608.26004v1",
+  "published": "2026-08-26T16:50:02Z",
+  "updated": "2026-08-26T16:50:02Z",
+  "summary": "Agentic LLM pipelines face escalating inference costs as context accumulates across retrieval, tool use, and multi-turn interactions. To control latency, deployments routinely compress inputs, but this degrades task accuracy. Speculative decoding (SD) accelerates generation losslessly, yet it assumes the drafter and verifier share an identical context, preventing SD from resolving the accuracy-overhead trade-off. We propose AsymSpec, an asymmetric speculative decoding framework that breaks this symmetry: a lightweight drafter reads the full input while the large verifier operates on the compressed view. The drafter steers the verifier via a contrastive $δ$-fusion of logits, modulated by a divergence-aware acceptance gate that preserves verification stability and high draft acceptance rates. Evaluated across four agentic capabilities and two end-to-end agent benchmarks, AsymSpec reaches $\\approx 90\\%$ of full-context accuracy on average, delivering $1.3$--$1.7\\times$ throughput speedups at $0.2$--$0.3\\times$ the compute cost on isolated text capabilities. These results show that asymmetric context access yields substantial gains precisely when compression discards critical reasoning signals.",
+  "id": "http://arxiv.org/abs/2608.26004v1",
+  "authors": [
+    "Sheng Liang",
+    "Yongyue Zhang",
+    "Nathanael Brian",
+    "Hang Lv",
+    "Hao Wang",
+    "Chen Zhang",
+    "Yong Liu"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.26004v1"
+}

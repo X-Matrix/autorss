@@ -1,0 +1,20 @@
+{
+  "title": "Imitation Learning for Connection-Tableau Construction",
+  "link": "https://arxiv.org/abs/2608.26009v1",
+  "published": "2026-08-26T16:53:25Z",
+  "updated": "2026-08-26T16:53:25Z",
+  "summary": "An automated theorem prover builds a proof step by step, choosing at each point what to add and what to remove. We cast this construction as a policy acting in a transition system induced by a formal calculus, which fixes which steps are sound: for clausal connection tableaux, leanCoP-style search and plCoP/rlCoP-style planning then become stateful policies over one interface, and policy-learning methods apply directly. We equip such policies with a graph neural network that scores proof edits from structure that transfers across problems, train it by imitation learning from found proofs, and measure how performance holds as we remove search scaffolding, from full symbolic backtracking to a policy the network drives alone. Within a fixed step budget on M2k, MPTP2078-bushy, and TPTP v9.2.1, learned policies solve up to 46% more problems than leanCoP, and reach proofs in an order of magnitude fewer steps.",
+  "id": "http://arxiv.org/abs/2608.26009v1",
+  "authors": [
+    "Fredrik Rømming",
+    "Mantas Bakšys",
+    "Martin S. Fixman",
+    "Sean B. Holden"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.LG",
+    "cs.LO"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.26009v1"
+}

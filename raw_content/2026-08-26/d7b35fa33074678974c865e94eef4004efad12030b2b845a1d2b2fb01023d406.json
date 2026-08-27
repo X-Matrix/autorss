@@ -1,0 +1,18 @@
+{
+  "title": "Query-Side Attacks on GNN-Based KGQA: Tracing Failures from Entity Linking to Answer Generation",
+  "link": "https://arxiv.org/abs/2608.25922v1",
+  "published": "2026-08-26T15:34:29Z",
+  "updated": "2026-08-26T15:34:29Z",
+  "summary": "GNN-based Knowledge Graph Question Answering (KGQA) pipelines process queries through four discrete stages: entity linking, subgraph retrieval, GNN reasoning, and answer generation. Standard robustness evaluations conflate stage-level failures into a single end-to-end metric, obscuring both the source of brittleness and the appropriate mitigation target. We ask which stage fails, and why, when the pipeline is subjected to adversarial perturbations on the input question. We introduce a stage-isolation protocol with two answer-preserving adversarial perturbations verified against the knowledge graph: Compositional Restructuring (CR) and Relation Synonym Swap (RS) target distinct stages while leaving entity seeds intact. Evaluated across ComplexWebQuestions and WebQSP, the results run counter to prevailing assumptions: the GNN reasoning stage retains near-baseline accuracy when the subgraph is intact, while subgraph construction accounts for over 99\\% of the end-to-end collapse under CR, occurring even when the gold answer is present in 74\\% of retrieved subgraphs. This exposes a fundamental distinction between answer presence and answer reachability that end-to-end metrics cannot detect, and places the mitigation target firmly at the subgraph construction stage rather than the reasoning model. Perturbed datasets and evaluation infrastructure are released at https://anonymous.4open.science/r/atkgrag-E85C .",
+  "id": "http://arxiv.org/abs/2608.25922v1",
+  "authors": [
+    "Pankaj Kumar",
+    "Subhankar Mishra"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.IR"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.25922v1"
+}

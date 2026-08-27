@@ -1,0 +1,19 @@
+{
+  "title": "How Robust Are Automated Fact-Checking Systems? A Cross-Benchmark Evaluation",
+  "link": "https://arxiv.org/abs/2608.25934v1",
+  "published": "2026-08-26T15:50:10Z",
+  "updated": "2026-08-26T15:50:10Z",
+  "summary": "Automated fact-checking (AFC) systems retrieve evidence and predict claim veracity, yet evaluations omit simple baselines, systems are developed for a single benchmark and cannot be trusted to generalise across domains. No prior work cross-evaluates the full two-stage retrieve-then-verify pipeline across diverse datasets, complementing retrieval-only studies (Thakur et al., 2021) and single-stage benchmarking studies (Calamai et al., 2025). We benchmark nine models, ranging from random and sparse baselines to fine-tuned transformers, zero-shot LLMs, and the two highest-ranked systems from the AVeriTeC 2025 shared task, across four datasets spanning scientific, open-web, and climate domains. Three findings stand out: (1) on ClimateCheck claim-only and fine-tuned models outperform zero-shot LLM and top-performing AVeriTeC 2025 systems, highlighting that noisy evidence can degrade veracity prediction; (2) system rankings are strongly domain- and metric-dependent: the best model on SciFact (macro-F1 0.70) drops to 0.31 on ClimateCheck, while the AVeriTeC 2025 winner and runner-up swap rankings based on evaluation metrics and datasets; (3) replacing retrieved evidence with gold annotations improves veracity accuracy by 14-22 points across models, confirming retrieval remains primary bottleneck. We release code, pre-processed datasets, and all results to support reproducible AFC research.",
+  "id": "http://arxiv.org/abs/2608.25934v1",
+  "authors": [
+    "Aida Usmanova",
+    "Zangir Iklassov",
+    "Markus Leippold",
+    "Ricardo Usbeck"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2608.25934v1"
+}
