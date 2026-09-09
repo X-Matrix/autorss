@@ -1,0 +1,24 @@
+{
+  "title": "A Three-Tier Persona Vector for Controllable User Simulation in Agentic Evaluation",
+  "link": "https://arxiv.org/abs/2609.08592v1",
+  "published": "2026-09-08T11:28:02Z",
+  "updated": "2026-09-08T11:28:02Z",
+  "summary": "Evaluating tool-augmented LLM agents requires diverse, realistic user inputs yet most evaluation frameworks use flat role descriptions (\"you are an angry customer\") that produce near-identical conversations regardless of the underlying scenario. In this paper, we propose a three-tier persona vector with 23 operationalized dimensions: 6 categorical demographics (jurisdiction, age, channel, device, language proficiency, time availability), 12 continuous behavioral traits (patience, assertiveness, digital literacy, etc.) sampled with Gaussian noise around curated profile base vectors, and 5 continuous emotional states (frustration, anxiety, trust, confidence, stress) that shift in response to scenario context. Orthogonal to the persona, a 4-level query-complexity overlay controls utterance phrasing from direct to deliberately vague. We evaluate the persona model inside a synthetic data generation pipeline across 64,698 multi-turn conversations spanning 8 named profiles and 3 production corpora. Key findings: (i) a 15.8 percentage-point spread in agent goal-achievement across personas confirms trait vectors produce measurably different user behavior; (ii) the same persona behaves differently across scenarios due to scenario-reactive emotional state shifts, validating the scenario-reactive design; (iii) domain-specific projects show persona sensitivity on booking-flow compliance (~15-20 percentage points gap between tier-aware and pressure-test personas), demonstrating the model faithfully reproduces real-world difficulty distributions; (iv) seven rule-described trait correlations produce auditable co-occurrence patterns without requiring learned covariance matrices. The persona model is fully specified for reproduction.",
+  "id": "http://arxiv.org/abs/2609.08592v1",
+  "authors": [
+    "Rahul Khedar",
+    " Eshita",
+    "Sneha Teja Sree Reddy Thondapu",
+    "Mayank Malhotra",
+    "Arup Kumar Das",
+    "Jitesh Chandra Mishra",
+    "Arun Menon",
+    "Avinash Karn",
+    "Mouli V"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.08592v1"
+}
