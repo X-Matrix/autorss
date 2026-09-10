@@ -1,0 +1,24 @@
+{
+  "title": "FlowCPO: A Unified Divergence View of Preference Alignment for Flow Models",
+  "link": "https://arxiv.org/abs/2609.09905v1",
+  "published": "2026-09-09T09:03:59Z",
+  "updated": "2026-09-09T09:03:59Z",
+  "summary": "Preference alignment for flow and diffusion models now spans online reinforcement learning and offline preference optimization, but the relation between these methods remains unclear. In particular, existing forward-process alignment methods require fresh samples from the current model, while offline methods based on fixed preference pairs rely primarily on positive-only fine-tuning or DPO-style likelihood-ratio surrogates. We organize these approaches through a divergence-based framework and introduce FlowCPO, an offline forward-KL objective that uses both preferred and dispreferred samples without online rollouts. For linear interpolation, we show under explicit regularity conditions that the forward-KL objective is bounded by a contrastive flow matching loss, yielding a tractable surrogate on fixed data. We further show that this loss is nonnegative, whereas the signed regression loss of simplified FlowDPO can be unbounded below. In the in-domain setting, FlowCPO achieves higher mean GenEval and OCR scores than the evaluated baselines, reaching 0.84 and 0.87 versus 0.81 and 0.74 for FlowDPO at CFG 3.0. In the out-of-domain setting, the results are mixed, with the best GenEval result but lower reward scores than RFT on several metrics.",
+  "id": "http://arxiv.org/abs/2609.09905v1",
+  "authors": [
+    "Yansen Han",
+    "Shengyi Liao",
+    "Peng Sun",
+    "Deyuan Liu",
+    "Yuanxing Zhang",
+    "Pengfei Wan",
+    "Tao Lin"
+  ],
+  "categories": [
+    "stat.ML",
+    "cs.AI",
+    "cs.CV",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.09905v1"
+}

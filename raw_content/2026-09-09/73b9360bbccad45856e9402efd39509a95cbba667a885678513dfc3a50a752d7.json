@@ -1,0 +1,23 @@
+{
+  "title": "Structural Process Supervision for Latent Chain-of-Thought Reasoning",
+  "link": "https://arxiv.org/abs/2609.09928v1",
+  "published": "2026-09-09T09:17:46Z",
+  "updated": "2026-09-09T09:17:46Z",
+  "summary": "Latent reasoning approaches enhance token-level efficiency and robustness by replacing verbose, explicit chain-of-thought (CoT) tokens with compact continuous-space embeddings. However, existing methods lack direct process supervision over these latent embeddings, which often leads to representation collapse and uneven information distribution. To address this, we propose Prototype-Mediated Process Supervision (PMPS), which introduces learnable reasoning prototypes as semantic anchors to provide structural process-level supervision for latent reasoning. PMPS projects latent embeddings and explicit CoT embeddings into a shared prototype space, achieving many-to-many soft alignment between unequal-length representations through prototype assignment. Meanwhile, we introduce a Progressive Sequential Alignment (PSA) module to further guide training: positional priors initially encourage sequential alignment structure, then gradually relax to permit adaptive matching. Experimental results show that PMPS compresses output token length to under 50% of explicit CoT on GSM8K-Aug. Compared to leading baseline SIM-CoT, our method achieves average accuracy gains of 2.08% across different model families. On GPT-2, PMPS even surpasses CoT-SFT. On larger models and a more challenging task, PMPS consistently attains the highest accuracy among all latent reasoning methods with comparable output length.",
+  "id": "http://arxiv.org/abs/2609.09928v1",
+  "authors": [
+    "Yiqi Li",
+    "Xu Chen",
+    "Chen Ju",
+    "Jiangchao Yao",
+    "Zhaoyang Li",
+    "Jinsong Lan",
+    "Xiaoyong Zhu",
+    "Bo Zheng",
+    "Yu Wang"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.09928v1"
+}
