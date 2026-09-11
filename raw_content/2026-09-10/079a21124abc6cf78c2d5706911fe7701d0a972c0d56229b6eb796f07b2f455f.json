@@ -1,0 +1,22 @@
+{
+  "title": "Learn the Solid, Not the File: Canonical Inputs for Neural Networks on CAD Boundary Representations",
+  "link": "https://arxiv.org/abs/2609.11573v1",
+  "published": "2026-09-10T14:08:03Z",
+  "updated": "2026-09-10T14:08:03Z",
+  "summary": "Boundary representation (B-rep) is the standard format used by modern CAD systems for parametric 3D models. It turns out, the exact same solid can be represented by different B-reps: for example, two engineers using different operations, a geometry kernel rebuilding the file, and an export setting repartitioning faces will lead to different B-reps even though the underlying solid remains the same.   We show that existing B-rep encoders are not robust to variation in the B-rep with the same solid on perturbations applied to standard benchmarks, naturally occurring variations inherent to CAD software, and differences in how designers model the same part via a human dataset we created in FreeCAD. The performance of popular B-rep encoders often collapses catastrophically.   We propose the canonical region graph, an input representation whose nodes, features and coordinate frame are derived from the solid itself and show theoretical invariance guarantees on repartitioning and rigid motions. It matches the strongest baseline on standard benchmarks, and is stable under every perturbation we test.",
+  "id": "http://arxiv.org/abs/2609.11573v1",
+  "authors": [
+    "Heinrich Jiang",
+    "Hager Yasser Mohamed",
+    "Alexander Hitt",
+    "Valeriia Lomakina",
+    "Henning Jiang",
+    "Jennifer Jang"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.CG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.11573v1"
+}

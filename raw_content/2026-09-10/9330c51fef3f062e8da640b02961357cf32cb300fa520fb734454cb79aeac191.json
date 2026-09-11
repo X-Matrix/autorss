@@ -1,0 +1,18 @@
+{
+  "title": "Investigating catastrophic forgetting in sound event classification",
+  "link": "https://arxiv.org/abs/2609.11447v1",
+  "published": "2026-09-10T12:16:56Z",
+  "updated": "2026-09-10T12:16:56Z",
+  "summary": "This work investigates a number of approaches to prevent catastrophic forgetting in class incremental learning scenarios for sound event classification tasks. We analyze the problem using architectural and regularization approaches, using FSD50K and AudioSet datasets. We design incremental stages and solutions that selectively protect the kernels of the network from weight updates to prevent catastrophic forgetting, and a dynamic head solution that expands itself each time a new task is learned. The findings show that catastrophic forgetting mainly happens in deeper layers, in particular in the classifier head. For the studied in-domain sound classification problem, the solution that seems to alleviate catastrophic forgetting and is the most efficient is a full freezing of the feature extractor with a fine-tuning of the dynamic head classifier, showing little to no forgetting and great training stability, and a good balance between memory-stability and learning plasticity.",
+  "id": "http://arxiv.org/abs/2609.11447v1",
+  "authors": [
+    "Riccardo Casciotti",
+    "Annamaria Mesaros"
+  ],
+  "categories": [
+    "eess.AS",
+    "cs.AI",
+    "cs.SD"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.11447v1"
+}

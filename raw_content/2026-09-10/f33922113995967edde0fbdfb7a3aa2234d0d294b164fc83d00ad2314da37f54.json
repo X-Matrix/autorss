@@ -1,0 +1,16 @@
+{
+  "title": "Published Unlearning Numbers Move Per Checkpoint, and Not Because the Removed Data Survives: An Audit of 263 Released Batch-Normalized Checkpoints",
+  "link": "https://arxiv.org/abs/2609.11490v1",
+  "published": "2026-09-10T12:57:14Z",
+  "updated": "2026-09-10T12:57:14Z",
+  "summary": "An unlearning audit reads its verdict off numbers that an unlearned model and its retrained reference each publish, and both also ship batch-normalization statistics that no gradient step wrote and no release records. Refitting them on kept data at bit-identical weights moves 47 of 221 released checkpoints past the spread their own release's seeds show, several inside a method whose average does not move: what moves is the checkpoint's property, not its method's. What does the moving is not the removed data surviving in the state: exchanging kept records for removed ones inside a fixed fitting pool moves a published cell by almost nothing, while how far a checkpoint's shipped state has drifted from any refit does track it. The consequence for a published decision is real but narrow: twelve verdicts cross, four clear a measured recalibration budget, two clear it on every replicate, and a population we trained and sited near its own criterion yields none. A release should therefore name the fitting convention beside the number, on the batch-normalized vision models where this channel exists.",
+  "id": "http://arxiv.org/abs/2609.11490v1",
+  "authors": [
+    "Junlong Shen Xingyu Li"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.11490v1"
+}
