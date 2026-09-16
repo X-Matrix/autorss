@@ -1,0 +1,16 @@
+{
+  "title": "Scaling-Score Conformal Prediction for Multi-Target Regression",
+  "link": "https://arxiv.org/abs/2609.17091v1",
+  "published": "2026-09-15T12:23:57Z",
+  "updated": "2026-09-15T12:23:57Z",
+  "summary": "Multi-target regression requires a model to simultaneously predict several related outputs. Conformal prediction provides distribution-free, finite-sample marginal coverage guarantees, but extending these to joint multi-dimensional regions in a model-agnostic, sample-efficient manner remains challenging: max-aggregation ignores scale differences, copula-based methods are only asymptotically valid, rectangular methods typically split the calibration set, and quantile or density-based methods require training a specialised model beyond a plain point predictor. We propose the scaling-score conformal method, which is model-agnostic (requires only component-wise absolute residuals), uses a single calibration set, and yields four nested output types: an outer rectangle (SCO) with valid joint coverage, the exact set R $α$ , a staircase (SC 2 ) over approximation of R $α$ , and an inner rectangle (SCI). A single hyperparameter $γ$ $\\in$ (0, 1) controls the base-rectangle quantile level independently of $α$. We prove downward-closedness and a rectangular sandwich bound and derive a closed-form outer rectangle. Experiments on 29 realworld datasets confirm valid joint coverage; SC 2 with $γ$ = 1-$α$ consistently achieves competitive volume relative to baselines, with the advantage growing with output dimension d.",
+  "id": "http://arxiv.org/abs/2609.17091v1",
+  "authors": [
+    "Sylvain Rousseau",
+    "Soundouss Messoudi"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.17091v1"
+}
