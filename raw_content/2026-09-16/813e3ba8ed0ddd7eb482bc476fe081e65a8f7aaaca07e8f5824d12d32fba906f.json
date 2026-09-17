@@ -1,0 +1,20 @@
+{
+  "title": "Beyond Truncation: Rethinking LLM Decoding as Ensemble Pruning",
+  "link": "https://arxiv.org/abs/2609.18723v1",
+  "published": "2026-09-16T14:23:40Z",
+  "updated": "2026-09-16T14:23:40Z",
+  "summary": "We introduce Mahalanobis-Ensemble Decoding (ME-Decoding), a novel Large Language Model (LLM) decoding framework that frames candidate token selection as ensemble pruning. Existing selection strategies rely predominantly on scalar probabilities, ignoring geometric semantic relationships and causing candidate redundancy. Meanwhile, current geometry-aware methods often require complex optimization or directly reweighting the original token probabilities, leading to significant computational overhead or inference instability. To address this, we formulate decoding as a subset optimization problem using a Mahalanobis distance-driven objective to enhance semantic diversity while preserving high probabilities. Specifically, we dynamically discount redundant generation paths using a token similarity matrix, constructed via an adaptive-bandwidth kernel over token embeddings. We further devise an efficient greedy selection algorithm with near-linear complexity in the candidate size under early stopping, while establishing its theoretical approximation guarantees. This renders ME-Decoding a robust, plug-and-play module with negligible inference overhead. Extensive experiments across diverse reasoning and generation tasks demonstrate that our method consistently achieves strong performance.",
+  "id": "http://arxiv.org/abs/2609.18723v1",
+  "authors": [
+    "Dunyao Xue",
+    "Chengshuo Du",
+    "Zhengbo Wang",
+    "Wenlin Dai",
+    "Cheng Meng"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.18723v1"
+}
