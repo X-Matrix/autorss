@@ -1,0 +1,24 @@
+{
+  "title": "Touch2Robot: Robot Touch in the Human Demonstration Loop",
+  "link": "https://arxiv.org/abs/2609.24660v1",
+  "published": "2026-09-21T14:26:51Z",
+  "updated": "2026-09-21T14:26:51Z",
+  "summary": "Human demonstrations offer a scalable way to collect manipulation data, but their contacts may be unstable or infeasible when transferred to a robot hand. Collecting demonstrations directly on the target robot avoids this mismatch, but substantially increases the cost of data collection. To address this trade-off, we present \\textbf{Touch2Robot}, a framework that lets humans collect demonstrations while seeing how the target robot hand would contact the object. We capture human hand motion, tactile-glove measurements, and object motion during human manipulation. These recordings guide object-specific RL policies to reproduce the demonstrated object motion while favoring contacts consistent with the recorded human touch. We distill the learned behaviors into a unified real-time retargeter that maps incoming human observations and object geometry to robot hand configurations. During collection, the predicted robot configuration is synchronized with the tracked object pose in simulation to reconstruct robot-object contacts, which are visualized to help the demonstrator adapt subsequent interactions to the target hand. Across four real-world tasks, Touch2Robot improves average real-robot replay completion from 37.9\\% to 72.1\\% over visual-only feedback, while reducing the collection time per replay-successful demonstration from 58.6~s to 18.2~s. Reconstructed target-hand contacts achieve 44.2\\% F1 against real-robot tactile measurements, and policies trained on Touch2Robot demonstrations improve downstream Diffusion Policy performance by 29.1 percentage points over visual-only feedback. These results show that bringing robot touch into the human demonstration loop improves both the quality and efficiency of scalable dexterous data collection. \\textit{Project webpage: \\href{https://Touch2Robot.github.io/}{https://Touch2Robot.github.io/}.}",
+  "id": "http://arxiv.org/abs/2609.24660v1",
+  "authors": [
+    "Shengcheng Luo",
+    "Xiaoyang Cheng",
+    "Hong Ying",
+    "Xiaoying Zhou",
+    "Jiaming Jiang",
+    "Haoran Guo",
+    "Wanlin Li",
+    "Ziyuan Jiao",
+    "Chenxi Xiao"
+  ],
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.24660v1"
+}

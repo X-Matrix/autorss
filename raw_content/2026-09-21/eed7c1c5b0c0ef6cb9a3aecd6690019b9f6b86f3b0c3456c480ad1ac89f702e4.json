@@ -1,0 +1,20 @@
+{
+  "title": "NPU Accelerator: Quantized Real-Time Vehicle Detection on PYNQ-Z1 Using FINN",
+  "link": "https://arxiv.org/abs/2609.24757v1",
+  "published": "2026-09-21T15:26:19Z",
+  "updated": "2026-09-21T15:26:19Z",
+  "summary": "This paper presents the design, optimization, implementation, and on-board validation of a neural processing unit (NPU) accelerator for real-time vehicle detection on the resource-constrained Xilinx Zynq XC7Z020 device of the PYNQ-Z1 board. The work follows a hardware/software co-design methodology that combines quantization-aware training (QAT), lightweight YOLO-derived detectors, Brevitas/QONNX model export, FINN dataflow compilation, Vivado implementation, and physical benchmarking on the target board. Four simultaneous engineering requirements define successful deployment: throughput above 30 frames/s (FPS), energy efficiency above 7 FPS/W, programmable-logic (PL) hardware latency below 50 ms, and Pascal VOC detection accuracy above 0.55 mAP@0.5. The design space includes LP-YOLO and LP-YOLO Slim variants, a custom YOLOv3-tiny reference, 4-bit and mixed low-bit quantization, 320$\\times$320 and 256$\\times$256 inputs, manual and automatic FIFO sizing, and programmable-logic clocks from 100 to 200 MHz. The final LP-YOLO Slim configuration uses a 256$\\times$256 input, w2a4 quantization, and a 142.86 MHz PL clock. With batch 100 it reaches 35.66 FPS at 2.91 W, corresponding to 12.25 FPS/W, while measured PL latency is 45.11 ms and VOC mAP@0.5 is 0.594. This is the only evaluated configuration for which the supplied measurements satisfy all four requirements simultaneously. The results show that low-bit QAT, architectural slimming, FINN folding and FIFO optimization, and moderate clock scaling can jointly provide a practical real-time detector on a small Zynq FPGA.",
+  "id": "http://arxiv.org/abs/2609.24757v1",
+  "authors": [
+    "Daniel Gutierrez",
+    "Antonio Cuesta",
+    "Jorge Fe",
+    "Bruno Gutierrez",
+    "Rashed Al Koutayni"
+  ],
+  "categories": [
+    "cs.AR",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.24757v1"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "A digital-twin framework for forecasting treatment-day imaging with contour uncertainty in adaptive proton radiotherapy",
+  "link": "https://arxiv.org/abs/2609.24725v1",
+  "published": "2026-09-21T15:01:12Z",
+  "updated": "2026-09-21T15:01:12Z",
+  "summary": "Head-and-neck anatomy changes over a six-to-seven-week proton course, and the anatomy of a later week cannot be imaged when the plan is made. We present a digital-twin framework that forecasts a patient's treatment-day anatomy as an ensemble of predicted CTs with propagated contours and quantifies the uncertainty of the forecast contours. The twin is a library of previously treated patients with planning and weekly quality-assurance CTs (QACTs), made patient-specific by a two-step foundation-model deformable registration: a cross-patient field carries each library patient onto the current patient, and a longitudinal field, estimated in the current patient's frame, carries that patient's planning-to-QACT change onto the current patient's own planning CT. A library of 302 observations from 88 patients yields about 300 replicates per patient, each a deformation that occurred in a treated patient. The dispersion of the propagated contours, resolved by outward normal, is six-direction contour uncertainty in millimeters. This is uncertainty in the input to the forecast, which library patient the current patient follows, rather than in model parameters, and it is unchanged when the registration engine is exchanged. On ten patients with clinician contours on two QACTs, the library alone fixes the anisotropic shape of the uncertainty (4.5 to 6.2 mm); the first QACT narrows it by a factor of 3.2 to 3.6 without a contour being drawn; an approved contour improves the center but not the width. The estimate orders directions correctly but is not Gaussian-calibrated. A clinical target volume expansion is worked out as one application.",
+  "id": "http://arxiv.org/abs/2609.24725v1",
+  "authors": [
+    "Yizhou Wu",
+    "Jie Ding",
+    "Justin Roper",
+    "Minglei Kang",
+    "Yuheng Li",
+    "Sibo Tian",
+    "David S. Yu",
+    "Xiaofeng Yang",
+    "Chih-Wei Chang"
+  ],
+  "categories": [
+    "physics.med-ph",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.24725v1"
+}

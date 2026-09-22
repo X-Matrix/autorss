@@ -1,0 +1,24 @@
+{
+  "title": "SPECTRA: Adaptive Execution of Speculative Decoding on a Runtime-Reconfigurable Tiled Architecture",
+  "link": "https://arxiv.org/abs/2609.24847v1",
+  "published": "2026-09-21T16:25:24Z",
+  "updated": "2026-09-21T16:25:24Z",
+  "summary": "LLM inference on edge devices is constrained by computational and memory resources, making efficient autoregressive decoding challenging. Speculative decoding alleviates this bottleneck by generating tokens with a smaller draft model and verifying multiple tokens in parallel with a batched target model pass. However, verification introduces a runtime-dependent intermediate regime between memory-bound general matrix-vector (GEMV) operations in decoding and compute-bound general matrix-matrix (GEMM) operations in prefill, as its arithmetic intensity varies with speculation length and acceptance rate. We present SPECTRA, a runtime-reconfigurable tiled architecture that sustains high utilization across the full speculative decoding pipeline. Within each tile, the compute engine switches between systolic execution for GEMMs and vector-lane execution for GEMVs. Across tiles, SPECTRA dynamically adapts computation parallelism by selecting tile count, kernel partitioning, and communication pattern. Both tile-level and system-level reconfiguration operate on a per-kernel basis, enabling efficient execution across these diverse regimes. Evaluated on a 20-tile FPGA prototype across the Pythia, SmolLM2, and GPT-2 families, SPECTRA achieves up to $2.09\\times$ speedup from tile-level reconfiguration and a further $1.25\\times$ gain from system-level adaptability over fixed designs.",
+  "id": "http://arxiv.org/abs/2609.24847v1",
+  "authors": [
+    "Gabriele Tombesi",
+    "William Baisi",
+    "Je Yang",
+    "Elisavet Lydia Alvanaki",
+    "Kevin Lee",
+    "Michael Lippe",
+    "Biruk Seyoum",
+    "Luca P. Carloni"
+  ],
+  "categories": [
+    "cs.AR",
+    "cs.AI",
+    "cs.DC"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.24847v1"
+}

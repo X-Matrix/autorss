@@ -1,0 +1,19 @@
+{
+  "title": "Decoding Guardrails: XAI-Guided Perturbation Analysis of Prompt Injection Detection",
+  "link": "https://arxiv.org/abs/2609.24801v1",
+  "published": "2026-09-21T16:01:09Z",
+  "updated": "2026-09-21T16:01:09Z",
+  "summary": "Large language models (LLMs) are increasingly deployed in production systems, raising concerns about their exposure to adversarial manipulation through prompt injection and jailbreak attacks. Classifier-based guardrails, such as Prompt Guard 2, are widely used as a first line of defense against such attacks, but their internal decision logic is largely opaque to both defenders and attackers. This paper presents an exploratory case study that applies explainable artificial intelligence (XAI) techniques to analyze how Prompt Guard 2 distinguishes malicious from benign prompts.   We conduct four experiments to probe this question empirically. Guided by Vanilla Gradient and SHAP attributions, we find that Prompt Guard 2's decisions rely on the cumulative contribution of many tokens rather than a few dominant ones, yet saliency-guided synonym substitution and sentence-level paraphrasing can flip its predictions while altering only a moderate fraction of the text, in some cases yielding a successful jailbreak against the underlying LLM. A dataset-scale saliency analysis further shows that undetected injection prompts systematically lack the lexical markers the classifier relies on. We discuss the implications of these findings for the design and evaluation of classifier-based guardrails, and argue that explanation methods intended to support transparency can simultaneously lower the cost of constructing successful adversarial bypasses.",
+  "id": "http://arxiv.org/abs/2609.24801v1",
+  "authors": [
+    "Fernando Outeda",
+    "Gustavo Betarte",
+    "Juan Diego Campo",
+    "Fiorella Cravero"
+  ],
+  "categories": [
+    "cs.CR",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.24801v1"
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Pinocchio: Fast Uncertainty Estimates for Black-Box Language Models",
+  "link": "https://arxiv.org/abs/2609.24881v1",
+  "published": "2026-09-21T16:48:50Z",
+  "updated": "2026-09-21T16:48:50Z",
+  "summary": "In high-stakes decision-making applications of large language models (LLMs), practitioners require not only accurate LLMs but also uncertainty estimates for their predictions. Existing approaches to uncertainty estimation for LLMs require access to log-probabilities output by the model or require fine-tuning access. However, many industrial LLM products use closed-source API models, and many such API models like GPT do not return log-probabilities and may not allow fine-tuning. We introduce Pinocchio, an external calibrator that estimates the correctness of responses from black-box API models. Trained jointly on responses from seven LLMs, it achieves 0.862 AUROC predicting the correctness of held-out responses from those same models, and shows zero-shot transfer to thirteen unseen models across eight organizations. Our model needs only a single forward pass to generate an uncertainty estimate and requires no access to the target model's logits, weights, or internal states. A lightweight text only 0.8B checkpoint matches our largest model's AUROC. We release code for adding uncertainty estimation to existing repos in only two additional lines of code.",
+  "id": "http://arxiv.org/abs/2609.24881v1",
+  "authors": [
+    "Kevin David Hayes",
+    "Arka Pal",
+    "Haosong Zhang",
+    "Tom Goldstein",
+    "Micah Goldblum"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.24881v1"
+}

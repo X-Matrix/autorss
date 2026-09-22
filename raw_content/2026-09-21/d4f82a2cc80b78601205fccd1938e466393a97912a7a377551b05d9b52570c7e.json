@@ -1,0 +1,20 @@
+{
+  "title": "World State Generator",
+  "link": "https://arxiv.org/abs/2609.24744v1",
+  "published": "2026-09-21T15:13:14Z",
+  "updated": "2026-09-21T15:13:14Z",
+  "summary": "Language agents solve complex tasks through plans and actions. A single step the world refuses puts the goal out of reach, and what the agent does next decides the task. Prompted planners fail at exactly this point, rewriting the refused step in new words, meeting the same refusal, and burning the attempt budget without moving. They fail because the plan was never tied to the world, so a refusal has nothing in the plan to attach to. A world is where a task runs, and it has its own rules, its own admissible actions, and its own constraints. We build synthetic worlds across 7 domains and extract training data from them. A program enforces each world's rules and grades its goal, and every world is admitted only if its goal is reachable from its initial state. Agents run inside and leave verified failures paired with repairs that carried the run to a state the world certified, a record of about 226K trajectories. On this record we train the World State Generator, a model that writes a plan as checkable states of the world and keeps that plan aligned with the world it runs in. That alignment is what a plan written in language lacks, since the world it runs in has physical limits, logical dependencies, and required orders the language never states, and the plan encounters these rules only when a state fails. WSG takes that failure as the rule the world has stated and rewrites the remaining states to obey it, so the plan bends to the world as the run goes on. Across 7 public benchmarks, WSG raises end-to-end success for two open models near 30B parameters over prompting and brings to the level of proprietary model.",
+  "id": "http://arxiv.org/abs/2609.24744v1",
+  "authors": [
+    "Sungheon Jeong",
+    "Sanggeon Yun",
+    "Ryozo Masukawa",
+    "Haleh Alimohamadi",
+    "Mahdi Imani",
+    "Mohsen Imani"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.24744v1"
+}
