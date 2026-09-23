@@ -1,0 +1,26 @@
+{
+  "title": "CompKV: Compensation-Aware KV Selection for Long-Context LLM Inference",
+  "link": "https://arxiv.org/abs/2609.26300v1",
+  "published": "2026-09-22T12:11:19Z",
+  "updated": "2026-09-22T12:11:19Z",
+  "summary": "Despite their strong performance, large language models (LLMs) are bottlenecked by KV cache memory traffic during long-context inference. Sparse attention is widely used to accelerate LLM inference by computing exact attention over a selected subset of tokens. To recover the contribution of tokens excluded from exact attention, recent methods apply coarse-grained compensation to the omitted attention tail. However, existing methods typically select tokens based on attention mass and only then compensate for the unselected tokens. This decoupled design overlooks their interaction: selection should prioritize tokens that would leave the largest compensation error if omitted. To address this limitation, we introduce CompKV, the first compensation-aware sparse attention framework that divides tokens into blocks and explicitly optimizes selection for the downstream compensation mechanism. Our theoretical analysis shows that the residual left by block-level mean compensation is governed by both block attention mass and within-block logit variation. We approximate this residual using compact block-level statistics, yielding a deployable selection criterion. We further develop an efficient asynchronous implementation. Experiments on RULER and LongBench-Pro show that CompKV performs best among the evaluated sparse baselines while delivering up to a $6.85\\times$ self-attention speedup over full attention.",
+  "id": "http://arxiv.org/abs/2609.26300v1",
+  "authors": [
+    "Zhen Huang",
+    "Ruizhe Yao",
+    "Danyi Liu",
+    "Xinrui Chen",
+    "Shuwei Li",
+    "Siru Zhong",
+    "Zijian Cao",
+    "Yushan Lai",
+    "Mingming Guo",
+    "Weijie Zheng",
+    "Haohuan Fu"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.26300v1"
+}

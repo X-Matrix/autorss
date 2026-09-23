@@ -1,0 +1,22 @@
+{
+  "title": "Dual-Frontier: When Can an Agent Trust Its World Model?",
+  "link": "https://arxiv.org/abs/2609.26293v1",
+  "published": "2026-09-22T12:05:43Z",
+  "updated": "2026-09-22T12:05:43Z",
+  "summary": "Learned world models are becoming essential to general-purpose agents: by predicting action consequences, they support planning and decision-making while reducing reliance on costly trial and error. This reliance creates a fundamental ambiguity: when a world-model-guided decision fails, the trajectory alone may not reveal whether the agent's decision rule or the world model caused the loss. We formalize this failure-attribution problem as a counterfactual decomposition of return loss and prove that its components are not identifiable from passive interaction, even for finite-horizon planners. This obstruction motivates Dual-Frontier, a learning principle that admits a world-model-guided decision only when its predicted advantage exceeds a certified bound on decision-relevant world-model error; otherwise, evidence is allocated to world-model verification. Action-conditioned value bounds and a closed-loop extension guarantee non-decreasing return for admitted decisions. Calibrated gates and simultaneous confidence sequences support adaptive evidence reuse, with sufficient and necessary verification bounds. Controlled learned-model experiments validate the predicted failure modes and certification behavior, while cross-backbone tool-use benchmarks instantiate the same verify-then-promote rule in realistic agent world-model pipelines, consistently improving decision quality and reliability.",
+  "id": "http://arxiv.org/abs/2609.26293v1",
+  "authors": [
+    "Huatai Zhu",
+    "Qiang Chen",
+    "Ziqian Kou",
+    "Wenhao Li",
+    "Fei Wang",
+    "Yichao Cao",
+    "Xiu Su",
+    "Yi Chen"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.26293v1"
+}

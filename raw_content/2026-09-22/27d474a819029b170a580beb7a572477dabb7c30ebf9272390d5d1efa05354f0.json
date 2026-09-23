@@ -1,0 +1,20 @@
+{
+  "title": "Do Vision Model See Like the Brain? A Comparison Across EEG Encoding Model",
+  "link": "https://arxiv.org/abs/2609.26512v1",
+  "published": "2026-09-22T14:41:31Z",
+  "updated": "2026-09-22T14:41:31Z",
+  "summary": "Convolutional neural networks (CNNs) and vision transformers are both used to model the human visual system, but whether the two architectures diverge at a specific point in network depth is unclear. We compared six CNNs and two vision transformers by computing the Pearson correlation (r) between each model's predicted and measured EEG response at every layer or block, in ten participants viewing 200 natural images. For the transformer models, we also tested four token representations, from the classification (CLS) token alone to CLS combined with all patch tokens. CNNs showed strongest correspondence at the earliest layers, weakening at deeper layers, particularly later in the post-stimulus response. Transformers instead sustained strong correspondence at their deepest blocks, though not at their earliest ones. This advantage depended on token representation: pooled representations gave weaker peak correlations (r approx 0.48-0.51) than representations retaining all patch tokens (r=0.640 for CLIP-ViT-B/32, r=0.656 for DINOv2-ViT-B/14). Controlled comparisons showed architecture, not training objective, drove this effect: MoCo-v1 and ResNet-50 (matched architecture) performed nearly identically (r=0.673, 0.670), whereas CLIP-RN50 and CLIP-ViT-B/32 (matched objective) diverged until patch tokens were preserved. We propose that CNN training's classification bottleneck compresses brain-relevant information at depth, unlike transformers' self-attention and non-classification objectives. A spatial topography analysis showed a common occipital-dominant pattern across all models, indicating these differences reflect signal strength and persistence rather than distinct brain regions. Patch-preserving transformer representations sustain brain-predictive correspondence where CNNs collapse.",
+  "id": "http://arxiv.org/abs/2609.26512v1",
+  "authors": [
+    "Shashank Baghel",
+    "Kshitij Dwivedi",
+    "Dinesh Singh",
+    "Sanjeev Nara"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.HC"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.26512v1"
+}
