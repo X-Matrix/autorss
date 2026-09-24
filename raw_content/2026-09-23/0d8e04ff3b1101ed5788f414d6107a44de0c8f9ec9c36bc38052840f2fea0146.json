@@ -1,0 +1,19 @@
+{
+  "title": "TEMPS: Temporal Sentence Embeddings for Temporal Information Retrieval",
+  "link": "https://arxiv.org/abs/2609.28048v1",
+  "published": "2026-09-23T13:05:09Z",
+  "updated": "2026-09-23T13:05:09Z",
+  "summary": "Modern information retrieval (IR) systems rarely represent time, yet many information needs depend on it: in clinical, journalistic, and legal search, when an event occurred can decide whether a document is relevant. Dense retrievers and Retrieval-Augmented Generation (RAG) pipelines match queries to documents well on topic but poorly on time, so they surface content that is on-topic yet temporally wrong. We introduce Temporal Textual Similarity (TTS), a task that measures how well two anchored texts align in time, independent of their topical similarity. We then present TEMPS (Temporal Embedding Model for Precise Search), a modular temporal branch that attaches to a frozen semantic retriever and trains on that signal. It resolves anchored temporal expressions to intervals and moment-matches each one to a Gaussian; the resulting ordering supervises an anchor-date-conditioned encoder, whose score we fuse with the semantic score at inference. Grounding supplies the supervision, so training uses no hand-labeled temporal data. The temporal score itself is the Gaussian-KL inclusion measure from distributional embeddings; what TEMPS adds is the grounding and the moment-matched supervision. On three temporal benchmarks, TEMPS improves MRR for every semantic backbone tested and, on TS- Retriever, lifts R@1 from 19.92 to 25.39 over the prior temporal state of the art.",
+  "id": "http://arxiv.org/abs/2609.28048v1",
+  "authors": [
+    "Mourad Hassani",
+    "Julien Romero",
+    "Amel Bouzeghoub",
+    "Christian Jacquelinet"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.28048v1"
+}

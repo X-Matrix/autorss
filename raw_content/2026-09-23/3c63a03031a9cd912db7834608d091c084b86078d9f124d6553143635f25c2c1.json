@@ -1,0 +1,21 @@
+{
+  "title": "Frozen Flows Forget: Diagnosing and Restoring Lost Motion in a Latent-flow World Model",
+  "link": "https://arxiv.org/abs/2609.28414v1",
+  "published": "2026-09-23T17:17:02Z",
+  "updated": "2026-09-23T17:17:02Z",
+  "summary": "Latent world models that integrate a flow in a frozen self supervised latent space train stably and cheaply, yet silently lose the property manipulation depends on most: motion. The pretrained flow never moves the manipulated object; retraining it with latent-only losses only trades stillness for teleport-like motion. We trace the failure to the training signal, not the representation: anchor-sparse, latent-only supervision never says where along the horizon change belongs. Decode-augmented rollout training (DART) repairs this while keeping the representation frozen, retraining only the flow with decode-path supervision. DART outperforms its latent only parent on the full protocol, restores the temporal structure of motion, and re-couples predicted motion to the scene; at larger scale it further improves prediction quality, closing nearly half the remaining gap to an oracle-informed interpolation reference. Finally, we report an unexpected finding about evaluation: pixel error alone rewards frozen predictions.",
+  "id": "http://arxiv.org/abs/2609.28414v1",
+  "authors": [
+    "Xiwen Chen",
+    "Rigaudiere Z. Li",
+    "Zhiruo Zhou",
+    "Xiaojun Zhu",
+    "Houde Liu"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.RO"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.28414v1"
+}

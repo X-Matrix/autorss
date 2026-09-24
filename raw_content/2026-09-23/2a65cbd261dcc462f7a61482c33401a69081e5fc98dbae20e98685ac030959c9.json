@@ -1,0 +1,25 @@
+{
+  "title": "State-Grounded Conditioning: Wrapping User-Facing LLM Agents Where Direction Depends on Live State",
+  "link": "https://arxiv.org/abs/2609.27606v1",
+  "published": "2026-09-23T09:26:07Z",
+  "updated": "2026-09-23T09:26:07Z",
+  "summary": "We introduce State-Grounded Conditioning (SGC), a design principle for user-facing LLM agents that must condition on live user state (game state, session history, live inventory), and a distinct failure class we call direction drift: task-complete responses whose chosen direction misaligns with the current state. SGC externalises state-dependent control into rule kernels over structured inputs and three primary state slices, via Perception, Grounding, and Interaction wrappers with explicit conditioning dependencies. We evaluate SGC on a 200-session anonymised benchmark ($\\approx$1,000 assistant model turns) from an in-game conversational coaching agent that guides players through consecutive competitive matches, reporting mean first-token latency and five human-annotated dialogue-quality metrics that jointly cover factual grounding and coach-like guidance progression. The Perception wrapper holds mean first-token latency at 1.5s (vs. 6.1s for PE-Agent inside a production tool-use harness); enabling all three wrappers lifts turn-level grounded accuracy from 61.1%/69.8% (Prompting / PE-Agent) to 96.7% and session-level grounded accuracy from 20.0%/26.5% to 83.5%; session-level grounding-failure incidents drop by $\\approx$78% relative to the strongest baseline. A cumulative ablation shows complementary incremental gains as the wrappers are added. These results inform approximate state-slice orthogonality, without establishing independent per-wrapper effects.",
+  "id": "http://arxiv.org/abs/2609.27606v1",
+  "authors": [
+    "Qi Liu",
+    "Xiaoyang Yuan",
+    "Yubin Ruan",
+    "Zhuomeng Zhang",
+    "Wenjin Wang",
+    "Di Wu",
+    "Mingye Xu",
+    "Xinyi Mou",
+    "Xingxi Yin",
+    "Ke Feng",
+    "Zixun Sun"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.27606v1"
+}
