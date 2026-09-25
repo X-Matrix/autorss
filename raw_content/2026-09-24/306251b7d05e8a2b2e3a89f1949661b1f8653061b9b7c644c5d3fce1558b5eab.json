@@ -1,0 +1,22 @@
+{
+  "title": "Self-Play Pretraining with Zero Data",
+  "link": "https://arxiv.org/abs/2609.30063v1",
+  "published": "2026-09-24T16:23:01Z",
+  "updated": "2026-09-24T16:23:01Z",
+  "summary": "Advances in language modeling have been driven by scaling pretraining on ever more data. Yet, the training data is still largely curated on the model's behalf. A more general approach to pretraining would let the model learn to generate the data most useful for its own improvement. This would provide an effectively unbounded source of training data, limited by compute rather than human knowledge. We introduce Self-Play Pretraining with Zero Data, an initial proof-of-concept towards realizing this vision. Our procedure casts synthetic data generation as a search over the space of all computable structure, taking inspiration from Solomonoff induction. Starting from random initialization, two models learn in tandem: a generator proposes programs interpreted by a universal Turing machine, generating byte sequences, while a learner autoregressively predicts these byte sequences. The learner is trained with standard cross-entropy, while the generator is trained with reinforcement learning to produce sequences at the frontier of the learner's capabilities, yielding an adaptive curriculum. A universal Turing machine gives us a search space over all computable data-generating processes, imposing little domain-specific structure, and self-play searches over this space for useful training data. We test whether zero-shot performance on natural data improves predictably with self-play compute; this is a clean test of transfer since neither generator nor learner is trained on natural data. Across several natural datasets, zero-shot loss exhibits predictable scaling in compute. The models also exhibit in-context learning, and discover recognizable mathematical sequences during training.",
+  "id": "http://arxiv.org/abs/2609.30063v1",
+  "authors": [
+    "Aditya Cowsik",
+    "Kfir Dolev",
+    "Michael Y. Li",
+    "G. Bruno De Luca",
+    "Nourya Cohen",
+    "Noah D. Goodman",
+    "Yoav Levine"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CL"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.30063v1"
+}

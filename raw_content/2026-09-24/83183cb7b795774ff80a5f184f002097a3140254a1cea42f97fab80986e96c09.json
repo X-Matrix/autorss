@@ -1,0 +1,23 @@
+{
+  "title": "Search-Aware Reinforcement Learning for Multi-Component Query Understanding in Roblox Game Search",
+  "link": "https://arxiv.org/abs/2609.30177v1",
+  "published": "2026-09-24T17:26:46Z",
+  "updated": "2026-09-24T17:26:46Z",
+  "summary": "Query understanding (QU) plays a critical role in production search systems, translating raw user queries into search execution plans that drive downstream retrieval and ranking. While large language models (LLMs) have enabled QU to be framed as a structured multi-task generation problem (e.g., intent classification, query expansion), optimizing such models to produce search-engine-coupled outputs remains challenging: static, label-based supervision fails to capture how each component actually interacts with the underlying search pipeline to affect downstream performance. We present a search-aware reinforcement learning (RL) framework for QU based on a distill-then-RL paradigm. Teacher-student supervised fine-tuning (SFT) first yields a well-formed, schema-compliant policy initialization. The RL stage then optimizes each QU component with rewards derived from live interaction with the search engine, tailored to that component's operational role, rather than a single reward tied to the final search outcome. Experiments on Roblox search show that this component-specific optimization improves both per-component utility and downstream search quality, raising NDCG@20 by 8.9 points over the SFT policy and by 3.5 points over training with a single end-to-end reward.",
+  "id": "http://arxiv.org/abs/2609.30177v1",
+  "authors": [
+    "Nayoung Choi",
+    "Shengjian Chen",
+    "Xiaokai Wei",
+    "Wenzheng Zhang",
+    "Daiyao Yi",
+    "Rachit Pareek",
+    "Vincent Su",
+    "Michelle Gong",
+    "Jinho D. Choi"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.30177v1"
+}

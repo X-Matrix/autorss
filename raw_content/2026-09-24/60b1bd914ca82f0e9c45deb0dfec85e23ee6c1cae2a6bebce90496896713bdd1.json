@@ -1,0 +1,19 @@
+{
+  "title": "MorphIK: Morphology-Conditioned Neural Inverse Kinematics for Unknown Robots",
+  "link": "https://arxiv.org/abs/2609.29908v1",
+  "published": "2026-09-24T14:48:33Z",
+  "updated": "2026-09-24T14:48:33Z",
+  "summary": "Neural models can learn to generate various solutions to the inverse kinematics problem from data, but are usually limited to a single robot. We present MorphIK, a flow-matching model that solves inverse kinematics for revolute-joint-based kinematic chains it has never seen during training. The model uses a transformer architecture to encode the robot's morphology along with the target pose. This encoding then conditions a flow-matching head that generates poses from noise. Trained on purely synthetic data from procedurally generated robots, the model reaches a precision of about 5 cm on unseen real-world robots with 6 to 9 Degrees of Freedom. For higher precision, the model serves as an excellent Prior for further optimization algorithms, reducing error to less than 1 cm after a single step of Damped Least Squares optimization and to sub-1 mm error after 3 steps in most cases. Building on flow matching's generative capabilities to produce highly diverse outputs, our model can efficiently sample the robot's null space, providing a wide variety of configurations for the same pose. Thus, overall, MorphIK allows learning and generalizing neural inverse kinematics for a multitude of known and unknown robots.",
+  "id": "http://arxiv.org/abs/2609.29908v1",
+  "authors": [
+    "Lennart Clasmeier",
+    "Jan Gerrit Habekost",
+    "Cornelius Weber",
+    "Stefan Wermter"
+  ],
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.29908v1"
+}

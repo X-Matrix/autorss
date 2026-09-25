@@ -1,0 +1,24 @@
+{
+  "title": "When Can Agents Forget Their Reasoning? ICLR for Long-Horizon Agent Context Compression",
+  "link": "https://arxiv.org/abs/2609.29875v1",
+  "published": "2026-09-24T14:28:43Z",
+  "updated": "2026-09-24T14:28:43Z",
+  "summary": "Long horizon language model agents continually accumulate reasoning history, increasing context length and inference cost even after earlier decisions have been executed and observed. Unlike static Chain of Thought compression, removing historical reasoning can change future actions and the resulting interaction trajectory. We study when such reasoning can be safely forgotten. We propose Interaction Aware Compression for Long Horizon Reasoning (ICLR), a training free online method that ranks reasoning blocks using frozen proxy entropy while preserving actions, tool calls, and observations. On 260 WorkBuddyBench tasks, ICLR improves average reward from 0.699 to 0.718, while reducing input, output, and cache read tokens by 25.5%, 14.4%, and 33.3%, respectively. Ablations reveal trajectory amplification, where local reasoning deletion produces nonlinear changes in total computation by altering subsequent interaction. Representation probing, activation patching, and controlled trajectory analyses further suggest that historical reasoning becomes more replaceable once task relevant derived state has been reliably externalized into code, files, tool outputs, or environmental feedback. These results characterize agent reasoning as dynamic working state rather than permanent interaction history.",
+  "id": "http://arxiv.org/abs/2609.29875v1",
+  "authors": [
+    "Mingxuan Wang",
+    "Fei Luo",
+    "Bo Wang",
+    "Guorun Yao",
+    "Yinglong Guo",
+    "Chao Ning",
+    "Hongyue Chen",
+    "Yanbiao Ma",
+    "Jungong Han"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CV"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.29875v1"
+}

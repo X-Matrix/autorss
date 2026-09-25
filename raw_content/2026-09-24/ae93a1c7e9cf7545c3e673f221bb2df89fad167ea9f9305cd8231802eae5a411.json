@@ -1,0 +1,22 @@
+{
+  "title": "An Empirical Study of VLM Pipelines for Long-Document QA",
+  "link": "https://arxiv.org/abs/2609.29933v1",
+  "published": "2026-09-24T15:00:18Z",
+  "updated": "2026-09-24T15:00:18Z",
+  "summary": "Vision-Language Models (VLMs) are increasingly used for long-document processing, where the inputs combine text with charts, tables, figures, and complex layouts. Deploying them means choosing how to feed the document to the model, which retriever to use when only a subset of pages is sent, and whether to run the model agentically or as a static pipeline. We study these choices on two long-document QA benchmarks with both frontier API and open-weight VLMs. First, on MMLongBench-Doc our six-tool agent with page, table, figure, and search calls pays off only once the answering VLM is large enough: with Qwen3.5-4B and 9B it trails static page input, with Qwen3.5-27B it draws level, and with Sonnet 4.5 it leads. On LongDocURL it is level with or ahead of static input at every reader. Its lead over the strongest static pipeline is clearest with the frontier reader on MMLongBench-Doc and narrows to within noise on LongDocURL. Second, retrieval modality matters more than the specific retriever: the strongest image retriever leads the strongest text pipeline, and on the text side a single off-the-shelf cross-encoder rerank essentially matches a much heavier multi-stage LLM pipeline. Top-k image retrieval is also the most token-efficient input at every reader we paired it with, at roughly a seventh to a quarter of the tokens of sending every page. Third, cutting across all three choices, three of our strongest pipelines succeed on different questions, and an oracle that picks the best pipeline per question gains roughly thirteen points over the best single pipeline, though evidence-type routing recovers almost none of it.",
+  "id": "http://arxiv.org/abs/2609.29933v1",
+  "authors": [
+    "Kenan E. Ak",
+    "Jay Mohta",
+    "Gwang Gook Lee",
+    "Yan Xu",
+    "Dimitrios Dimitriadis"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.CV",
+    "cs.IR"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.29933v1"
+}

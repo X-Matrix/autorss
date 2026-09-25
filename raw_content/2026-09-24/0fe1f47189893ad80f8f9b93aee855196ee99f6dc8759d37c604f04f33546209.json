@@ -1,0 +1,19 @@
+{
+  "title": "GHOST-Q: Towards Studying Grounding Hallucinations Overlooked Under Same-score TradeOffs in Quantized VLMS",
+  "link": "https://arxiv.org/abs/2609.29999v1",
+  "published": "2026-09-24T15:44:33Z",
+  "updated": "2026-09-24T15:44:33Z",
+  "summary": "Post-training quantization of vision--language models (VLMs) is typically assessed through aggregate task accuracy and memory savings, but preserving a headline score does not guarantee preservation of visual grounding behavior. We present GHOST-Q, a cross-precision controlled evaluation of three 8B VLM families under FP16, INT8, and NF4 across utility and hallucination-sensitive benchmarks. Rather than comparing only aggregate accuracy, we pair FP16 and quantized predictions item by-item to quantify how compression redistributes grounding successes and failures. Five of six quantized variants preserve MMStar accuracy within $\\pm2$ percentage points, yet 10 of 36 paired effects remain significant after false-discovery-rate correction, nine on hallucination-sensitive conditions. Same-device A100 profiling further demonstrates that substantial memory reduction does not necessarily mean lower inference latency. Finally, an open-ended AMBER audit reveals strong generation budget censoring whose severity varies by architecture and precision. These results show that quantized VLMs should be evaluated jointly for aggregate utility, grounding reliability, generation behavior, and realized deployment efficiency.",
+  "id": "http://arxiv.org/abs/2609.29999v1",
+  "authors": [
+    "Saim Rehman",
+    "Muhammad Shafique"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI",
+    "cs.LG",
+    "cs.MM"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.29999v1"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Learning Better Reasoning for Generative Recommendation with Semantic IDs",
+  "link": "https://arxiv.org/abs/2609.29973v1",
+  "published": "2026-09-24T15:24:54Z",
+  "updated": "2026-09-24T15:24:54Z",
+  "summary": "Generative recommendation reformulates item retrieval as sequence generation, allowing a unified model to directly generate the next item from a user's interaction history. Semantic IDs further make this paradigm effective and scalable by representing each item as discrete codes, enabling knowledge sharing among semantically related items. Recent studies introduce explicit reasoning before Semantic-ID generation, helping models summarize user interests and infer possible preference transitions. However, reasoning is not inherently beneficial: Inaccurate or uninformative reasoning may mislead subsequent item generation and ultimately degrade recommendation performance. This raises a central challenge: how can a recommender select and learn effective reasoning traces and progressively evolve toward better reasoning from its own generations? In this work, we propose Evo-Rec, a three-stage framework for learning better reasoning and further enhancing it through reinforcement learning. First, we align Semantic IDs with their textual and behavioral contexts, enabling the model to understand and generate item identifiers. Second, we sample multiple candidate reasoning traces and retain those that improve the prediction of the ground-truth item, providing a stronger reasoning initialization through supervised fine-tuning. Third, we further optimize the reasoning policy through reinforcement learning with catalog-constrained item generation and ranking-aware recommendation feedback. Experiments on three Amazon Review benchmarks show that Evo-Rec consistently outperforms discriminative, generative, and reasoning-enhanced recommenders across all evaluation metrics. These results demonstrate the effectiveness of our framework in learning better reasoning for SID-based generative recommendation.",
+  "id": "http://arxiv.org/abs/2609.29973v1",
+  "authors": [
+    "Mengdan Zhu",
+    "Yufan Zhao",
+    "Sophie Di",
+    "Yao Zhao",
+    "Tao Di",
+    "Yulan Yan",
+    "Sridhar Iyer",
+    "Liang Zhao"
+  ],
+  "categories": [
+    "cs.IR",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.29973v1"
+}

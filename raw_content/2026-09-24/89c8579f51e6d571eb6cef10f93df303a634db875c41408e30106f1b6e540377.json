@@ -1,0 +1,25 @@
+{
+  "title": "Who Holds the Pen? Let Specifications, Not Agents, Sign Off",
+  "link": "https://arxiv.org/abs/2609.29921v1",
+  "published": "2026-09-24T14:55:14Z",
+  "updated": "2026-09-24T14:55:14Z",
+  "summary": "Large language model agents increasingly combine generation, decision-making, execution, and self-evaluation within a single agentic loop. Although they operate under external specifications such as task instructions, guidelines, output schemas, and reusable skills, these specifications typically remain context for the same model that acts and declares completion, leaving no independent specification authority boundary. We identify two resulting gaps. The understanding--execution gap arises when a requirement is understood but not satisfied in execution; the state--authority gap arises when an agent's interpretation or completion claim does not establish the required state. On SkillsBench, using only agent-visible prompts, workspace information, and injected skill specifications, we extract 509 source-grounded task directions. Across seven models, only 79.6%--86.4% are satisfied, while completion-claim rates exceed official evaluator pass rates by 28.7--37.9 percentage points. We therefore separate agent proposals from authoritative state. Agents may plan, act, and request completion, but only admissible evidence from qualified providers may establish specification-governed state. SpecHarness operationalizes this principle by compiling visible specifications into source-linked obligations and governing execution and finalization through versioned obligation state. Verifiable requirements are mediated or validated at runtime, while ambiguous or subjective requirements remain advisory. Experiments on guideline-following and artifact-generation tasks show that specifications can serve not merely as behavioral guidance, but as authority over compliant execution and completion.",
+  "id": "http://arxiv.org/abs/2609.29921v1",
+  "authors": [
+    "Haiqing Li",
+    "Xin Ma",
+    "Yinhao Wu",
+    "Wenliang Zhong",
+    "Feng Jiang",
+    "Thao M. Dang",
+    "Xiao Hu",
+    "Hehuan Ma",
+    "Yuzhi Guo",
+    "Junzhou Huang"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.MA"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.29921v1"
+}

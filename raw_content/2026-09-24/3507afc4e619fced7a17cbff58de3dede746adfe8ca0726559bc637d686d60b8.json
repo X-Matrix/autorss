@@ -1,0 +1,20 @@
+{
+  "title": "ENDOPROMPT: Victim-Side Pseudo-References for Utility Degradation",
+  "link": "https://arxiv.org/abs/2609.29948v1",
+  "published": "2026-09-24T15:08:13Z",
+  "updated": "2026-09-24T15:08:13Z",
+  "summary": "Prompt injection can degrade benign task performance without eliciting harmful content. Yet many attack objectives depend on task labels or predefined target responses. We present ENDOPROMPT, a white-box method that learns utility-degrading prefixes from unlabeled instructions. Its generator takes the request text as input. Clean victim continuations serve as pseudo-references: local search identifies prefixes that reduce continuation likelihood, and preference fitting on comparisons within the same instruction, followed by reward refinement, distills this signal into a generator. At deployment, the generator produces one prefix per request without further victim-side search. Across four instruction-tuned models and the complete splits of seven benign benchmarks, ENDOPROMPT yields a mean utility change of -26.8 percentage points; 27 of 28 cells are negative. Failure analysis reveals output expansion and prefix reuse; the controls do not establish a degradation advantage from request matching. Victim-derived supervision can reveal utility weaknesses without benchmark feedback or prescribed failure responses. The code will be released upon acceptance.",
+  "id": "http://arxiv.org/abs/2609.29948v1",
+  "authors": [
+    "Qingyu Wu",
+    "Zeyu Feng",
+    "Yongda Yu",
+    "Yuzhe Luo",
+    "Hua Cheng"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.CR"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.29948v1"
+}
