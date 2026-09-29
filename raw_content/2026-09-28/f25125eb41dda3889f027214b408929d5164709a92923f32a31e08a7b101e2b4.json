@@ -1,0 +1,19 @@
+{
+  "title": "GLAD: Global-Local Adaptive Detector for Robust Speech Deepfake Detection",
+  "link": "https://arxiv.org/abs/2609.35411v1",
+  "published": "2026-09-28T15:29:03Z",
+  "updated": "2026-09-28T15:29:03Z",
+  "summary": "Recent advances in AI-based speech synthesis have enabled highly realistic speech, increasing the importance of speech deepfake detection (SDD) in preventing misuse. While mainstream Self-Supervised Learning (SSL)-based detectors achieve strong performance, they suffer from poor generalization to unseen domains and often overlook fine-grained signal artifacts due to a bias towards global semantic consistency. In this paper, we conduct the first detailed empirical and visual analysis to validate these limitations explicitly. Our investigation reveals two critical architectural vulnerabilities: (1) a systemic failure to capture localized spoofing traces, and (2) a severe lack of adaptability to domain-driven shifts in SSL layer importance, rendering static aggregation strategies prone to overfitting. To address these vulnerabilities, we propose the Global-Local Adaptive Detector (GLAD). Specifically, to capture localized forgeries, GLAD employs a Hierarchical Global-Local (HGL) backbone that explicitly bridges the granularity gap by fusing global linguistic and acoustic features with fine-grained local signal details. To counter layer importance shifts in out-of-distribution (OOD) scenarios, we introduce a Hierarchical Adaptive Gating (HAG) mechanism that dynamically recalibrates layer-wise focus in a sample-specific manner. Finally, to address shortcut learning induced by environmental biases, we introduce SaniBoost, a composite data augmentation strategy for robust signal standardization and noise sanitization. Extensive experiments demonstrate that GLAD significantly outperforms state-of-the-art methods, particularly on unseen domain cases.The code will be released upon publication.",
+  "id": "http://arxiv.org/abs/2609.35411v1",
+  "authors": [
+    "Zelin Zhao",
+    "Guanjie Huang",
+    "Danny Hin Kwok Tsang",
+    "Li Liu"
+  ],
+  "categories": [
+    "cs.SD",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.35411v1"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "The Hidden Ratio in Adam: Stable Structure, Compression, and Sign Dynamics",
+  "link": "https://arxiv.org/abs/2609.35392v1",
+  "published": "2026-09-28T15:21:30Z",
+  "updated": "2026-09-28T15:21:30Z",
+  "summary": "Adam is the default optimizer for training modern deep neural networks, yet its adaptive behavior remains poorly understood due to the complex interaction between its first- and second-moment exponential moving averages (EMAs). We study Adam in the tied-$β$ regime, where the two EMA decay rates are equal, and show that its adaptive dynamics can be expressed through a transformed ratio with approximately scale-stable behavior. Empirically, this transformed ratio exhibits a stable, heavy-tailed distribution across tasks, model scales, and training stages, in contrast to the variability of raw moment magnitudes. This empirical stability has both practical and conceptual consequences. First, we derive a recurrence for the transformed ratio, yielding a reparameterization of Adam that replaces the second moment with a compressible state. Leveraging its stable distribution, we show that a fixed 4-bit codebook is sufficient in our experiments to store this state without auxiliary scaling, achieving performance competitive with full-precision Adam. Second, the transformed ratio view clarifies Adam's connection to sign-based methods: Adam reduces to sign-based momentum modulated by the transformed ratio, and replacing it with a constant recovers Signum as a limiting case. This perspective further provides a simple rule for transferring learning rates between the two methods. Together, these results suggest that tied-$β$ Adam admits a simple and approximately stable ratio structure underlying its adaptive behavior and demonstrate its utility for both analysis and efficient implementation.",
+  "id": "http://arxiv.org/abs/2609.35392v1",
+  "authors": [
+    "Yihe Zhou",
+    "Tongtian Zhu",
+    "Yingxiao Huo",
+    "Satya Prakash Dash",
+    "Can Wang",
+    "Samuel Kaski",
+    "Mingfei Sun"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.35392v1"
+}

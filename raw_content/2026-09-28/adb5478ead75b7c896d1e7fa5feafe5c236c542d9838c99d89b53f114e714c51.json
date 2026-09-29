@@ -1,0 +1,19 @@
+{
+  "title": "X-Reset: Scaling Object-Centric Reinforcement Learning via Cross-Embodiment Resets",
+  "link": "https://arxiv.org/abs/2609.35715v1",
+  "published": "2026-09-28T17:46:42Z",
+  "updated": "2026-09-28T17:46:42Z",
+  "summary": "Reinforcement learning (RL) in simulation can train dexterous manipulation policies without robot demonstrations, but training a single generalist policy with task-agnostic rewards faces a severe exploration problem: approaching, grasping, and reorienting diverse objects with many degrees of freedom is difficult to discover from scratch. Prior works make exploration tractable with high-quality robot demonstrations, per-task reward shaping, or by restricting policies to narrow modes of behavior. We propose X-Reset, a framework that instead resolves exploration with human hand-object demonstrations. Rather than imitating or tracking retargeted human motion, X-Reset kinematically retargets hand-object states to noisy robot states, filters out states that are unstable in simulation, and samples the remainder as resets during RL training with general-purpose object-centric rewards. The resulting policy depends only on object state and goal, with demonstrations entering training through the reset distribution. We show that X-Reset trains generalist policies on 20 objects across three embodiments---a 22-DoF hand on two different arms and a parallel-jaw gripper---and resolves the exploration challenges of RL from scratch. X-Reset scales with the number of training objects, generalizes to unseen objects, can learn from imperfect hand-pose estimates, and transfers behaviors zero-shot from sim-to-real.",
+  "id": "http://arxiv.org/abs/2609.35715v1",
+  "authors": [
+    "Prithwish Dan",
+    "Chenyang Ma",
+    "Wei Zhan"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI",
+    "cs.RO"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.35715v1"
+}

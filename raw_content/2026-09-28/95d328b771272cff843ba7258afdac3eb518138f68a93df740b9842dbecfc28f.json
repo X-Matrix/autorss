@@ -1,0 +1,23 @@
+{
+  "title": "From Scores to Samples: Elastic Forcing for Autoregressive Video Generation",
+  "link": "https://arxiv.org/abs/2609.35491v1",
+  "published": "2026-09-28T16:00:49Z",
+  "updated": "2026-09-28T16:00:49Z",
+  "summary": "Few-step autoregressive video generation commonly relies on Distribution Matching Distillation (DMD), requiring a bidirectional diffusion teacher and an online fake-score model. We instead learn the rollout distribution directly from reference videos, eliminating both score models during post-training. Our framework minimizes maximum mean discrepancy (MMD) in frozen self-supervised video representation spaces, using a hybrid Nyström--Monte Carlo estimator to balance approximation bias and sampling variance. Memory-efficient replay and gradient subsampling make this objective practical. Using the same architecture and initialization as Self-Forcing, our 1.3B model improves the VBench Total score from 83.80 to 84.64 while retaining 17 FPS. Removing auxiliary score models also enables 14B post-training on eight H200 GPUs. Beyond distillation, learning from reference videos enables the acquisition of new visual styles, semantic concepts, and spatial priors without a target-specific diffusion teacher.",
+  "id": "http://arxiv.org/abs/2609.35491v1",
+  "authors": [
+    "Chi Zhang",
+    "Yueyi Liu",
+    "Haoyang Shi",
+    "Ruichuan An",
+    "Haoyu Li",
+    "Yuhang Wu",
+    "Sen Cui",
+    "Miao Liu"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.35491v1"
+}

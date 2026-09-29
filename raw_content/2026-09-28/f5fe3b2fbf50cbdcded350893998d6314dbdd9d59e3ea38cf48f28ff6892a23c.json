@@ -1,0 +1,19 @@
+{
+  "title": "Riccati State Space Models: Non-iterative Parallelization for Nonlinear Sequence Modeling",
+  "link": "https://arxiv.org/abs/2609.35441v1",
+  "published": "2026-09-28T15:40:55Z",
+  "updated": "2026-09-28T15:40:55Z",
+  "summary": "State space models (SSMs) achieve efficient sequence processing because their affine state updates are closed under composition and can therefore be evaluated with an associative parallel scan. Nonlinear recurrent models can provide richer, state-dependent dynamics, but generally lose this compositional structure: parallel evaluation then requires iterative methods that repeatedly linearize and scan the recurrence. We ask, what state-dependent nonlinear dynamics can be designed to remain exactly composable? We answer by introducing RiccatiSSM, a nonlinear SSM, in which each state dimension follows an input-conditioned Riccati differential equation. Its quadratic state dependence makes the local Jacobian explicitly state-dependent, while its exact per-step flow under piecewise-constant inputs is a Möbius transformation. Since Möbius maps are closed under composition and compose through $2\\times 2$ matrix multiplication, the complete nonlinear state trajectory can be evaluated exactly with a single associative parallel scan, without iterative linearization. We further derive a constrained parameterization that ensures bounded, contractive dynamics, and avoids poles in the fractional-linear state update. Across long-sequence classification, regression, and forecasting tasks, RiccatiSSM achieves competitive predictive performance while reducing runtime by $22{-}33\\%$ compared to the nonlinear LrcSSM under matched architectures. These results demonstrate that state-dependent nonlinear dynamics can retain exact composability and be evaluated efficiently within a single parallel scan.",
+  "id": "http://arxiv.org/abs/2609.35441v1",
+  "authors": [
+    "Mónika Farsang",
+    "Ramin Hasani",
+    "Daniela Rus",
+    "Radu Grosu"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.35441v1"
+}

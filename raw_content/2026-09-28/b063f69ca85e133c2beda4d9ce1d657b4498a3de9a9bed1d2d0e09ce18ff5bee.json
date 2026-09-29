@@ -1,0 +1,18 @@
+{
+  "title": "\"Nothing to See Here'': Unintended Disclosure through Revision Traces of LLM Deliverables",
+  "link": "https://arxiv.org/abs/2609.35408v1",
+  "published": "2026-09-28T15:28:03Z",
+  "updated": "2026-09-28T15:28:03Z",
+  "summary": "Large language model (LLM) assistants increasingly help users draft content for third-party recipients. During private drafting, the user or the model may introduce an item and later remove or replace it. The model may remove the item from the intended content but reveal it again when stating the edit. We call such statements revision traces. For example, after a user removes the password before sharing a configuration file, the model may delete it but leave a comment saying, \"Removed the password 'No****4!' as requested.\" A third-party recipient who sees only the delivered file can therefore recover the withdrawn password from the comment. In an in-the-wild analysis of three public conversation corpora, we identify 26,753 revision requests, of which 2,363 (8.8%) leave revision traces. We study them in greater depth under controlled conditions by introducing RevLeakBench, a benchmark of 100 tasks across five scenarios with a conversation track and an agent track. We measure trace occurrence, withdrawn-item recovery, trace position, and required-content retention. Across six models, about half of the deliverables in both tracks state the edit after a revocation, and a reader that sees only the deliverable can recover the withdrawn item from about 13% of them. Telling the model that its entire reply will be forwarded to the recipient still leaves revision traces in 36.4% of the deliverables. We compare prompt defenses and a delivery boundary, and propose an output-side filter that sharply reduces recovery with little loss of required content. We believe our work can benefit efforts to understand and mitigate unintended disclosure in LLM interactions.",
+  "id": "http://arxiv.org/abs/2609.35408v1",
+  "authors": [
+    "Yage Zhang",
+    "Yukun Jiang",
+    "Yang Zhang"
+  ],
+  "categories": [
+    "cs.CR",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.35408v1"
+}

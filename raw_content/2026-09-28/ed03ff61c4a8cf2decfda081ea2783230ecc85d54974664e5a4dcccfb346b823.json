@@ -1,0 +1,21 @@
+{
+  "title": "Source-preserving alignment for robust evidence localization in scientific PDFS",
+  "link": "https://arxiv.org/abs/2609.35588v1",
+  "published": "2026-09-28T16:40:33Z",
+  "updated": "2026-09-28T16:40:33Z",
+  "summary": "Scientific information-extraction systems often return a claim with an evidence string, which users must locate in the original PDF. This is challenging because the extracted evidence and PDF text layer are different representations: line wrapping, Unicode variants, superscripts, citation markers, and fragmented items alter text sequences and geometry. We present a source-preserving alignment framework: normalize text for robust matching while preserving provenance for accurate localization. It aligns evidence with normalized page text, maps matches back to source-character spans, and renders only their geometry. When exact alignment fails, line-break-aware token alignment recovers supported spans while excluding unmatched noise. Experiments on 1,020 chemistry papers show that the framework achieves a 92.6\\% quote-level automatic localization rate, compared with 43.6\\% for text search and 19.1\\% for a precomputed bounding-box baseline. Component ablation confirms distinct contributions from normalization and approximate token alignment, while human verification assesses the visual correctness of returned highlights. Overall, these results demonstrate that reliable evidence verification requires robust matching and precise localization within a shared source-preserving alignment representation.",
+  "id": "http://arxiv.org/abs/2609.35588v1",
+  "authors": [
+    "Zihao Liu",
+    "Wei Yang",
+    "Zixiao Dong",
+    "Chenshu Li",
+    "Longzhang Liu",
+    "Tao Tan",
+    "Hong Xie"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.35588v1"
+}
