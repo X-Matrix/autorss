@@ -1,0 +1,27 @@
+{
+  "title": "Guide, Then Let Go: Gap-Adaptive Teacher Scheduling for Sparse-Reward Agentic RL",
+  "link": "https://arxiv.org/abs/2609.37898v1",
+  "published": "2026-09-29T16:00:21Z",
+  "updated": "2026-09-29T16:00:21Z",
+  "summary": "Reinforcement learning for long-horizon agents typically relies on sparse outcome-based rewards. This leads to a severe cold-start problem, as early-stage policies often fail to solve sampled tasks, leaving little useful reward signal for learning. To mitigate this problem, we use on-policy distillation (OPD) to provide token-level guidance on the student's own rollouts. We find that the benefit of this guidance depends on the performance gap between the teacher and the student. When the teacher substantially outperforms the student, distillation helps guide the student through the early training stage where outcome rewards provide little learning signal. As the gap narrows and eventually reverses, however, continued distillation becomes less beneficial and may hinder further improvement. Motivated by this observation, we propose Gap-Adaptive Teacher Scheduling (GATS), which augments the student's RL objective with an OPD term whose weight adapts to the teacher-student performance gap. Specifically, GATS gradually reduces teacher guidance as the student approaches the teacher's reference performance and withdraws it once that reference is reached. This enables GATS to leverage task-trained teachers smaller than the student, since teacher guidance is primarily needed during early training. Across ALFWorld, WebShop, and ScienceWorld with three Qwen2.5 teacher-student configurations, GATS achieves the highest average success rate among the compared methods in all three configurations, improving over reward-only GRPO by 4.37%-11.87% under matched student rollout budgets. Code is available at https://github.com/Ricardo-H/guide-then-let-go.",
+  "id": "http://arxiv.org/abs/2609.37898v1",
+  "authors": [
+    "Youling Huang",
+    "Tiankuo Xu",
+    "Jiaji Liu",
+    "Tong Zheng",
+    "Shuo Zhou",
+    "Shaotong Qi",
+    "Junchi Yao",
+    "Shiyang Liu",
+    "Hao Xu",
+    "Pengcheng Xu",
+    "Bo Huang",
+    "Hongyi Fu",
+    "Lin Lin"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.37898v1"
+}

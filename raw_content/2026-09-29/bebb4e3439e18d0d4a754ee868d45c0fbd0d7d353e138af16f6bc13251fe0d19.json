@@ -1,0 +1,23 @@
+{
+  "title": "Privy to the Foil: Recasting Value Estimation with a Self-Privileged Critic for RLVR",
+  "link": "https://arxiv.org/abs/2609.37825v1",
+  "published": "2026-09-29T15:32:21Z",
+  "updated": "2026-09-29T15:32:21Z",
+  "summary": "Assigning credit to intermediate steps remains a central challenge in training Large Language Models (LLMs) on multi-step reasoning tasks with sparse terminal rewards, and actor-critic methods such as PPO address this by learning value functions to construct token-level advantages. Their effectiveness, however, hinges on reliable value estimation, a difficult task requiring the critic to both assess progress toward a correct solution and anticipate an evolving policy's future behavior; errors in either can compromise credit assignment and destabilize online training. In this paper, we revisit the standard state-only formulation of value estimation and propose $π$PPO, a self-privileged actor-critic framework. By reusing verified same-prompt rollouts as contrastive evidence, $π$PPO helps the critic assess intermediate reasoning against successful and failed attempts, while preserving standard policy optimization and the deployment interface. Experiments show that $π$PPO consistently improves value-estimation quality by a substantial margin and outperforms representative actor-critic and critic-free RLVR baselines on challenging mathematical reasoning benchmarks, while remaining effective even when paired with substantially smaller asymmetric critics.",
+  "id": "http://arxiv.org/abs/2609.37825v1",
+  "authors": [
+    "Kun Liang",
+    "Chenming Tang",
+    "Clive Bai",
+    "Weijie Liu",
+    "Zeyuan Liu",
+    "Qingyang Zhang",
+    "Saiyong Yang",
+    "Yunfang Wu"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.37825v1"
+}
