@@ -1,0 +1,22 @@
+{
+  "title": "OPSRD: On-Policy Self-Role Distillation",
+  "link": "https://arxiv.org/abs/2609.39884v1",
+  "published": "2026-09-30T14:56:10Z",
+  "updated": "2026-09-30T14:56:10Z",
+  "summary": "Role prompting elicits specialized behavior from large language models through an expert identity, offering a lightweight way to guide reasoning on demanding tasks. However, evaluating or distilling complete role-prompted answers can miss useful next-token preferences when the sampled solution remains incorrect. Transferring these preferences also requires an objective that reaches alternatives the student rarely predicts. We introduce OPSRD, which uses a fixed expert role as privileged teaching context for on-policy self-distillation without reference solutions. A role-free student generates a trajectory, and a frozen instance of the same base model supplies role-conditioned distributions on its exact prefixes, exposing alternatives beyond the sampled continuation. Teacher-weighted forward KL targets alternatives the student underestimates, with clipping to limit individual vocabulary contributions. Supervision is restricted to the highest-entropy half of student positions, concentrating learning where predictions are uncertain. Experiments on three competition-math benchmarks with Qwen3-1.7B, 4B, and 8B show improvements over the base models without role prompts at inference. Forward KL achieves the highest macro-averaged accuracy among the three evaluated divergences at every scale. Code is available at https://github.com/zhansan114514/OPSRD.",
+  "id": "http://arxiv.org/abs/2609.39884v1",
+  "authors": [
+    "Weijie Ren",
+    "Yanwen Zhang",
+    "Hao Li",
+    "Zhuolin Qi",
+    "Hengyi Zhang",
+    "Naibo Wang"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2609.39884v1"
+}
