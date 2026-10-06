@@ -1,0 +1,18 @@
+{
+  "title": "Harmful Content Generation in Text-to-Image Models: Capabilities and Moderation Limitations",
+  "link": "https://arxiv.org/abs/2610.06503v1",
+  "published": "2026-10-05T15:22:19Z",
+  "updated": "2026-10-05T15:22:19Z",
+  "summary": "Text-to-image generative models can produce highly realistic imagery but also raise concerns about harmful misuse. While safety mechanisms exist, systematic evaluations of their effectiveness against realistic attacks remain limited. We present a systematic evaluation of harmful content generation across five open text-to-image models using an automated pipeline that transforms legitimate news captions into unsafe prompts targeting sexually explicit content, violence/gore, harmful stereotypes, self-harm, and hate speech. We evaluate both standard models with built-in safety mechanisms and community fine-tuned variants that bypass content restrictions. A human evaluation of 1,500 generated images shows high harmful-content generation rates: 89.2% for gore-related prompts, 47.6% for sexually explicit content, 43.6% for harmful stereotypes, 46.0% for hate speech, and 34.5% for self-harm, predominantly through graphic violence. Models show substantial capability for generating violent and stereotypical content, while community fine-tuned variants are particularly vulnerable to sexually explicit prompts. Generation quality is largely preserved under harmful prompting, producing imagery of sufficient fidelity to pose risks for disinformation and abuse; FLUX.1-dev produces clearly realistic harmful images in 30.9% of cases. We further evaluate automated moderation systems and find substantial detection gaps that allow unsafe images to evade filtering. Finally, we assess synthetic image detectors and show that models trained only on benign datasets perform worse on explicit content, while more diverse training data improves detection, highlighting semantic distribution gaps in current approaches. These findings expose limitations in current generation safeguards, moderation systems, and synthetic image detection, highlighting the need for stronger defenses against misuse at scale.",
+  "id": "http://arxiv.org/abs/2610.06503v1",
+  "authors": [
+    "Paschalis Giakoumoglou",
+    "Manos Schinas",
+    "Symeon Papadopoulos"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.06503v1"
+}

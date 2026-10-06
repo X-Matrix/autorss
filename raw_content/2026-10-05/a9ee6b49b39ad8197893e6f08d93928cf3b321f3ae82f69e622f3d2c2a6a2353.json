@@ -1,0 +1,23 @@
+{
+  "title": "Balancing Memory Pathways: Analyzing and Improving Memory Utilization in Hybrid LMs",
+  "link": "https://arxiv.org/abs/2610.06750v1",
+  "published": "2026-10-05T17:27:30Z",
+  "updated": "2026-10-05T17:27:30Z",
+  "summary": "Recurrent-attention hybrid language models (LMs), which interleave attention and recurrent layers, are increasingly used to combine the efficiency of the recurrent layers with the strong performance of attention layers. Prior work suggests that attention and recurrent layers offer complementary pathways to use past information: attention supports precise memory recall from earlier tokens, while recurrent layers support consolidation of disparate information over long contexts. However, we observe that simply having access to both pathways does not mean that hybrid LMs are effectively using them. We find that they rely substantially more on attention than on the recurrent state. Standard supervised fine-tuning improves overall performance but does not improve how the two memory pathways are coordinated: the model becomes more reliant on information propagated by attention layers, while its use of information propagated by recurrent layers remains limited. To encourage better coordination between the two memory pathways, we add an auxiliary loss that limits attention's access to earlier context while the recurrent state propagates through the full sequence. This objective encourages the model to retain and use information through the recurrent pathway alongside attention. It improves overall performance, with particularly strong gains on tasks involving longer contexts or requiring information aggregation, consistent with the strengths of recurrent layers observed in analysis. Crucially, this imbalance and the benefit of our auxiliary loss generalize: they apply to multiple recurrent-attention LMs in question-answering and agentic tasks, as well as to attention-based LMs that combine different forms of memory. Together, our findings show that simply providing multiple memory pathways does not ensure their effective use, and that targeted supervision is needed to better coordinate them.",
+  "id": "http://arxiv.org/abs/2610.06750v1",
+  "authors": [
+    "Hyunji Lee",
+    "Joykirat Singh",
+    "Zaid Khan",
+    "Justin Chih-Yao Chen",
+    "Elias Stengel-Eskin",
+    "Alessandro Sordoni",
+    "Arman Cohan",
+    "Mohit Bansal"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.06750v1"
+}

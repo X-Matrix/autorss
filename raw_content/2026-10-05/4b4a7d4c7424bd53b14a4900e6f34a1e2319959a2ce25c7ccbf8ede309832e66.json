@@ -1,0 +1,16 @@
+{
+  "title": "DGA-Muon: Decoupled Geometry-Aligned Adaptive Scaling for Muon",
+  "link": "https://arxiv.org/abs/2610.06578v1",
+  "published": "2026-10-05T15:56:02Z",
+  "updated": "2026-10-05T15:56:02Z",
+  "summary": "While NorMuon has achieved strong empirical performance in large-scale pretraining by enhancing Muon with row-wise adaptive scaling, its underlying adaptive mechanism remains poorly understood. In this work, we provide the first systematic analysis of NorMuon's adaptivity, revealing that it originates primarily from orthogonalization-induced geometry rather than genuine optimization-relevant information. Under exact orthogonalization, the adaptive scaling factors degenerate into a single global scalar for square and wide matrices, while for tall matrices their variation arises from the non-uniform distribution of row energy after orthogonalization. Under approximate orthogonalization, the orthogonality residual introduces additional variation into the scaling factors, leading to the \\textit{Orthogonalization--Adaptivity Paradox}: more accurate orthogonalization weakens adaptivity. We further show that NorMuon's rigid row-wise scaling is geometrically misaligned with the one-sided orthogonal structure of tall matrices. Based on the analysis of these limitations, we propose two core design principles that a desirable adaptive mechanism for Muon should satisfy. First, adaptive scaling should be decoupled from orthogonalization, with the scaling factors computed directly from raw gradients. Second, adaptive scaling should be aligned with the shape-dependent orthogonal structure of the polar factor, using row-wise scaling for wide matrices and column-wise scaling for tall matrices. By incorporating several other design considerations, including sum-based second-moment estimates, bias correction, and adaptive clipping of scaling factors, we obtain the Decoupled Geometry-Aligned Muon (DGA-Muon) optimizer. We establish convergence guarantees for DGA-Muon and empirically validate both our theoretical characterization of NorMuon's scaling degeneration and the superiority of DGA-Muon over NorMuon.",
+  "id": "http://arxiv.org/abs/2610.06578v1",
+  "authors": [
+    "Wenpeng Zhang",
+    "Runsheng Yu"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.06578v1"
+}

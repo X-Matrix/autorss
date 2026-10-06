@@ -1,0 +1,19 @@
+{
+  "title": "Normality Constraint Learning: Adapting Foundation Models for Time Series Anomaly Detection",
+  "link": "https://arxiv.org/abs/2610.06453v1",
+  "published": "2026-10-05T14:55:46Z",
+  "updated": "2026-10-05T14:55:46Z",
+  "summary": "Time Series Foundation Models (TSFMs) achieve strong generalization by learning to reconstruct or forecast broad temporal patterns from large-scale time series during pre-training. Yet this strength can become a weakness for anomaly detection: TSFMs may model rare anomalous patterns as effectively as normal ones, allowing anomalies to be accurately reconstructed or forecasted and thus diminishing their reconstruction/forecasting error-based anomaly scores. This paper proposes $\\underline{\\textbf{N}}$$\\textbf{ormality}$ $\\underline{\\textbf{C}}$$\\textbf{onstraint}$ $\\underline{\\textbf{L}}$$\\textbf{earning}$ ($\\textbf{NCL}$), a lightweight plug-and-play framework that adapts pre-trained TSFMs for accurate anomaly detection without modifying their pre-trained parameters. Our key insight is to constrain the broad pattern space of TSFMs to the normal structure of a target time series, preventing their broad modeling capability from obscuring abnormal deviations. Specifically, NCL constructs a compact normality subspace from a few normal patch features and adaptively steers each patch feature toward normality within this subspace, guided by contrastive constraints that form compact and discriminative normality manifolds. The calibrated features are aggregated to reinforce normal components and fused with the original TSFM output, amplifying the discrepancy between normal and abnormal observations for the reconstruction/forecasting error-based anomaly scoring. Extensive experiments across diverse TSFM families and benchmarks show that NCL consistently improves anomaly detection performance, providing a generalizable framework for adapting TSFMs to anomaly detection.",
+  "id": "http://arxiv.org/abs/2610.06453v1",
+  "authors": [
+    "Xiaohui Zhou",
+    "Yijie Wang",
+    "Hongzuo Xu",
+    "Weixuan Liang",
+    "Guansong Pang"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.06453v1"
+}
