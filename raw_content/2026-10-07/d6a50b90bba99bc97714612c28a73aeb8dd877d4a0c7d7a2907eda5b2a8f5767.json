@@ -1,0 +1,18 @@
+{
+  "title": "Does Document Structure Help Dense Retrieval? A Placebo-Controlled Ablation of Four Mechanisms Across Two Corpora",
+  "link": "https://arxiv.org/abs/2610.10170v1",
+  "published": "2026-10-07T14:45:26Z",
+  "updated": "2026-10-07T14:45:26Z",
+  "summary": "Retrieval-augmented generation systems increasingly rely on document-structure treatments: structure-aligned chunking, LLM-generated chunk contexts, heading-path metadata, and hierarchical two-stage retrieval. Separate studies support each on different corpora, embedders, and metrics, and none control for a shared confound: any text prepended to a chunk perturbs its embedding. We present a mechanism-isolating ablation testing all four treatments under one protocol, matching chunk sizes across conditions and adding a semantically null placebo---heading paths that are structurally valid but shuffled across documents. We score retrieval with a coverage-aware nDCG and test four pre-registered contrasts via document-clustered bootstrap with Holm correction, on two distant corpora: 200 Wikipedia Featured Articles (951 queries) and 1,585 QASPER papers (4,303 questions). Organization helps, and the cause is content, not tokens: structure-aligned chunks with real heading paths beat contextualized fixed windows (+0.022 / +0.012 cov-nDCG@10) and the placebo (+0.010 / +0.016). Naive two-stage hierarchical retrieval hurts (-0.033 / -0.015), traceable to first-stage section recall. Gold structure beats LLM-induced structure on Wikipedia but not on QASPER. Effects are small ($dz$ 0.06-0.11) but Holm-significant and consistent across corpora.",
+  "id": "http://arxiv.org/abs/2610.10170v1",
+  "authors": [
+    "Andrey Kuehlkamp",
+    "Priscila Correa Saboia Moreira",
+    "Samuel Rund"
+  ],
+  "categories": [
+    "cs.IR",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.10170v1"
+}

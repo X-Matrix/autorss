@@ -1,0 +1,21 @@
+{
+  "title": "Know the Shape, Find the Fault: Topology-Conditioned Diagnosis of Multi-Agent LLM Failures",
+  "link": "https://arxiv.org/abs/2610.10126v1",
+  "published": "2026-10-07T14:07:48Z",
+  "updated": "2026-10-07T14:07:48Z",
+  "summary": "Multi-agent LLM systems coordinate task execution through exchanges of information among agents. When coordination breaks down, similar symptoms in execution traces can reflect different problems in how information is passed, used, or verified. Communication topology captures how agents exchange information and provides structural cues for distinguishing coordination failure modes. Using these cues for diagnosis requires establishing how topology relates to failure patterns and recovering the relevant structure from execution traces that lack explicit topology labels. We analyze the relationship between communication topology and failure patterns and introduce MAScope, a two-stage framework for topology-conditioned diagnosis. Its Trace Structural Extractor TSE recovers communication topology from heterogeneous execution traces by grounding an interaction graph in message evidence. The Topology-Conditioned Judge TC-Judge then classifies failures using the trace, predicted topology, an empirical failure prior estimated from separate labeled traces, and a short description of topology-specific failure patterns. Under a fixed orchestration structure, the recovered topology can be reused across executions. Experimental results show a statistically significant association between communication topology and failure type, with $χ^2 = 409.9$ and $p = 1.2 \\times 10^{-70}$. On the \\num{851} MAST-clean traces, ground-truth topology context raises gpt-mini's Macro-F1 from $0.173$ to $0.350$. With predicted topology, the pipeline achieves $0.346$, approaching the trace-only gpt-5.4 baseline of $0.372$. For \\num{1000} traces under a fixed orchestration structure, the projected pipeline cost, including one topology extraction, is approximately $6\\%$ of repeated gpt-5.4 diagnosis cost. These results show that topology-conditioned context improves failure diagnosis and supports lower-cost deployment.",
+  "id": "http://arxiv.org/abs/2610.10126v1",
+  "authors": [
+    "Xinwen Liu",
+    "Zhuocheng Pan",
+    "Isabella Zhu",
+    "Jawei Zhang",
+    "Xudong Liu",
+    "Tianyu Wo"
+  ],
+  "categories": [
+    "cs.MA",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.10126v1"
+}

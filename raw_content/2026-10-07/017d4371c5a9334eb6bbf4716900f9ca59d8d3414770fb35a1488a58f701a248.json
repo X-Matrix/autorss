@@ -1,0 +1,17 @@
+{
+  "title": "Logarithmic Regret via Passive Change Detection in Piecewise-Stationary Self-Tuning Regulation",
+  "link": "https://arxiv.org/abs/2610.10250v1",
+  "published": "2026-10-07T15:31:27Z",
+  "updated": "2026-10-07T15:31:27Z",
+  "summary": "We study minimum-variance control of an unknown autoregressive system with exogenous inputs and coefficients that change at unknown times. Under bounded independent disturbances, fixed detection gaps, stability and feasibility conditions, and sufficient time between changes, we prove \\(O((C+1)\\log((T+1)/δ))\\) regret with probability at least \\(1-δ\\), where \\(T\\) is the horizon and \\(C\\) the number of changes. Unlike switching bandits, where unselected arms can change unobserved, admissible plant changes provide information during exploitation: the correct feasible controller leaves only the disturbance in the output, whereas a detectable change raises output energy under the old controller. PIECE-CD explores initially and after alarms, then uses gated recursive least squares for control. Its energy test compares windowed output power with a threshold above the noise floor; the extension to unstable controller mismatches also monitors the reference controller's input proposal. We control false alarms across the horizon and prove logarithmic detection delay. Inputs are clipped to prescribed bounds. Logarithmic regret also holds under an explicit condition ensuring that clipping becomes inactive after a finite burn-in. Under the stated feasibility conditions, the extended detector covers destabilizing changes with detectable excess energy over a fixed window.",
+  "id": "http://arxiv.org/abs/2610.10250v1",
+  "authors": [
+    "A. Ch. Madhusudanarao",
+    "Rahul Singh"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.10250v1"
+}

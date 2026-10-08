@@ -1,0 +1,22 @@
+{
+  "title": "FoldBack: Self-Correcting Masked Generative Policy for Long-Horizon Garment Folding",
+  "link": "https://arxiv.org/abs/2610.10462v1",
+  "published": "2026-10-07T17:28:32Z",
+  "updated": "2026-10-07T17:28:32Z",
+  "summary": "We present FoldBack, a self-correcting masked generative policy for long-horizon garment folding. Existing long-trajectory policies may continue after a missed or slipped grasp even when the garment has not reached the intended configuration. We structure FoldBack's recovery mechanisms around three inference-time decisions: when to refine and verify, how to roll back, and where and how to retry. FoldBack aligns refinement and grasp verification with pick-and-place events, returns the robot to a retryable pre-grasp configuration while preserving successful grasps, and selectively regenerates the failed segment and selected future actions while avoiding previous failed grasp locations. To our knowledge, FoldBack is the first editable full-trajectory policy to unify these decisions, enabling failed interactions to be detected, undone, and repaired before execution continues, without recovery demonstrations or base-policy retraining. Across 33 real garments from six categories, FoldBack achieves 75.2% final folding success and 0.837 final-mask IoU, versus 45.7% and 0.689 for the strongest prior baseline.",
+  "id": "http://arxiv.org/abs/2610.10462v1",
+  "authors": [
+    "Lipeng Zhuang",
+    "Shiyu Fan",
+    "Yingdong Ru",
+    "Zhuo He",
+    "Florent P. Audonnet",
+    "Paul Henderson",
+    "Gerardo Aragon Camarasa"
+  ],
+  "categories": [
+    "cs.RO",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.10462v1"
+}

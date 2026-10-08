@@ -1,0 +1,21 @@
+{
+  "title": "Learning to Accumulate Knowledge with Mutual Information",
+  "link": "https://arxiv.org/abs/2610.10042v1",
+  "published": "2026-10-07T13:20:18Z",
+  "updated": "2026-10-07T13:20:18Z",
+  "summary": "Large language model (LLM) agents can improve their performance by reusing knowledge distilled from past interactions. However, curating new experiences into a knowledge bank that becomes more useful as it grows remains challenging. Effective knowledge accumulation should limit redundant overlap among entries and ensure that new knowledge contributes beyond what the bank already provides. Yet training a curator with Group Relative Policy Optimization (GRPO) on standalone task success can reinforce general guidance even when it duplicates existing knowledge. Therefore, we propose Knowledge Weaver, a reinforcement learning framework that trains a language model to curate reusable knowledge from agent trajectories. We couple feedback inspired by token-wise mutual information (MI) with marginal success rewards to guide knowledge accumulation. Together, these signals encourage the curator to preserve distinct information from experience and produce entries that improve task success when added to existing knowledge. Standalone success rewards also favor entries that are useful on their own. On ALFWorld and WebShop, Knowledge Weaver achieves mean success rates of 54.0\\% and 42.0\\% with k=10 retrieved entries, exceeding GRPO by 16.9 and 18.7 percentage points, respectively. Its knowledge banks also outperform the evaluated prompt-based and established banks, including human-written banks, in overall ALFWorld success rate and WebShop score with the executor frozen. Our codebase is available at https://github.com/LaoKuiZe/Knowledge-Weaver.",
+  "id": "http://arxiv.org/abs/2610.10042v1",
+  "authors": [
+    "Yuyang Zhao",
+    "Lizi Liao",
+    "Leyang Shen",
+    "Xiaoyan Zhao",
+    "Yang Zhang",
+    "Fuli Feng",
+    "Xiangnan He"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.10042v1"
+}

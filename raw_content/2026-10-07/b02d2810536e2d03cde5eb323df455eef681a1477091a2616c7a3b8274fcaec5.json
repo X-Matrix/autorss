@@ -1,0 +1,19 @@
+{
+  "title": "TestGRAD: Evolving Test Suites via Failure Pattern Momentum for SWE-Agent Ensemble",
+  "link": "https://arxiv.org/abs/2610.10242v1",
+  "published": "2026-10-07T15:25:15Z",
+  "updated": "2026-10-07T15:25:15Z",
+  "summary": "SWE-agent ensembles improve issue resolution by combining candidate patches from different agents with complementary strengths. The central problem is therefore test-based selection: generate tests, execute candidate patches, and identify the best patch. We formulate this process as test-space optimization: evolving an executable repository test suite until it distinguishes competing patches. Existing test-generation methods are limited optimizers. They usually lack an explicit loss for ensemble selection, optimize through incomplete directions that mostly create new tests or delete old ones, and perform one-off generation without feedback from repeated failures. Inspired by gradient descent with momentum, we introduce TestGRAD, a framework for automatic test optimization. TestGRAD centers on three concepts. Differential loss gives the optimizer an explicit execution-defined target: useful tests should separate candidate patches by behavior. Full CRUD gradients expand the update direction from merely creating or deleting tests to reading existing test infrastructure, creating new tests, updating stale assertions, and deleting only obsolete tests. Failure Pattern Momentum mines frequent failure sequences from memory, allowing the optimizer to avoid repeated non-discriminative directions while compressing the failure-history context. On SWE-bench Verified, TestGRAD achieves 84.2% Pass@1 with a 4-agent ensemble, outperforming the strongest baseline (80.6%) by an absolute improvement of 3.6 percentage points, while compressing failure-history context by over $100\\times$.",
+  "id": "http://arxiv.org/abs/2610.10242v1",
+  "authors": [
+    "Pengfei He",
+    "Jiayuan Zhou",
+    "Shaowei Wang",
+    "Ruiqi Pan"
+  ],
+  "categories": [
+    "cs.SE",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.10242v1"
+}
