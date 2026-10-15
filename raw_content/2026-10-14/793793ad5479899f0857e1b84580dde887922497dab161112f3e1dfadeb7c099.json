@@ -1,0 +1,18 @@
+{
+  "title": "From Spectral to Frobenius: When Muon Loses Its Spectral Implicit Bias",
+  "link": "https://arxiv.org/abs/2610.20112v1",
+  "published": "2026-10-14T12:42:35Z",
+  "updated": "2026-10-14T12:42:35Z",
+  "summary": "Prior work on implicit bias shows that gradient descent selects the Frobenius max-margin direction on linearly separable problems, whereas Fan et al. (2025) established spectral max-margin behavior for spectral-norm steepest descent methods, including idealized Muon with exact orthogonalization. In practice, however, Muon approximates orthogonalization using finite Newton-Schulz iterations and a positive stabilization constant. We prove that these implementation choices cause Muon to select the Frobenius rather than the spectral max-margin direction in linear classification with separable data. We also establish this behavior for both exponential moving average and Nesterov-style momentum. The key technical ingredient is a summable perturbation argument showing that the resulting parameter trajectories remain at bounded distance from those of gradient descent. We then disentangle the roles of Newton-Schulz iteration count, the stabilization constant, and the Newton-Schulz polynomial, revealing distinct asymptotic behaviors, including directions that achieve neither Frobenius nor spectral max-margin. Finally, we show that Muon can recover its spectral max-margin bias with Newton-Schulz iterations growing logarithmically over training.",
+  "id": "http://arxiv.org/abs/2610.20112v1",
+  "authors": [
+    "Yongtao Wu",
+    "Mahdi Mansouri",
+    "Zhenyu Zhu"
+  ],
+  "categories": [
+    "cs.LG",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.20112v1"
+}

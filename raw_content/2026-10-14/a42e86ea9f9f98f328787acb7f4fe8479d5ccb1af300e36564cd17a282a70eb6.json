@@ -1,0 +1,18 @@
+{
+  "title": "Lifted State Policy Optimization: Internalizing Self-Correction through Transition Geometry",
+  "link": "https://arxiv.org/abs/2610.20350v1",
+  "published": "2026-10-14T15:27:50Z",
+  "updated": "2026-10-14T15:27:50Z",
+  "summary": "Preference optimization ranks final answers and trajectory RL maximizes aggregate returns, yet neither credits the local change that turns a flawed reasoning state into a better one. We introduce Lifted State Policy Optimization (LSPO), which establishes this finite, cost-adjusted transition as the primary unit of learning. Each textual answer is augmented with a learned continuous coordinate, forming a lifted state that an energy function evaluates and orders. A shaped reward drives energy descent net of edit and step costs, and an internalization loss absorbs selected low-energy answers into the direct generator. On Qwen3.5-27B, the resulting single-pass policy reaches 71.8% aggregate accuracy across mathematics, science, code, and logic benchmarks, matching test-time reflection at 71.9% with 28% lower latency and 25.8% fewer tokens. The pattern holds across dense and mixture-of-experts backbones, and matched controls confirm that transition credit and the lifted coordinate each contribute, as does answer internalization. Our code is available at https://github.com/Venomrko/lspo.",
+  "id": "http://arxiv.org/abs/2610.20350v1",
+  "authors": [
+    "Ren Zhuang",
+    "Ben Wang",
+    "Shuifa Sun"
+  ],
+  "categories": [
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.20350v1"
+}
