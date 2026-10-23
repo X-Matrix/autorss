@@ -1,0 +1,18 @@
+{
+  "title": "RecallGS: Geometry-Grounded Recall for Online Semantic Gaussian Splatting",
+  "link": "https://arxiv.org/abs/2610.31293v1",
+  "published": "2026-10-22T13:55:31Z",
+  "updated": "2026-10-22T13:55:31Z",
+  "summary": "Online semantic 3D Gaussian Splatting (3DGS) enables open-vocabulary scene understanding from streaming observations. However, existing methods recover geometric context missing from image-derived semantic features using an additionally learned 3D network, incurring extra training and runtime overhead. We observe that such geometric-semantic evidence may already exist in the agent's observation history and can be retrieved rather than learned. Based on this insight, we introduce RecallGS (Geometry-Grounded Recall for Online Semantic Gaussian Splatting), a lightweight, training-free mechanism that treats past observations as a non-parametric geometric-semantic prior. RecallGS follows a recall-ground-fuse pipeline: CLIP retrieves relevant observations, alpha-compositing weights identify geometrically supported views, and aggregate their semantic features over each Gaussian's rendered footprint. On ScanNet and ScanNet++, RecallGS achieves strong semantic segmentation performance at 2.48 FPS, demonstrating that geometric-semantic context can be effectively recovered from observation history without an additional learned 3D branch.",
+  "id": "http://arxiv.org/abs/2610.31293v1",
+  "authors": [
+    "Thanh-Khoi Nguyen",
+    "Thien-Phuc Tran",
+    "Minh-Triet Tran"
+  ],
+  "categories": [
+    "cs.CV",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.31293v1"
+}
