@@ -1,0 +1,21 @@
+{
+  "title": "JANUS: Synthesizing Cross-Layer Defenses Against Web Deserialization Attacks",
+  "link": "https://arxiv.org/abs/2610.35532v1",
+  "published": "2026-10-26T14:47:24Z",
+  "updated": "2026-10-26T14:47:24Z",
+  "summary": "Unsafe deserialization turns untrusted data into attacker-controlled execution, and a single vulnerability can admit diverse exploit variants that evade defenses tailored to a known exploit. Existing defenses typically operate at a single enforcement point with limited visibility into the full attack. Combining controls across layers offers complementary protection, but coordinating them to preserve legitimate functionality and adapting them to new variants requires substantial expert effort.   We propose JANUS, a red-blue adversarial framework for automated cross-layer defense synthesis. Starting from a known exploit, \\sys iteratively refines deployment-specific policies in an isolated offline environment. A black-box attacker probes the current policy for exploit variants using only externally observable feedback. The defender summarizes each verified variant into its security-relevant effects, uses counterfactual replay to separate complementary coverage from redundant enforcement, and jointly selects and scopes controls across layers. Each candidate policy is validated against accumulated exploits and benign workflows.   We evaluate JANUS on sixteen vulnerability deployments across six Java and PHP applications against gateway, application, system, and cross-layer defenses. JANUS reduces held-out attack success to 6.2%, compared with 18.8-55.0% for the baselines, fully mitigates 13 of 16 deployments, and preserves 98.4% of benign functionality tests at a 6.9% targeted P95 latency increase.",
+  "id": "http://arxiv.org/abs/2610.35532v1",
+  "authors": [
+    "Ruozhao Yang",
+    "Minglang Li",
+    "Jiongchi Yu",
+    "Xinfeng Li",
+    "Xiaofei Xie"
+  ],
+  "categories": [
+    "cs.CR",
+    "cs.AI",
+    "cs.SE"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.35532v1"
+}
