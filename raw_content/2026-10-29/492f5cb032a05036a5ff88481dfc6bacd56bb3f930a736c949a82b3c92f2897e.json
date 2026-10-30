@@ -1,0 +1,22 @@
+{
+  "title": "Reward-Adaptive Co-Evolution of Policy and Rubric",
+  "link": "https://arxiv.org/abs/2610.40096v1",
+  "published": "2026-10-29T14:00:07Z",
+  "updated": "2026-10-29T14:00:07Z",
+  "summary": "Rubric-based rewards provide fine-grained, interpretable supervision for open-ended reinforcement learning, where holistic scalar rewards struggle to capture multidimensional response quality. Static rubrics can lose discriminative power as the policy distribution evolves, while existing policy--rubric co-evolution methods rely on globally prescribed update schedules that ignore heterogeneous reward informativeness. We introduce RACE, a Reward-Adaptive Co-Evolution framework. At the group level, per-rollout-group training-signal routing classifies groups as informative, diversity-collapsed, or rubric-failed, updating the policy only with informative groups while caching rubric failures. At the phase level, event-triggered phase switching enters rubric optimization upon persistent reward saturation and returns when rubric-reward improvement plateaus. Rubric phases train the generator on cached pairs using a frozen judge and a scale-normalized pairwise-margin reward. Across both levels, online threshold adaptation adjusts routing and switching thresholds through proportional control. Under a unified evaluation protocol, RACE achieves the highest average performance and outperforms the strongest fixed-alternation baseline on all eight tasks, while improving rubric discrimination.",
+  "id": "http://arxiv.org/abs/2610.40096v1",
+  "authors": [
+    "Yizhu Chen",
+    "Jianguang Jiang",
+    "Jiameng Huang",
+    "Chuyu Fang",
+    "Bojun Zhang",
+    "Zhenyu Jiao",
+    "Xing Yuan",
+    "Tong Lin"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2610.40096v1"
+}
