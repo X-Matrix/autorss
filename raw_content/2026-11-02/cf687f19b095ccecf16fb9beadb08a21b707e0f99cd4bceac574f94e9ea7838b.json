@@ -1,0 +1,15 @@
+{
+  "title": "Top-$k$ Retrieval Leaves Memory Value Undetermined",
+  "link": "https://arxiv.org/abs/2611.03289v1",
+  "published": "2026-11-02T15:28:04Z",
+  "updated": "2026-11-02T15:28:04Z",
+  "summary": "A memory-augmented agent must decide which memories to keep, merge and retrieve, and its only evidence of their value is its retrieval log: the memories it retrieved in each episode and whether it succeeded. Existing methods assign every memory a value from this log, even when the log cannot separate one memory's contribution from another's. We treat the log as an experiment that nobody designed and ask which memory values it determines. Two counts answer this before any outcome is observed: how often each memory was retrieved, and how often each pair was retrieved together. From these counts, we prove that top-$k$ retrieval leaves every memory value undetermined, however many episodes are logged, and that a question with its own memories, asked once, determines at most one of their values. On fourteen standard memory benchmarks, no memory value is determined in any of 55 configurations. Both causes are choices about retrieval. We introduce LEDGER, which estimates each determined Shapley value in closed form with a confidence interval and reports every other value as undetermined. It merges memories with identical histories without losing a determined value, and it retrieves so that the next log determines more. On pooled HotpotQA, LEDGER raises the fraction of memories determined from 0.001 to 0.797, at a cost of 2.6 accuracy points on HotpotQA and with a gain of 2.7 on LoCoMo.",
+  "id": "http://arxiv.org/abs/2611.03289v1",
+  "authors": [
+    "Arman Behnam"
+  ],
+  "categories": [
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2611.03289v1"
+}

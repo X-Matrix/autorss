@@ -1,0 +1,16 @@
+{
+  "title": "A Cross-Domain Matrix Engine for Signal Processing and Deep Neural Net Inference",
+  "link": "https://arxiv.org/abs/2611.03503v1",
+  "published": "2026-11-02T17:40:14Z",
+  "updated": "2026-11-02T17:40:14Z",
+  "summary": "Matrix multiplication dominates both PHY signal processing and Deep Neural Network (DNN) inference, yet these domains place opposing demands on the matrix engine. Signal processing requires low-latency execution of relatively small matrix operations, whereas DNN inference, particularly at large batch sizes, prioritizes high throughput and energy efficiency for large matrix multiplications. While offering efficient memory access profile, a Systolic Array (SA) adds fill and drain delays per matrix. Those can be amortized for large matrices but not for small matrices. Conversely, a tensor unit completes the kernel in few cycles but would require repeated reads of same operand tiles over large matrices. This makes SA too slow for signal processing and tensor too inefficient for AI. We show that this need not be a choice between systolic and tensor structuring of Multiply-Accumulate (MAC) units. We propose a single engine that operates primarily as a SA and, through low-cost reconfiguration, transforms into a tensor-style engine on a per-operation basis. MUXes create both the spatial reduction adder tree and temporal reduction accumulators from the existing MACs and registers within the systolic array. The proposed reconfigurable SA simulated using modified SCALESim simulator, verified on an Zynq 702 FPGA and synthesized using ASAP 7nm FinFET library. SCALE-Sim simulations shows up to 7.5x lower latency for small complex value PHY kernels. Even on DNN workloads, it achieves up to 1.65x speedups over vanilla SA execution with trivial increase of memory accesses, retaining the systolic array's memory access advantage. Synthesis results estimate reconfigurable fabric costs only 8% power and 13.6% area overheads.",
+  "id": "http://arxiv.org/abs/2611.03503v1",
+  "authors": [
+    "Mehdi Safarpour"
+  ],
+  "categories": [
+    "cs.AR",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2611.03503v1"
+}
