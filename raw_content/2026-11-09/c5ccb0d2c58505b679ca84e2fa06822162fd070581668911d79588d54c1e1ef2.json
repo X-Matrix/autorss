@@ -1,0 +1,16 @@
+{
+  "title": "AgentOPSD: Turn-Level Credit Assignment via Recursive Belief Revision",
+  "link": "https://arxiv.org/abs/2611.12587v1",
+  "published": "2026-11-09T15:40:43Z",
+  "updated": "2026-11-09T15:40:43Z",
+  "summary": "Reinforcement learning with verifiable rewards ordinarily spreads a single advantage over a whole trajectory, a granularity too coarse to isolate the few decisions on which success in a long, multi-turn interaction actually turns. Privileged self-distillation supplies denser supervision, but it leaves unanswered how a set of local teacher-student discrepancies should be converted into credit along a sequence. We introduce AgentOPSD, a critic-free scheme that assigns credit recursively, one interaction turn at a time. Inside a turn, the token-level log-probability gaps between a skill-conditioned self-teacher and the student are summed, and that sum acts as evidence in a recursive Bayesian update carried out in log-odds space; the resulting revisions reallocate the outcome-derived advantage across turns through a multiplier that is bounded and preserves its sign. With Qwen2.5-3B and Qwen2.5-7B as policy backbones on ALFWorld, the method improves consistently on GRPO and on self-distillation baselines, and attains 89.1% success at the 7B scale. Ablations attribute the gain to aggregating evidence at turn boundaries and to making the belief revision depend on history, rather than to the local gap by itself.",
+  "id": "http://arxiv.org/abs/2611.12587v1",
+  "authors": [
+    "Yizhuo Li"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2611.12587v1"
+}

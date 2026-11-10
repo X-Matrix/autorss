@@ -1,0 +1,20 @@
+{
+  "title": "Say Shibboleth: Fingerprinting the LLMs and Harnesses Behind Agentic Attacks",
+  "link": "https://arxiv.org/abs/2611.12386v1",
+  "published": "2026-11-09T13:27:13Z",
+  "updated": "2026-11-09T13:27:13Z",
+  "summary": "We study the fingerprinting of agentic cyberattacks. Our objective is to reliably infer information about the attacker's configuration, such as LLM version and harness, from telemetry. To achieve this, we introduce a technique we call shibboleth traps: modular honeypot services designed to elicit discriminative behaviors from agentic attackers. The traps make informative interactions a condition for obtaining resources the agent seeks, eliciting model declarations and characteristic writing without requiring a successful prompt injection.   To achieve harness fingerprinting, we introduce general mechanisms to indirectly probe peculiar execution behaviors of harnesses. These probes reveal how a harness masks secrets in tool output, enforces command time limits, and schedules tool calls, using only the effects visible in subsequent requests.   We show that combined declarative and behavioral inference distinguishes among 15 candidate models with an average 90% top-1 accuracy, with behavioral classifiers evaluated on held-out harnesses or task families. In a separate experiment across four harnesses, fixed probe rules identify the correct harness with 92% accuracy. When instructed to conceal their identity, agents still leave useful behavioral evidence even as their declarations become uninformative.",
+  "id": "http://arxiv.org/abs/2611.12386v1",
+  "authors": [
+    "Dario Pasquini",
+    " Reworr",
+    "Giuseppe Ateniese",
+    "Manish Bhatt",
+    "Sergej Epp"
+  ],
+  "categories": [
+    "cs.CR",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2611.12386v1"
+}

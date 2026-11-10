@@ -1,0 +1,17 @@
+{
+  "title": "Phrase-Level Speculative Decoding on a Frozen Target",
+  "link": "https://arxiv.org/abs/2611.12464v1",
+  "published": "2026-11-09T14:13:32Z",
+  "updated": "2026-11-09T14:13:32Z",
+  "summary": "Speculative decoders raise throughput by banking more target tokens per forward pass, and Medusa, EAGLE-3, DFlash and DSpark all do it the same way: more candidates that survive verification. All of them draft in the target's own vocabulary, so one node of the candidate tree is one target token, and the tokenizer makes that unit look like a constant. It is not. BPE's pretokenizer splits on whitespace before merges are learned, so no multi-word string can ever become a single token: in Qwen3-4B, \"United States of America\" is four tokens and no adjacent pair of them exists as one entry, so a phrase is out of reach of any method drafting in the target's vocabulary.   We change the unit. A small MLP head reads the frozen target's hidden state and predicts a one- to three-word phrase as one entry in a separate draft vocabulary; greedy longest-match expansion maps it back into the target's own tokens, and N candidates are verified in one forward pass behind a prefix-tree mask, so the change is orthogonal to tree depth and width. The target and its tokenizer stay frozen and a candidate is accepted only while it matches the target's own argmax, so the served output is identical to greedy decoding up to floating-point tie-breaking.   On one A5000 at batch 1, against HuggingFace generate(), a 21.94M head (0.545% of Qwen3-4B) reaches 2.391x on GSM8K, 2.444x on MATH-500 and 1.544x on MT-Bench. Because the head's output layer is one row of 257 parameters per entry, the draft vocabulary size is the parameter budget: an 8,000-entry head is 3.434M parameters, 0.0854% of the target and 64x smaller than EAGLE-3's drafter, and keeps 92.3% of the larger head's GSM8K tokens per pass. With EAGLE-3 run on same prompts and baseline, our 21.94M head is ahead of tree-16 on both maths sets and behind tree-60 on every set.",
+  "id": "http://arxiv.org/abs/2611.12464v1",
+  "authors": [
+    "Madhusudhana Naidu"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2611.12464v1"
+}

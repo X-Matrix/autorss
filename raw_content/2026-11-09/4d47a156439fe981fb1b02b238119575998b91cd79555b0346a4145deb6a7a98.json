@@ -1,0 +1,17 @@
+{
+  "title": "Unmasking Four Knapsack Problems in the Traveling Thief Benchmark",
+  "link": "https://arxiv.org/abs/2611.12597v1",
+  "published": "2026-11-09T15:45:46Z",
+  "updated": "2026-11-09T15:45:46Z",
+  "summary": "The traveling thief problem (TTP) asks a thief to choose a tour and a packing together, and the benchmark of 9,720 instances of Polyakovskiy et al. (2014) is the standard test set for comparing TTP heuristics. We show that four of these instances are not TTP instances at all. Their files give a renting rate of 0.00, so the tour has no effect on the objective and each instance reduces to a 0-1 knapsack problem. One of them belongs to the 60 categorized instances on which new methods are usually compared, and on it five of nine published methods report exactly the same value. The cause is the format of the files, which keep the renting rate with two decimals, while the rule of the generator gives a rate close to 0.003 on these instances. The same rounding may shift the rate of 949 other instances by more than 1%. Since the tour and the packing used by the generator were not published, the original rates cannot be recovered. We therefore define new rates with the same rule, applied to a fully specified reference solution that we publish, and we show with a published heuristic that the corrected instances behave as TTP instances again. We also give reference results on the corrected instances and recommendations for future studies. Finally, we present ttplib, a new open-source Python library that loads any of the 9,720 instances, including the corrected ones, without downloading the whole benchmark.",
+  "id": "http://arxiv.org/abs/2611.12597v1",
+  "authors": [
+    "Mohammed Mizan Alanazi",
+    "Mahdi Khemakhem"
+  ],
+  "categories": [
+    "cs.CL",
+    "cs.AI"
+  ],
+  "pdf_link": "https://arxiv.org/pdf/2611.12597v1"
+}
